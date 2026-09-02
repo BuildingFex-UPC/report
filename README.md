@@ -1,3 +1,4 @@
+![Logo-UPC](img/img-upc.png)
 # Universidad Peruana de Ciencias Aplicadas
 ## Carrera de Ingeniería de Software
 
@@ -31,7 +32,7 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
-| AV1 | DD-MM-AAAA | Equipo BuildingFex | Estructura inicial correspondiente a la primera entrega. |
+| AV1 | 02-09-2026 | Equipo BuildingFex | Estructura inicial correspondiente a la primera entrega. |
 
 <div style="page-break-after: always;"></div>
 
@@ -290,7 +291,10 @@ Reciben opciones de precios adaptadas a su tamaño real.<br>
 * Con una estructura de suscripción en tres niveles (Essential, Standard, Scale) basada en la cantidad de unidades<br>
 
 ##### 1.2.2.4. Lean UX Canvas
+A continuación, se adjunta el Lean UX Canvas, una matriz colaborativa que nos ayuda a mapear los dolores de la administración de inmuebles con las soluciones de
+nuestra plataforma, estructurando el diseño de nuestros MVP y las métricas que evaluarán la adopción de los planes de suscripción. <br>
 
+![Lean UX Canvas](img/Lean-UX-Canvas-BuildingFex.png)
 ### 1.3. Entrevistas
 #### 1.3.1. Diseño de entrevistas
 #### 1.3.2. Registro de entrevistas
@@ -308,7 +312,20 @@ Reciben opciones de precios adaptadas a su tamaño real.<br>
 ## Capítulo II: Requirements Development and Software Solution Design
 
 ### 2.1. Competidores
+<b>Condo Control</b><br>
+Es una plataforma SaaS especializada en la gestión de comunidades residenciales, principalmente en Norteamérica. Permite administrar unidades, gestionar
+comunicaciones internas, controlar reservas de áreas comunes y llevar registros de visitantes. También ofrece herramientas básicas de reportes y gestión operativa.
+
+<b>Buildium</b><br>
+Plataforma digital enfocada en la administración de propiedades residenciales y asociaciones. Incluye herramientas para la gestión financiera, cobranza automatizada,
+generación de reportes y administración de mantenimiento.
+
+<b>ComunidadFeliz</b><br>
+Plataforma orientada al mercado latinoamericano para la gestión de condominios. Permite gestionar cobros, comunicaciones, reservas de espacios y reportes financieros
+dentro de una misma plataforma.
+
 #### 2.1.1. Análisis competitivo
+
 #### 2.1.2. Estrategias y tácticas frente a competidores
 
 ### 2.2. Entrevistas estructuradas
