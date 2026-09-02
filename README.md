@@ -228,7 +228,67 @@ para escalar desde un edificio boutique hasta un gran complejo.<br>
 * La cantidad de suscripciones activas (MRR) en los diferentes planes (Essential, Standard, Scale).<br>
 
 ##### 1.2.2.2. Lean UX Assumptions
+En esta sección se detallan las suposiciones que validarán la viabilidad y adopción de BuildingFex. Se categorizan en impactos comerciales, beneficios para el usuario y
+funcionalidades clave del software.<br>
+
+<b>Business Outcomes</b><br>
+* Creemos que al centralizar la visibilidad de las cobranzas, reduciremos la tasa de morosidad en los condominios afiliados en un 25%.<br>
+* Creemos que al ofrecer planes de suscripción escalonados basados en el número de departamentos, facilitaremos la adquisición de clientes de diversos tamaños.<br>
+* Creemos que el diseño responsivo y la interfaz estandarizada reducirán los tiempos de capacitación (onboarding) para las empresas administradoras en un 40%.<br>
+* Creemos que al proveer flujos de trabajo claros, las administradoras podrán gestionar más edificios simultáneamente, incrementando nuestra retención de
+clientes B2B.<br>
+
+<b>Business Outcomes Assumptions</b><br>
+* Creemos que las juntas de propietarios están dispuestas a pagar entre S/ 40 y S/ 120 mensuales si perciben un incremento real en la transparencia y orden del
+edificio.<br>
+* Creemos que el mercado local requiere facturación en moneda nacional (PEN) para agilizar la aprobación de presupuestos en asambleas.<br>
+* Creemos que las agencias de administración prefieren un software unificado antes que utilizar múltiples aplicaciones desconectadas.<br>
+
+<b>User Outcomes</b><br>
+* Creemos que al ofrecer un módulo digital de reservas, los residentes evitarán conflictos y malentendidos por el uso de áreas comunes.<br>
+* Creemos que al disponer de un repositorio de documentos en la nube, los propietarios tendrán la tranquilidad de consultar reglamentos y actas cuando lo
+necesiten.<br>
+* Creemos que los avisos oficiales en la plataforma mejorarán la tasa de lectura de comunicados en comparación con los correos electrónicos tradicionales.<br>
+* Creemos que el registro digital de visitas brindará un mayor sentido de seguridad y control a toda la comunidad.<br>
+
+<b>User Outcomes Assumptions</b><br>
+* Creemos que los residentes demandan una manera rápida y transparente de verificar si sus pagos han sido registrados correctamente.<br>
+* Creemos que los comités de administración necesitan reportes consolidados para justificar sus decisiones frente a los vecinos.<br>
+* Creemos que la estandarización de procesos de mantenimiento calmará la ansiedad de los residentes frente a desperfectos en el edificio.<br>
+
+<b>Features Assumptions</b><br>
+* Creemos que incluir un sistema de recordatorios de cobro será la característica más valorada por los tesoreros.<br>
+* Creemos que la consola web para administradores facilitará la gestión simultánea de múltiples propiedades.<br>
+* Creemos que ofrecer soporte segmentado (email en días hábiles vs. tiempos de respuesta acordados) aportará valor diferenciado a los planes superiores.<br>
+* Creemos que un dashboard que resuma áreas comunes, cobranzas e incidencias en "una sola vista" será el diferencial principal frente a la competencia.<br>
+
 ##### 1.2.2.3. Lean UX Hypothesis Statements
+Las siguientes hipótesis buscan validar el impacto de la adopción de BuildingFex en la operatividad de los condominios y el crecimiento del producto en el mercado.<br>
+
+<b>Hypothesis Statement #1</b><br>
+* Creemos que incrementaremos la puntualidad en el pago de cuotas de mantenimiento.<br>
+* Si las juntas de propietarios y residentes<br>
+Obtienen visibilidad clara de las deudas y un sistema de recordatorios.<br>
+* Con un módulo de "Collections" centralizado dentro de la plataforma.<br>
+
+<b>Hypothesis Statement #2</b><br>
+* Creemos que optimizaremos la eficiencia del personal de administración y conserjería.<br>
+* Si los property managers<br>
+Obtienen la capacidad de gestionar visitas, solicitudes de mantenimiento y emitir anuncios masivos.<br>
+* Con una consola web unificada que reemplaza los registros en papel y los avisos en ascensores.<br>
+
+<b>Hypothesis Statement #3</b><br>
+* Creemos que reduciremos las quejas vecinales respecto al uso de las instalaciones.<br>
+* Si los propietarios<br>
+Obtienen un acceso directo a las normativas y disponibilidad de espacios.<br>
+* Con un módulo de "Common areas" que muestra reservas, reglas y mantenimiento en una sola vista.<br>
+
+<b>Hypothesis Statement #4</b><br>
+* Creemos que lograremos un rápido crecimiento comercial entre diferentes perfiles de clientes.<br>
+* Si las comunidades de edificios<br>
+Reciben opciones de precios adaptadas a su tamaño real.<br>
+* Con una estructura de suscripción en tres niveles (Essential, Standard, Scale) basada en la cantidad de unidades<br>
+
 ##### 1.2.2.4. Lean UX Canvas
 
 ### 1.3. Entrevistas
