@@ -1,3 +1,5 @@
+<div align="center">
+  
 ![Logo-UPC](img/img-upc.png)
 # Universidad Peruana de Ciencias Aplicadas
 ## Carrera de Ingeniería de Software
@@ -19,12 +21,14 @@
 | :--- | :--- |
 | u202022211 | Javier Murillo, Mathias |
 | | Hermoza Quispe, Jude Alessandro |
-| | Jave Chang, Alejandro Manuel |
+| u202312510 | Jave Chang, Alejandro Manuel |
 | | Heredia Hoyos, Danitza Ivonne |
 | | Suteau, Antonin |
 
 **Período:** 2026-20  
 **Fecha:** Setiembre 2026
+
+</div>
 
 <div style="page-break-after: always;"></div>
 
@@ -140,7 +144,7 @@ visibilidad a las juntas de propietarios.
 |------|--------|--------|---------|--------------------------------------------|
 | ![Mathias Javier Murillo](img/img-profile/MJ.png)| Mathias Javier Murillo | U202022211 | Ingeniería de Software | Soy estudiante de 7mo ciclo de Ingeniería de Software en la UPC. Me especializo en desarrollo full stack de webs y aplicaciones móviles. Me caracterizo por ser una persona muy responsable, puntual y organizada. Aporto al equipo apoyo en el diseño, organización y desarrollo de los Sprints. |
 | |  | |  |  |
-|  |  |  |  | |
+| ![Alejandro Jave Chanf](img/img-profile/AJ.png) | Alejandro Manuel Jave Chang | U202312510 | Ingenieria de Software | Vengo de la carrera de Ingeniería de software, me gusta explorar diversas soluciones a desafíos tecnológicos y me apasiona aprender nuevas cosas. Mi enfoque dedicado a los proyectos que me apasionan me impulsa a explorar nuevas fronteras en mi carrera. |
 | |  | |  |  |
 | |  | |  |  |
 
@@ -295,17 +299,22 @@ A continuación, se adjunta el Lean UX Canvas, una matriz colaborativa que nos a
 nuestra plataforma, estructurando el diseño de nuestros MVP y las métricas que evaluarán la adopción de los planes de suscripción. <br>
 
 ![Lean UX Canvas](img/Lean-UX-Canvas-BuildingFex.png)
-### 1.3. Entrevistas
-#### 1.3.1. Diseño de entrevistas
-#### 1.3.2. Registro de entrevistas
-#### 1.3.3. Análisis de entrevistas
 
-### 1.4. Needfinding
-#### 1.4.1. User Personas
-#### 1.4.2. User Task Matrix
-#### 1.4.3. User Journey Mapping
-#### 1.4.4. Empathy Mapping
-#### 1.4.5. As-is Scenario Mapping
+### 1.3. Segmentos objetivo
+La modernización del sector de la gestión de propiedades demuestra que implementar soluciones tecnológicas es fundamental no solo para llevar un control contable, sino para garantizar la armonía residencial y el mantenimiento del valor de los inmuebles. El uso de plataformas digitales elimina la fricción diaria y profesionaliza la labor de los comités vecinales.
+
+Para dimensionar correctamente la cuota de mercado (Market Share) a la que apuntamos, hemos definido nuestros segmentos bajo variables geográficas, demográficas y operativas, enfocándonos inicialmente en el mercado inmobiliario de Lima Metropolitana:
+
+- **Segmento 1: Empresas y agencias administradoras de inmuebles (Property Managers B2B).** Compañías constituidas que buscan escalar sus operaciones y gestionar múltiples torres residenciales o condominios bajo una misma consola web estandarizada y eficiente.
+  - **Perfil Demográfico y Operativo:** Empresas formales (Mypes y medianas empresas) con equipos operativos conformados por profesionales de entre 24 y 50 años. Manejan portafolios que van desde 3 hasta más de 20 edificios (alcanzando volúmenes de 100 a 700+ departamentos gestionados simultáneamente).
+  - **Perfil Geográfico (Market Focus):** Principalmente ubicadas en Lima Metropolitana, con fuerte enfoque en distritos de alta densidad vertical de Lima Moderna y Lima Top (ej. San Borja, Santiago de Surco, Jesús María, Miraflores, San Isidro, Magdalena).
+  - **Comportamiento:** Son usuarios altamente tecnológicos y pragmáticos (nativos digitales en muchos casos), que buscan reemplazar el uso excesivo de Excel y WhatsApp por soluciones que reduzcan sus "horas-hombre" y les permitan captar más clientes sin aumentar su plantilla.
+
+- **Segmento 2: Juntas de propietarios de condominios y torres residenciales (B2C / B2B2C).** Edificios autogestionados por los propios vecinos que requieren organizar sus cobros, áreas comunes y comunicaciones con total transparencia y seguridad para evitar conflictos internos.
+  - **Perfil Demográfico:** Residentes y propietarios pertenecientes a los Niveles Socioeconómicos (NSE) A, B y C+. Los miembros de las juntas directivas suelen ser profesionales o personas jubiladas con edades que oscilan entre los 28 y 75 años, quienes asumen el cargo *ad honorem*.
+  - **Perfil Geográfico y Estructural:** Edificios y torres residenciales ubicados en zonas urbanas de Lima Metropolitana. El segmento abarca desde condominios "boutique" pequeños (10 a 15 unidades) hasta grandes complejos residenciales (40 a 80 unidades).
+  - **Comportamiento:** Valoran la confianza, la transparencia financiera y la comunicación clara. Tienen distintos niveles de adopción tecnológica, por lo que necesitan una plataforma sencilla e intuitiva que automatice los recordatorios de morosidad sin generar fricción vecinal.
+
 
 <div style="page-break-after: always;"></div>
 
