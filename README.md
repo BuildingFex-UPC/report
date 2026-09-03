@@ -374,6 +374,15 @@ Este diagrama de BuildingFex resume la estructura del sistema: los usuarios inte
 ![Containerdiagram.png](img/ContainerDiagram.png)
 
 ##### 2.5.3.3. Software Architecture Deployment Diagrams
+
+El Deployment Diagram de BuildingFex muestra la distribución de los principales componentes de la plataforma sobre la infraestructura utilizada para su despliegue. El usuario accede al sistema mediante un navegador web, desde donde interactúa con el frontend desarrollado con Vue.js y Vite, el cual se encuentra alojado en Vercel. El frontend se comunica mediante solicitudes HTTPS con la API desarrollada en ASP.NET Core Web API y desplegada en Railway.
+
+El backend concentra la lógica de negocio de los principales módulos de la plataforma, entre ellos IAM, Finances, Incidents y SocialSpaces, además de los servicios relacionados con la gestión de información y servicios. La API se conecta con una instancia de base de datos desplegada en Railway, donde se almacenan y consultan los datos necesarios para el funcionamiento de la aplicación.
+
+Por otro lado, GitHub funciona como repositorio del código fuente y se encuentra integrado con las plataformas de despliegue. De esta manera, los cambios incorporados a la rama principal pueden activar automáticamente los procesos de construcción y despliegue tanto del frontend en Vercel como del backend en Railway. Esta distribución permite separar la interfaz de usuario, la lógica de negocio y el almacenamiento de datos, manteniendo una infraestructura centralizada en la nube.
+
+![DeploymentDiagram.png](img/DeploymentDiagram.png)
+
 ### 2.6. Tactical-Level Domain-Driven Design
 #### 2.6.x. Bounded Context: <Bounded Context Name>
 ##### 2.6.x.1. Domain Layer
