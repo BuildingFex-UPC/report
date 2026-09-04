@@ -384,15 +384,1115 @@ Por otro lado, GitHub funciona como repositorio del código fuente y se encuentr
 ![DeploymentDiagram.png](img/DeploymentDiagram.png)
 
 ### 2.6. Tactical-Level Domain-Driven Design
-#### 2.6.x. Bounded Context: <Bounded Context Name>
-##### 2.6.x.1. Domain Layer
-##### 2.6.x.2. Interface Layer
-##### 2.6.x.3. Application Layer
-##### 2.6.x.4 Infrastructure Layer
-##### 2.6.x.5. Bounded Context Software Architecture Component Level Diagrams
-##### 2.6.x.6. Bounded Context Software Architecture Code Level Diagrams
-###### 2.6.x.6.1. Bounded Context Domain Layer Class Diagrams
-###### 2.6.x.6.2. Bounded Context Database Design Diagram
+
+---
+
+#### 2.6.1. Bounded Context: Identity & Access Management (IAM)
+
+Este contexto administra la autenticación, autorización, registro de administradores y residentes, y la gestión de planes de suscripción SaaS.
+
+##### 2.6.1.1. Domain Layer
+
+Representa el núcleo del negocio referente a la identidad de usuarios (administradores y residentes), las reglas de multi-tenancy y el control de suscripciones SaaS.
+
+**Diccionario de Clases del Dominio**
+
+- **User** (Aggregate Root)
+  - **Propósito:** Entidad raíz de agregado que unifica administradores y residentes en una tabla única. Administra multi-tenancy (residentes pertenecen a un admin) y planes de suscripción.
+  - **Atributos:**
+    - `Id`: int (PK auto-incremental)
+    - `ExternalId`: string (ID externo compatible con json-server)
+    - `Name`: string (nombre completo)
+    - `Email`: string (email normalizado lowercase)
+    - `PasswordHash`: string (hash BCrypt, ignorado en JSON via `[JsonIgnore]`)
+    - `Role`: string ("admin" o "resident")
+    - `Dni`: string? (DNI del admin)
+    - `Address`: string? (dirección del admin)
+    - `Company`: string? (empresa del admin)
+    - `Ruc`: string? (RUC del admin)
+    - `Floor`: string? (piso del residente)
+    - `Code`: string? (código único del residente)
+    - `AdmissionDate`: DateOnly? (fecha de admisión del residente)
+    - `OwnerAdminId`: int? (FK auto-referenciada al admin propietario)
+    - `OwnerAdmin`: User? (navegación al admin dueño)
+    - `SubscriptionPlanId`: string (plan de suscripción, default "free")
+    - `SubscriptionPaidUntil`: DateTime? (fecha de expiración del plan)
+    - `CreatedAt`: DateTimeOffset? (de IAuditableEntity)
+    - `UpdatedAt`: DateTimeOffset? (de IAuditableEntity)
+  - **Métodos:**
+    - `CreateAdmin(externalId, name, email, passwordHash, dni, address, company, ruc): User` (factory estático)
+    - `CreateResident(externalId, name, email, passwordHash, floor, code, ownerAdminId, admissionDate): User` (factory estático)
+    - `UpdateCredentials(email, passwordHash): void`
+    - `UpdateSubscription(planId, paidUntil): void`
+  - **Relaciones:** Implementa `IAuditableEntity`. Auto-relación con `User` via `OwnerAdminId`.
+
+- **SubscriptionPlans** (Domain Service estático)
+  - **Propósito:** Encapsula la lógica de negocio para validar, normalizar y consultar límites/precios de planes de suscripción.
+  - **Constantes:** `SubscriptionPlanIds` (Free="free", Essential="essential", Standard="standard", Scale="scale")
+  - **Diccionarios internos:** ResidentLimits (free=9, essential=15, standard=40, scale=80), MonthlyPricesPen (free=0, essential=40, standard=80, scale=120)
+  - **Métodos:**
+    - `IsValid(planId): bool`
+    - `Normalize(planId): string`
+    - `MaxResidents(planId): int`
+    - `MonthlyPricePen(planId): decimal`
+    - `IsPaid(planId): bool`
+
+- **IamError** (Enum)
+  - **Propósito:** Catalogo centralizado de errores del dominio IAM.
+  - **Valores:** InvalidCredentials, EmailNotFound, InvalidPassword, EmailAlreadyExists, UserNotFound, ResidentFieldsRequired, ResidentCodeAlreadyExists, ResidentOwnerRequired, ResidentNotFound, ResidentPlanLimitReached
+
+- **IUserRepository** (Interface)
+  - **Propósito:** Contrato de persistencia del aggregate User.
+  - **Herencia:** `IBaseRepository<User>`
+  - **Métodos:**
+    - `FindByEmailAsync(email, CancellationToken): Task<User?>`
+    - `FindByExternalIdAsync(externalId, CancellationToken): Task<User?>`
+    - `ExistsByEmailAsync(email, CancellationToken): Task<bool>`
+    - `ListByOwnerAdminIdAsync(ownerAdminId, CancellationToken): Task<IEnumerable<User>>`
+    - `SearchAsync(email, role, code, ownerAdminId, CancellationToken): Task<IEnumerable<User>>`
+    - `AnyUsersAsync(CancellationToken): Task<bool>`
+    - `ExistsResidentByCodeAsync(code, ownerAdminId, CancellationToken): Task<bool>`
+    - `CountResidentsByOwnerAdminIdAsync(ownerAdminId, CancellationToken): Task<int>`
+
+- **SignInCommand** (Command)
+  - **Propósito:** Comando CQRS para iniciar sesión.
+  - **Atributos:** `Email: string`, `Password: string`
+
+- **RegisterAdminCommand** (Command)
+  - **Propósito:** Comando CQRS para registrar un nuevo administrador.
+  - **Atributos:** `Name: string`, `Email: string`, `Password: string`, `Dni: string?`, `Address: string?`, `Company: string?`, `Ruc: string?`
+
+- **CreateResidentCommand** (Command)
+  - **Propósito:** Comando CQRS para crear un residente bajo un admin existente.
+  - **Atributos:** `ExternalId: string`, `Name: string`, `Floor: string`, `Code: string`, `OwnerAdminExternalId: string`, `AdmissionDate: string?`
+
+- **DeleteResidentCommand** (Command)
+  - **Propósito:** Comando CQRS para eliminar un residente.
+  - **Atributos:** `ExternalId: string`
+
+- **UpdateResidentCredentialsCommand** (Command)
+  - **Propósito:** Comando CQRS para actualizar credenciales de residente.
+  - **Atributos:** `ExternalId: string`, `Email: string`, `Password: string`
+
+##### 2.6.1.2. Interface Layer
+
+Expone la funcionalidad del Bounded Context hacia clientes externos (API REST).
+
+- **AuthenticationController**
+  - **Ruta base:** `/api/v1/authentication`
+  - **Propósito:** API REST versionada para autenticación y registro. No requiere autorización (`[AllowAnonymous]`).
+  - **Endpoints:**
+    - `POST /sign-in`: Login con email+password → usuario+token JWT
+    - `POST /register-admin`: Registro de admin → usuario+token JWT
+    - `GET /check-email?email=`: Verificar si email existe → `{ exists: bool }`
+    - `GET /residents/invite?code=`: Buscar residente por código para flujo de invitación
+    - `POST /residents/set-credentials`: Establecer credenciales de residente por código
+
+- **UsersCompatController**
+  - **Ruta base:** `/users`
+  - **Propósito:** API REST compatible con json-server. Requiere autorización (`[Authorize]`).
+  - **Endpoints:**
+    - `GET /`: Listar/buscar usuarios con filtros (ownerAdminId, role, email, code)
+    - `GET /{id}`: Obtener usuario por ExternalId
+    - `POST /`: Crear usuario (admin o residente según role)
+    - `PATCH /{id}`: Actualizar credenciales de residente
+    - `DELETE /{id}`: Eliminar residente
+
+- **SubscriptionController**
+  - **Ruta base:** `/api/v1/subscription`
+  - **Propósito:** API REST para gestión de planes de suscripción con MercadoPago. Requiere autorización.
+  - **Endpoints:**
+    - `GET /`: Obtener suscripción actual del admin autenticado
+    - `PATCH /`: Cambiar a otro plan gratuito (valida downgrade)
+    - `POST /checkout`: Crear preferencia de pago en MercadoPago para planes pagados
+    - `POST /confirm`: Confirmar pago y activar plan
+
+- **UserResource** (DTOs)
+  - `UserResource`: DTO de respuesta de usuario (Id, Name, Email, Role, Floor, Code, OwnerAdminId, Dni, Address, Company, Ruc, AdmissionDate, HasCredentials, SubscriptionPlanId, SubscriptionPaidUntil, ResidentLimit)
+  - `AuthenticatedUserResource`: Respuesta de login/registro (User, Token)
+  - `SignInResource`: Petición de login (Email, Password)
+  - `RegisterAdminResource`: Petición de registro admin (Name, Email, Password, Dni, Address, Company, Ruc)
+  - `CreateUserCompatResource`: Petición de creación compatible con json-server
+  - `UpdateResidentCredentialsResource`: Petición de actualización (Email, Password)
+  - `SetResidentCredentialsByCodeResource`: Petición de credenciales por código (Code, Email, Password)
+  - `SubscriptionResponseResource`: Respuesta de suscripción (PlanId, ResidentLimit, ResidentsCount, MonthlyPricePen, PaidUntil, IsPaid)
+  - `ChangeSubscriptionPlanResource`: Petición de cambio de plan (PlanId)
+  - `SubscriptionCheckoutResource`: Petición de checkout (PlanId, FrontendBaseUrl)
+  - `ConfirmSubscriptionResource`: Petición de confirmación (PlanId, PaymentId, Demo)
+
+- **UserResourceAssembler** (Transformador)
+  - **Propósito:** Transforma la entidad `User` en `UserResource` para respuestas HTTP.
+  - **Método:** `ToResource(user): UserResource`
+
+##### 2.6.1.3. Application Layer
+
+Coordina los flujos de uso, ejecutando casos de negocio e instruyendo mutaciones en el dominio.
+
+- **IUserCommandService** (Interface)
+  - **Propósito:** Contrato de la capa de aplicación para operaciones de escritura.
+  - **Métodos:**
+    - `Handle(SignInCommand, CancellationToken): Task<Result<(User, string)>>`
+    - `Handle(RegisterAdminCommand, CancellationToken): Task<Result<(User, string)>>`
+    - `Handle(CreateResidentCommand, CancellationToken): Task<Result<User>>`
+    - `Handle(UpdateResidentCredentialsCommand, CancellationToken): Task<Result<User>>`
+    - `Handle(DeleteResidentCommand, CancellationToken): Task<Result<User>>`
+
+- **UserCommandService** (Implementación)
+  - **Propósito:** Implementa toda la lógica de negocio para login, registro de admin, CRUD de residentes con validaciones de plan.
+  - **Dependencias:** IUserRepository, ITokenService, IHashingService, IUnitOfWork
+  - **Lógica clave:** Valida límite de residentes según plan (`SubscriptionPlans.MaxResidents`), verifica email único, hashea contraseñas, genera ExternalId con timestamp.
+
+- **IUserQueryService** (Interface)
+  - **Propósito:** Contrato para operaciones de lectura.
+  - **Métodos:**
+    - `GetByExternalIdAsync(externalId, CancellationToken): Task<User?>`
+    - `GetAllAsync(CancellationToken): Task<IEnumerable<User>>`
+    - `GetResidentsByOwnerExternalIdAsync(ownerAdminExternalId, CancellationToken): Task<IEnumerable<User>>`
+    - `SearchAsync(email, role, code, ownerAdminExternalId, CancellationToken): Task<IEnumerable<User>>`
+
+- **UserQueryService** (Implementación)
+  - **Propósito:** Implementa consultas de solo lectura de usuarios.
+  - **Dependencias:** IUserRepository
+
+- **IHashingService** (Interface - Outbound Service)
+  - **Propósito:** Abstracción para hashing de contraseñas.
+  - **Métodos:** `HashPassword(password): string`, `VerifyPassword(password, passwordHash): bool`
+
+- **ITokenService** (Interface - Outbound Service)
+  - **Propósito:** Abstracción para generación de tokens JWT.
+  - **Método:** `GenerateToken(user): string`
+
+##### 2.6.1.4. Infrastructure Layer
+
+Proporciona el acceso a la base de datos y servicios externos.
+
+- **UserRepository** (Implementación del repositorio)
+  - **Propósito:** Implementación concreta de `IUserRepository` usando EF Core y MySQL.
+  - **Herencia:** `BaseRepository<User>`
+  - **Método privado:** `WithOwner()` para eager loading de `OwnerAdmin` via `.Include()`
+
+- **ModelBuilderExtensions** (Configuración EF Core)
+  - **Propósito:** Configura el mapeo de `User` a tabla MySQL con Fluent API.
+  - **Método:** `ApplyIamConfiguration(this ModelBuilder)`
+  - **Configuración:** PK Id (auto), ExternalId (unique, max 64), Name (max 200), Email (max 320), PasswordHash, Role (max 20), FK OwnerAdminId con DeleteBehavior.Restrict
+
+- **DbJsonUserSeeder** (Semilla de datos)
+  - **Propósito:** Carga usuarios iniciales desde `db.json` (formato json-server).
+  - **Método:** `SeedAsync(dbJsonPath, CancellationToken)`
+  - **Lógica:** Verifica si hay datos, lee JSON, procesa admins primero, luego residentes resolviendo su owner.
+
+- **HashingService** (Implementación BCrypt)
+  - **Propósito:** Implementa hashing con `BCrypt.Net.BCrypt`.
+
+- **TokenService** (Implementación JWT)
+  - **Propósito:** Genera tokens JWT con claims sub, email, role, name, ownerAdminId.
+  - **Dependencia:** `IOptions<TokenSettings>` (Secret, ExpirationHours)
+
+##### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.1.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+#### 2.6.2. Bounded Context: Incident & Maintenance Management
+
+Este contexto gestiona la creación, seguimiento y resolución de incidencias reportadas por residentes o administradores dentro del edificio.
+
+##### 2.6.2.1. Domain Layer
+
+**Diccionario de Clases del Dominio**
+
+- **Incident** (Aggregate Root)
+  - **Propósito:** Entidad agregada que representa una incidencia reportada en el sistema.
+  - **Atributos:**
+    - `Id`: int (PK auto-incremental)
+    - `ExternalId`: string (ID externo único)
+    - `OwnerAdminId`: int (FK al admin propietario)
+    - `OwnerAdmin`: User? (navegación al admin)
+    - `ResidentExternalId`: string? (ExternalId del residente asociado)
+    - `ResidentName`: string (nombre del residente)
+    - `Description`: string (descripción de la incidencia)
+    - `Status`: string (default "open")
+    - `Provider`: string? (proveedor asignado)
+    - `ReportedAt`: DateTimeOffset (fecha/hora de reporte)
+    - `CreatedAt`: DateTimeOffset? (de IAuditableEntity)
+    - `UpdatedAt`: DateTimeOffset? (de IAuditableEntity)
+  - **Métodos:**
+    - `Create(externalId, ownerAdminId, description, status, residentExternalId, residentName, provider, reportedAt): Incident` (factory estático)
+    - `Update(description, status, provider, residentExternalId, residentName): void`
+  - **Relaciones:** FK a `User` via `OwnerAdminId` con `DeleteBehavior.Restrict`. Implementa `IAuditableEntity`.
+
+- **IncidentStatuses** (Value Object Helper)
+  - **Propósito:** Define valores válidos de estado y métodos de normalización.
+  - **Constantes:** Open="open", InProgress="in-progress", Resolved="resolved"
+  - **Métodos:** `Normalize(status): string`, `IsValid(status): bool`
+
+- **IncidentError** (Enum)
+  - **Valores:** IncidentNotFound, OwnerAdminRequired, DescriptionRequired, InvalidStatus, ResidentRequired, ProviderRequired
+
+- **IIncidentRepository** (Interface)
+  - **Herencia:** `IBaseRepository<Incident>`
+  - **Métodos:**
+    - `FindByExternalIdAsync(externalId, CancellationToken): Task<Incident?>`
+    - `ListByOwnerAdminIdAsync(ownerAdminId, CancellationToken): Task<IEnumerable<Incident>>`
+    - `AnyIncidentsAsync(CancellationToken): Task<bool>`
+
+- **CreateIncidentCommand** (Command)
+  - **Atributos:** `ExternalId`, `OwnerAdminExternalId`, `Description`, `Status`, `ResidentExternalId?`, `ResidentName?`, `Provider?`, `CreatedAt?`
+
+- **UpdateIncidentCommand** (Command)
+  - **Atributos:** `ExternalId`, `Description`, `Status`, `Provider?`, `ResidentExternalId?`, `ResidentName?`
+
+- **DeleteIncidentCommand** (Command)
+  - **Atributos:** `ExternalId`
+
+##### 2.6.2.2. Interface Layer
+
+- **IncidentsCompatController**
+  - **Ruta base:** `/incidents`
+  - **Propósito:** Controlador REST con CRUD de incidencias. Requiere autorización (`[Authorize]`).
+  - **Endpoints:**
+    - `GET /`: Listar incidencias (filtro: ownerAdminId)
+    - `POST /`: Crear incidencia
+    - `PUT /{id}`: Actualizar incidencia
+    - `DELETE /{id}`: Eliminar incidencia
+
+- **IncidentResource** (DTOs)
+  - `IncidentResource`: DTO de respuesta (Id, ResidentId, ResidentName, Description, Status, CreatedAt, Provider, OwnerAdminId)
+  - `CreateIncidentCompatResource`: DTO de entrada POST
+  - `UpdateIncidentCompatResource`: DTO de entrada PUT
+
+- **IncidentResourceAssembler** (Transformador)
+  - **Método:** `ToResource(incident): IncidentResource`
+
+##### 2.6.2.3. Application Layer
+
+- **IIncidentQueryService** (Interface)
+  - **Método:** `ListByOwnerExternalIdAsync(ownerAdminExternalId, CancellationToken): Task<IEnumerable<Incident>>`
+
+- **IIncidentCommandService** (Interface)
+  - **Métodos:**
+    - `Handle(CreateIncidentCommand, CancellationToken): Task<Result<Incident>>`
+    - `Handle(UpdateIncidentCommand, CancellationToken): Task<Result<Incident>>`
+    - `Handle(DeleteIncidentCommand, CancellationToken): Task<Result<Incident>>`
+
+- **IncidentQueryService** (Implementación)
+  - **Dependencias:** IIncidentRepository, IUserRepository
+
+- **IncidentCommandService** (Implementación)
+  - **Dependencias:** IIncidentRepository, IUserRepository, IUnitOfWork
+  - **Lógica clave:** Valida que el owner sea role "admin", genera ExternalId con timestamp si está vacío, usa `Incident.Create()` y `Incident.Update()` del dominio.
+
+##### 2.6.2.4. Infrastructure Layer
+
+- **IncidentRepository** (Implementación del repositorio)
+  - **Herencia:** `BaseRepository<Incident>`
+  - **Método privado:** `WithOwner()` para eager loading
+
+- **ModelBuilderExtensions** (Configuración EF Core)
+  - **Método:** `ApplyIncidentsConfiguration(this ModelBuilder)`
+  - **Configuración:** ExternalId (unique, max 64), Description (max 2000, required), Status (max 20, required), FK OwnerAdminId con DeleteBehavior.Restrict
+
+- **DbJsonIncidentSeeder** (Semilla de datos)
+  - **Método:** `SeedAsync(dbJsonPath, CancellationToken)`
+
+##### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.2.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.2.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+#### 2.6.3. Bounded Context: Financial & Billing Management
+
+Este contexto gestiona el sistema financiero completo: cuotas, pagos, recibos, configuración, KPIs, gastos administrativos, servicios compartidos y pagos fijos a trabajadores. Incluye integración con MercadoPago.
+
+##### 2.6.3.1. Domain Layer
+
+**Diccionario de Clases del Dominio**
+
+- **IOwnerScopedFinanceEntity** (Interface)
+  - **Propósito:** Define el contrato para aislamiento de datos por propietario.
+  - **Propiedades:** `ExternalId: string`, `OwnerAdminId: int`, `ResidentExternalId: string?`
+
+- **Fee** (Aggregate Root)
+  - **Propósito:** Cuota de mantenimiento mensual asignada a un residente.
+  - **Atributos:** Id, ExternalId, OwnerAdminId, OwnerAdmin (User?), ResidentExternalId, Month (string), Amount (decimal), DueDate (string), Status (string), CreatedAt, UpdatedAt
+  - **Métodos:** `Create(...)`, `UpdateStatus(status): void`
+
+- **Payment** (Aggregate Root)
+  - **Propósito:** Pago registrado (MercadoPago o manual). Inmutable después de creado.
+  - **Atributos:** Id, ExternalId, OwnerAdminId, OwnerAdmin, ResidentExternalId, FeeExternalId?, FeeMonth?, Amount, PaidAt?, Method?, Reference?, CreatedAt, UpdatedAt
+  - **Método:** `Create(...)`
+
+- **Receipt** (Aggregate Root)
+  - **Propósito:** Recibo/boleta de expensas con monto, recargo, cargos extra y concepto.
+  - **Atributos:** Id, ExternalId, OwnerAdminId, OwnerAdmin, ResidentExternalId, IssueDate?, DueDate?, Amount, Status (default "Pending"), LateFee, ExtraCharges, Concept?, CreatedAt, UpdatedAt
+  - **Métodos:** `Create(...)`, `Patch(status, lateFee, extraCharges, concept): void`, `MarkAsPaid(): void`
+
+- **FinanceSetting** (Aggregate Root)
+  - **Propósito:** Configuración financiera del edificio (singleton por admin).
+  - **Atributos:** Id, ExternalId, OwnerAdminId, OwnerAdmin, BaseMonthlyExpense (decimal), LateFeeRate (decimal), CreatedAt, UpdatedAt
+  - **Métodos:** `Create(...)`, `Patch(baseMonthlyExpense, lateFeeRate): void`
+
+- **KpiRecord** (Aggregate Root)
+  - **Propósito:** Snapshot de KPIs financieros del edificio.
+  - **Atributos:** Id, ExternalId, OwnerAdminId, OwnerAdmin, TotalResidents (int), OccupiedUnits (int), EmptyUnits (int), TotalDebt (decimal), CreatedAt, UpdatedAt
+  - **Método:** `Create(...)`
+
+- **AdminManagementExpense** (Aggregate Root)
+  - **Propósito:** Gasto administrativo del edificio (compras, facturas).
+  - **Atributos:** Id, ExternalId, OwnerAdminId, OwnerAdmin, Name, Amount, PurchaseDate, InvoicePhotoUrl, CreatedAt, UpdatedAt
+  - **Método:** `Create(...)`
+
+- **SharedUtilityService** (Aggregate Root)
+  - **Propósito:** Servicio compartido (agua, luz) cuyo costo se distribuye entre residentes.
+  - **Atributos:** Id, ExternalId, OwnerAdminId, OwnerAdmin, Type, Amount, Month?, ResidentCount?, PerResidentShare?, CreatedAt, UpdatedAt
+  - **Método:** `Create(...)`
+
+- **FixedPayoutRecipient** (Aggregate Root)
+  - **Propósito:** Beneficiario de pago fijo (personal del edificio).
+  - **Atributos:** Id, ExternalId, OwnerAdminId, OwnerAdmin, Name, Dni, Phone, Salary, IntervalDays, NextPaymentDate, PhotoUrl, PaymentHistoryJson, CreatedAtIso?, CreatedAt, UpdatedAt
+  - **Métodos:** `Create(...)`, `ReplaceFrom(...)` (reemplazo completo de todos los campos editables)
+
+- **IFeeRepository** (Interface)
+  - **Métodos:** FindByExternalIdAsync, ListAsync(ownerAdminExternalId, residentExternalId), AddAsync, Update, AnyAsync
+
+- **IPaymentRepository** (Interface)
+  - **Métodos:** FindByExternalIdAsync, ListAsync, AddAsync, AnyAsync (sin Update, inmutable)
+
+- **IReceiptRepository** (Interface)
+  - **Métodos:** FindByExternalIdAsync, ListAsync, AddAsync, Update, AnyAsync
+
+- **IFinanceSettingRepository** (Interface)
+  - **Métodos:** FindByExternalIdAsync, ListAsync, AddAsync, Update, AnyAsync
+
+- **IKpiRepository** (Interface)
+  - **Métodos:** FindByExternalIdAsync, ListAsync, AddAsync, AnyAsync (sin Update)
+
+- **IAdminManagementExpenseRepository** (Interface)
+  - **Métodos:** ListAsync, AddAsync, AnyAsync
+
+- **ISharedUtilityServiceRepository** (Interface)
+  - **Métodos:** ListAsync, AddAsync, AnyAsync
+
+- **IFixedPayoutRecipientRepository** (Interface)
+  - **Métodos:** FindByExternalIdAsync, ListAsync, AddAsync, Update, AnyAsync
+
+##### 2.6.3.2. Interface Layer
+
+- **DashboardController**
+  - **Ruta base:** `/api/v1/finances`
+  - **Propósito:** Endpoint versionado para KPIs del dashboard financiero.
+  - **Endpoints:**
+    - `GET /kpi`: Obtener KPIs consolidados (filtro: ownerAdminId)
+
+- **MercadoPagoController**
+  - **Ruta base:** `/api/v1/payments`
+  - **Propósito:** Controlador principal de pagos con MercadoPago.
+  - **Endpoints:**
+    - `GET /config`: Configuración pública de MP (AllowAnonymous)
+    - `POST /preference`: Crear preferencia de pago
+    - `POST /checkout`: Checkout de mantenimiento
+    - `POST /confirm`: Confirmar pago
+    - `POST /process`: Procesar pago con tarjeta
+    - `POST /webhook`: Recibir webhooks de MP (AllowAnonymous, con validación HMAC)
+
+- **FeesCompatController** (`/fees`)
+  - **Endpoints:** GET (listar con filtros ownerAdminId, residentId), PATCH (actualizar estado)
+
+- **PaymentsCompatController** (`/payments`)
+  - **Endpoints:** GET (listar), POST (crear pago manual)
+
+- **ReceiptsCompatController** (`/receipts`)
+  - **Endpoints:** GET (listar), POST (crear), PATCH (actualizar status, lateFee, extraCharges, concept)
+
+- **FinanceSettingsCompatController** (`/financeSettings`)
+  - **Endpoints:** GET (listar), POST (crear), PATCH (upsert - crea si no existe)
+
+- **KpiCompatController** (`/kpi`)
+  - **Endpoints:** GET (listar), POST (crear snapshot)
+
+- **AdminManagementExpensesCompatController** (`/adminManagementExpenses`)
+  - **Endpoints:** GET (listar), POST (crear)
+
+- **SharedUtilityServicesCompatController** (`/sharedUtilityServices`)
+  - **Endpoints:** GET (listar), POST (crear)
+
+- **FixedPayoutRecipientsCompatController** (`/fixedPayoutRecipients`)
+  - **Endpoints:** GET (listar), POST (crear), PUT (reemplazo completo)
+
+- **FinanceCompatSerializer** (Transformador)
+  - **Propósito:** Serializa entidades a formato JSON compatible con el frontend legacy.
+  - **Métodos:** FeeToJson, PaymentToJson, ReceiptToJson, FinanceSettingToJson, KpiToJson, AdminExpenseToJson, SharedServiceToJson, FixedPayoutToJson, ToCompatId, OwnerExternalId
+
+- **Dtos.cs** (DTOs MercadoPago)
+  - CreatePreferenceRequest, CreateMaintenanceCheckoutRequest, ConfirmMaintenancePaymentRequest, MaintenancePaymentResult, CreateSubscriptionPreferenceRequest, SubscriptionActivationResult, PreferenceResult, CardPaymentRequest, CardPaymentResult, WebhookResult
+
+##### 2.6.3.3. Application Layer
+
+- **FinanceOwnerResolver** (Domain Service)
+  - **Propósito:** Resuelve externalId de admin a User válido con rol "admin". Guardián de seguridad para operaciones financieras.
+  - **Método:** `ResolveOwnerAdminAsync(ownerAdminExternalId, CancellationToken): Task<User?>`
+
+- **IDashboardQueryService** (Interface)
+  - **Método:** `GetKpisAsync(ownerAdminId, CancellationToken): Task<DashboardKpiResponse>`
+
+- **DashboardQueryService** (Implementación)
+  - **Propósito:** Calcula KPIs del dashboard consultando directamente AppDbContext (sin repositorios).
+  - **Dependencia:** AppDbContext
+  - **Métodos privados:** `MonthKeyFromIso(value)`, `BuildMonthlyChartAsync(ownerAdminId, ct)`
+
+- **DashboardKpiResponse** (DTOs)
+  - `RecentPaymentDto`: Id, ResidentId, Amount, PaidAt, Method, Reference
+  - `AdminExpenseSummaryDto`: Name, Amount, PurchaseDate
+  - `MonthlyChartPointDto`: MonthKey, Income, Expenses
+  - `DashboardKpiResponse`: TotalCollectedThisMonth, TotalPendingDebt, TotalResidents, OccupiedUnits, EmptyUnits, TotalDebt, RecentPayments, TotalAdminExpenses, AdminExpenses, MonthlyChart
+
+- **IMercadoPagoService** (Interface)
+  - **Métodos:**
+    - `CreatePreferenceAsync(request, ct): Task<PreferenceResult>`
+    - `CreateMaintenanceCheckoutPreferenceAsync(request, ct): Task<PreferenceResult>`
+    - `ConfirmMaintenancePaymentAsync(request, ct): Task<MaintenancePaymentResult>`
+    - `CreateSubscriptionPreferenceAsync(request, ct): Task<PreferenceResult>`
+    - `ConfirmSubscriptionPaymentAsync(adminExternalId, planId, mpPaymentId, allowDemo, ct): Task<SubscriptionActivationResult>`
+    - `ProcessCardPaymentAsync(request, ct): Task<CardPaymentResult>`
+    - `HandleWebhookAsync(mpPaymentId, ct): Task<WebhookResult>`
+
+- **MercadoPagoService** (Implementación - 686 líneas)
+  - **Propósito:** Implementación completa de integración con MercadoPago SDK.
+  - **Dependencias:** MercadoPagoSettings, IReceiptRepository, IFeeRepository, IPaymentRepository, IUserRepository, FinanceOwnerResolver, IUnitOfWork, IHostEnvironment, ILogger
+  - **Métodos privados:** EnsureSdkConfigured, IsMercadoPagoConfigured, IsValidMercadoPagoUrl, ResolveFrontendBaseForCheckout, ResolveNotificationUrl, BuildBackUrls, CreatePreferenceSafeAsync, HandleSubscriptionWebhookAsync, HandleMaintenanceWebhookAsync, ReconcileMaintenanceAsync, ActivateAdminSubscriptionAsync, ReconcilePaymentAsync
+
+- **MercadoPagoSettings** (Configuración)
+  - **Propiedades:** AccessToken, PublicKey, WebhookSecret, FrontendBaseUrl (default "http://localhost:5173"), NotificationUrl
+
+- **MercadoPagoWebhookValidator** (Helper estático)
+  - **Propósito:** Valida firma HMAC-SHA256 de webhooks entrantes de MercadoPago.
+  - **Método:** `TryValidateSignature(signatureHeader, requestId, dataId, webhookSecret, out failureReason): bool`
+
+##### 2.6.3.4. Infrastructure Layer
+
+- **FinanceRepositories.cs** (8 repositorios en un solo archivo)
+  - FeeRepository, PaymentRepository, ReceiptRepository, FinanceSettingRepository, KpiRepository, AdminManagementExpenseRepository, SharedUtilityServiceRepository, FixedPayoutRecipientRepository
+  - Todos heredan de `BaseRepository<T>` e implementan sus interfaces respectivas
+  - Todos incluyen método privado `WithOwner()` para eager loading
+
+- **ModelBuilderExtensions** (Configuración EF Core)
+  - **Método:** `ApplyFinancesConfiguration(this ModelBuilder)`
+  - **Configuración de 8 entidades:** Precisión decimal(18,2) para montos, decimal(8,4) para LateFeeRate, columnas LONGTEXT para PhotoUrl, InvoicePhotoUrl, PaymentHistoryJson
+
+- **DbJsonFinanceSeeder** (Semilla de datos)
+  - **Método:** `SeedAsync(dbJsonPath, CancellationToken)`
+  - **Siembra las 8 tablas:** fees, payments, receipts, financeSettings, kpi, adminManagementExpenses, sharedUtilityServices, fixedPayoutRecipients
+
+##### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.3.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.3.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+#### 2.6.4. Bounded Context: Common Areas & Resource Reservation
+
+Este contexto gestiona el catálogo de espacios comunes del edificio y el sistema de reservas con validación de solapamiento.
+
+##### 2.6.4.1. Domain Layer
+
+**Diccionario de Clases del Dominio**
+
+- **SocialSpace** (Aggregate Root)
+  - **Propósito:** Espacio común del edificio que puede ser reservado (salón de fiestas, gimnasio, piscina, etc.).
+  - **Atributos:**
+    - `Id`: int (PK auto-incremental)
+    - `ExternalId`: string (ID externo único)
+    - `OwnerAdminId`: int (FK al admin propietario)
+    - `OwnerAdmin`: User? (navegación al admin)
+    - `Name`: string (nombre del espacio)
+    - `Description`: string (descripción)
+    - `Capacity`: int? (capacidad máxima, nullable)
+    - `ImageUrl`: string (URL de imagen)
+    - `CreatedAt`: DateTimeOffset? (de IAuditableEntity)
+    - `UpdatedAt`: DateTimeOffset? (de IAuditableEntity)
+  - **Métodos:**
+    - `Create(externalId, ownerAdminId, name, description, capacity, imageUrl): SocialSpace` (factory estático)
+    - `Patch(name, description, capacity, imageUrl?): void`
+  - **Relaciones:** FK a `User` via `OwnerAdminId`. Implementa `IAuditableEntity`.
+
+- **Reservation** (Aggregate Root)
+  - **Propósito:** Reserva de un SocialSpace por un residente, con datos del residente, horario, invitados y token de invitación.
+  - **Atributos:**
+    - `Id`: int (PK auto-incremental)
+    - `ExternalId`: string (ID externo único)
+    - `OwnerAdminId`: int (FK al admin propietario)
+    - `OwnerAdmin`: User? (navegación al admin)
+    - `SpaceExternalId`: string (ExternalId del SocialSpace reservado)
+    - `ResidentExternalId`: string (ExternalId del residente que reserva)
+    - `ResidentName`: string (nombre del residente)
+    - `ResidentCode`: string (código del residente)
+    - `Date`: string (fecha de la reserva, formato "yyyy-MM-dd")
+    - `StartTime`: string (hora de inicio, formato "HH:mm")
+    - `EndTime`: string (hora de fin, formato "HH:mm")
+    - `GuestsJson`: string (JSON de invitados, default "[]")
+    - `GuestInviteToken`: string? (token para lookup público de invitados)
+    - `CreatedAt`: DateTimeOffset?
+    - `UpdatedAt`: DateTimeOffset?
+  - **Métodos:**
+    - `Create(externalId, ownerAdminId, spaceExternalId, residentExternalId, residentName, residentCode, date, startTime, endTime, guestsJson, guestInviteToken): Reservation`
+    - `PatchGuests(guestsJson, guestInviteToken?): void`
+  - **Relaciones:** FK a `User` via `OwnerAdminId`. Relación lógica con `SocialSpace` via `SpaceExternalId` (no es FK directa).
+
+- **ISocialSpaceRepository** (Interface)
+  - **Métodos:** FindByExternalIdAsync, ListByOwnerExternalIdAsync, AddAsync, Update, Remove, AnyAsync
+
+- **IReservationRepository** (Interface)
+  - **Métodos:** FindByExternalIdAsync, ListAsync(ownerAdminExternalId, spaceExternalId, residentExternalId, date, guestInviteToken), AddAsync, Update, Remove, AnyAsync
+
+##### 2.6.4.2. Interface Layer
+
+- **SocialSpacesCompatController**
+  - **Ruta base:** `/socialSpaces`
+  - **Propósito:** CRUD de espacios sociales. Requiere autorización.
+  - **Endpoints:**
+    - `GET /`: Listar espacios (filtro: ownerAdminId)
+    - `GET /{id}`: Obtener espacio por ID
+    - `POST /`: Crear espacio (valida owner via SocialSpacesOwnerResolver)
+    - `PATCH /{id}`: Actualizar espacio
+    - `DELETE /{id}`: Eliminar espacio
+
+- **ReservationsCompatController**
+  - **Ruta base:** `/reservations`
+  - **Propósito:** CRUD de reservas con validación de solapamiento y lookup público por guestInviteToken.
+  - **Endpoints:**
+    - `GET /`: Listar reservas (filtros: ownerAdminId, spaceId, residentId, date, guestInviteToken). Funciona sin auth si se envía `guestInviteToken`.
+    - `GET /{id}`: Obtener reserva
+    - `POST /`: Crear reserva (con validación de solapamiento via ReservationOverlapHelper)
+    - `PATCH /{id}`: Actualizar guests
+    - `DELETE /{id}`: Eliminar reserva
+  - **Errores:** RESERVATION_TIME_INVALID, RESERVATION_OVERLAP
+
+- **SocialSpacesCompatSerializer** (Transformador)
+  - **Métodos:** `SpaceToJson(space)`, `ReservationToJson(reservation)`
+
+##### 2.6.4.3. Application Layer
+
+- **ReservationOverlapHelper** (Helper estático)
+  - **Propósito:** Determina si dos reservas se solapan en fecha y horario.
+  - **Método:** `Overlaps(existing, date, startTime, endTime): bool`
+  - **Lógica:** Convierte horas a minutos y verifica intersección de intervalos: `aStart < bEnd && bStart < aEnd`
+
+- **SocialSpacesOwnerResolver** (Domain Service)
+  - **Propósito:** Resuelve admin propietario desde externalId.
+  - **Método:** `ResolveOwnerAdminAsync(ownerAdminExternalId, CancellationToken): Task<User?>`
+  - **Dependencia:** IUserRepository (módulo IAM)
+
+##### 2.6.4.4. Infrastructure Layer
+
+- **SocialSpaceRepository** (Implementación)
+  - **Herencia:** `BaseRepository<SocialSpace>`
+  - **Método privado:** `WithOwner()` para eager loading
+
+- **ReservationRepository** (Implementación)
+  - **Herencia:** `BaseRepository<Reservation>`
+  - **Lógica especial:** Si `guestInviteToken` está presente, filtra SOLO por ese token (búsqueda pública). Si no, aplica filtros acumulativos.
+
+- **ModelBuilderExtensions** (Configuración EF Core)
+  - **Método:** `ApplySocialSpacesConfiguration(this ModelBuilder)`
+  - **Configuración:** SocialSpace (Name max 200, Description max 2000, ImageUrl LONGTEXT), Reservation (SpaceExternalId max 64, Date max 20, StartTime/EndTime max 10, GuestsJson LONGTEXT, GuestInviteToken max 64 con índice)
+
+- **DbJsonSocialSpacesSeeder** (Semilla de datos)
+  - **Método:** `SeedAsync(dbJsonPath, CancellationToken)`
+  - **Siembra:** socialSpaces y reservations
+
+##### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.4.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.4.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+#### 2.6.5. Bounded Context: Communication & Announcements
+
+Este contexto gestiona la publicación de comunicados oficiales de la administración hacia los residentes.
+
+##### 2.6.5.1. Domain Layer
+
+**Diccionario de Clases del Dominio**
+
+- **Announcement** (Aggregate Root)
+  - **Propósito:** Comunicado oficial publicado por un administrador.
+  - **Atributos:**
+    - `Id`: int (PK auto-incremental)
+    - `ExternalId`: string (ID externo único)
+    - `OwnerAdminId`: int (FK al admin propietario)
+    - `OwnerAdmin`: User? (navegación al admin)
+    - `Title`: string (título del comunicado)
+    - `Body`: string (contenido del comunicado)
+    - `Priority`: string (default "normal", valores: "normal", "high", "urgent")
+    - `Duration`: int (duración en días: 7, 15, 30)
+    - `AuthorName`: string (nombre del autor)
+    - `ExpiresAt`: DateTimeOffset? (fecha de expiración)
+    - `CreatedAt`: DateTimeOffset?
+    - `UpdatedAt`: DateTimeOffset?
+  - **Métodos:**
+    - `Create(externalId, ownerAdminId, title, body, priority, duration, authorName, expiresAt, createdAt): Announcement`
+    - `Update(title, body, priority, duration): void`
+  - **Relaciones:** FK a `User` via `OwnerAdminId`. Implementa `IAuditableEntity`.
+
+- **AnnouncementError** (Enum)
+  - **Valores:** AnnouncementNotFound, OwnerAdminRequired, TitleRequired
+
+- **IAnnouncementRepository** (Interface)
+  - **Herencia:** `IBaseRepository<Announcement>`
+  - **Métodos:** FindByExternalIdAsync, ListByOwnerAdminIdAsync, AnyAnnouncementsAsync
+
+- **CreateAnnouncementCommand** (Command)
+  - **Atributos:** ExternalId, OwnerAdminExternalId, Title, Body, Priority, Duration, AuthorName?, CreatedAt?, ExpiresAt?
+
+- **UpdateAnnouncementCommand** (Command)
+  - **Atributos:** ExternalId, Title, Body, Priority, Duration
+
+- **DeleteAnnouncementCommand** (Command)
+  - **Atributos:** ExternalId
+
+##### 2.6.5.2. Interface Layer
+
+- **AnnouncementsCompatController**
+  - **Ruta base:** `/announcements`
+  - **Propósito:** CRUD de comunicados. Requiere autorización.
+  - **Endpoints:**
+    - `GET /`: Listar comunicados (filtro: ownerAdminId)
+    - `POST /`: Crear comunicado
+    - `PUT /{id}`: Actualizar comunicado
+    - `DELETE /{id}`: Eliminar comunicado
+
+- **AnnouncementResource** (DTOs)
+  - `AnnouncementResource`: DTO de respuesta (Id, Title, Body, Priority, Duration, AuthorId, AuthorName, CreatedAt, ExpiresAt, OwnerAdminId)
+  - `CreateAnnouncementCompatResource`: DTO de entrada POST
+  - `UpdateAnnouncementCompatResource`: DTO de entrada PUT
+
+- **AnnouncementResourceAssembler** (Transformador)
+  - **Método:** `ToResource(announcement): AnnouncementResource`
+
+##### 2.6.5.3. Application Layer
+
+- **IAnnouncementCommandService** (Interface)
+  - **Métodos:**
+    - `Handle(CreateAnnouncementCommand, CancellationToken): Task<Result<Announcement>>`
+    - `Handle(UpdateAnnouncementCommand, CancellationToken): Task<Result<Announcement>>`
+    - `Handle(DeleteAnnouncementCommand, CancellationToken): Task<Result<Announcement>>`
+
+- **IAnnouncementQueryService** (Interface)
+  - **Método:** `ListByOwnerExternalIdAsync(ownerAdminExternalId, CancellationToken): Task<IEnumerable<Announcement>>`
+
+- **AnnouncementCommandService** (Implementación)
+  - **Dependencias:** IAnnouncementRepository, IUserRepository, IUnitOfWork
+  - **Lógica clave:** Genera ExternalId automático como `ann-{timestamp Unix ms}`, valida owner con rol "admin", parsea fechas.
+
+- **AnnouncementQueryService** (Implementación)
+  - **Dependencias:** IAnnouncementRepository, IUserRepository
+
+##### 2.6.5.4. Infrastructure Layer
+
+- **AnnouncementRepository** (Implementación)
+  - **Herencia:** `BaseRepository<Announcement>`
+  - **Método:** `WithOwner()` para eager loading
+
+- **ModelBuilderExtensions** (Configuración EF Core)
+  - **Método:** `ApplyInformationConfiguration(this ModelBuilder)`
+  - **Configuración:** Title (max 500, required), Body (max 4000), Priority (max 20, required), AuthorName (max 200), FK OwnerAdminId con DeleteBehavior.Restrict
+
+- **DbJsonAnnouncementSeeder** (Semilla de datos)
+  - **Método:** `SeedAsync(dbJsonPath, CancellationToken)`
+
+##### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.5.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+#### 2.6.6. Bounded Context: Support Chat
+
+Este contexto gestiona el chat de soporte entre residentes y administradores.
+
+##### 2.6.6.1. Domain Layer
+
+**Diccionario de Clases del Dominio**
+
+- **SupportChat** (Aggregate Root)
+  - **Propósito:** Chat de soporte técnico entre residente y administrador. Almacena el historial de mensajes como JSON serializado.
+  - **Atributos:**
+    - `Id`: int (PK auto-incremental)
+    - `ExternalId`: string (ID externo único)
+    - `OwnerAdminId`: string (ID del administrador propietario)
+    - `ResidentId`: string (ID del residente)
+    - `ResidentName`: string (nombre del residente)
+    - `Topic`: string (tema/asunto del chat)
+    - `Status`: string (default "open", valores: "open", "closed")
+    - `MessagesJson`: string (mensajes serializados en JSON, default "[]", LONGTEXT)
+    - `CreatedAt`: DateTimeOffset
+    - `UpdatedAt`: DateTimeOffset
+  - **Métodos:**
+    - `Create(externalId, ownerAdminId, residentId, residentName, topic): SupportChat` (factory estático)
+    - `UpdateMessages(messagesJson): void`
+    - `UpdateStatus(status): void`
+  - **Nota:** No tiene FK a User (referencia por texto a OwnerAdminId).
+
+##### 2.6.6.2. Interface Layer
+
+- **SupportChatsCompatController**
+  - **Ruta base:** `/supportChats`
+  - **Propósito:** CRUD de chats de soporte. Requiere autorización.
+  - **Endpoints:**
+    - `GET /`: Listar chats (filtros: ownerAdminId, residentId)
+    - `GET /{id}`: Obtener chat por ExternalId o Id numérico
+    - `POST /`: Crear chat
+    - `PUT /{id}`: Actualizar mensajes/status
+  - **DTOs:** CreateSupportChatResource (Id?, OwnerAdminId?, ResidentId?, ResidentName?, Topic?), UpdateSupportChatResource (Messages?, Status?, UpdatedAt?)
+
+##### 2.6.6.3. Application Layer
+
+No implementado (acceso directo a DbContext desde el controller).
+
+##### 2.6.6.4. Infrastructure Layer
+
+Configuración en `AppDbContext.OnModelCreating` (Shared):
+- ExternalId: unique, max 128
+- OwnerAdminId: max 128
+- ResidentId: max 128
+- ResidentName: max 256
+- Topic: max 256
+- Status: max 32
+- MessagesJson: LONGTEXT
+
+##### 2.6.6.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.6.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.6.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.6.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+#### 2.6.7. Bounded Context: Team Management
+
+Este contexto gestiona el directorio de trabajadores del edificio (personal de mantenimiento, limpieza, vigilancia, etc.).
+
+##### 2.6.7.1. Domain Layer
+
+**Diccionario de Clases del Dominio**
+
+- **TeamWorker** (Aggregate Root)
+  - **Propósito:** Trabajador del equipo de mantenimiento/administración del edificio.
+  - **Atributos:**
+    - `Id`: int (PK auto-incremental)
+    - `ExternalId`: string (ID externo único)
+    - `OwnerAdminId`: string (ID del administrador propietario)
+    - `Name`: string (nombre completo)
+    - `Phone`: string (número de teléfono)
+    - `Dni`: string (documento de identidad)
+    - `Salary`: decimal (salario, precisión 18,2 en DB)
+    - `PhotoUrl`: string (URL o Data URL de foto, LONGTEXT en DB)
+    - `CreatedAt`: DateTimeOffset
+  - **Método:**
+    - `Create(externalId, ownerAdminId, name, phone, dni, salary, photoUrl): TeamWorker` (factory estático)
+  - **Nota:** No tiene FK a User (referencia por texto a OwnerAdminId).
+
+##### 2.6.7.2. Interface Layer
+
+- **TeamWorkersCompatController**
+  - **Ruta base:** `/teamWorkers`
+  - **Propósito:** CRUD de trabajadores. Requiere autorización.
+  - **Endpoints:**
+    - `GET /`: Listar trabajadores (filtro: ownerAdminId)
+    - `POST /`: Crear trabajador
+    - `DELETE /{id}`: Eliminar trabajador
+  - **Nota:** No tiene endpoint PUT (no permite actualización).
+  - **DTO:** CreateTeamWorkerResource (Id?, OwnerAdminId?, Name?, Phone?, Dni?, Salary, PhotoUrl?)
+
+##### 2.6.7.3. Application Layer
+
+No implementado (acceso directo a DbContext desde el controller).
+
+##### 2.6.7.4. Infrastructure Layer
+
+Configuración en `AppDbContext.OnModelCreating` (Shared):
+- ExternalId: unique, max 128
+- OwnerAdminId: max 128
+- Name: max 256
+- Phone: max 64
+- Dni: max 32
+- Salary: precisión decimal 18,2
+- PhotoUrl: LONGTEXT
+
+##### 2.6.7.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.7.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.7.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.7.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+#### 2.6.8. Bounded Context: Data Import
+
+Este contexto gestiona la carga masiva de archivos por administradores.
+
+##### 2.6.8.1. Domain Layer
+
+**Diccionario de Clases del Dominio**
+
+- **ImportUpload** (Aggregate Root)
+  - **Propósito:** Archivo subido para carga masiva de datos. Almacena metadatos y el contenido completo como Data URL (Base64).
+  - **Atributos:**
+    - `Id`: int (PK auto-incremental)
+    - `ExternalId`: string (ID externo único)
+    - `OwnerAdminId`: string (ID del administrador propietario)
+    - `FileName`: string (nombre del archivo, max 512 en DB)
+    - `MimeType`: string (tipo MIME, max 128 en DB)
+    - `Size`: long (tamaño en bytes)
+    - `DataUrl`: string (contenido codificado como Data URL/Base64, LONGTEXT en DB)
+    - `UploadedAt`: DateTimeOffset
+  - **Método:**
+    - `Create(externalId, ownerAdminId, fileName, mimeType, size, dataUrl): ImportUpload` (factory estático)
+  - **Nota:** No tiene FK a User (referencia por texto a OwnerAdminId).
+
+##### 2.6.8.2. Interface Layer
+
+- **ImportUploadsCompatController**
+  - **Ruta base:** `/importUploads`
+  - **Propósito:** CRUD de uploads de archivos. Requiere autorización.
+  - **Endpoints:**
+    - `GET /`: Listar uploads (filtro: ownerAdminId)
+    - `POST /`: Crear upload
+    - `DELETE /{id}`: Eliminar upload
+  - **Nota:** No tiene endpoint PUT (no permite actualización).
+  - **DTO:** CreateImportUploadResource (Id?, OwnerAdminId?, FileName?, MimeType?, Size, DataUrl?)
+
+##### 2.6.8.3. Application Layer
+
+No implementado (acceso directo a DbContext desde el controller).
+
+##### 2.6.8.4. Infrastructure Layer
+
+Configuración en `AppDbContext.OnModelCreating` (Shared):
+- ExternalId: unique, max 128
+- OwnerAdminId: max 128
+- FileName: max 512
+- MimeType: max 128
+- DataUrl: LONGTEXT
+
+##### 2.6.8.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.8.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.8.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.8.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+#### 2.6.9. Bounded Context: Shared Infrastructure (Transversal)
+
+Este contexto provee la infraestructura compartida por todos los bounded contexts: patrón Result, repositorio base, unidad de trabajo, DbContext y configuración de hosting.
+
+##### 2.6.9.1. Domain Layer
+
+**Diccionario de Clases del Dominio**
+
+- **IBaseRepository<TEntity>** (Interface genérica)
+  - **Propósito:** Contrato CRUD genérico para todas las entidades de dominio.
+  - **Restricción:** `where TEntity : class`
+  - **Métodos:**
+    - `AddAsync(entity, CancellationToken): Task`
+    - `FindByIdAsync(id, CancellationToken): Task<TEntity?>`
+    - `Update(entity): void`
+    - `Remove(entity): void`
+    - `ListAsync(CancellationToken): Task<IEnumerable<TEntity>>`
+
+- **IUnitOfWork** (Interface)
+  - **Propósito:** Contrato del patrón Unidad de Trabajo para confirmar transacciones atómicas.
+  - **Método:** `CompleteAsync(CancellationToken): Task`
+
+- **IAuditableEntity** (Interface)
+  - **Propósito:** Contrato para entidades con campos de auditoría.
+  - **Propiedades:**
+    - `CreatedAt`: DateTimeOffset? (get/set)
+    - `UpdatedAt`: DateTimeOffset? (get/set)
+
+##### 2.6.9.2. Interface Layer
+
+No aplica (este bounded context es transversal y no expone endpoints propios).
+
+##### 2.6.9.3. Application Layer
+
+- **Result<T>** (Modelo genérico)
+  - **Propósito:** Encapsula el éxito o fallo de operaciones, transportando valor, mensaje y error tipado.
+  - **Propiedades:** IsSuccess (bool), IsFailure (bool), Value (T?), Message (string), Error (Enum?)
+  - **Métodos estáticos:** `Success(value): Result<T>`, `Failure(error, message): Result<T>`
+
+- **Result** (hereda de `Result<object>`)
+  - **Métodos estáticos:** `Success(): Result`, `Failure(error, message): Result`
+
+##### 2.6.9.4. Infrastructure Layer
+
+- **BaseRepository<TEntity>** (Implementación genérica)
+  - **Propósito:** Implementación base del repositorio con Entity Framework Core.
+  - **Herencia:** Implementa `IBaseRepository<TEntity>`
+  - **Dependencia:** `AppDbContext` (protected readonly)
+  - **Implementación:** Delega a `Context.Set<TEntity>()` para AddAsync, FindByIdAsync, Update, Remove, ListAsync
+
+- **UnitOfWork** (Implementación)
+  - **Propósito:** Implementación concreta de `IUnitOfWork`.
+  - **Herencia:** Implementa `IUnitOfWork`
+  - **Dependencia:** `AppDbContext`
+  - **Implementación:** `context.SaveChangesAsync()`
+
+- **AppDbContext** (DbContext central)
+  - **Propósito:** DbContext compartido por TODOS los bounded contexts.
+  - **Herencia:** `DbContext`
+  - **Configura en OnModelCreating:**
+    - Entidades de IAM, Incidents, Finances, SocialSpaces, Information (vía extension methods)
+    - Entidades de Support (SupportChat), Import (ImportUpload), Team (TeamWorker) directamente
+    - Convención: `UseSnakeCaseNamingConvention()` para tablas y columnas
+
+- **AppDbContextFactory** (Fábrica para migraciones)
+  - **Propósito:** Crea `AppDbContext` en tiempo de diseño para migraciones EF Core.
+  - **Implementa:** `IDesignTimeDbContextFactory<AppDbContext>`
+  - **Conexión hardcoded:** MySQL localhost (server=localhost, port=3306, user=root, password=root, database=buildingfex)
+
+- **StringExtensions** (Helpers de cadena)
+  - **Métodos:**
+    - `ToSnakeCase(this string text)`: Convierte "PascalCase" a "pascal_case"
+    - `ToPlural(this string text)`: Pluraliza texto vía librería Humanizer
+
+- **ModelBuilderExtensions** (Convención global)
+  - **Método:** `UseSnakeCaseNamingConvention(this ModelBuilder)`
+  - **Lógica:** Recorre todas las entidades y convierte nombres de tablas, columnas, claves, foreign keys e índices a snake_case
+
+- **RailwayHosting** (Configuración de hosting)
+  - **Propósito:** Resolución de variables de entorno para despliegue en Railway.
+  - **Métodos:**
+    - `ConfigureKestrelPort(builder)`: Lee PORT de env y configura Kestrel
+    - `ResolveConnectionString(configuration)`: Resuelve cadena MySQL desde env o appsettings
+    - `ApplySecretsFromEnvironment(builder)`: Inyecta JWT secret, MercadoPago config y connection string desde env
+    - `ValidateProductionSecrets(configuration, environment)`: Valida JWT secret en producción (>= 32 chars)
+    - `IsRailwayDeployment()`: Detecta variables RAILWAY_ENVIRONMENT o PORT
+  - **Variables soportadas:** PORT, RAILWAY_ENVIRONMENT, JWT_SECRET, MP_ACCESS_TOKEN, MP_PUBLIC_KEY, MP_WEBHOOK_SECRET, MP_FRONTEND_BASE_URL, MP_NOTIFICATION_URL, MYSQL_URL, DATABASE_URL, MYSQLHOST, MYSQLPORT, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE
+
+##### 2.6.9.5. Bounded Context Software Architecture Component Level Diagrams
+
+*Por documentar.*
+
+##### 2.6.9.6. Bounded Context Software Architecture Code Level Diagrams
+
+*Por documentar.*
+
+###### 2.6.9.6.1. Bounded Context Domain Layer Class Diagrams
+
+*Por documentar.*
+
+###### 2.6.9.6.2. Bounded Context Database Design Diagram
+
+*Por documentar.*
+
+---
+---
+
+
+
+
 
 <div style="page-break-after: always;"></div>
 
