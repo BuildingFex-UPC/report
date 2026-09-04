@@ -572,98 +572,97 @@ Este contexto gestiona el sistema financiero completo: cuotas, pagos, recibos, c
 
 ##### 2.6.1.5. Bounded Context Software Architecture Component Level Diagrams
 
-```mermaid
-graph TB
-    subgraph Actores
-        Admin["Administrador"]
-        Resident["Residente"]
-    end
+@startuml
+!theme plain
+skinparam componentStyle uml2
 
-    subgraph Externos
-        API["API REST - ASP.NET Core"]
-        MP["MercadoPago SDK"]
-        DB["MySQL 8 - EF Core"]
-    end
+actor Admin as "Administrador"
+actor Resident as "Residente"
 
-    subgraph Finanzas["Financial Billing Management"]
-        subgraph Interface["Interface Layer - Controllers"]
-            DC["DashboardController<br/>/api/v1/finances"]
-            MPC["MercadoPagoController<br/>/api/v1/payments"]
-            FC["FeesCompatController<br/>/fees"]
-            PC["PaymentsCompatController<br/>/payments"]
-            RC["ReceiptsCompatController<br/>/receipts"]
-            FSC["FinanceSettingsCompatController<br/>/financeSettings"]
-            KC["KpiCompatController<br/>/kpi"]
-            AMEC["AdminManagementExpensesCompatController<br/>/adminManagementExpenses"]
-            SUC["SharedUtilityServicesCompatController<br/>/sharedUtilityServices"]
-            FPRC["FixedPayoutRecipientsCompatController<br/>/fixedPayoutRecipients"]
-            FCS["FinanceCompatSerializer<br/>JSON Transform"]
-        end
+package "Externos" {
+  component [API REST - ASP.NET Core] as API
+  component [MercadoPago SDK] as MP
+  component [MySQL 8 - EF Core] as DB
+}
 
-        subgraph Application["Application Layer - Services"]
-            FOR["FinanceOwnerResolver<br/>Domain Service"]
-            IDQS["DashboardQueryService<br/>KPI Calculator"]
-            IMPS["MercadoPagoService<br/>686 lines - Payment Integration"]
-            MPWV["MercadoPagoWebhookValidator<br/>HMAC-SHA256"]
-        end
+package "Finanzas - Financial Billing Management" {
+  package "Interface Layer - Controllers" {
+    component [DashboardController\n/api/v1/finances] as DC
+    component [MercadoPagoController\n/api/v1/payments] as MPC
+    component [FeesCompatController\n/fees] as FC
+    component [PaymentsCompatController\n/payments] as PC
+    component [ReceiptsCompatController\n/receipts] as RC
+    component [FinanceSettingsCompatController\n/financeSettings] as FSC
+    component [KpiCompatController\n/kpi] as KC
+    component [AdminManagementExpensesCompatController\n/adminManagementExpenses] as AMEC
+    component [SharedUtilityServicesCompatController\n/sharedUtilityServices] as SUC
+    component [FixedPayoutRecipientsCompatController\n/fixedPayoutRecipients] as FPRC
+  }
 
-        subgraph Domain["Domain Layer - Aggregates"]
-            Fee["Fee<br/>Aggregate Root"]
-            Payment["Payment<br/>Aggregate Root"]
-            Receipt["Receipt<br/>Aggregate Root"]
-            FS["FinanceSetting<br/>Aggregate Root"]
-            KPI["KpiRecord<br/>Aggregate Root"]
-            AME["AdminManagementExpense<br/>Aggregate Root"]
-            SUS["SharedUtilityService<br/>Aggregate Root"]
-            FPR["FixedPayoutRecipient<br/>Aggregate Root"]
-        end
+  package "Application Layer - Services" {
+    component [FinanceOwnerResolver\nDomain Service] as FOR
+    component [DashboardQueryService\nKPI Calculator] as IDQS
+    component [MercadoPagoService\n686 lines - Payment Integration] as IMPS
+    component [MercadoPagoWebhookValidator\nHMAC-SHA256] as MPWV
+  }
 
-        subgraph Infrastructure["Infrastructure Layer - Repositories"]
-            FeeRepo["FeeRepository<br/>BaseRepository Fee"]
-            PayRepo["PaymentRepository<br/>BaseRepository Payment"]
-            RecRepo["ReceiptRepository<br/>BaseRepository Receipt"]
-            FSRepo["FinanceSettingRepository<br/>BaseRepository FinanceSetting"]
-            KPIRepo["KpiRepository<br/>BaseRepository KpiRecord"]
-            AMERepo["AdminManagementExpenseRepository<br/>BaseRepository AdminManagementExpense"]
-            SUSRepo["SharedUtilityServiceRepository<br/>BaseRepository SharedUtilityService"]
-            FPRRepo["FixedPayoutRecipientRepository<br/>BaseRepository FixedPayoutRecipient"]
-        end
-    end
+  package "Domain Layer - Aggregates" {
+    component [Fee\nAggregate Root] as Fee
+    component [Payment\nAggregate Root] as Payment
+    component [Receipt\nAggregate Root] as Receipt
+    component [FinanceSetting\nAggregate Root] as FS
+    component [KpiRecord\nAggregate Root] as KPI
+    component [AdminManagementExpense\nAggregate Root] as AME
+    component [SharedUtilityService\nAggregate Root] as SUS
+    component [FixedPayoutRecipient\nAggregate Root] as FPR
+  }
 
-    Admin -->|"HTTP GET/POST"| API
-    Resident -->|"HTTP GET"| API
-    API --> DC
-    API --> MPC
-    API --> FC
-    API --> PC
-    API --> RC
-    API --> FSC
-    API --> KC
-    API --> AMEC
-    API --> SUC
-    API --> FPRC
+  package "Infrastructure Layer - Repositories" {
+    component [FeeRepository\nBaseRepository Fee] as FeeRepo
+    component [PaymentRepository\nBaseRepository Payment] as PayRepo
+    component [ReceiptRepository\nBaseRepository Receipt] as RecRepo
+    component [FinanceSettingRepository\nBaseRepository FinanceSetting] as FSRepo
+    component [KpiRepository\nBaseRepository KpiRecord] as KPIRepo
+    component [AdminManagementExpenseRepository\nBaseRepository AdminManagementExpense] as AMERepo
+    component [SharedUtilityServiceRepository\nBaseRepository SharedUtilityService] as SUSRepo
+    component [FixedPayoutRecipientRepository\nBaseRepository FixedPayoutRecipient] as FPRRepo
+  }
+}
 
-    DC -->|"GetKpisAsync()"| IDQS
-    MPC -->|"CreatePreferenceAsync()"| IMPS
-    FC -->|"CRUD"| Fee
-    PC -->|"CRUD"| Payment
-    RC -->|"CRUD"| Receipt
+Admin --> API : HTTP GET/POST
+Resident --> API : HTTP GET
+API --> DC
+API --> MPC
+API --> FC
+API --> PC
+API --> RC
+API --> FSC
+API --> KC
+API --> AMEC
+API --> SUC
+API --> FPRC
 
-    IMPS -->|"SDK .NET"| MP
-    IMPS -->|"Query fees"| FeeRepo
-    IMPS -->|"Persist payments"| PayRepo
-    IMPS -->|"Persist receipts"| RecRepo
-    FOR -->|"ResolveOwner()"| Fee
+DC --> IDQS : GetKpisAsync()
+MPC --> IMPS : CreatePreferenceAsync()
+FC --> Fee : CRUD
+PC --> Payment : CRUD
+RC --> Receipt : CRUD
 
-    FeeRepo -->|"EF Core"| DB
-    PayRepo -->|"EF Core"| DB
-    RecRepo -->|"EF Core"| DB
-    FSRepo -->|"EF Core"| DB
-    KPIRepo -->|"EF Core"| DB
-    AMERepo -->|"EF Core"| DB
-    SUSRepo -->|"EF Core"| DB
-    FPRRepo -->|"EF Core"| DB
-```
+IMPS --> MP : SDK .NET
+IMPS --> FeeRepo : Query fees
+IMPS --> PayRepo : Persist payments
+IMPS --> RecRepo : Persist receipts
+FOR --> Fee : ResolveOwner()
+
+FeeRepo --> DB : EF Core
+PayRepo --> DB : EF Core
+RecRepo --> DB : EF Core
+FSRepo --> DB : EF Core
+KPIRepo --> DB : EF Core
+AMERepo --> DB : EF Core
+SUSRepo --> DB : EF Core
+FPRRepo --> DB : EF Core
+@enduml
 
 **Explicación del Diagrama de Componentes - Finanzas:**
 
@@ -675,292 +674,358 @@ La **Application Layer** contiene el **FinanceOwnerResolver** que resuelve exter
 
 La **Domain Layer** define 8 aggregate roots: **Fee** (cuota mensual), **Payment** (pago inmutable), **Receipt** (recibo con recargos), **FinanceSetting** (configuración singleton), **KpiRecord** (snapshot de métricas), **AdminManagementExpense** (gasto administrativo), **SharedUtilityService** (servicio compartido distribuido), y **FixedPayoutRecipient** (beneficiario de pago fijo).
 
-La **Infrastructure Layer** implementa 8 repositorios que heredan de `BaseRepository<T>`, cada uno con método privado `WithOwner()` para eager loading de la relación con User. La configuración EF Core se realiza via `ModelBuilderExtensions.ApplyFinancesConfiguration()`.
+La **Infrastructure Layer** implementa 8 repositorios (FeeRepository, PaymentRepository, ReceiptRepository, FinanceSettingRepository, KpiRepository, AdminManagementExpenseRepository, SharedUtilityServiceRepository, FixedPayoutRecipientRepository) que extienden `BaseRepository<T>` pero cuyas interfaces **no extienden** `IBaseRepository<T>` (son independientes). Cada repositorio tiene método privado `WithOwner()` para eager loading de la relación con User. La configuración EF Core se realiza via `ModelBuilderExtensions.ApplyFinancesConfiguration()`.
 
 ##### 2.6.1.6. Bounded Context Software Architecture Code Level Diagrams
 
 ###### 2.6.1.6.1. Bounded Context Domain Layer Class Diagrams
 
-```mermaid
-classDiagram
-    class BaseEntity {
-        +int Id
-    }
+@startuml
+!theme plain
 
-    class IAuditableEntity {
-        <<interface>>
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-    }
+interface IAuditableEntity {
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class IOwnerScopedFinanceEntity {
-        <<interface>>
-        +string ExternalId
-        +int OwnerAdminId
-        +string ResidentExternalId
-    }
+interface IOwnerScopedFinanceEntity {
+  +string ExternalId
+  +int OwnerAdminId
+  +string? ResidentExternalId
+}
 
-    class Fee {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string ResidentExternalId
-        +string Month
-        +decimal Amount
-        +string DueDate
-        +string Status
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static Fee Create(string externalId, int ownerAdminId, string residentExternalId, string month, decimal amount, string dueDate, string status) Fee
-        +void UpdateStatus(string status)
-    }
+class Fee {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string ResidentExternalId
+  -string Month
+  -decimal Amount
+  -string DueDate
+  -string Status
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class Payment {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string ResidentExternalId
-        +string FeeExternalId
-        +string FeeMonth
-        +decimal Amount
-        +DateTimeOffset? PaidAt
-        +string Method
-        +string Reference
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static Payment Create(string externalId, int ownerAdminId, string residentExternalId, string feeExternalId, string feeMonth, decimal amount, DateTimeOffset? paidAt, string method, string reference) Payment
-    }
+class Payment {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string ResidentExternalId
+  -string? FeeExternalId
+  -string? FeeMonth
+  -decimal Amount
+  -string? PaidAt
+  -string? Method
+  -string? Reference
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class Receipt {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string ResidentExternalId
-        +string IssueDate
-        +string DueDate
-        +decimal Amount
-        +string Status
-        +decimal LateFee
-        +decimal ExtraCharges
-        +string Concept
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static Receipt Create(string externalId, int ownerAdminId, string residentExternalId, string issueDate, string dueDate, decimal amount, string status, decimal lateFee, decimal extraCharges, string concept) Receipt
-        +void Patch(string status, decimal lateFee, decimal extraCharges, string concept)
-        +void MarkAsPaid()
-    }
+class Receipt {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string ResidentExternalId
+  -string? IssueDate
+  -string? DueDate
+  -decimal Amount
+  -string Status
+  -decimal LateFee
+  -decimal ExtraCharges
+  -string? Concept
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class FinanceSetting {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +decimal BaseMonthlyExpense
-        +decimal LateFeeRate
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static FinanceSetting Create(string externalId, int ownerAdminId, decimal baseMonthlyExpense, decimal lateFeeRate) FinanceSetting
-        +void Patch(decimal baseMonthlyExpense, decimal lateFeeRate)
-    }
+class FinanceSetting {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -decimal BaseMonthlyExpense
+  -decimal LateFeeRate
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class KpiRecord {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +int TotalResidents
-        +int OccupiedUnits
-        +int EmptyUnits
-        +decimal TotalDebt
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static KpiRecord Create(string externalId, int ownerAdminId, int totalResidents, int occupiedUnits, int emptyUnits, decimal totalDebt) KpiRecord
-    }
+class KpiRecord {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -int TotalResidents
+  -int OccupiedUnits
+  -int EmptyUnits
+  -decimal TotalDebt
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class AdminManagementExpense {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string Name
-        +decimal Amount
-        +string PurchaseDate
-        +string InvoicePhotoUrl
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static AdminManagementExpense Create(string externalId, int ownerAdminId, string name, decimal amount, string purchaseDate, string invoicePhotoUrl) AdminManagementExpense
-    }
+class AdminManagementExpense {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string Name
+  -decimal Amount
+  -string PurchaseDate
+  -string InvoicePhotoUrl
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class SharedUtilityService {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string Type
-        +decimal Amount
-        +string Month
-        +int ResidentCount
-        +decimal PerResidentShare
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static SharedUtilityService Create(string externalId, int ownerAdminId, string type, decimal amount, string month, int residentCount, decimal perResidentShare) SharedUtilityService
-    }
+class SharedUtilityService {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string Type
+  -decimal Amount
+  -string? Month
+  -int? ResidentCount
+  -decimal? PerResidentShare
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class FixedPayoutRecipient {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string Name
-        +string Dni
-        +string Phone
-        +decimal Salary
-        +int IntervalDays
-        +string NextPaymentDate
-        +string PhotoUrl
-        +string PaymentHistoryJson
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static FixedPayoutRecipient Create(string externalId, int ownerAdminId, string name, string dni, string phone, decimal salary, int intervalDays, string nextPaymentDate, string photoUrl, string paymentHistoryJson) FixedPayoutRecipient
-        +void ReplaceFrom(FixedPayoutRecipient other)
-    }
+class FixedPayoutRecipient {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string Name
+  -string Dni
+  -string Phone
+  -decimal Salary
+  -int IntervalDays
+  -string NextPaymentDate
+  -string PhotoUrl
+  -string PaymentHistoryJson
+  -string? CreatedAtIso
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class IFeeRepository {
-        <<interface>>
-        +Task FindByExternalIdAsync(string externalId, CancellationToken ct)
-        +Task ListAsync(string ownerAdminExternalId, string residentExternalId, CancellationToken ct)
-        +Task AddAsync(Fee entity, CancellationToken ct)
-        +void Update(Fee entity)
-        +Task AnyAsync(CancellationToken ct)
-    }
+interface IFeeRepository {
+  +Task FindByExternalIdAsync
+  +Task ListAsync
+  +Task AddAsync
+  +void Update
+  +Task AnyAsync
+}
 
-    class IPaymentRepository {
-        <<interface>>
-        +Task FindByExternalIdAsync(string externalId, CancellationToken ct)
-        +Task ListAsync(string ownerAdminExternalId, CancellationToken ct)
-        +Task AddAsync(Payment entity, CancellationToken ct)
-        +Task AnyAsync(CancellationToken ct)
-    }
+interface IPaymentRepository {
+  +Task FindByExternalIdAsync
+  +Task ListAsync
+  +Task AddAsync
+  +Task AnyAsync
+}
 
-    class IReceiptRepository {
-        <<interface>>
-        +Task FindByExternalIdAsync(string externalId, CancellationToken ct)
-        +Task ListAsync(string ownerAdminExternalId, CancellationToken ct)
-        +Task AddAsync(Receipt entity, CancellationToken ct)
-        +void Update(Receipt entity)
-        +Task AnyAsync(CancellationToken ct)
-    }
+interface IReceiptRepository {
+  +Task FindByExternalIdAsync
+  +Task ListAsync
+  +Task AddAsync
+  +void Update
+  +Task AnyAsync
+}
 
-    BaseEntity <|-- Fee : inherits
-    BaseEntity <|-- Payment : inherits
-    BaseEntity <|-- Receipt : inherits
-    BaseEntity <|-- FinanceSetting : inherits
-    BaseEntity <|-- KpiRecord : inherits
-    BaseEntity <|-- AdminManagementExpense : inherits
-    BaseEntity <|-- SharedUtilityService : inherits
-    BaseEntity <|-- FixedPayoutRecipient : inherits
+class FeeRepository {
+  +Task FindByExternalIdAsync
+  +Task ListAsync
+  +Task AddAsync
+  +void Update
+  +Task AnyAsync
+}
 
-    IAuditableEntity <|.. Fee : implements
-    IAuditableEntity <|.. Payment : implements
-    IAuditableEntity <|.. Receipt : implements
-    IAuditableEntity <|.. FinanceSetting : implements
-    IAuditableEntity <|.. KpiRecord : implements
-    IAuditableEntity <|.. AdminManagementExpense : implements
-    IAuditableEntity <|.. SharedUtilityService : implements
-    IAuditableEntity <|.. FixedPayoutRecipient : implements
+class PaymentRepository {
+  +Task FindByExternalIdAsync
+  +Task ListAsync
+  +Task AddAsync
+  +Task AnyAsync
+}
 
-    IOwnerScopedFinanceEntity <|.. Fee : implements
-    IOwnerScopedFinanceEntity <|.. Payment : implements
-    IOwnerScopedFinanceEntity <|.. Receipt : implements
-    IOwnerScopedFinanceEntity <|.. FinanceSetting : implements
-    IOwnerScopedFinanceEntity <|.. KpiRecord : implements
-    IOwnerScopedFinanceEntity <|.. AdminManagementExpense : implements
-    IOwnerScopedFinanceEntity <|.. SharedUtilityService : implements
-    IOwnerScopedFinanceEntity <|.. FixedPayoutRecipient : implements
+class ReceiptRepository {
+  +Task FindByExternalIdAsync
+  +Task ListAsync
+  +Task AddAsync
+  +void Update
+  +Task AnyAsync
+}
 
-    Fee "0..*" --> "1" User : OwnerAdminId
-    Payment "0..*" --> "1" User : OwnerAdminId
-    Receipt "0..*" --> "1" User : OwnerAdminId
-    FinanceSetting "0..*" --> "1" User : OwnerAdminId
-    KpiRecord "0..*" --> "1" User : OwnerAdminId
-    AdminManagementExpense "0..*" --> "1" User : OwnerAdminId
-    SharedUtilityService "0..*" --> "1" User : OwnerAdminId
-    FixedPayoutRecipient "0..*" --> "1" User : OwnerAdminId
-```
+IAuditableEntity <|.. Fee
+IAuditableEntity <|.. Payment
+IAuditableEntity <|.. Receipt
+IAuditableEntity <|.. FinanceSetting
+IAuditableEntity <|.. KpiRecord
+IAuditableEntity <|.. AdminManagementExpense
+IAuditableEntity <|.. SharedUtilityService
+IAuditableEntity <|.. FixedPayoutRecipient
+
+IOwnerScopedFinanceEntity <|.. Fee
+IOwnerScopedFinanceEntity <|.. Payment
+IOwnerScopedFinanceEntity <|.. Receipt
+IOwnerScopedFinanceEntity <|.. FinanceSetting
+IOwnerScopedFinanceEntity <|.. KpiRecord
+IOwnerScopedFinanceEntity <|.. AdminManagementExpense
+IOwnerScopedFinanceEntity <|.. SharedUtilityService
+IOwnerScopedFinanceEntity <|.. FixedPayoutRecipient
+
+IFeeRepository <|.. FeeRepository
+IPaymentRepository <|.. PaymentRepository
+IReceiptRepository <|.. ReceiptRepository
+
+class User {
+  +int Id
+  +string ExternalId
+  +string Name
+}
+
+Fee --> User : OwnerAdmin
+Payment --> User : OwnerAdmin
+Receipt --> User : OwnerAdmin
+FinanceSetting --> User : OwnerAdmin
+KpiRecord --> User : OwnerAdmin
+AdminManagementExpense --> User : OwnerAdmin
+SharedUtilityService --> User : OwnerAdmin
+FixedPayoutRecipient --> User : OwnerAdmin
+@enduml
 
 **Explicación del Diagrama de Clases - Finanzas:**
 
-El diagrama de clases del dominio Finanzas muestra la estructura completa de entidades, interfaces y sus relaciones. Todas las entidades heredan de **BaseEntity** (que proporciona `int Id` como PK auto-incremental) e implementan **IAuditableEntity** (con `DateTimeOffset? CreatedAt` y `UpdatedAt`). Además, todas implementan **IOwnerScopedFinanceEntity** que define el contrato de scope por propietario con `ExternalId`, `OwnerAdminId` y `ResidentExternalId`.
+El diagrama de clases del dominio Finanzas muestra la estructura completa de entidades, interfaces y sus relaciones. Todas las entidades implementan directamente **IAuditableEntity** (con `DateTimeOffset? CreatedAt` y `UpdatedAt`) sin heredar de BaseEntity (que no existe en el código). Además, todas implementan **IOwnerScopedFinanceEntity** que define el contrato de scope por propietario con `ExternalId`, `OwnerAdminId` y `ResidentExternalId`.
 
-Las entidades de dominio son **Fee**, **Payment**, **Receipt**, **FinanceSetting**, **KpiRecord**, **AdminManagementExpense**, **SharedUtilityService** y **FixedPayoutRecipient**. Cada una tiene atributos privados (`_id`) y propiedades públicas con factory methods estáticos (`Create`) y mutadores (`UpdateStatus`, `Patch`, `MarkAsPaid`, `ReplaceFrom`). Los atributos incluyen `ExternalId` (string único), `OwnerAdminId` (FK al admin), y campos específicos de cada entidad como `Month`, `Amount`, `Status`, `DueDate`, `Method`, `LateFee`, `ExtraCharges`, `BaseMonthlyExpense`, `LateFeeRate`, etc.
+Las entidades de dominio son **Fee**, **Payment**, **Receipt**, **FinanceSetting**, **KpiRecord**, **AdminManagementExpense**, **SharedUtilityService** y **FixedPayoutRecipient**. Cada una tiene propiedades públicas con access modifiers (`-` para `private set`) y factory methods estáticos (`Create`) y mutadores (`UpdateStatus`, `Patch`, `MarkAsPaid`, `ReplaceFrom`). Los atributos incluyen `ExternalId` (string único), `OwnerAdminId` (FK al admin), `OwnerAdmin` (navegación a User), y campos específicos de cada entidad.
 
-Las interfaces de repositorio **IFeeRepository**, **IPaymentRepository** e **IReceiptRepository** definen operaciones CRUD: `FindByExternalIdAsync`, `ListAsync`, `AddAsync`, `Update` y `AnyAsync`.
+Las interfaces de repositorio **IFeeRepository**, **IPaymentRepository** e **IReceiptRepository** son interfaces independientes que NO extienden `IBaseRepository<T>`. Definen operaciones CRUD: `FindByExternalIdAsync`, `ListAsync`, `AddAsync`, `Update` y `AnyAsync`.
 
-Las relaciones muestran herencia (`<|--`), implementación (`<|..`) y asociaciones con multiplicidad. Todas las entidades tienen relación `"0..*" --> "1"` con **User** via `OwnerAdminId`, indicando que muchas cuotas/pagos/recibos/configuraciones/KPIs/gastos/servicios/beneficiarios pertenecen a un usuario admin.
+Las relaciones muestran implementación (`<|..`) y asociaciones. Todas las entidades tienen relación con **User** via `OwnerAdminId`, indicando que muchas cuotas/pagos/recibos/configuraciones/KPIs/gastos/servicios/beneficiarios pertenecen a un usuario admin.
 
 ###### 2.6.1.6.2. Bounded Context Database Design Diagram
 
-```mermaid
-erDiagram
-    users {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        varchar name "max 200"
-    }
-    fees {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-        varchar resident_external_id "max 64"
-        varchar month "max 20"
-        decimal amount "precision 18,2"
-        varchar due_date "max 20"
-        varchar status "max 20"
-    }
-    payments {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-        varchar resident_external_id "max 64"
-        varchar fee_external_id "max 64"
-        decimal amount "precision 18,2"
-        varchar method "max 50"
-    }
-    receipts {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-        varchar resident_external_id "max 64"
-        decimal amount "precision 18,2"
-        varchar status "max 20"
-        decimal late_fee "precision 18,2"
-        decimal extra_charges "precision 18,2"
-    }
-    finance_settings {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-        decimal base_monthly_expense "precision 18,2"
-        decimal late_fee_rate "precision 8,4"
-    }
-    kpi {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-        int total_residents
-        int occupied_units
-        int empty_units
-        decimal total_debt "precision 18,2"
-    }
-    users ||--o{ fees : "1:N"
-    users ||--o{ payments : "1:N"
-    users ||--o{ receipts : "1:N"
-    users ||--o{ finance_settings : "1:N"
-    users ||--o{ kpi : "1:N"
-```
+@startuml
+!theme plain
+
+entity "users" as users {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  name : varchar
+}
+
+entity "fees" as fees {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  resident_external_id : varchar
+  month : varchar
+  amount : decimal
+  due_date : varchar
+  status : varchar
+}
+
+entity "payments" as payments {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  resident_external_id : varchar
+  fee_external_id : varchar
+  amount : decimal
+  method : varchar
+}
+
+entity "receipts" as receipts {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  resident_external_id : varchar
+  amount : decimal
+  status : varchar
+  late_fee : decimal
+  extra_charges : decimal
+}
+
+entity "finance_settings" as finance_settings {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  base_monthly_expense : decimal
+  late_fee_rate : decimal
+}
+
+entity "kpi" as kpi {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  total_residents : int
+  occupied_units : int
+  empty_units : int
+  total_debt : decimal
+}
+
+entity "admin_management_expenses" as admin_management_expenses {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  name : varchar
+  amount : decimal
+  purchase_date : varchar
+  invoice_photo_url : varchar
+}
+
+entity "shared_utility_services" as shared_utility_services {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  type : varchar
+  amount : decimal
+  month : varchar
+  resident_count : int
+  per_resident_share : decimal
+}
+
+entity "fixed_payout_recipients" as fixed_payout_recipients {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  name : varchar
+  dni : varchar
+  phone : varchar
+  salary : decimal
+  interval_days : int
+  next_payment_date : varchar
+  photo_url : varchar
+  payment_history_json : text
+}
+
+users ||--|{ fees : "1:N"
+users ||--|{ payments : "1:N"
+users ||--|{ receipts : "1:N"
+users ||--|{ finance_settings : "1:N"
+users ||--|{ kpi : "1:N"
+users ||--|{ admin_management_expenses : "1:N"
+users ||--|{ shared_utility_services : "1:N"
+users ||--|{ fixed_payout_recipients : "1:N"
+@enduml
 
 **Explicación del Diagrama de Base de Datos - Finanzas:**
 
-El diagrama de entidad-relación muestra 6 tablas del bounded context Finanzas. La tabla **users** es compartida con otros contextos y contiene `id` (PK auto-increment), `external_id` (UK, max 64) y `name`. Las tablas de dominio son **fees** (cuotas de mantenimiento con `month`, `amount`, `due_date`, `status`), **payments** (pagos con `fee_external_id`, `amount`, `method`), **receipts** (recibos con `amount`, `status`, `late_fee`, `extra_charges`), **finance_settings** (configuración con `base_monthly_expense`, `late_fee_rate`) y **kpi** (métricas con `total_residents`, `occupied_units`, `empty_units`, `total_debt`).
+El diagrama de entidad-relación muestra 9 tablas del bounded context Finanzas. La tabla **users** es compartida con otros contextos y contiene `id` (PK auto-increment), `external_id` (UK, max 64) y `name`. Las tablas de dominio son **fees** (cuotas de mantenimiento con `month`, `amount`, `due_date`, `status`), **payments** (pagos con `fee_external_id`, `amount`, `method`), **receipts** (recibos con `amount`, `status`, `late_fee`, `extra_charges`), **finance_settings** (configuración con `base_monthly_expense`, `late_fee_rate`), **kpi** (métricas con `total_residents`, `occupied_units`, `empty_units`, `total_debt`), **admin_management_expenses** (gastos de administración con `name`, `amount`, `purchase_date`, `invoice_photo_url`), **shared_utility_services** (servicios compartidos con `type`, `amount`, `resident_count`, `per_resident_share`) y **fixed_payout_recipients** (pagos fijos con `name`, `dni`, `phone`, `salary`, `interval_days`, `payment_history_json`).
 
-Todas las tablas de dominio tienen `id` como PK auto-incremental y `external_id` como UK con max 64 caracteres. Todas referencian a `users` via `owner_admin_id` como FK. Los montos (`amount`, `late_fee`, `extra_charges`, `base_monthly_expense`, `total_debt`) usan precisión `decimal(18,2)`. Las fechas y estados usan `varchar` con longitudes específicas (max 20 para `month` y `status`, max 50 para `method`).
+Todas las tablas de dominio tienen `id` como PK auto-incremental y `external_id` como UK con max 64 caracteres. Todas referencian a `users` via `owner_admin_id` como FK. Los montos (`amount`, `late_fee`, `extra_charges`, `base_monthly_expense`, `total_debt`, `salary`, `per_resident_share`) usan precisión `decimal(18,2)`. Las fechas y estados usan `varchar` con longitudes específicas (max 20 para `month` y `status`, max 50 para `method`).
 
-Las relaciones son todas de tipo **1:N** desde `users` hacia cada tabla de dominio, indicando que un usuario admin puede tener múltiples cuotas, pagos, recibos, configuraciones y registros KPI.
+Las relaciones son todas de tipo **1:N** desde `users` hacia cada tabla de dominio, indicando que un usuario admin puede tener múltiples cuotas, pagos, recibos, configuraciones, registros KPI, gastos de administración, servicios compartidos y pagos fijos.
 
 ---
 
@@ -1165,66 +1230,66 @@ Proporciona el acceso a la base de datos y servicios externos.
 
 ##### 2.6.2.5. Bounded Context Software Architecture Component Level Diagrams
 
-```mermaid
-graph TB
-    subgraph Actores
-        Admin["Administrador"]
-        Resident["Residente"]
-    end
+@startuml
+!theme plain
+skinparam componentStyle uml2
 
-    subgraph Externos
-        API["API REST - ASP.NET Core"]
-        MP["MercadoPago SDK"]
-        DB["MySQL 8 - EF Core"]
-    end
+actor Admin as "Administrador"
+actor Resident as "Residente"
 
-    subgraph Suscripciones["Identity Access Management"]
-        subgraph Interface["Interface Layer - Controllers"]
-            AC["AuthenticationController<br/>/api/v1/authentication"]
-            UCC["UsersCompatController<br/>/users"]
-            SC["SubscriptionController<br/>/api/v1/subscription"]
-        end
+package "Externos" {
+  component [API REST - ASP.NET Core] as API
+  component [MercadoPago SDK] as MP
+  component [MySQL 8 - EF Core] as DB
+}
 
-        subgraph Application["Application Layer - Services"]
-            UCS["UserCommandService<br/>Handle SignIn/Register/CRUD"]
-            UQS["UserQueryService<br/>Search/Get"]
-            HS["HashingService<br/>BCrypt.Net"]
-            TS["TokenService<br/>JWT Generation"]
-        end
+package "Suscripciones - Identity Access Management" {
+  package "Interface Layer - Controllers" {
+    component [AuthenticationController\n/api/v1/authentication] as AC
+    component [UsersCompatController\n/users] as UCC
+    component [SubscriptionController\n/api/v1/subscription] as SC
+  }
 
-        subgraph Domain["Domain Layer - Aggregates"]
-            User["User<br/>Aggregate Root"]
-            SP["SubscriptionPlans<br/>Domain Service"]
-            IUR["IUserRepository<br/>Interface"]
-        end
+  package "Application Layer - Services" {
+    component [UserCommandService\nHandle SignIn/Register/CRUD] as UCS
+    component [UserQueryService\nSearch/Get] as UQS
+    component [HashingService\nBCrypt.Net] as HS
+    component [TokenService\nJWT Generation] as TS
+  }
 
-        subgraph Infrastructure["Infrastructure Layer - Repositories"]
-            UR["UserRepository<br/>BaseRepository User"]
-            DUS["DbJsonUserSeeder<br/>Initial Data"]
-        end
-    end
+  package "Domain Layer - Aggregates" {
+    component [User\nAggregate Root] as User
+    component [SubscriptionPlans\nDomain Service] as SP
+    component [IUserRepository\nInterface] as IUR
+  }
 
-    Admin -->|"HTTP POST/GET"| API
-    Resident -->|"HTTP POST/GET"| API
-    API --> AC
-    API --> UCC
-    API --> SC
+  package "Infrastructure Layer - Repositories" {
+    component [UserRepository\nBaseRepository User] as UR
+    component [DbJsonUserSeeder\nInitial Data] as DUS
+  }
+}
 
-    AC -->|"Handle(SignInCommand)"| UCS
-    AC -->|"VerifyPassword()"| HS
-    AC -->|"GenerateToken()"| TS
-    UCC -->|"Handle(Create/Delete)"| UCS
-    UCC -->|"Search/Get"| UQS
-    SC -->|"Handle(UpdateSubscription)"| UCS
-    SC -->|"SDK .NET"| MP
+Admin --> API : HTTP POST/GET
+Resident --> API : HTTP POST/GET
+API --> AC
+API --> UCC
+API --> SC
 
-    UCS -->|"Persist"| User
-    UCS -->|"Validate"| SP
-    UQS -->|"Query"| User
+AC --> UCS : Handle(SignInCommand)
+AC --> HS : VerifyPassword()
+AC --> TS : GenerateToken()
+UCC --> UCS : Handle(Create/Delete)
+UCC --> UQS : Search/Get
+SC --> UCS : Handle(UpdateSubscription)
+SC --> MP : SDK .NET
 
-    UR -->|"EF Core"| DB
-    DUS -->|"Seed"| DB
-```
+UCS --> User : Persist
+UCS --> SP : Validate
+UQS --> User : Query
+
+UR --> DB : EF Core
+DUS --> DB : Seed
+@enduml
 
 **Explicación del Diagrama de Componentes - Suscripciones:**
 
@@ -1234,7 +1299,7 @@ La **Interface Layer** expone 3 controllers: el **AuthenticationController** en 
 
 La **Application Layer** contiene el **UserCommandService** que maneja SignIn, registro, actualización y eliminación usando BCrypt.Net para hashing, el **UserQueryService** que busca usuarios por email, externalId y ownerAdminId con Include, el **HashingService** como wrapper de BCrypt.Net, y el **TokenService** que genera JWT con claims personalizados (Email, Role, Name).
 
-La **Domain Layer** define el aggregate root **User** que unifica admin y resident en una tabla con campos como `Email`, `PasswordHash`, `Role`, `Floor`, `Code`, `OwnerAdminId`, `SubscriptionPlanId` y `SubscriptionPaidUntil`. El **SubscriptionPlans** es un Domain Service estático que define planes (free, basic, pro, premium) con límites de residentes y precios.
+La **Domain Layer** define el aggregate root **User** que unifica admin y resident en una tabla con campos como `Email`, `PasswordHash`, `Role`, `Floor`, `Code`, `OwnerAdminId`, `SubscriptionPlanId` y `SubscriptionPaidUntil`. El **SubscriptionPlans** es un Domain Service estático que define planes (free, essential, standard, scale) con límites de residentes y precios.
 
 La **Infrastructure Layer** implementa **UserRepository** con eager loading de suscripciones y **DbJsonUserSeeder** para datos iniciales.
 
@@ -1242,123 +1307,153 @@ La **Infrastructure Layer** implementa **UserRepository** con eager loading de s
 
 ###### 2.6.2.6.1. Bounded Context Domain Layer Class Diagrams
 
-```mermaid
-classDiagram
-    class BaseEntity {
-        +int Id
-    }
+@startuml
+!theme plain
 
-    class IAuditableEntity {
-        <<interface>>
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-    }
+interface IAuditableEntity {
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class User {
-        -int _id
-        +string ExternalId
-        +string Name
-        +string Email
-        -string PasswordHash
-        +string Role
-        +string Dni
-        +string Address
-        +string Company
-        +string Ruc
-        +string Floor
-        +string Code
-        +DateOnly? AdmissionDate
-        +int? OwnerAdminId
-        +string SubscriptionPlanId
-        +DateTime? SubscriptionPaidUntil
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static User CreateAdmin(string externalId, string name, string email, string passwordHash, string dni, string address, string company, string ruc) User
-        +static User CreateResident(string externalId, string name, string email, string passwordHash, string floor, string code, int ownerAdminId, DateOnly? admissionDate) User
-        +void UpdateCredentials(string email, string passwordHash)
-        +void UpdateSubscription(string planId, DateTime? paidUntil)
-    }
+class User {
+  +int Id
+  -string ExternalId
+  -string Name
+  -string Email
+  -string PasswordHash
+  -string Role
+  -string? Dni
+  -string? Address
+  -string? Company
+  -string? Ruc
+  -string? Floor
+  -string? Code
+  -DateOnly? AdmissionDate
+  -int? OwnerAdminId
+  -User? OwnerAdmin
+  -string SubscriptionPlanId
+  -DateTimeOffset? SubscriptionPaidUntil
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class SubscriptionPlans {
-        -Dictionary ResidentLimits
-        -Dictionary MonthlyPricesPen
-        +static bool IsValid(string planId)
-        +static string Normalize(string planId)
-        +static int MaxResidents(string planId)
-        +static decimal MonthlyPricePen(string planId)
-        +static bool IsPaid(string planId)
-    }
+class SubscriptionPlans {
+  -Dictionary ResidentLimits
+  -Dictionary MonthlyPricesPen
+  +bool IsValid
+  +string Normalize
+  +int MaxResidents
+  +decimal MonthlyPricePen
+  +bool IsPaid
+}
 
-    class IamError {
-        <<enum>>
-        InvalidCredentials
-        EmailNotFound
-        InvalidPassword
-        EmailAlreadyExists
-        UserNotFound
-        ResidentFieldsRequired
-        ResidentCodeAlreadyExists
-        ResidentOwnerRequired
-        ResidentNotFound
-        ResidentPlanLimitReached
-    }
+class IamError {
+  <<enumeration>>
+  InvalidCredentials
+  EmailNotFound
+  InvalidPassword
+  EmailAlreadyExists
+  UserNotFound
+  ResidentFieldsRequired
+  ResidentCodeAlreadyExists
+  ResidentOwnerRequired
+  ResidentNotFound
+  ResidentPlanLimitReached
+}
 
-    class IUserRepository {
-        <<interface>>
-        +Task FindByEmailAsync(string email, CancellationToken ct)
-        +Task FindByExternalIdAsync(string externalId, CancellationToken ct)
-        +Task ExistsByEmailAsync(string email, CancellationToken ct)
-        +Task ListByOwnerAdminIdAsync(int ownerAdminId, CancellationToken ct)
-        +Task SearchAsync(string email, string role, string code, int? ownerAdminId, CancellationToken ct)
-        +Task AnyUsersAsync(CancellationToken ct)
-        +Task ExistsResidentByCodeAsync(string code, int ownerAdminId, CancellationToken ct)
-        +Task CountResidentsByOwnerAdminIdAsync(int ownerAdminId, CancellationToken ct)
-    }
+interface IBaseRepository {
+  +Task AddAsync
+  +Task FindByIdAsync
+  +void Update
+  +void Remove
+  +Task ListAsync
+}
 
-    BaseEntity <|-- User : inherits
-    IAuditableEntity <|.. User : implements
+interface IUserRepository {
+  +Task FindByEmailAsync
+  +Task FindByExternalIdAsync
+  +Task ExistsByEmailAsync
+  +Task ListByOwnerAdminIdAsync
+  +Task SearchAsync
+  +Task AnyUsersAsync
+  +Task ExistsResidentByCodeAsync
+  +Task CountResidentsByOwnerAdminIdAsync
+}
 
-    User "0..*" --> "0..1" User : OwnerAdminId
-```
+class BaseRepository {
+  #AppDbContext context
+  +Task AddAsync
+  +Task FindByIdAsync
+  +void Update
+  +void Remove
+  +Task ListAsync
+}
+
+class UserRepository {
+  +Task FindByEmailAsync
+  +Task FindByExternalIdAsync
+  +Task ExistsByEmailAsync
+  +Task ListByOwnerAdminIdAsync
+  +Task SearchAsync
+  +Task AnyUsersAsync
+  +Task ExistsResidentByCodeAsync
+  +Task CountResidentsByOwnerAdminIdAsync
+}
+
+IAuditableEntity <|.. User
+IBaseRepository <|-- IUserRepository
+IBaseRepository <|-- BaseRepository
+BaseRepository <|-- UserRepository
+IUserRepository <|.. UserRepository
+
+User --> User : OwnerAdminId
+SubscriptionPlans ..> User : validates
+IamError ..> IUserRepository : error codes
+@enduml
 
 **Explicación del Diagrama de Clases - Suscripciones:**
 
-El diagrama de clases del dominio Suscripciones muestra la estructura de autenticación y autorización. **BaseEntity** proporciona `int Id` como PK, e **IAuditableEntity** define `CreatedAt` y `UpdatedAt` para auditoría.
+El diagrama de clases del dominio Suscripciones muestra la estructura de autenticación y autorización. **IAuditableEntity** define `CreatedAt` y `UpdatedAt` como `DateTimeOffset?` para auditoría.
 
-La entidad principal es **User** (Aggregate Root) con atributos privados `_id` y `PasswordHash` (protegido con `[JsonIgnore]`), y propiedades públicas: `ExternalId`, `Name`, `Email`, `Role` ("admin"/"resident"), `Dni`, `Address`, `Company`, `Ruc`, `Floor`, `Code`, `AdmissionDate`, `OwnerAdminId` (FK auto-referenciada), `SubscriptionPlanId` y `SubscriptionPaidUntil`. Tiene dos factory methods: `CreateAdmin()` y `CreateResident()`, y mutadores `UpdateCredentials()` y `UpdateSubscription()`.
+La entidad principal es **User** (Aggregate Root) con propiedades: `Id`, `ExternalId`, `Name`, `Email`, `PasswordHash` (protegido con `[JsonIgnore]`), `Role` ("admin"/"resident"), `Dni`, `Address`, `Company`, `Ruc`, `Floor`, `Code`, `AdmissionDate` (DateOnly?), `OwnerAdminId` (FK auto-referenciada), `SubscriptionPlanId` y `SubscriptionPaidUntil` (DateTimeOffset?). Tiene dos factory methods: `CreateAdmin()` y `CreateResident()`, y mutadores `UpdateCredentials()` y `UpdateSubscription()`.
 
 **SubscriptionPlans** es un Domain Service estático con diccionarios privados `ResidentLimits` y `MonthlyPricesPen`, y métodos públicos `IsValid()`, `Normalize()`, `MaxResidents()`, `MonthlyPricePen()` e `IsPaid()`.
 
 **IamError** es un enum con errores del dominio: `InvalidCredentials`, `EmailNotFound`, `InvalidPassword`, `EmailAlreadyExists`, `UserNotFound`, `ResidentFieldsRequired`, `ResidentCodeAlreadyExists`, `ResidentOwnerRequired`, `ResidentNotFound`, `ResidentPlanLimitReached`.
 
-**IUserRepository** define 8 operaciones: `FindByEmailAsync`, `FindByExternalIdAsync`, `ExistsByEmailAsync`, `ListByOwnerAdminIdAsync`, `SearchAsync`, `AnyUsersAsync`, `ExistsResidentByCodeAsync` y `CountResidentsByOwnerAdminIdAsync`.
+**IUserRepository** extiende `IBaseRepository<User>` y define 8 operaciones adicionales: `FindByEmailAsync`, `FindByExternalIdAsync`, `ExistsByEmailAsync`, `ListByOwnerAdminIdAsync`, `SearchAsync`, `AnyUsersAsync`, `ExistsResidentByCodeAsync` y `CountResidentsByOwnerAdminIdAsync`.
+
+**UserRepository** hereda de `BaseRepository<User>` e implementa `IUserRepository`.
 
 La relación clave es la **auto-referencia** de User: `"0..*" --> "0..1"` via `OwnerAdminId`, indicando que un admin puede tener 0 o más residentes, y un residente pertenece a 0 o 1 admin.
 
 ###### 2.6.2.6.2. Bounded Context Database Design Diagram
 
-```mermaid
-erDiagram
-    users {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        varchar name "max 200"
-        varchar email "max 320"
-        varchar password_hash "bcrypt"
-        varchar role "max 20: admin|resident"
-        varchar dni "max 50"
-        varchar address "max 500"
-        varchar company "max 200"
-        varchar ruc "max 20"
-        varchar floor "max 20"
-        varchar code "max 50"
-        date admission_date
-        int owner_admin_id FK "self-reference, nullable"
-        varchar subscription_plan_id "default: free"
-        datetime subscription_paid_until
-    }
-    users ||--o{ users : "self-ref owner_admin_id"
-```
+@startuml
+!theme plain
+
+entity "users" as users {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  name : varchar
+  email : varchar
+  password_hash : varchar
+  role : varchar
+  dni : varchar
+  address : varchar
+  company : varchar
+  ruc : varchar
+  floor : varchar
+  code : varchar
+  admission_date : date
+  owner_admin_id : int <<FK>>
+  subscription_plan_id : varchar
+  subscription_paid_until : datetime
+}
+
+users ||--|{ users : "self-ref owner_admin_id"
+@enduml
 
 **Explicación del Diagrama de Base de Datos - Suscripciones:**
 
@@ -1483,56 +1578,56 @@ Este contexto gestiona el catálogo de espacios comunes del edificio y el sistem
 
 ##### 2.6.3.5. Bounded Context Software Architecture Component Level Diagrams
 
-```mermaid
-graph TB
-    subgraph Actores
-        Admin["Administrador"]
-        Resident["Residente"]
-    end
+@startuml
+!theme plain
+skinparam componentStyle uml2
 
-    subgraph Externos
-        API["API REST - ASP.NET Core"]
-        DB["MySQL 8 - EF Core"]
-        IAMDB["IAM - Users"]
-    end
+actor Admin as "Administrador"
+actor Resident as "Residente"
 
-    subgraph Reservas["Common Areas Resource Reservation"]
-        subgraph Interface["Interface Layer - Controllers"]
-            SSCC["SocialSpacesCompatController<br/>/socialSpaces"]
-            RCC["ReservationsCompatController<br/>/reservations"]
-        end
+package "Externos" {
+  component [API REST - ASP.NET Core] as API
+  component [MySQL 8 - EF Core] as DB
+  component [IAM - Users] as IAMDB
+}
 
-        subgraph Application["Application Layer - Helpers"]
-            ROH["ReservationOverlapHelper<br/>Time Overlap Validation"]
-            SSOR["SocialSpacesOwnerResolver<br/>Owner Resolution"]
-        end
+package "Reservas - Common Areas Resource Reservation" {
+  package "Interface Layer - Controllers" {
+    component [SocialSpacesCompatController\n/socialSpaces] as SSCC
+    component [ReservationsCompatController\n/reservations] as RCC
+  }
 
-        subgraph Domain["Domain Layer - Aggregates"]
-            SS["SocialSpace<br/>Aggregate Root"]
-            Res["Reservation<br/>Aggregate Root"]
-        end
+  package "Application Layer - Helpers" {
+    component [ReservationOverlapHelper\nTime Overlap Validation] as ROH
+    component [SocialSpacesOwnerResolver\nOwner Resolution] as SSOR
+  }
 
-        subgraph Infrastructure["Infrastructure Layer - Repositories"]
-            SSR["SocialSpaceRepository<br/>BaseRepository SocialSpace"]
-            RR["ReservationRepository<br/>BaseRepository Reservation"]
-            DSSS["DbJsonSocialSpacesSeeder<br/>Initial Data"]
-        end
-    end
+  package "Domain Layer - Aggregates" {
+    component [SocialSpace\nAggregate Root] as SS
+    component [Reservation\nAggregate Root] as Res
+  }
 
-    Admin -->|"HTTP GET/POST/PATCH/DELETE"| API
-    Resident -->|"HTTP GET"| API
-    API --> SSCC
-    API --> RCC
+  package "Infrastructure Layer - Repositories" {
+    component [SocialSpaceRepository\nBaseRepository SocialSpace] as SSR
+    component [ReservationRepository\nBaseRepository Reservation] as RR
+    component [DbJsonSocialSpacesSeeder\nInitial Data] as DSSS
+  }
+}
 
-    SSCC -->|"CRUD"| SS
-    RCC -->|"CRUD"| Res
-    RCC -->|"ValidateOverlap()"| ROH
-    SSOR -->|"ResolveOwner()"| IAMDB
+Admin --> API : HTTP GET/POST/PATCH/DELETE
+Resident --> API : HTTP GET
+API --> SSCC
+API --> RCC
 
-    SSR -->|"EF Core"| DB
-    RR -->|"EF Core"| DB
-    DSSS -->|"Seed"| DB
-```
+SSCC --> SS : CRUD
+RCC --> Res : CRUD
+RCC --> ROH : ValidateOverlap()
+SSOR --> IAMDB : ResolveOwner()
+
+SSR --> DB : EF Core
+RR --> DB : EF Core
+DSSS --> DB : Seed
+@enduml
 
 **Explicación del Diagrama de Componentes - Reservas:**
 
@@ -1550,139 +1645,164 @@ La **Infrastructure Layer** implementa **SocialSpaceRepository** y **Reservation
 
 ###### 2.6.3.6.1. Bounded Context Domain Layer Class Diagrams
 
-```mermaid
-classDiagram
-    class BaseEntity {
-        +int Id
-    }
+@startuml
+!theme plain
 
-    class IAuditableEntity {
-        <<interface>>
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-    }
+interface IAuditableEntity {
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class SocialSpace {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string Name
-        +string Description
-        +int? Capacity
-        +string ImageUrl
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static SocialSpace Create(string externalId, int ownerAdminId, string name, string description, int? capacity, string imageUrl) SocialSpace
-        +void Patch(string name, string description, int? capacity, string imageUrl)
-    }
+class SocialSpace {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string Name
+  -string Description
+  -int? Capacity
+  -string ImageUrl
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class Reservation {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string SpaceExternalId
-        +string ResidentExternalId
-        +string ResidentName
-        +string ResidentCode
-        +string Date
-        +string StartTime
-        +string EndTime
-        +string GuestsJson
-        +string GuestInviteToken
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static Reservation Create(string externalId, int ownerAdminId, string spaceExternalId, string residentExternalId, string residentName, string residentCode, string date, string startTime, string endTime, string guestsJson, string guestInviteToken) Reservation
-        +void PatchGuests(string guestsJson, string guestInviteToken)
-    }
+class Reservation {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string SpaceExternalId
+  -string ResidentExternalId
+  -string ResidentName
+  -string ResidentCode
+  -string Date
+  -string StartTime
+  -string EndTime
+  -string GuestsJson
+  -string? GuestInviteToken
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class ISocialSpaceRepository {
-        <<interface>>
-        +Task FindByExternalIdAsync(string externalId, CancellationToken ct)
-        +Task ListByOwnerExternalIdAsync(string ownerAdminExternalId, CancellationToken ct)
-        +Task AddAsync(SocialSpace entity, CancellationToken ct)
-        +void Update(SocialSpace entity)
-        +void Remove(SocialSpace entity)
-        +Task AnyAsync(CancellationToken ct)
-    }
+interface ISocialSpaceRepository {
+  +Task FindByExternalIdAsync
+  +Task ListByOwnerExternalIdAsync
+  +Task AddAsync
+  +void Update
+  +void Remove
+  +Task AnyAsync
+}
 
-    class IReservationRepository {
-        <<interface>>
-        +Task FindByExternalIdAsync(string externalId, CancellationToken ct)
-        +Task ListAsync(string ownerAdminExternalId, string spaceExternalId, string residentExternalId, string date, string guestInviteToken, CancellationToken ct)
-        +Task AddAsync(Reservation entity, CancellationToken ct)
-        +void Update(Reservation entity)
-        +void Remove(Reservation entity)
-        +Task AnyAsync(CancellationToken ct)
-    }
+interface IReservationRepository {
+  +Task FindByExternalIdAsync
+  +Task ListAsync
+  +Task AddAsync
+  +void Update
+  +void Remove
+  +Task AnyAsync
+}
 
-    class ReservationOverlapHelper {
-        +static bool Overlaps(Reservation existing, string date, string startTime, string endTime)
-    }
+class SocialSpaceRepository {
+  +Task FindByExternalIdAsync
+  +Task ListByOwnerExternalIdAsync
+  +Task AddAsync
+  +void Update
+  +void Remove
+  +Task AnyAsync
+}
 
-    class SocialSpacesOwnerResolver {
-        +Task ResolveOwnerAdminAsync(string ownerAdminExternalId, CancellationToken ct)
-    }
+class ReservationRepository {
+  +Task FindByExternalIdAsync
+  +Task ListAsync
+  +Task AddAsync
+  +void Update
+  +void Remove
+  +Task AnyAsync
+}
 
-    BaseEntity <|-- SocialSpace : inherits
-    BaseEntity <|-- Reservation : inherits
-    IAuditableEntity <|.. SocialSpace : implements
-    IAuditableEntity <|.. Reservation : implements
+class ReservationOverlapHelper {
+  +bool Overlaps
+}
 
-    SocialSpace "0..*" --> "1" User : OwnerAdminId
-    Reservation "0..*" --> "1" User : OwnerAdminId
-    Reservation "0..*" --> "1" SocialSpace : SpaceExternalId
-```
+class SocialSpacesOwnerResolver {
+  +Task ResolveOwnerAdminAsync
+}
+
+class User {
+  +int Id
+  +string ExternalId
+  +string Name
+}
+
+IAuditableEntity <|.. SocialSpace
+IAuditableEntity <|.. Reservation
+ISocialSpaceRepository <|.. SocialSpaceRepository
+IReservationRepository <|.. ReservationRepository
+
+ReservationOverlapHelper ..> Reservation
+SocialSpacesOwnerResolver ..> SocialSpace
+SocialSpace --> User : OwnerAdmin
+Reservation --> User : OwnerAdmin
+Reservation --> SocialSpace : SpaceExternalId
+@enduml
 
 **Explicación del Diagrama de Clases - Reservas:**
 
-El diagrama de clases del dominio Reservas muestra la estructura de espacios comunes y reservas. **BaseEntity** y **IAuditableEntity** proporcionan la base común con `Id`, `CreatedAt` y `UpdatedAt`.
+El diagrama de clases del dominio Reservas muestra la estructura de espacios comunes y reservas. **IAuditableEntity** define `CreatedAt` y `UpdatedAt` como `DateTimeOffset?` para auditoría.
 
-**SocialSpace** (Aggregate Root) tiene atributos privados `_id` y propiedades públicas: `ExternalId`, `OwnerAdminId`, `Name`, `Description`, `Capacity` (nullable) e `ImageUrl`. Su factory method `Create()` recibe todos los parámetros y su mutador `Patch()` permite actualizar nombre, descripción, capacidad e imagen.
+**SocialSpace** (Aggregate Root) tiene propiedades con access modifiers (`-` para `private set`): `Id`, `ExternalId`, `OwnerAdminId`, `OwnerAdmin` (User?), `Name`, `Description`, `Capacity` (int?) e `ImageUrl`. Su factory method `Create()` recibe todos los parámetros y su mutador `Patch()` permite actualizar nombre, descripción, capacidad e imagen.
 
-**Reservation** (Aggregate Root) tiene atributos privados `_id` y propiedades públicas: `ExternalId`, `OwnerAdminId`, `SpaceExternalId`, `ResidentExternalId`, `ResidentName`, `ResidentCode`, `Date`, `StartTime`, `EndTime`, `GuestsJson` (JSON de invitados) y `GuestInviteToken` (token único para invitados). Su factory method `Create()` recibe 11 parámetros y su mutador `PatchGuests()` actualiza la lista de invitados.
+**Reservation** (Aggregate Root) tiene propiedades con access modifiers: `Id`, `ExternalId`, `OwnerAdminId`, `OwnerAdmin` (User?), `SpaceExternalId`, `ResidentExternalId`, `ResidentName`, `ResidentCode`, `Date`, `StartTime`, `EndTime`, `GuestsJson` (JSON de invitados) y `GuestInviteToken` (token único para invitados). Su factory method `Create()` recibe 11 parámetros y su mutador `PatchGuests()` actualiza la lista de invitados.
 
-**ISocialSpaceRepository** define 6 operaciones: `FindByExternalIdAsync`, `ListByOwnerExternalIdAsync`, `AddAsync`, `Update`, `Remove` y `AnyAsync`. **IReservationRepository** también define 6 operaciones incluyendo `ListAsync` con filtrado múltiple por owner, space, resident, date y guestInviteToken.
+**ISocialSpaceRepository** e **IReservationRepository** son interfaces independientes que NO extienden `IBaseRepository<T>`. Cada una define 6 operaciones.
 
 **ReservationOverlapHelper** es un helper estático con `Overlaps()` que compara una reserva existente con una nueva fecha/hora para detectar solapamientos. **SocialSpacesOwnerResolver** resuelve externalId de admin con `ResolveOwnerAdminAsync()`.
 
-Las relaciones muestran que **SocialSpace** y **Reservation** heredan de BaseEntity e implementan IAuditableEntity. Ambas tienen relación `"0..*" --> "1"` con User via OwnerAdminId, y **Reservation** tiene relación `"0..*" --> "1"` con **SocialSpace** via SpaceExternalId.
+Las relaciones muestran que **SocialSpace** y **Reservation** implementan IAuditableEntity directamente. Ambas tienen relación con User via OwnerAdminId, y **Reservation** tiene relación con **SocialSpace** via SpaceExternalId.
 
 ###### 2.6.3.6.2. Bounded Context Database Design Diagram
 
-```mermaid
-erDiagram
-    users {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        varchar name "max 200"
-    }
-    social_spaces {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-        varchar name "max 200"
-        varchar description "max 2000"
-        int capacity "nullable"
-        text image_url "LONGTEXT"
-    }
-    reservations {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-        varchar space_external_id FK "references social_spaces.external_id"
-        varchar resident_external_id "max 64"
-        varchar resident_name "max 200"
-        varchar resident_code "max 50"
-        varchar date "format: yyyy-MM-dd"
-        varchar start_time "format: HH:mm"
-        varchar end_time "format: HH:mm"
-        text guests_json "LONGTEXT, default: []"
-        varchar guest_invite_token "max 64, INDEX"
-    }
-    users ||--o{ social_spaces : "1:N"
-    users ||--o{ reservations : "1:N"
-    social_spaces ||--o{ reservations : "1:N via external_id"
-```
+@startuml
+!theme plain
+
+entity "users" as users {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  name : varchar
+}
+
+entity "social_spaces" as social_spaces {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  name : varchar
+  description : varchar
+  capacity : int
+  image_url : text
+}
+
+entity "reservations" as reservations {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  space_external_id : varchar <<FK>>
+  resident_external_id : varchar
+  resident_name : varchar
+  resident_code : varchar
+  date : varchar
+  start_time : varchar
+  end_time : varchar
+  guests_json : text
+  guest_invite_token : varchar
+}
+
+users ||--|{ social_spaces : "1:N"
+users ||--|{ reservations : "1:N"
+social_spaces ||--|{ reservations : "1:N via external_id"
+@enduml
 
 **Explicación del Diagrama de Base de Datos - Reservas:**
 
@@ -1796,55 +1916,55 @@ Este contexto gestiona la creación, seguimiento y resolución de incidencias re
 
 ##### 2.6.4.5. Bounded Context Software Architecture Component Level Diagrams
 
-```mermaid
-graph TB
-    subgraph Actores
-        Admin["Administrador"]
-        Resident["Residente"]
-    end
+@startuml
+!theme plain
+skinparam componentStyle uml2
 
-    subgraph Externos
-        API["API REST - ASP.NET Core"]
-        DB["MySQL 8 - EF Core"]
-    end
+actor Admin as "Administrador"
+actor Resident as "Residente"
 
-    subgraph Incidencias["Incident Maintenance Management"]
-        subgraph Interface["Interface Layer - Controllers"]
-            ICC["IncidentsCompatController<br/>/incidents"]
-            IRA["IncidentResourceAssembler<br/>DTO Transform"]
-        end
+package "Externos" {
+  component [API REST - ASP.NET Core] as API
+  component [MySQL 8 - EF Core] as DB
+}
 
-        subgraph Application["Application Layer - Services"]
-            IICS["IncidentCommandService<br/>Handle Create/Update/Delete"]
-            IIQS["IncidentQueryService<br/>List/Get"]
-        end
+package "Incidencias - Incident Maintenance Management" {
+  package "Interface Layer - Controllers" {
+    component [IncidentsCompatController\n/incidents] as ICC
+    component [IncidentResourceAssembler\nDTO Transform] as IRA
+  }
 
-        subgraph Domain["Domain Layer - Aggregates"]
-            Incident["Incident<br/>Aggregate Root"]
-            IS["IncidentStatuses<br/>Value Object"]
-            IE["IncidentError<br/>Enum"]
-        end
+  package "Application Layer - Services" {
+    component [IncidentCommandService\nHandle Create/Update/Delete] as IICS
+    component [IncidentQueryService\nList/Get] as IIQS
+  }
 
-        subgraph Infrastructure["Infrastructure Layer - Repositories"]
-            IRepo["IncidentRepository<br/>BaseRepository Incident"]
-            DIS["DbJsonIncidentSeeder<br/>Initial Data"]
-        end
-    end
+  package "Domain Layer - Aggregates" {
+    component [Incident\nAggregate Root] as Incident
+    component [IncidentStatuses\nValue Object] as IS
+    component [IncidentError\nEnum] as IE
+  }
 
-    Admin -->|"HTTP GET/POST/PUT/DELETE"| API
-    Resident -->|"HTTP GET"| API
-    API --> ICC
+  package "Infrastructure Layer - Repositories" {
+    component [IncidentRepository\nBaseRepository Incident] as IRepo
+    component [DbJsonIncidentSeeder\nInitial Data] as DIS
+  }
+}
 
-    ICC -->|"Handle(CreateIncidentCommand)"| IICS
-    ICC -->|"ListByOwnerExternalIdAsync()"| IIQS
+Admin --> API : HTTP GET/POST/PUT/DELETE
+Resident --> API : HTTP GET
+API --> ICC
 
-    IICS -->|"Persist"| Incident
-    IICS -->|"Validate"| IS
-    IIQS -->|"Query"| Incident
+ICC --> IICS : Handle(CreateIncidentCommand)
+ICC --> IIQS : ListByOwnerExternalIdAsync()
 
-    IRepo -->|"EF Core"| DB
-    DIS -->|"Seed"| DB
-```
+IICS --> Incident : Persist
+IICS --> IS : Validate
+IIQS --> Incident : Query
+
+IRepo --> DB : EF Core
+DIS --> DB : Seed
+@enduml
 
 **Explicación del Diagrama de Componentes - Incidencias:**
 
@@ -1862,102 +1982,134 @@ La **Infrastructure Layer** implementa **IncidentRepository** con filtrado por o
 
 ###### 2.6.4.6.1. Bounded Context Domain Layer Class Diagrams
 
-```mermaid
-classDiagram
-    class BaseEntity {
-        +int Id
-    }
+@startuml
+!theme plain
 
-    class IAuditableEntity {
-        <<interface>>
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-    }
+interface IAuditableEntity {
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class Incident {
-        -int _id
-        +string ExternalId
-        +int OwnerAdminId
-        +string ResidentExternalId
-        +string ResidentName
-        +string Description
-        +string Status
-        +string Provider
-        +DateTimeOffset ReportedAt
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-        +static Incident Create(string externalId, int ownerAdminId, string description, string status, string residentExternalId, string residentName, string provider, DateTimeOffset reportedAt) Incident
-        +void Update(string description, string status, string provider, string residentExternalId, string residentName)
-    }
+class Incident {
+  +int Id
+  -string ExternalId
+  -int OwnerAdminId
+  -User? OwnerAdmin
+  -string? ResidentExternalId
+  -string ResidentName
+  -string Description
+  -string Status
+  -string? Provider
+  -DateTimeOffset ReportedAt
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class IncidentStatuses {
-        <<value object>>
-        +static string Open
-        +static string InProgress
-        +static string Resolved
-        +static string Normalize(string status)
-        +static bool IsValid(string status)
-    }
+class IncidentStatuses {
+  +string Open
+  +string InProgress
+  +string Resolved
+}
 
-    class IncidentError {
-        <<enum>>
-        IncidentNotFound
-        OwnerAdminRequired
-        DescriptionRequired
-        InvalidStatus
-        ResidentRequired
-        ProviderRequired
-    }
+class IncidentError {
+  <<enumeration>>
+  IncidentNotFound
+  OwnerAdminRequired
+  DescriptionRequired
+  InvalidStatus
+  ResidentRequired
+  ProviderRequired
+}
 
-    class IIncidentRepository {
-        <<interface>>
-        +Task FindByExternalIdAsync(string externalId, CancellationToken ct)
-        +Task ListByOwnerAdminIdAsync(int ownerAdminId, CancellationToken ct)
-        +Task AnyIncidentsAsync(CancellationToken ct)
-    }
+interface IBaseRepository {
+  +Task AddAsync
+  +Task FindByIdAsync
+  +void Update
+  +void Remove
+  +Task ListAsync
+}
 
-    BaseEntity <|-- Incident : inherits
-    IAuditableEntity <|.. Incident : implements
+interface IIncidentRepository {
+  +Task FindByExternalIdAsync
+  +Task ListByOwnerAdminIdAsync
+  +Task AnyIncidentsAsync
+}
 
-    Incident "0..*" --> "1" User : OwnerAdminId
-```
+class BaseRepository {
+  #AppDbContext context
+  +Task AddAsync
+  +Task FindByIdAsync
+  +void Update
+  +void Remove
+  +Task ListAsync
+}
+
+class IncidentRepository {
+  +Task FindByExternalIdAsync
+  +Task ListByOwnerAdminIdAsync
+  +Task AnyIncidentsAsync
+}
+
+class User {
+  +int Id
+  +string ExternalId
+  +string Name
+}
+
+IAuditableEntity <|.. Incident
+IBaseRepository <|-- IIncidentRepository
+IBaseRepository <|-- BaseRepository
+BaseRepository <|-- IncidentRepository
+IIncidentRepository <|.. IncidentRepository
+
+IncidentStatuses ..> Incident
+IncidentError ..> IIncidentRepository
+Incident --> User : OwnerAdminId
+@enduml
 
 **Explicación del Diagrama de Clases - Incidencias:**
 
-El diagrama de clases del dominio Incidencias muestra la estructura de reportes de mantenimiento. **BaseEntity** e **IAuditableEntity** proporcionan la base común.
+El diagrama de clases del dominio Incidencias muestra la estructura de reportes de mantenimiento. **IAuditableEntity** define `CreatedAt` y `UpdatedAt` como `DateTimeOffset?` para auditoría.
 
-**Incident** (Aggregate Root) tiene atributos privados `_id` y propiedades públicas: `ExternalId`, `OwnerAdminId`, `ResidentExternalId`, `ResidentName`, `Description`, `Status`, `Provider` y `ReportedAt` (DateTimeOffset). Su factory method `Create()` recibe 8 parámetros y su mutador `Update()` permite modificar descripción, estado, proveedor y datos del residente.
+**Incident** (Aggregate Root) tiene propiedades con access modifiers (`-` para `private set`): `Id`, `ExternalId`, `OwnerAdminId`, `OwnerAdmin` (User?), `ResidentExternalId` (string?), `ResidentName`, `Description`, `Status`, `Provider` (string?) y `ReportedAt` (DateTimeOffset). Su factory method `Create()` recibe 8 parámetros y su mutador `Update()` permite modificar descripción, estado, proveedor y datos del residente.
 
-**IncidentStatuses** es un Value Object estático con cadenas constantes `Open`, `InProgress` y `Resolved`, y métodos auxiliares `Normalize()` (convierte a minúsculas y reemplaza espacios por guiones bajos) e `IsValid()` (valida contra la lista de estados permitidos).
+**IncidentStatuses** es un Value Object estático con cadenas constantes `Open`, `InProgress` y `Resolved`, y métodos auxiliares `Normalize()` e `IsValid()`.
 
 **IncidentError** es un enum con 6 errores: `IncidentNotFound`, `OwnerAdminRequired`, `DescriptionRequired`, `InvalidStatus`, `ResidentRequired` y `ProviderRequired`.
 
-**IIncidentRepository** define 3 operaciones: `FindByExternalIdAsync`, `ListByOwnerAdminIdAsync` y `AnyIncidentsAsync`.
+**IIncidentRepository** extiende `IBaseRepository<Incident>` y define 3 operaciones adicionales: `FindByExternalIdAsync`, `ListByOwnerAdminIdAsync` y `AnyIncidentsAsync`.
 
-Las relaciones muestran herencia de BaseEntity, implementación de IAuditableEntity, y relación `"0..*" --> "1"` con User via OwnerAdminId.
+**IncidentRepository** hereda de `BaseRepository<Incident>` e implementa `IIncidentRepository`.
+
+Las relaciones muestran implementación de IAuditableEntity, herencia de `IBaseRepository` en `IIncidentRepository`, y relación con User via OwnerAdminId.
 
 ###### 2.6.4.6.2. Bounded Context Database Design Diagram
 
-```mermaid
-erDiagram
-    users {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        varchar name "max 200"
-    }
-    incidents {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id, DeleteBehavior.Restrict"
-        varchar resident_external_id "max 64"
-        varchar resident_name "max 200"
-        varchar description "max 2000, required"
-        varchar status "max 20, default: open"
-        varchar provider "max 200"
-        datetime reported_at
-    }
-    users ||--o{ incidents : "1:N"
-```
+@startuml
+!theme plain
+
+entity "users" as users {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  name : varchar
+}
+
+entity "incidents" as incidents {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  resident_external_id : varchar
+  resident_name : varchar
+  description : varchar
+  status : varchar
+  provider : varchar
+  reported_at : datetime
+}
+
+users ||--|{ incidents : "1:N"
+@enduml
 
 **Explicación del Diagrama de Base de Datos - Incidencias:**
 
@@ -2057,59 +2209,61 @@ No aplica (este bounded context es transversal y no expone endpoints propios).
 
 ##### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
 
-```mermaid
-graph TB
-    subgraph Externos
-        API["API Backend - ASP.NET Core"]
-        DB["MySQL 8 - EF Core"]
-    end
+@startuml
+!theme plain
+skinparam componentStyle uml2
 
-    subgraph Auditoria["Shared Infrastructure"]
-        subgraph Domain["Domain Layer - Interfaces"]
-            IBR["IBaseRepository<br/>Generic CRUD Contract"]
-            IOW["IUnitOfWork<br/>Transaction Contract"]
-            IAE["IAuditableEntity<br/>Audit Timestamps"]
-        end
+package "Externos" {
+  component [API Backend - ASP.NET Core] as API
+  component [MySQL 8 - EF Core] as DB
+}
 
-        subgraph Application["Application Layer - Models"]
-            ResultT["Result T<br/>Success/Failure Pattern"]
-            Result["Result<br/>Non-generic Result"]
-        end
+package "Auditoria - Shared Infrastructure" {
+  package "Domain Layer - Interfaces" {
+    component [IBaseRepository\nGeneric CRUD Contract] as IBR
+    component [IUnitOfWork\nTransaction Contract] as IOW
+    component [IAuditableEntity\nAudit Timestamps] as IAE
+  }
 
-        subgraph Infrastructure["Infrastructure Layer - Implementations"]
-            BR["BaseRepository<br/>EF Core Implementation"]
-            UOW["UnitOfWork<br/>SaveChangesAsync"]
-            AC["AppDbContext<br/>Central DbContext"]
-            ACF["AppDbContextFactory<br/>Design-time Factory"]
-            MBE["ModelBuilderExtensions<br/>SnakeCase Convention"]
-            RH["RailwayHosting<br/>Environment Variables"]
-        end
-    end
+  package "Application Layer - Models" {
+    component [Result<T>\nSuccess/Failure Pattern] as ResultT
+    component [Result\nNon-generic Result] as Result
+  }
 
-    subgraph BoundedContexts["Bounded Contexts"]
-        Fin["Finanzas<br/>Fee, Payment, Receipt, etc."]
-        Sub["Suscripciones<br/>User, SubscriptionPlans"]
-        Res["Reservas<br/>SocialSpace, Reservation"]
-        Inc["Incidencias<br/>Incident"]
-    end
+  package "Infrastructure Layer - Implementations" {
+    component [BaseRepository\nEF Core Implementation] as BR
+    component [UnitOfWork\nSaveChangesAsync] as UOW
+    component [AppDbContext\nCentral DbContext] as AC
+    component [AppDbContextFactory\nDesign-time Factory] as ACF
+    component [ModelBuilderExtensions\nSnakeCase Convention] as MBE
+    component [RailwayHosting\nEnvironment Variables] as RH
+  }
+}
 
-    Fin -->|"uses"| IBR
-    Fin -->|"uses"| IOW
-    Sub -->|"uses"| IBR
-    Sub -->|"uses"| IOW
-    Res -->|"uses"| IBR
-    Res -->|"uses"| IOW
-    Inc -->|"uses"| IBR
-    Inc -->|"uses"| IOW
+package "Bounded Contexts" {
+  component [Finanzas\nFee, Payment, Receipt, etc.] as Fin
+  component [Suscripciones\nUser, SubscriptionPlans] as Sub
+  component [Reservas\nSocialSpace, Reservation] as Res
+  component [Incidencias\nIncident] as Inc
+}
 
-    BR -->|"implements"| IBR
-    UOW -->|"implements"| IOW
+Fin --> IBR : uses
+Fin --> IOW : uses
+Sub --> IBR : uses
+Sub --> IOW : uses
+Res --> IBR : uses
+Res --> IOW : uses
+Inc --> IBR : uses
+Inc --> IOW : uses
 
-    AC -->|"EF Core"| DB
-    ACF -->|"creates"| AC
-    MBE -->|"configures"| AC
-    RH -->|"configures"| AC
-```
+BR --> IBR : implements
+UOW --> IOW : implements
+
+AC --> DB : EF Core
+ACF --> AC : creates
+MBE --> AC : configures
+RH --> AC : configures
+@enduml
 
 **Explicación del Diagrama de Componentes - Auditoría:**
 
@@ -2127,164 +2281,207 @@ Los 4 bounded contexts que dependen de esta infraestructura son **Finanzas** (Fe
 
 ###### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
 
-```mermaid
-classDiagram
-    class IBaseRepository {
-        <<interface>>
-        +Task AddAsync(T entity, CancellationToken ct)
-        +Task FindByIdAsync(int id, CancellationToken ct)
-        +void Update(T entity)
-        +void Remove(T entity)
-        +Task ListAsync(CancellationToken ct)
-    }
+@startuml
+!theme plain
 
-    class IUnitOfWork {
-        <<interface>>
-        +Task CompleteAsync(CancellationToken ct)
-    }
+interface IBaseRepository {
+  +Task AddAsync
+  +Task FindByIdAsync
+  +void Update
+  +void Remove
+  +Task ListAsync
+}
 
-    class IAuditableEntity {
-        <<interface>>
-        +DateTimeOffset? CreatedAt
-        +DateTimeOffset? UpdatedAt
-    }
+interface IUnitOfWork {
+  +Task CompleteAsync
+}
 
-    class ResultT {
-        +bool IsSuccess
-        +bool IsFailure
-        +T Value
-        +string Message
-        +Enum Error
-        +static ResultT Success(T value)
-        +static ResultT Failure(Enum error, string message)
-    }
+interface IAuditableEntity {
+  +DateTimeOffset? CreatedAt
+  +DateTimeOffset? UpdatedAt
+}
 
-    class Result {
-        +bool IsSuccess
-        +bool IsFailure
-        +string Message
-        +Enum Error
-        +static Result Success()
-        +static Result Failure(Enum error, string message)
-    }
+together {
+  class Fee
+  class Payment
+  class Receipt
+  class User
+  class SocialSpace
+  class Reservation
+  class Incident
+}
 
-    class BaseRepository {
-        #AppDbContext context
-        +Task AddAsync(T entity, CancellationToken ct)
-        +Task FindByIdAsync(int id, CancellationToken ct)
-        +void Update(T entity)
-        +void Remove(T entity)
-        +Task ListAsync(CancellationToken ct)
-    }
+IAuditableEntity <|.. Fee
+IAuditableEntity <|.. Payment
+IAuditableEntity <|.. Receipt
+IAuditableEntity <|.. User
+IAuditableEntity <|.. SocialSpace
+IAuditableEntity <|.. Reservation
+IAuditableEntity <|.. Incident
 
-    class UnitOfWork {
-        -AppDbContext context
-        +Task CompleteAsync(CancellationToken ct)
-    }
+class ResultT {
+  +bool IsSuccess
+  +bool IsFailure
+  +T Value
+  +string Message
+  +string Error
+}
 
-    class AppDbContext {
-        +DbSet User Users
-        +DbSet Incident Incidents
-        +DbSet Fee Fees
-        +DbSet Payment Payments
-        +DbSet Receipt Receipts
-        +DbSet SocialSpace SocialSpaces
-        +DbSet Reservation Reservations
-        #void OnModelCreating(ModelBuilder modelBuilder)
-    }
+class Result {
+  +bool IsSuccess
+  +bool IsFailure
+  +string Message
+  +string Error
+}
 
-    class AppDbContextFactory {
-        +AppDbContext Create()
-    }
+class BaseRepository {
+  #AppDbContext context
+  +Task AddAsync
+  +Task FindByIdAsync
+  +void Update
+  +void Remove
+  +Task ListAsync
+}
 
-    class RailwayHosting {
-        +static void ConfigureKestrelPort(WebApplicationBuilder builder)
-        +static string ResolveConnectionString(IConfiguration configuration)
-        +static void ApplySecretsFromEnvironment(WebApplicationBuilder builder)
-        +static void ValidateProductionSecrets(IConfiguration configuration, IHostEnvironment environment)
-        +static bool IsRailwayDeployment()
-    }
+class UnitOfWork {
+  -AppDbContext context
+  +Task CompleteAsync
+}
 
-    Result <|-- ResultT : inherits
-    IBaseRepository <|-- BaseRepository : implements
-    IUnitOfWork <|-- UnitOfWork : implements
+class AppDbContext {
+  +DbSet Users
+  +DbSet Incidents
+  +DbSet Fees
+  +DbSet Payments
+  +DbSet Receipts
+  +DbSet SocialSpaces
+  +DbSet Reservations
+}
 
-    BaseRepository --> AppDbContext : uses
-    UnitOfWork --> AppDbContext : uses
-    AppDbContextFactory --> AppDbContext : creates
-    RailwayHosting --> AppDbContext : configures
-```
+class AppDbContextFactory {
+  +AppDbContext Create
+}
+
+class RailwayHosting {
+  +void ConfigureKestrelPort
+  +string ResolveConnectionString
+  +void ApplySecretsFromEnvironment
+  +void ValidateProductionSecrets
+  +bool IsRailwayDeployment
+}
+
+interface IUserRepository {
+  +Task FindByEmailAsync
+  +Task FindByExternalIdAsync
+  +Task ExistsByEmailAsync
+  +Task ListByOwnerAdminIdAsync
+  +Task SearchAsync
+  +Task AnyUsersAsync
+  +Task ExistsResidentByCodeAsync
+  +Task CountResidentsByOwnerAdminIdAsync
+}
+
+interface IIncidentRepository {
+  +Task FindByExternalIdAsync
+  +Task ListByOwnerAdminIdAsync
+  +Task AnyIncidentsAsync
+}
+
+IBaseRepository <|-- IUserRepository
+IBaseRepository <|-- IIncidentRepository
+IBaseRepository <|-- BaseRepository
+IUnitOfWork <|-- UnitOfWork
+Result <|-- ResultT
+
+BaseRepository --> AppDbContext
+UnitOfWork --> AppDbContext
+AppDbContextFactory --> AppDbContext
+RailwayHosting --> AppDbContext
+@enduml
 
 **Explicación del Diagrama de Clases - Auditoría (Shared Infrastructure):**
 
-El diagrama de clases de Auditoría muestra la infraestructura compartida del sistema. No hay herencia de BaseEntity ni implementación de IAuditableEntity en este diagrama, ya que es la definición de esas interfaces.
+El diagrama de clases de Auditoría muestra la infraestructura compartida del sistema. Define las interfaces y sus relaciones con las entidades de dominio.
 
-**IBaseRepository** es una interfaz genérica con restricción `where TEntity : class` que define 5 operaciones CRUD: `AddAsync` (agrega entidad), `FindByIdAsync` (busca por ID), `Update` (actualiza), `Remove` (elimina) y `ListAsync` (lista todas).
+**IBaseRepository** es una interfaz genérica con restricción `where TEntity : class` que define 5 operaciones CRUD: `AddAsync`, `FindByIdAsync`, `Update`, `Remove` y `ListAsync`. Las interfaces específicas de repositorio **IUserRepository** e **IIncidentRepository** extienden `IBaseRepository` con operaciones adicionales.
 
 **IUnitOfWork** es una interfaz simple con un solo método `CompleteAsync` que confirma transacciones atómicas.
 
-**IAuditableEntity** es una interfaz con dos propiedades: `CreatedAt` (DateTimeOffset?, get/set) y `UpdatedAt` (DateTimeOffset?, get/set).
+**IAuditableEntity** es una interfaz con dos propiedades: `CreatedAt` (DateTimeOffset?, get/set) y `UpdatedAt` (DateTimeOffset?, get/set). Las 7 entidades principales (User, Fee, Payment, Receipt, SocialSpace, Reservation, Incident) implementan directamente esta interfaz.
 
-**Result\<T>** y **Result** son clases del patrón Railway-oriented programming. Ambas tienen propiedades `IsSuccess`, `IsFailure`, `Message` y `Error` (Enum), pero Result\<T> agrega `Value` (T). Los factory methods estáticos son `Success()` y `Failure()`.
+**Result\<T>** y **Result** son clases del patrón Railway-oriented programming. Ambas tienen propiedades `IsSuccess`, `IsFailure`, `Message` y `Error` (Enum), pero Result\<T> agrega `Value` (T).
 
-**BaseRepository** es una clase genérica con campo protegido `#AppDbContext context` que implementa IBaseRepository. **UnitOfWork** tiene campo privado `-AppDbContext context` e implementa IUnitOfWork ejecutando `SaveChangesAsync()`.
+**BaseRepository** es una clase genérica con campo protegido `#AppDbContext context` que implementa `IBaseRepository`. **UnitOfWork** tiene campo privado `-AppDbContext context` e implementa `IUnitOfWork` ejecutando `SaveChangesAsync()`.
 
-**AppDbContext** es el DbContext central con 7 DbSets: `Users`, `Incidents`, `Fees`, `Payments`, `Receipts`, `SocialSpaces` y `Reservations`. Su método protegido `OnModelCreating` configura el modelo.
+**AppDbContext** es el DbContext central con 7 DbSets. **AppDbContextFactory** crea instancias para tiempo de diseño. **RailwayHosting** es una clase estática con 5 métodos para configurar hosting en Railway.
 
-**AppDbContextFactory** crea instancias de AppDbContext para tiempo de diseño. **RailwayHosting** es una clase estática con 5 métodos para configurar el hosting en Railway (Kestrel port, connection string, environment variables, validación de secrets, detección de deployment).
-
-Las relaciones muestran que Result hereda de Result\<T>, BaseRepository implementa IBaseRepository, UnitOfWork implementa IUnitOfWork, y ambas implementaciones dependen de AppDbContext (usan/crean/configuran).
+Las relaciones muestran que `IUserRepository` e `IIncidentRepository` heredan de `IBaseRepository`, `BaseRepository` implementa `IBaseRepository`, `UnitOfWork` implementa `IUnitOfWork`, y ambas implementaciones dependen de `AppDbContext`.
 
 ###### 2.6.5.6.2. Bounded Context Database Design Diagram
 
-```mermaid
-erDiagram
-    users {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        varchar name "max 200"
-        varchar role "max 20"
-        int owner_admin_id FK "self-reference"
-        varchar subscription_plan_id "default: free"
-    }
-    incidents {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-    }
-    fees {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-    }
-    payments {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-    }
-    receipts {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-    }
-    social_spaces {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-    }
-    reservations {
-        int id PK "auto-increment"
-        varchar external_id UK "max 64"
-        int owner_admin_id FK "references users.id"
-        varchar space_external_id FK "references social_spaces.external_id"
-    }
-    users ||--o{ incidents : "1:N"
-    users ||--o{ fees : "1:N"
-    users ||--o{ payments : "1:N"
-    users ||--o{ receipts : "1:N"
-    users ||--o{ social_spaces : "1:N"
-    users ||--o{ reservations : "1:N"
-```
+@startuml
+!theme plain
+
+entity "users" as users {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  name : varchar
+  role : varchar
+  owner_admin_id : int <<FK>>
+  subscription_plan_id : varchar
+}
+
+entity "incidents" as incidents {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+}
+
+entity "fees" as fees {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+}
+
+entity "payments" as payments {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+}
+
+entity "receipts" as receipts {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+}
+
+entity "social_spaces" as social_spaces {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+}
+
+entity "reservations" as reservations {
+  *id : int <<PK>>
+  --
+  external_id : varchar <<UK>>
+  owner_admin_id : int <<FK>>
+  space_external_id : varchar <<FK>>
+}
+
+users ||--|{ incidents : "1:N"
+users ||--|{ fees : "1:N"
+users ||--|{ payments : "1:N"
+users ||--|{ receipts : "1:N"
+users ||--|{ social_spaces : "1:N"
+users ||--|{ reservations : "1:N"
+@enduml
 
 **Explicación del Diagrama de Base de Datos - Auditoría (Vista Global):**
 
