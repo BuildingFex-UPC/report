@@ -20,7 +20,7 @@
 | Código | Apellidos y Nombres |
 | :--- | :--- |
 | u202022211 | Javier Murillo, Mathias |
-| | Hermoza Quispe, Jude Alessandro |
+| u202318220 | Hermoza Quispe, Jude Alessandro |
 | u202312510 | Jave Chang, Alejandro Manuel |
 | | Heredia Hoyos, Danitza Ivonne |
 | | Suteau, Antonin |
@@ -37,6 +37,7 @@
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
 | AV1 | 02-09-2026 | Equipo BuildingFex | Estructura inicial correspondiente a la primera entrega. |
+| AV1 | 06-09-2026 | Hermoza Quispe, Jude Alessandro | Redacción de las secciones 2.2 Entrevistas (diseño), 2.4.3 Product Backlog y 2.5.3 Software Architecture; registro de datos personales del integrante. |
 
 <div style="page-break-after: always;"></div>
 
@@ -143,7 +144,7 @@ visibilidad a las juntas de propietarios.
 | Foto | Nombre | Código | Carrera | Descripción de habilidades y conocimientos |
 |------|--------|--------|---------|--------------------------------------------|
 | ![Mathias Javier Murillo](img/img-profile/MJ.png)| Mathias Javier Murillo | U202022211 | Ingeniería de Software | Soy estudiante de 7mo ciclo de Ingeniería de Software en la UPC. Me especializo en desarrollo full stack de webs y aplicaciones móviles. Me caracterizo por ser una persona muy responsable, puntual y organizada. Aporto al equipo apoyo en el diseño, organización y desarrollo de los Sprints. |
-| |  | |  |  |
+| ![Jude Alessandro Hermoza Quispe](img/img-profile/FotoJude.jpg) | Jude Alessandro Hermoza Quispe | u202318220 | Ingeniería de Software | Soy estudiante de Ingeniería de Software en la UPC con interés en el desarrollo de aplicaciones web y móviles. Me enfoco en el levantamiento de requerimientos, el modelado del backlog y el diseño de la arquitectura de software. Aporto al equipo organización, análisis de entrevistas y documentación técnica del proyecto. |
 | ![Alejandro Jave Chanf](img/img-profile/AJ.jpeg) | Alejandro Manuel Jave Chang | U202312510 | Ingenieria de Software | Vengo de la carrera de Ingeniería de software, me gusta explorar diversas soluciones a desafíos tecnológicos y me apasiona aprender nuevas cosas. Mi enfoque dedicado a los proyectos que me apasionan me impulsa a explorar nuevas fronteras en mi carrera. |
 | |  | |  |  |
 | |  | |  |  |
@@ -337,11 +338,94 @@ dentro de una misma plataforma.
 
 #### 2.1.2. Estrategias y tácticas frente a competidores
 
-### 2.2. Entrevistas 
+### 2.2. Entrevistas
+
+Para complementar la investigación secundaria realizada sobre los competidores y el mercado, el equipo BuildingFex llevó a cabo un proceso de entrevistas **estructuradas** dirigidas a los dos segmentos objetivo definidos en la sección 1.3: empresas y agencias administradoras de inmuebles (B2B) y juntas de propietarios de condominios y torres residenciales (B2C / B2B2C). El objetivo fue validar los *pain points* identificados, contrastar las suposiciones del Lean UX y priorizar las funcionalidades del producto a partir de evidencia directa de los usuarios.
+
+Se optó por un formato de entrevista estructurada porque permite comparar de forma homogénea las respuestas entre entrevistados, reducir el sesgo del entrevistador y obtener datos que puedan tabularse para el análisis posterior (sección 2.2.3) y para la construcción del Product Backlog (sección 2.4.3).
 
 #### 2.2.1. Diseño de entrevistas
+
+**Objetivos de la entrevista**
+
+- Comprender cómo gestionan actualmente las cobranzas, las áreas comunes, el mantenimiento y las comunicaciones los administradores y las juntas de propietarios.
+- Identificar las herramientas que utilizan hoy (hojas de cálculo, WhatsApp, correo, software especializado) y sus limitaciones percibidas.
+- Validar la disposición a pagar por una plataforma unificada y el rango de precio aceptable.
+- Priorizar las funcionalidades que el usuario considera imprescindibles frente a las deseables.
+
+**Segmento 1: Empresas y agencias administradoras de inmuebles (B2B)**
+
+- Perfil del entrevistado: gerente de operaciones, administrador de portafolio o property manager con responsabilidad sobre 3 o más edificios.
+- Duración estimada: 20 a 30 minutos.
+- Preguntas:
+  1. ¿Podría describir su rol y cuántos edificios o unidades administra actualmente?
+  2. ¿Qué procesos de la administración le consumen más tiempo durante el mes?
+  3. ¿Qué herramientas utiliza hoy para llevar el control de cobranzas y morosidad? ¿Qué le funciona y qué no?
+  4. ¿Cómo gestiona la comunicación con los residentes y el registro de solicitudes de mantenimiento?
+  5. ¿Con qué frecuencia necesita generar reportes consolidados y para quién?
+  6. Si tuviera una consola web unificada para gestionar todos sus edificios, ¿qué función debería tener sí o sí?
+  7. ¿Qué rango de pago mensual por edificio consideraría razonable para una plataforma así?
+  8. ¿Qué le haría desconfiar o abandonar una herramienta de este tipo?
+
+**Segmento 2: Juntas de propietarios y residentes (B2C / B2B2C)**
+
+- Perfil del entrevistado: miembro de junta directiva (presidente, tesorero) o residente propietario de un edificio autogestionado.
+- Duración estimada: 15 a 25 minutos.
+- Preguntas:
+  1. ¿Qué rol cumple dentro de la junta de propietarios o como residente del edificio?
+  2. ¿Cómo se enteran los residentes de sus deudas de mantenimiento y de los comunicados oficiales?
+  3. ¿Ha tenido conflictos por el uso de áreas comunes? ¿Cómo se resuelven hoy?
+  4. ¿Dónde consultan el reglamento interno, las actas o los estados de cuenta?
+  5. ¿Qué tan transparente considera la gestión financiera actual del edificio?
+  6. ¿Usaría una aplicación móvil para pagar, reservar espacios y reportar incidencias? ¿Qué le preocuparía de usarla?
+  7. ¿Cuánto estaría dispuesta la junta a pagar mensualmente por una herramienta que ordene estos procesos?
+
+**Instrumentos y registro**
+
+Las entrevistas se realizaron por videollamada y de forma presencial, con grabación previa autorización del entrevistado. Cada sesión fue transcrita y resumida en una ficha con: datos del entrevistado, segmento, fecha, enlace a la grabación y hallazgos clave.
+
 #### 2.2.2. Registro de entrevistas
+
+> **Pendiente de completar con la evidencia de las entrevistas realizadas.** Para cada entrevistado se debe registrar: nombre y cargo, segmento al que pertenece, empresa o edificio, fecha, duración, enlace a la grabación y un resumen de las respuestas más relevantes.
+
+| # | Entrevistado | Cargo / Rol | Segmento | Edificio / Empresa | Fecha | Duración | Enlace a la grabación |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| 1 |  |  | Segmento 1 (B2B) |  |  |  |  |
+| 2 |  |  | Segmento 1 (B2B) |  |  |  |  |
+| 3 |  |  | Segmento 2 (B2C) |  |  |  |  |
+| 4 |  |  | Segmento 2 (B2C) |  |  |  |  |
+
+**Resumen por entrevistado**
+
+*Entrevista 1 — (Segmento 1):* _pendiente._
+
+*Entrevista 2 — (Segmento 1):* _pendiente._
+
+*Entrevista 3 — (Segmento 2):* _pendiente._
+
+*Entrevista 4 — (Segmento 2):* _pendiente._
+
 #### 2.2.3. Análisis de entrevistas
+
+> **Pendiente de completar una vez cerrado el registro de la sección 2.2.2.**
+
+A partir de las entrevistas se consolidan los hallazgos por segmento, contrastándolos con las suposiciones del Lean UX (sección 1.2.2):
+
+**Segmento 1 — Administradoras (B2B)**
+
+- Hallazgos sobre gestión de cobranzas y morosidad: _pendiente._
+- Hallazgos sobre comunicación y mantenimiento: _pendiente._
+- Disposición a pagar y frenos de adopción: _pendiente._
+
+**Segmento 2 — Juntas de propietarios (B2C)**
+
+- Hallazgos sobre transparencia financiera y pagos: _pendiente._
+- Hallazgos sobre áreas comunes y comunicados: _pendiente._
+- Disposición a pagar y frenos de adopción: _pendiente._
+
+**Conclusiones del proceso de entrevistas**
+
+Las conclusiones se redactarán indicando qué suposiciones del Lean UX quedaron validadas, cuáles fueron refutadas y qué funcionalidades ascienden o descienden de prioridad en el Product Backlog (sección 2.4.3).
 
 ### 2.3. Needfinding
 #### 2.3.1. User Personas
@@ -354,6 +438,59 @@ dentro de una misma plataforma.
 #### 2.4.1. User Stories
 #### 2.4.2. Impact Mapping
 #### 2.4.3. Product Backlog
+
+El Product Backlog de BuildingFex consolida y prioriza todas las historias de usuario derivadas de las secciones 2.4.1 (User Stories) y 2.4.2 (Impact Mapping), agrupándolas por *epics* alineados con los bounded contexts del producto (Finanzas, Suscripciones, Gestión de Usuarios, Áreas Comunes, Incidencias) y con las funcionalidades priorizadas en el Lean UX Canvas.
+
+La priorización se define con la escala **Alta / Media / Baja** según el valor para el usuario y su aporte al MVP, y el esfuerzo se estima en **Story Points** usando la sucesión de Fibonacci (1, 2, 3, 5, 8, 13). El backlog es un artefacto vivo: el orden y la estimación se ajustan al cierre de cada Sprint y tras el análisis de entrevistas (sección 2.2.3).
+
+**Épicas**
+
+| ID | Épica | Descripción | Bounded Context |
+| :--- | :--- | :--- | :--- |
+| EP01 | Gestión de cobranzas | Registro y seguimiento de cuotas, pagos, recibos y morosidad. | Finanzas |
+| EP02 | Reportes financieros | Consolidación de KPIs, gastos y estados de cuenta para juntas y administradoras. | Finanzas |
+| EP03 | Planes de suscripción | Alta, cambio y facturación de planes escalonados por número de unidades. | Suscripciones |
+| EP04 | Gestión de usuarios y acceso | Registro de administradoras, residentes y roles; relación admin–residente. | Gestión de Usuarios (IAM) |
+| EP05 | Áreas comunes y reservas | Catálogo de espacios, reglas y reserva con validación de solapamiento. | Áreas Comunes |
+| EP06 | Gestión de incidencias | Reporte, seguimiento y resolución de incidencias del edificio. | Incidencias |
+| EP07 | Comunicaciones y documentos | Comunicados oficiales y repositorio de reglamentos y actas. | Gestión de Usuarios / Transversal |
+| EP08 | Dashboard unificado | Vista única con cobranzas, áreas comunes e incidencias. | Transversal |
+
+**Product Backlog priorizado**
+
+| ID | Épica | Historia de usuario | Prioridad | Story Points |
+| :--- | :--- | :--- | :--- | :--- |
+| US01 | EP01 | Como administrador, quiero registrar las cuotas mensuales de cada unidad para automatizar la cobranza del edificio. | Alta | 5 |
+| US02 | EP01 | Como residente, quiero visualizar mis deudas y su estado de pago para saber cuánto y cuándo debo pagar. | Alta | 3 |
+| US03 | EP01 | Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para que quede constancia. | Alta | 5 |
+| US04 | EP01 | Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes morosos para reducir la morosidad. | Alta | 5 |
+| US05 | EP01 | Como residente, quiero recibir un recibo digital al confirmarse mi pago para tener respaldo de la transacción. | Media | 3 |
+| US06 | EP02 | Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea. | Alta | 8 |
+| US07 | EP02 | Como administrador, quiero registrar los gastos administrativos y servicios compartidos para reflejarlos en el estado de cuenta del edificio. | Media | 5 |
+| US08 | EP02 | Como miembro de la junta, quiero exportar los reportes financieros en PDF para compartirlos con los propietarios. | Media | 3 |
+| US09 | EP03 | Como empresa administradora, quiero elegir un plan de suscripción según el número de unidades para pagar solo por lo que necesito. | Alta | 5 |
+| US10 | EP03 | Como empresa administradora, quiero cambiar de plan cuando incorporo o retiro edificios para ajustar mi facturación. | Media | 5 |
+| US11 | EP03 | Como responsable de pagos, quiero recibir la facturación mensual en soles (PEN) para agilizar la aprobación del presupuesto. | Media | 3 |
+| US12 | EP04 | Como empresa administradora, quiero registrar mi cuenta y dar de alta los edificios que gestiono para empezar a operar en la plataforma. | Alta | 5 |
+| US13 | EP04 | Como administrador, quiero invitar a los residentes de un edificio y asignarles su unidad para que accedan a la app. | Alta | 5 |
+| US14 | EP04 | Como usuario, quiero iniciar sesión de forma segura para proteger mi información y la del edificio. | Alta | 3 |
+| US15 | EP04 | Como administrador, quiero definir roles (administrador, miembro de junta, residente) para controlar qué puede hacer cada usuario. | Media | 5 |
+| US16 | EP05 | Como residente, quiero ver el catálogo de áreas comunes con sus reglas y disponibilidad para saber qué puedo reservar. | Alta | 3 |
+| US17 | EP05 | Como residente, quiero reservar un área común en una fecha y hora para asegurar su uso sin conflictos. | Alta | 5 |
+| US18 | EP05 | Como sistema, quiero validar que una reserva no se solape con otra existente para evitar dobles reservas. | Alta | 5 |
+| US19 | EP05 | Como administrador, quiero configurar las reglas y el mantenimiento de cada espacio para mantener el orden en su uso. | Media | 3 |
+| US20 | EP06 | Como residente, quiero reportar una incidencia con descripción y foto para que la administración la atienda. | Alta | 5 |
+| US21 | EP06 | Como administrador, quiero dar seguimiento al estado de cada incidencia (abierta, en proceso, resuelta) para controlar las reparaciones. | Alta | 5 |
+| US22 | EP06 | Como residente, quiero recibir una notificación cuando cambie el estado de mi incidencia para estar informado. | Media | 3 |
+| US23 | EP07 | Como administrador, quiero publicar comunicados oficiales para que todos los residentes los reciban en la app. | Alta | 3 |
+| US24 | EP07 | Como residente, quiero consultar el reglamento interno y las actas en la nube para revisarlos cuando lo necesite. | Media | 3 |
+| US25 | EP07 | Como residente, quiero recibir notificaciones push de los comunicados importantes para no perderme información relevante. | Media | 5 |
+| US26 | EP08 | Como administrador, quiero un dashboard con el resumen de cobranzas, reservas e incidencias para tener el estado del edificio en una sola vista. | Alta | 8 |
+| US27 | EP08 | Como miembro de la junta, quiero ver indicadores de morosidad y de incidencias pendientes para tomar decisiones informadas. | Media | 5 |
+| US28 | EP04 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | Baja | 2 |
+| US29 | EP01 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | Baja | 5 |
+| US30 | EP02 | Como administrador, quiero ver la evolución mensual de la morosidad en un gráfico para identificar tendencias. | Baja | 3 |
+
 ### 2.5. Strategic-Level Domain-Driven Design
 #### 2.5.1. EventStorming
 ##### 2.5.1.1. Candidate Context Discovery
@@ -361,6 +498,9 @@ dentro de una misma plataforma.
 ##### 2.5.1.3. Bounded Context Canvases
 #### 2.5.2. Context Mapping
 #### 2.5.3. Software Architecture
+
+En esta sección se describe la arquitectura de software de BuildingFex utilizando el modelo **C4** (Context, Container y Deployment), que permite representar el sistema con distintos niveles de detalle y para audiencias diferentes. El nivel de **contexto** ubica la plataforma frente a sus usuarios (visitantes, administradores) y los servicios externos con los que se integra; el nivel de **contenedores** descompone la aplicación en sus piezas ejecutables principales (aplicación web, API Gateway, módulos de negocio y sus bases de datos); y el nivel de **despliegue** muestra cómo esos contenedores se distribuyen sobre la infraestructura en la nube. Los tres diagramas se elaboraron con Structurizr / notación C4 y se presentan a continuación.
+
 ##### 2.5.3.1. Software Architecture Context Level Diagrams
 
 Este diagrama de contexto representa cómo funciona la plataforma BuildingFex: los visitantes envian consultas y revisan informacion de suscripciones, mientras que los administradores analizan las respuestas. El sistema central, la aplicacion, se conecta con un API externo para obtener datos de edificios y con Firebase Cloud Messaging para enviar notificaciones push, mostrando así el flujo de interaccion entre usuarios, la plataforma y servicios externos.
