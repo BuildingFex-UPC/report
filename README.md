@@ -299,7 +299,7 @@ Reciben opciones de precios adaptadas a su tamaño real.<br>
 A continuación, se adjunta el Lean UX Canvas, una matriz colaborativa que nos ayuda a mapear los dolores de la administración de inmuebles con las soluciones de
 nuestra plataforma, estructurando el diseño de nuestros MVP y las métricas que evaluarán la adopción de los planes de suscripción. <br>
 
-![Lean UX Canvas](img/Lean-UX-Canvas-BuildingFex.png)
+![Lean UX Canvas](img/lean-ux-canva.jpeg)
 
 ### 1.3. Segmentos objetivo
 La modernización del sector de la gestión de propiedades demuestra que implementar soluciones tecnológicas es fundamental no solo para llevar un control contable, sino para garantizar la armonía residencial y el mantenimiento del valor de los inmuebles. El uso de plataformas digitales elimina la fricción diaria y profesionaliza la labor de los comités vecinales.
