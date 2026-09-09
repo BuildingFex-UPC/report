@@ -480,6 +480,10 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202316829_upc_edu_pe/IQAjOrj36WAbS7yjtkqR3BOjAYmhb5EJho0nURxlr5DQ3h0?e=ruuATc |
 | **Duración** | 6:02 |
 | **Resumen** | Prefiere trato personal antes que automatización en cobranzas. Maneja deudas mediante conversación y confianza directa. Percibe que la confianza reduce conflictos entre vecinos. Considera que el software puede ser útil, pero no indispensable en edificios pequeños. Tiene preocupaciones sobre privacidad y seguridad de datos. Ve la digitalización como tendencia, pero prioriza el factor humano. |
+| **Personalidad** | - **Empático y Conciliador:** Prefiere el trato directo persona a persona antes que la automatización o publicación de morosos para entender la situación de cada residente.<br>- **Conservador y Cauteloso:** Valora altamente la confianza mutua y muestra preocupación por la privacidad de los datos financieros y riesgos de ciberseguridad.<br>- **Enfocado en Rentabilidad:** Prioriza la eficiencia de costos y métodos tradicionales de bajo presupuesto por sobre la adopción de softwares complejos. |
+| **Marcas** | - **Comunicación presencial / Diálogo directo:** Su principal medio para resolver deudas, acordar pagos y construir confianza con los residentes.<br>- **WhatsApp / Vías tradicionales:** Utilizados para coordinaciones administrativas mínimas del edificio. |
+| **Dispositivos** | - **Smartphone:** Herramienta básica para contacto telefónico o mensajes directos con los propietarios.<br>- **Laptop / Computadora:** Uso esporádico relegado a revisiones puntuales de la administración. |
+| **Flujos principales** | - Gestión personalizada de cobranza y mediación de deudas mediante conversación directa.<br>- Coordinación interna entre el equipo de directiva, abogado y contador.<br>- Control básico de gastos y mantenimiento del edificio basado en la confianza vecinal. |
 
 #### Entrevista 2
 
@@ -494,6 +498,10 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217853_upc_edu_pe/IQACC1SIKVjvTagwZh1y0u4aAXk8Tw2TAlffNsDCWQMPQrc?e=pekn9G&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | **Duración** | 5:51 |
 | **Resumen** | La administración ejecuta, la junta planifica y supervisa. Ella dedica tiempo a presupuestos y proyección financiera. Identifica la falta de comunicación como principal problema. Reconoce la importancia de la transparencia financiera. Considera útil la automatización (recordatorios, pagos), pero como apoyo. Valora el software por su capacidad de organización y control. |
+| **Personalidad** | - **Sobrecargada pero Adaptable:** Asumió el cargo por falta de voluntarios y dedica más de 6 horas semanales de su tiempo personal a gestionar el edificio.<br>- **Formal y Respetuosa:** Mantiene una postura estricta al tratar la morosidad para evitar conflictos personales con sus propios vecinos.<br>- **Buscadora de Automatización:** Prefiere la simplicidad en la tecnología y está altamente motivada a adoptar herramientas digitales que reduzcan errores manuales y automaticen cobros. |
+| **Marcas** | - **WhatsApp:** Utilizado para atender consultas, coordinar reservas de áreas comunes y emitir avisos.<br>- **Libros de Excel:** Su herramienta base para organizar cuentas, llevar el registro de pagos y seguimiento a morosos.<br>- **Avisos físicos / Murales:** Medio complementario en el edificio para comunicar temas importantes. |
+| **Dispositivos** | - **Smartphone:** Dispositivo principal de respuesta rápida para coordinaciones diarias con el conserje y atención a vecinos.<br>- **Laptop / Computadora:** Destinada a la elaboración de hojas de cálculo, seguimiento de morosos y liquidación de cuentas con el contador. |
+| **Flujos principales** | - Seguimiento de cobros y gestión de morosidad.<br>- Coordinación de reservas de áreas comunes y atención de incidencias vecinales.<br>- Cuadre de cuentas mensual y rendición de información en el traspaso de directivas. |
 
 #### Entrevista 3
 
@@ -508,6 +516,11 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202316829_upc_edu_pe/IQCeaFiAnHVMS4osYS6VReweAdCzF57CR0YvpEt6g_Fkdjc?e=Vk1CG6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | **Duración** | 5:51 |
 | **Resumen** | La administración ejecuta, la junta planifica y supervisa. Dedica tiempo a presupuestos y proyección financiera. Identifica la falta de comunicación como principal problema. Reconoce la importancia de la transparencia financiera. Considera útil la automatización (recordatorios, pagos), pero como apoyo. Valora el software por su capacidad de organización y control. |
+| **Personalidad** | - **Planificador y Supervisor:** Se enfoca en la proyección financiera, elaboración de presupuestos y definición de normativas para la asamblea.<br>- **Pragmático y Orientado al Control:** Valora las herramientas digitales como un medio para organizar las cuentas, mantener la transparencia y reducir cuestionamientos por falta de información.<br>- **Delegador:** Prefiere que la administración ejecute la parte operativa y el cobro directo para no desgastar el rol directivo ante los propietarios. |
+| **Marcas** | - **Excel / Hojas de cálculo:** Herramienta utilizada para el ordenamiento de estados financieros y proyecciones presupuestales.<br>- **WhatsApp / Asambleas:** Canales clave para coordinar acuerdos, informar a los propietarios y mitigar la falta de comunicación. |
+| **Dispositivos** | - **Laptop / Computadora:** Su uso principal está destinado a la revisión de presupuestos y supervisión de estados financieros.<br>- **Smartphone:** Utilizado para la comunicación directa y seguimiento de temas puntuales con la administración. |
+| **Flujos principales** | - Proyección financiera y aprobación de presupuestos anuales.<br>- Supervisión de estados de cuenta y transparencia económica.<br>- Planificación de acuerdos y resoluciones aprobadas en asamblea. |
+
 
 ### Segmento 2: Empresas de Gestión de Edificios (Administradores profesionales)
 
