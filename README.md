@@ -299,7 +299,7 @@ Reciben opciones de precios adaptadas a su tamaño real.<br>
 A continuación, se adjunta el Lean UX Canvas, una matriz colaborativa que nos ayuda a mapear los dolores de la administración de inmuebles con las soluciones de
 nuestra plataforma, estructurando el diseño de nuestros MVP y las métricas que evaluarán la adopción de los planes de suscripción. <br>
 
-![Lean UX Canvas](img/Lean-UX-Canvas-BuildingFex.png)
+![Lean UX Canvas](img/lean-ux-canva.jpeg)
 
 ### 1.3. Segmentos objetivo
 La modernización del sector de la gestión de propiedades demuestra que implementar soluciones tecnológicas es fundamental no solo para llevar un control contable, sino para garantizar la armonía residencial y el mantenimiento del valor de los inmuebles. El uso de plataformas digitales elimina la fricción diaria y profesionaliza la labor de los comités vecinales.
@@ -386,95 +386,390 @@ Para complementar la investigación secundaria realizada sobre los competidores 
 
 Se optó por un formato de entrevista estructurada porque permite comparar de forma homogénea las respuestas entre entrevistados, reducir el sesgo del entrevistador y obtener datos que puedan tabularse para el análisis posterior (sección 2.2.3) y para la construcción del Product Backlog (sección 2.4.3).
 
+A continuación, presentamos las preguntas diseñadas para las entrevistas de validación. Las hemos estructurado en dos bloques: un grupo de preguntas transversales para ambos segmentos (para entender el perfil general y uso de tecnología) y preguntas específicas enfocadas en los dolores particulares de cada tipo de administrador.
+
+#### Información a recolectar (transversal a los 2 segmentos)
+
+##### 1. Datos demográficos y profesionales básicos
+- ¿Cuál es su edad?
+- ¿En qué distrito reside o en qué zona opera principalmente?
+- ¿Cuál es su ocupación principal o cargo actual?
+- ¿Cuál es su nivel educativo o formación profesional?
+
+##### 2. Contexto de gestión y equipo de trabajo
+- ¿Cuenta con el apoyo de un equipo administrativo, conserjes o contadores en su día a día?
+- ¿Con qué frecuencia coordina con ellos para revisar temas del edificio?
+- ¿Quién se encarga específicamente de hacer los cobros y cuadrar las cuentas?
+
+##### 3. Estilo de trabajo y relación con la tecnología
+- ¿Cómo describiría un día típico gestionando los temas del condominio?
+- ¿Qué tareas administrativas le consumen más tiempo a la semana?
+- ¿Cómo se considera respecto al uso de nuevas plataformas o software: le resulta fácil, regular o prefiere lo tradicional?
+
+##### 4. Dispositivos de preferencia y canales digitales
+- ¿Qué dispositivo utiliza más para gestionar el edificio: la computadora de escritorio/laptop o el celular?
+- ¿Qué herramientas usa actualmente para comunicarse con los vecinos (WhatsApp, correos, murales físicos)?
+- ¿Cómo prefiere organizar los datos financieros: cuadernos, Excel, algún software genérico?
+
+##### 5. Objetivos y motivaciones
+- ¿Qué es lo más importante para usted al momento de entregar las cuentas a fin de mes?
+- ¿Qué le motivaría a cambiar su método actual por una plataforma digital de pago por suscripción?
+- ¿Qué significa para usted tener "tranquilidad" en la gestión de un edificio?
+
+##### 6. Frustraciones y problemas actuales
+- ¿Qué dificultades reales tiene hoy en día para cobrar puntualmente el mantenimiento?
+- ¿Cómo maneja actualmente el control de las reservas de áreas comunes y el registro de visitas? ¿Le genera problemas?
+- ¿Cuál es la queja más frecuente que recibe por parte de los residentes?
+
+##### 7. Background y experiencia
+- ¿Podría contarme brevemente cómo empezó a administrar edificios o cómo asumió el cargo en la directiva?
+- ¿Recuerda alguna "historia de terror" o conflicto grave relacionado con cuentas poco claras o vecinos morosos?
+- Si pudiera, ¿qué proceso de su gestión diaria automatizaría de inmediato?
+
+
 #### 2.2.1. Diseño de entrevistas
 
-**Objetivos de la entrevista**
+A continuación se presentan las preguntas dirigidas por segmento objetivo.
 
-- Comprender cómo gestionan actualmente las cobranzas, las áreas comunes, el mantenimiento y las comunicaciones los administradores y las juntas de propietarios.
-- Identificar las herramientas que utilizan hoy (hojas de cálculo, WhatsApp, correo, software especializado) y sus limitaciones percibidas.
-- Validar la disposición a pagar por una plataforma unificada y el rango de precio aceptable.
-- Priorizar las funcionalidades que el usuario considera imprescindibles frente a las deseables.
+##### Segmento 1: Junta de Directiva (Propietarios que administran su propio edificio)
 
-**Segmento 1: Empresas y agencias administradoras de inmuebles (B2B)**
+**Objetivo:**  
+Entender la carga que representa administrar el edificio "ad honorem" o como tarea extra, la fricción directa con sus propios vecinos y su necesidad de una herramienta muy simple que no requiera conocimientos contables.
 
-- Perfil del entrevistado: gerente de operaciones, administrador de portafolio o property manager con responsabilidad sobre 3 o más edificios.
-- Duración estimada: 20 a 30 minutos.
-- Preguntas:
-  1. ¿Podría describir su rol y cuántos edificios o unidades administra actualmente?
-  2. ¿Qué procesos de la administración le consumen más tiempo durante el mes?
-  3. ¿Qué herramientas utiliza hoy para llevar el control de cobranzas y morosidad? ¿Qué le funciona y qué no?
-  4. ¿Cómo gestiona la comunicación con los residentes y el registro de solicitudes de mantenimiento?
-  5. ¿Con qué frecuencia necesita generar reportes consolidados y para quién?
-  6. Si tuviera una consola web unificada para gestionar todos sus edificios, ¿qué función debería tener sí o sí?
-  7. ¿Qué rango de pago mensual por edificio consideraría razonable para una plataforma así?
-  8. ¿Qué le haría desconfiar o abandonar una herramienta de este tipo?
+###### Preguntas principales
+- Al ser vecino y directivo a la vez, ¿cómo maneja la incomodidad de tener que cobrarle la mora a alguien con quien se cruza en el ascensor?
+- ¿Cuánto tiempo de su vida personal o fines de semana le dedica a cuadrar los pagos de mantenimiento?
+- ¿Alguna vez han tenido problemas de desconfianza por parte de otros vecinos respecto a cómo se gasta el dinero?
+- ¿Qué tan útil sería para la junta que el sistema aplique las multas y envíe recordatorios de pago automáticamente sin que ustedes den la cara?
+- ¿Qué barreras cree que tendrían los vecinos más mayores de su edificio para usar una app para ver sus recibos?
 
-**Segmento 2: Juntas de propietarios y residentes (B2C / B2B2C)**
+###### Preguntas complementarias
+- ¿Cómo se organizan actualmente cuando un vecino quiere reservar la zona de parrillas o el salón de usos múltiples?
+- Si la directiva cambia el próximo año, ¿qué tan difícil es pasarle toda la información (cuentas, morosos, historial) a la nueva gestión?
 
-- Perfil del entrevistado: miembro de junta directiva (presidente, tesorero) o residente propietario de un edificio autogestionado.
-- Duración estimada: 15 a 25 minutos.
-- Preguntas:
-  1. ¿Qué rol cumple dentro de la junta de propietarios o como residente del edificio?
-  2. ¿Cómo se enteran los residentes de sus deudas de mantenimiento y de los comunicados oficiales?
-  3. ¿Ha tenido conflictos por el uso de áreas comunes? ¿Cómo se resuelven hoy?
-  4. ¿Dónde consultan el reglamento interno, las actas o los estados de cuenta?
-  5. ¿Qué tan transparente considera la gestión financiera actual del edificio?
-  6. ¿Usaría una aplicación móvil para pagar, reservar espacios y reportar incidencias? ¿Qué le preocuparía de usarla?
-  7. ¿Cuánto estaría dispuesta la junta a pagar mensualmente por una herramienta que ordene estos procesos?
+##### Segmento 2: Empresas de Gestión de Edificios (Administradores profesionales)
 
-**Instrumentos y registro**
+**Objetivo:**  
+Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandarizan sus procesos para no tener que contratar un contador por cada edificio nuevo, y cómo un software les ayudaría a escalar su negocio.
 
-Las entrevistas se realizaron por videollamada y de forma presencial, con grabación previa autorización del entrevistado. Cada sesión fue transcrita y resumida en una ficha con: datos del entrevistado, segmento, fecha, enlace a la grabación y hallazgos clave.
+###### Preguntas principales
+- ¿Cuántos edificios o condominios maneja su empresa actualmente en total?
+- ¿Qué proceso se vuelve un "cuello de botella" cuando intentan sumar un nuevo edificio a su cartera de clientes?
+- ¿Cómo consolidan actualmente la información financiera de distintos edificios para rendir cuentas a cada junta de propietarios?
+- ¿Han perdido algún contrato de administración por problemas de comunicación o falta de transparencia percibida por los vecinos?
+- En términos de negocio, ¿valorarían más una herramienta que les ahorre horas hombre en contabilidad, o una que mejore la experiencia del residente con una buena app?
+
+###### Preguntas complementarias
+- ¿Han intentado usar algún software de administración antes? ¿Qué les gustó o disgustó de esa experiencia?
+- ¿Qué tan importante es para su empresa poder ofrecer a los condominios integraciones con pasarelas de pago o bancos locales para automatizar la conciliación?
 
 #### 2.2.2. Registro de entrevistas
 
-> **Pendiente de completar con la evidencia de las entrevistas realizadas.** Para cada entrevistado se debe registrar: nombre y cargo, segmento al que pertenece, empresa o edificio, fecha, duración, enlace a la grabación y un resumen de las respuestas más relevantes.
+### Segmento 1: Junta de Directiva (Propietarios que administran su propio edificio)
 
-| # | Entrevistado | Cargo / Rol | Segmento | Edificio / Empresa | Fecha | Duración | Enlace a la grabación |
-| :--- | :--- | :--- | :--- | :--- | :--- | :--- | :--- |
-| 1 |  |  | Segmento 1 (B2B) |  |  |  |  |
-| 2 |  |  | Segmento 1 (B2B) |  |  |  |  |
-| 3 |  |  | Segmento 2 (B2C) |  |  |  |  |
-| 4 |  |  | Segmento 2 (B2C) |  |  |  |  |
+#### Entrevista 1
 
-**Resumen por entrevistado**
+| Campo | Detalle |
+|------|--------|
+| **Segmento** | Junta de Directiva |
+| **Nombre** | Ismael |
+| **Apellidos** | Paredes |
+| **Edad** | 73 |
+| **Distrito** | Jesus Maria |
+| **Screenshot** | ![Entrevista 1](img/entrevista1_ismael.png) |
+| **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202316829_upc_edu_pe/IQAjOrj36WAbS7yjtkqR3BOjAYmhb5EJho0nURxlr5DQ3h0?e=ruuATc |
+| **Duración** | 6:02 |
+| **Resumen** | Prefiere trato personal antes que automatización en cobranzas. Maneja deudas mediante conversación y confianza directa. Percibe que la confianza reduce conflictos entre vecinos. Considera que el software puede ser útil, pero no indispensable en edificios pequeños. Tiene preocupaciones sobre privacidad y seguridad de datos. Ve la digitalización como tendencia, pero prioriza el factor humano. |
 
-*Entrevista 1 — (Segmento 1):* _pendiente._
+#### Entrevista 2
 
-*Entrevista 2 — (Segmento 1):* _pendiente._
+| Campo | Detalle |
+|------|--------|
+| **Segmento** | Junta de Directiva |
+| **Nombre** | Valeria |
+| **Apellidos** | Carpio |
+| **Edad** | 28 |
+| **Distrito** | Lima |
+| **Screenshot** | ![Entrevista 3](img/entrevista3_valeria.png) |
+| **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217853_upc_edu_pe/IQACC1SIKVjvTagwZh1y0u4aAXk8Tw2TAlffNsDCWQMPQrc?e=pekn9G&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Duración** | 5:51 |
+| **Resumen** | La administración ejecuta, la junta planifica y supervisa. Ella dedica tiempo a presupuestos y proyección financiera. Identifica la falta de comunicación como principal problema. Reconoce la importancia de la transparencia financiera. Considera útil la automatización (recordatorios, pagos), pero como apoyo. Valora el software por su capacidad de organización y control. |
 
-*Entrevista 3 — (Segmento 2):* _pendiente._
+#### Entrevista 3
 
-*Entrevista 4 — (Segmento 2):* _pendiente._
+| Campo | Detalle |
+|------|--------|
+| **Segmento** | Junta de Directiva |
+| **Nombre** | Antonio |
+| **Apellidos** | Chan |
+| **Edad** | 50 |
+| **Distrito** | Jesus Maria |
+| **Screenshot** | ![Entrevista 2](img/entrevista2_antonio.png) |
+| **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202316829_upc_edu_pe/IQCeaFiAnHVMS4osYS6VReweAdCzF57CR0YvpEt6g_Fkdjc?e=Vk1CG6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
+| **Duración** | 5:51 |
+| **Resumen** | La administración ejecuta, la junta planifica y supervisa. Dedica tiempo a presupuestos y proyección financiera. Identifica la falta de comunicación como principal problema. Reconoce la importancia de la transparencia financiera. Considera útil la automatización (recordatorios, pagos), pero como apoyo. Valora el software por su capacidad de organización y control. |
+
+### Segmento 2: Empresas de Gestión de Edificios (Administradores profesionales)
+
+#### Entrevista 4
+
+| Campo | Detalle |
+|------|--------|
+| **Segmento** | Empresas de Gestión de Edificios |
+| **Nombre** | Manuel |
+| **Apellidos** | Mera |
+| **Edad** | 45 |
+| **Distrito** | San Borja |
+| **Screenshot** | ![Entrevista 4](img/entrevista4_manuel.png) |
+| **URL** | [upc-pre-202610-1asi0730-6818-BuildingFex-needfinding-sprint-4.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQAEMbg8JmgaQaVqskOQem9iAb1I7oRMsDqavQquDJIMQeA?e=dLkD0t&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
+| **Duración** | 17:37 |
+| **Resumen** | Manuel es un profesional que trabaja de forma remota y reside en un edificio de departamentos. Relata incidentes de gas y electricidad con procesos frustrantes: depende de recomendaciones, búsquedas en Google o apoyo limitado del conserje. Su principal problema es la falta de confianza en técnicos y la dificultad para encontrar especialistas calificados rápidamente. |
+| **Personalidad** | - Precavido y analítico: investiga antes de contratar.<br>- Pragmático: busca soluciones directas.<br>- Escéptico: desconfía de servicios informales. |
+| **Marcas** | - WhatsApp: comunicación y contactos.<br>- Excel: control de cuentas e información. |
+| **Dispositivos** | - Smartphone: comunicación y búsquedas rápidas.<br>- Laptop: trabajo e investigación. |
+| **Flujos principales** | - Búsqueda y selección de confianza<br>- Gestión de la emergencia<br>- Validación y pago<br>- Post-servicio (garantía) |
+
+#### Entrevista 5
+
+| Campo | Detalle |
+|------|--------|
+| **Segmento** | Empresas de Gestión de Edificios |
+| **Nombre** | Carlos |
+| **Apellidos** | Chang |
+| **Edad** | 24 |
+| **Distrito** | San Borja |
+| **Screenshot** | ![Entrevista 5](img/entrevista5_carlos.png) |
+| **URL** | [upc-pre-202610-1asi0730-6818-BuildingFex-needfinding-sprint-5.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQAb0fPmezaQR4uOkVXODq7XAYk47uCjZoA2l1mIjnWkvAA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=qppxed) |
+| **Duración** | 12:12 |
+| **Resumen** | Administrador general de 24 años que gestiona 18 edificios (~700 departamentos) en Lima Moderna. Depende fuertemente de procesos manuales y Excel. Su principal problema es la conciliación bancaria y la cobranza. Ve la digitalización como clave para reducir horas-hombre y escalar su negocio, siempre que el software esté adaptado al contexto peruano y automatice pagos. |
+| **Personalidad** | - Pragmático y enfocado en eficiencia (busca reducir carga administrativa).<br>- Detallista y orientado a la confianza financiera.<br>- Cauteloso con software nuevo (prefiere soluciones simples e intuitivas). |
+| **Marcas** | - Excel: base actual de gestión financiera.<br>- WhatsApp: comunicación operativa diaria.<br>- Yape / Plin: clave para automatizar cobros. |
+| **Dispositivos** | - Laptop/PC: tareas complejas (reportes, cuentas).<br>- Smartphone: uso diario para coordinación y emergencias. |
+| **Flujos principales** | - Conciliación de pagos y cobranza<br>- Gestión de reservas<br>- Onboarding de edificios<br>- Mantenimiento e incidencias |
+
+#### Entrevista 6
+
+| Campo | Detalle |
+|------|--------|
+| **Segmento** | Empresas de Gestión de Edificios |
+| **Nombre** | Adrian |
+| **Apellidos** | Delgado |
+| **Edad** | 24 |
+| **Distrito** | Surco |
+| **Screenshot** |  ![Vercel — evidencia 1](img/entrevista6.jpeg)  |
+| **URL** | [upc-pre-202610-1asi0730-6818-BuildingFex-needfinding-sprint-6.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQCU3cNsBGklT4-T2l_crjfeAfIA-zu4Aj5K_0AmkObByA8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=12dNB5) |
+| **Duración** | 17:04 |
+| **Resumen** | Adrián es un Asistente de Operaciones de 24 años que actúa como el brazo ejecutor y la mano derecha en la gestión de 18 edificios. A diferencia de un perfil tradicional, es un nativo digital que sufre con los procesos analógicos de su propia empresa. Su día a día es altamente reactivo y caótico: pasa horas persiguiendo comprobantes de pago, actualizando hojas de cálculo desde su celular y actuando como mediador en conflictos por reservas mal anotadas. Ve en la adopción de una plataforma moderna la clave no solo para automatizar su carga operativa (y recuperar su tiempo libre), sino para mejorar radicalmente la experiencia del residente, un factor que ya les ha costado contratos en el pasado por parecer "anticuados". |
+| **Personalidad** | - Nativo Digital y Dinámico: Le frustra la dependencia del papel y los procesos lentos.<br>- Orientado a la Experiencia del Usuario (UX): Entiende perfectamente que la retención del negocio depende de tener a los residentes contentos.<br>- Resolutivo pero Saturado: Tiene la iniciativa de mejorar los procesos (como migrar de Excel a Google Sheets por su cuenta). |
+| **Marcas** | - WhatsApp: Su centro principal de operaciones.<br>- Google Sheets: La herramienta que impuso en su equipo para poder trabajar desde el celular, reemplazando al Excel tradicional.<br>- Yape: Crítico en su operativa diaria. |
+| **Dispositivos** | - Smartphone: Es su herramienta de trabajo principal absoluto. <br>- Laptop/Computadora: Su uso está estrictamente relegado a tareas pesadas que no puede hacer desde su celular. |
+| **Flujos principales** | - Recaudación y Verificación de Pagos.<br>- Gestión de Áreas Comunes.<br>- Onboarding y Creación de Base de Datos.<br>- Consolidación y Reportes. |
 
 #### 2.2.3. Análisis de entrevistas
 
-> **Pendiente de completar una vez cerrado el registro de la sección 2.2.2.**
+##### Segmento 1: Juntas de Directiva (Propietarios que administran su propio edificio)
 
-A partir de las entrevistas se consolidan los hallazgos por segmento, contrastándolos con las suposiciones del Lean UX (sección 1.2.2):
+---
 
-**Segmento 1 — Administradoras (B2B)**
+###### Resumen
 
-- Hallazgos sobre gestión de cobranzas y morosidad: _pendiente._
-- Hallazgos sobre comunicación y mantenimiento: _pendiente._
-- Disposición a pagar y frenos de adopción: _pendiente._
+Los miembros de juntas directivas entrevistados presentan un perfil de gestión ad honorem o delegada por falta de voluntarios, caracterizado por asumir la administración como una carga adicional a sus actividades profesionales personales. Su día a día se ve afectado por la falta de tiempo, la centralización de la información y la fricción constante al gestionar cobros o resolver reclamos con sus propios vecinos.
 
-**Segmento 2 — Juntas de propietarios (B2C)**
+Su relación con la tecnología varía según la edad y la costumbre digital: mientras que perfiles más jóvenes o adaptables buscan herramientas simples para automatizar cobros y evitar el desgaste personal, perfiles de mayor edad priorizan la comunicación directa e interpersonal para no erosionar la convivencia vecinal ni exponer la privacidad de las cuentas.
 
-- Hallazgos sobre transparencia financiera y pagos: _pendiente._
-- Hallazgos sobre áreas comunes y comunicados: _pendiente._
-- Disposición a pagar y frenos de adopción: _pendiente._
+Se apoyan principalmente en WhatsApp para coordinar emergencias o reservas de áreas comunes, y en hojas de cálculo (Excel) junto con asesores externos (contadores o conserjes) para llevar las cuentas. Para ellos, la tranquilidad en la gestión radica en contar con transparencia financiera frente a las asambleas, reducir la morosidad mediante procesos automatizados o formales y garantizar una transición de información sencilla cuando cambia la directiva.
 
-**Conclusiones del proceso de entrevistas**
+---
 
-Las conclusiones se redactarán indicando qué suposiciones del Lean UX quedaron validadas, cuáles fueron refutadas y qué funcionalidades ascienden o descienden de prioridad en el Product Backlog (sección 2.4.3).
+###### Edad de entrevistados
+
+| Entrevistado                          | Edad |
+|---------------------------------------|------|
+| Antonio Chan                          | 50   |
+| Valeria Carpio                        | 28   |
+| Ismael Paredes                        | 73   |
+| **Media**                             | **50.3** |
+
+---
+
+###### Personalidad
+
+- **Directivos por compromiso:**  
+  Asumen el cargo motivados por mantener la convivencia o ante la ausencia de voluntarios; buscan balancear el tiempo personal con la responsabilidad del edificio sin desgastar sus relaciones vecinales.
+
+- **Gestores empáticos y cautelosos:**  
+  Valoran el trato humano y directo en temas delicados como la morosidad; muestran cautela frente a la exposición pública de deudas o riesgos asociados a la ciberseguridad y manejo de información confidencial.
+
+- **Adaptables en búsqueda de eficiencia:**  
+  Reconocen la necesidad de organización y transparencia; se muestran dispuestos a adoptar herramientas digitales siempre que sean intuitivas, reduzcan la burocracia y no requieran conocimientos contables avanzados.
+
+---
+
+###### Marcas y canales de comunicación
+
+| Marca / Canal           | Frecuencia Absoluta | Frecuencia Relativa |
+|-------------------------|--------------------|---------------------|
+| WhatsApp                | 3                  | 42.8%               |
+| Excel / Hojas de cálculo| 2                  | 28.6%               |
+| Comunicación presencial / Murales | 2       | 28.6%               |
+| **Total**               | **7**              | **100%**            |
+
+---
+
+###### Dispositivos
+
+| Dispositivo            | Frecuencia Absoluta | Frecuencia Relativa |
+|------------------------|--------------------|---------------------|
+| Smartphone             | 3                  | 60%                 |
+| Computadora / Laptop   | 2                  | 40%                 |
+| **Total**              | **5**              | **100%**            |
+
+---
+
+###### Flujos principales
+
+| Flujo de trabajo                                               | Frecuencia Absoluta | Frecuencia Relativa |
+|----------------------------------------------------------------|--------------------|---------------------|
+| Seguimiento de cobros y gestión de morosos                     | 3                  | 33.3%               |
+| Rendición de cuentas y proyección de presupuestos para asambleas | 3               | 33.3%               |
+| Coordinación de reservas de áreas comunes y atención a vecinos | 2                  | 22.2%               |
+| Traspaso de información y documentación a nuevas directivas    | 1                  | 11.2%               |
+| **Total**                                                      | **9**              | **100%**            |
+
+##### Segmento 2: Empresas de Gestión de Edificios (Administradores profesionales)
+
+---
+
+###### Resumen
+
+Los administradores de edificios y asistentes de operaciones entrevistados presentan un perfil altamente operativo y enfocado en la eficiencia del negocio. Aunque manejan un volumen fuerte de información y coordinan con cientos de residentes, su día a día está saturado de tareas manuales repetitivas, especialmente la conciliación de pagos y la resolución de conflictos vecinales. 
+
+La tecnología es su entorno natural (son nativos digitales que operan casi todo el día desde el smartphone), pero se ven frenados por la dependencia de herramientas improvisadas como Excel, cuadernos físicos o plataformas que no se adaptan al contexto local.
+
+Se apoyan fundamentalmente en WhatsApp para apagar "incendios" diarios y coordinar con los conserjes, y en hojas de cálculo para el back-office. Para ellos, la tranquilidad significa automatizar el cobro y lograr que el edificio funcione en piloto automático, lo que les permitiría escalar su cartera de clientes y proyectar una imagen de total transparencia ante las juntas de propietarios.
+
+---
+
+###### Edad de entrevistados
+
+| Entrevistado                         | Edad |
+|------------------------------------|------|
+| Manuel Mera         | 45   |
+| Adrián Delgado                     | 24   |
+| Carlos Chang | 24   |
+| **Media**                          | **31** |
+
+---
+
+###### Personalidad
+
+- **Administradores operativos:**  
+  Pragmáticos, dinámicos y enfocados en el rendimiento; buscan reducir desesperadamente las "horas hombre" invertidas en trabajo manual para poder hacer crecer el negocio de la empresa inmobiliaria.
+
+- **Nativos digitales saturados:**  
+  Orientados a la inmediatez y a la experiencia del usuario (UX). Prefieren trabajar en la nube y desde el celular, sintiendo profunda frustración por los procesos burocráticos, el uso de papel y los sistemas contables anticuados.
+
+- **Gestores de comunidad:**  
+  Detallistas y muy conscientes de su reputación. Saben que la confianza lo es todo; un error en las cuentas o parecer poco transparentes les cuesta contratos, por lo que valoran la claridad visual en los reportes.
+
+---
+
+###### Marcas y canales de comunicación
+
+| Marca / Canal          | Frecuencia Absoluta | Frecuencia Relativa |
+|-----------------------|--------------------|---------------------|
+| WhatsApp              | 3                  | 42.8%               |
+| Excel / Google Sheets | 3                  | 42.8%               |
+| Yape / Plin           | 1                  | 14.4%               |
+| **Total**             | **7**              | **100%**            |
+
+---
+
+###### Dispositivos
+
+| Dispositivo           | Frecuencia Absoluta | Frecuencia Relativa |
+|----------------------|--------------------|---------------------|
+| Smartphone           | 3                  | 50%                 |
+| Laptop / Computadora | 3                  | 50%                 |
+| **Total**            | **6**              | **100%**            |
+
+---
+
+###### Flujos principales
+
+| Flujo de trabajo                                               | Frecuencia Absoluta | Frecuencia Relativa |
+|----------------------------------------------------------------|--------------------|---------------------|
+| Conciliación bancaria y validación manual de pagos             | 3                  | 33.3%               |
+| Coordinación diaria con conserjes y atención de incidencias    | 3                  | 33.3%               |
+| Gestión y mediación por reservas de áreas comunes              | 2                  | 22.2%               |
+| Levantamiento de información (onboarding) de nuevos edificios  | 1                  | 11.2%               |
+| **Total**                                                      | **9**              | **100%**            |
+
+---
 
 ### 2.3. Needfinding
 #### 2.3.1. User Personas
+A partir de la información recopilada en las entrevistas, hemos construido dos User Personas que representan nuestros segmentos objetivos principales. Estos arquetipos ideales nos permiten empatizar con las necesidades, frustraciones y metas reales de los usuarios que interactuarán con la plataforma BuildingFex.
+
+##### User Persona 1: Segmento: Junta directiva
+
+![User Persona](img/userpersona_roberto.png)
+
+##### User Persona 2: Segmento: Empresas de Gestión de Edificios
+
+![User Persona](img/userpersona_valeria.png)
+
 #### 2.3.2. User Task Matrix
+
+Esta sección permite identificar las tareas clave que realizan los usuarios de los segmentos objetivos, evaluando su frecuencia e importancia. El análisis resalta coincidencias, diferencias y puntos críticos que la plataforma BuildingFex debe atender, especialmente en los cuellos de botella operativos de cada perfil.
+
+| Tarea (Taks) | Directivo Roberto (Frecuencia) | Directivo Roberto (Importancia) | Administradora Valeria (Frecuencia) | Administradora Valeria (Importancia) |
+|------|-------------------------------|---------------------------------|------------------------------------|--------------------------------------|
+| Generar y enviar recibos | Baja (mensual) | Alta | Alta (varios edificios) | Muy alta |
+| Conciliación bancaria | Media (fin de mes) | Muy alta | Muy alta (diario/semanal) | Muy alta |
+| Recordatorios a morosos | Baja (evita hacerlo) | Alta | Alta (constante) | Alta |
+| Reportes financieros | Baja (mensual) | Alta | Media (por edificio) | Muy alta |
+| Reservas áreas comunes | Media (fines de semana) | Media | Media (supervisión) | Media |
+| Incidencias y quejas | Alta (diario WhatsApp) | Media | Muy alta (diario) | Alta |
+| Configuración inicial | Muy baja (una vez) | Alta | Media (nuevos clientes) | Muy alta |
+| Dashboard (estado) | Media (revisión rápida) | Alta | Alta (diario) | Muy alta |
+
+Análisis de la matriz:
+
+Por un lado, la conciliación bancaria y el envío de recordatorios a morosos son tareas de muy alta importancia para ambos segmentos. Para el directivo representan una carga emocional (incomodidad vecinal) y pérdida de tiempo libre, mientras que para el administrador representan un freno económico (necesidad de contratar más personal contable). BuildingFlex debe priorizar la automatización absoluta de estas dos tareas.
+
+Por otro lado, mientras el directivo realiza la carga de datos inicial solo una vez en su vida, el administrador lo hace cada vez que consigue un nuevo cliente. Por ello, el módulo de Onboarding o importación masiva desde Excel debe ser tan robusto como sencillo, para satisfacer la necesidad de crecimiento de las empresas administradoras
+
+
 #### 2.3.3. User Journey Mapping
+
+En esta sección se presenta el User Journey Mapping para la plataforma de gestión de condominios BuildingFlex, destacando las interacciones clave de los usuarios desde que descubren su problema hasta la etapa final de su ciclo en la plataforma.
+
+Se detallan las acciones, problemas y emociones de cada etapa, lo que nos permite identificar oportunidades clave para mejorar el desarrollo.
+
+##### Segmento 1: Junta Directiva
+
+![User Journey](img/journeymap_roberto.png)
+
+##### Segmento 2: Empresa de gestión de edificios
+
+![User Journey](img/journeymap_valeria.png)
+
 #### 2.3.4. Empathy Mapping
+
+##### User Persona 1 Empathy Map: Segmento: Junta directiva
+
+![Empathy Map Persona 1](img/EmpathyMapping_Roberto.png)
+
+##### User Persona 2: Segmento: Empresas de Gestión de Edificios
+
+![Empathy Map Persona 1](img/EmpathyMapping_Valeria.png)
+
 #### 2.3.5. Big Picture EventStorming
+
+![Big Picture EventStorming](img/BigPictureEventstorming.png)
+
+link del Big Picture EventStorming https://miro.com/welcomeonboard/bXdOWFFHWU1GWVdZa1JWK2k4TDNWdTdoYUpIQjB3R0hnZnpuVTNkM2dkN1Joc3pvd0ZRSGhuY3NXenU3T2pvVXBBcTg3bThxeUY3dXh6R2RPWUxpVFBwcVNPb3FvbThENEoxMWVKblRPSFVjK3dudjNpSnRlVE5mdU1jeFNoRy9Bd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=905759698205
 
 #### 2.3.6. Ubiquitous Language
 
