@@ -476,7 +476,7 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **Apellidos** | Paredes |
 | **Edad** | 73 |
 | **Distrito** | Jesus Maria |
-| **Screenshot** | ![Entrevista 1](../img/entrevista1_ismael.png) |
+| **Screenshot** | ![Entrevista 1](img/entrevista1_ismael.png) |
 | **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202316829_upc_edu_pe/IQAjOrj36WAbS7yjtkqR3BOjAYmhb5EJho0nURxlr5DQ3h0?e=ruuATc |
 | **Duración** | 6:02 |
 | **Resumen** | Prefiere trato personal antes que automatización en cobranzas. Maneja deudas mediante conversación y confianza directa. Percibe que la confianza reduce conflictos entre vecinos. Considera que el software puede ser útil, pero no indispensable en edificios pequeños. Tiene preocupaciones sobre privacidad y seguridad de datos. Ve la digitalización como tendencia, pero prioriza el factor humano. |
@@ -490,7 +490,7 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **Apellidos** | Carpio |
 | **Edad** | 28 |
 | **Distrito** | Lima |
-| **Screenshot** | ![Entrevista 3](../img/entrevista3_valeria.png) |
+| **Screenshot** | ![Entrevista 3](img/entrevista3_valeria.png) |
 | **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217853_upc_edu_pe/IQACC1SIKVjvTagwZh1y0u4aAXk8Tw2TAlffNsDCWQMPQrc?e=pekn9G&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | **Duración** | 5:51 |
 | **Resumen** | La administración ejecuta, la junta planifica y supervisa. Ella dedica tiempo a presupuestos y proyección financiera. Identifica la falta de comunicación como principal problema. Reconoce la importancia de la transparencia financiera. Considera útil la automatización (recordatorios, pagos), pero como apoyo. Valora el software por su capacidad de organización y control. |
@@ -504,7 +504,7 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **Apellidos** | Chan |
 | **Edad** | 50 |
 | **Distrito** | Jesus Maria |
-| **Screenshot** | ![Entrevista 2](../img/entrevista2_antonio.png) |
+| **Screenshot** | ![Entrevista 2](img/entrevista2_antonio.png) |
 | **URL** | https://upcedupe-my.sharepoint.com/:v:/g/personal/u202316829_upc_edu_pe/IQCeaFiAnHVMS4osYS6VReweAdCzF57CR0YvpEt6g_Fkdjc?e=Vk1CG6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D |
 | **Duración** | 5:51 |
 | **Resumen** | La administración ejecuta, la junta planifica y supervisa. Dedica tiempo a presupuestos y proyección financiera. Identifica la falta de comunicación como principal problema. Reconoce la importancia de la transparencia financiera. Considera útil la automatización (recordatorios, pagos), pero como apoyo. Valora el software por su capacidad de organización y control. |
@@ -520,7 +520,7 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **Apellidos** | Mera |
 | **Edad** | 45 |
 | **Distrito** | San Borja |
-| **Screenshot** | ![Entrevista 4](../img/entrevista4_manuel.png) |
+| **Screenshot** | ![Entrevista 4](img/entrevista4_manuel.png) |
 | **URL** | [upc-pre-202610-1asi0730-6818-BuildingFex-needfinding-sprint-4.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQAEMbg8JmgaQaVqskOQem9iAb1I7oRMsDqavQquDJIMQeA?e=dLkD0t&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D) |
 | **Duración** | 17:37 |
 | **Resumen** | Manuel es un profesional que trabaja de forma remota y reside en un edificio de departamentos. Relata incidentes de gas y electricidad con procesos frustrantes: depende de recomendaciones, búsquedas en Google o apoyo limitado del conserje. Su principal problema es la falta de confianza en técnicos y la dificultad para encontrar especialistas calificados rápidamente. |
@@ -538,7 +538,7 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **Apellidos** | Chang |
 | **Edad** | 24 |
 | **Distrito** | San Borja |
-| **Screenshot** | ![Entrevista 5](../img/entrevista5_carlos.png) |
+| **Screenshot** | ![Entrevista 5](img/entrevista5_carlos.png) |
 | **URL** | [upc-pre-202610-1asi0730-6818-BuildingFex-needfinding-sprint-5.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQAb0fPmezaQR4uOkVXODq7XAYk47uCjZoA2l1mIjnWkvAA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=qppxed) |
 | **Duración** | 12:12 |
 | **Resumen** | Administrador general de 24 años que gestiona 18 edificios (~700 departamentos) en Lima Moderna. Depende fuertemente de procesos manuales y Excel. Su principal problema es la conciliación bancaria y la cobranza. Ve la digitalización como clave para reducir horas-hombre y escalar su negocio, siempre que el software esté adaptado al contexto peruano y automatice pagos. |
@@ -556,7 +556,7 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **Apellidos** | Delgado |
 | **Edad** | 24 |
 | **Distrito** | Surco |
-| **Screenshot** |  ![Vercel — evidencia 1](../img/entrevista6.jpeg)  |
+| **Screenshot** |  ![Vercel — evidencia 1](img/entrevista6.jpeg)  |
 | **URL** | [upc-pre-202610-1asi0730-6818-BuildingFex-needfinding-sprint-6.mp4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQCU3cNsBGklT4-T2l_crjfeAfIA-zu4Aj5K_0AmkObByA8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=12dNB5) |
 | **Duración** | 17:04 |
 | **Resumen** | Adrián es un Asistente de Operaciones de 24 años que actúa como el brazo ejecutor y la mano derecha en la gestión de 18 edificios. A diferencia de un perfil tradicional, es un nativo digital que sufre con los procesos analógicos de su propia empresa. Su día a día es altamente reactivo y caótico: pasa horas persiguiendo comprobantes de pago, actualizando hojas de cálculo desde su celular y actuando como mediador en conflictos por reservas mal anotadas. Ve en la adopción de una plataforma moderna la clave no solo para automatizar su carga operativa (y recuperar su tiempo libre), sino para mejorar radicalmente la experiencia del residente, un factor que ya les ha costado contratos en el pasado por parecer "anticuados". |
@@ -713,11 +713,11 @@ A partir de la información recopilada en las entrevistas, hemos construido dos 
 
 ##### User Persona 1: Segmento: Junta directiva
 
-![User Persona](../img/userpersona_roberto.png)
+![User Persona](img/userpersona_roberto.png)
 
 ##### User Persona 2: Segmento: Empresas de Gestión de Edificios
 
-![User Persona](../img/userpersona_valeria.png)
+![User Persona](img/userpersona_valeria.png)
 
 #### 2.3.2. User Task Matrix
 
@@ -749,25 +749,25 @@ Se detallan las acciones, problemas y emociones de cada etapa, lo que nos permit
 
 ##### Segmento 1: Junta Directiva
 
-![User Journey](../img/journeymap_roberto.png)
+![User Journey](img/journeymap_roberto.png)
 
 ##### Segmento 2: Empresa de gestión de edificios
 
-![User Journey](../img/journeymap_valeria.png)
+![User Journey](img/journeymap_valeria.png)
 
 #### 2.3.4. Empathy Mapping
 
 ##### User Persona 1 Empathy Map: Segmento: Junta directiva
 
-![Empathy Map Persona 1](../img/EmpathyMapping_Roberto.png)
+![Empathy Map Persona 1](img/EmpathyMapping_Roberto.png)
 
 ##### User Persona 2: Segmento: Empresas de Gestión de Edificios
 
-![Empathy Map Persona 1](../img/EmpathyMapping_Valeria.png)
+![Empathy Map Persona 1](img/EmpathyMapping_Valeria.png)
 
 #### 2.3.5. Big Picture EventStorming
 
-![Big Picture EventStorming](../img/BigPictureEventstorming.png)
+![Big Picture EventStorming](img/BigPictureEventstorming.png)
 
 link del Big Picture EventStorming https://miro.com/welcomeonboard/bXdOWFFHWU1GWVdZa1JWK2k4TDNWdTdoYUpIQjB3R0hnZnpuVTNkM2dkN1Joc3pvd0ZRSGhuY3NXenU3T2pvVXBBcTg3bThxeUY3dXh6R2RPWUxpVFBwcVNPb3FvbThENEoxMWVKblRPSFVjK3dudjNpSnRlVE5mdU1jeFNoRy9Bd044SHFHaVlWYWk0d3NxeHNmeG9BPT0hdjE=?share_link_id=905759698205
 
