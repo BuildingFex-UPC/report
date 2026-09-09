@@ -475,11 +475,45 @@ Las conclusiones se redactarán indicando qué suposiciones del Lean UX quedaron
 #### 2.3.3. User Journey Mapping
 #### 2.3.4. Empathy Mapping
 #### 2.3.5. Big Picture EventStorming
-#### 2.3.6. Ubiquitous Language
-### 2.4. Requirements specification
-#### 2.4.1. User Stories
 
-## 2.4.1. User Stories
+#### 2.3.6. Ubiquitous Language
+
+El Ubiquitous Language de BuildingFex establece un conjunto común de términos utilizados por los miembros del equipo y los stakeholders para describir el dominio de la administración de condominios y conjuntos residenciales. Este glosario permite mantener una comunicación clara y consistente durante la definición de las necesidades del negocio y de las funcionalidades del producto.
+
+Los términos se encuentran definidos de acuerdo con el contexto de BuildingFex y representan conceptos utilizados por administradores, empresas administradoras, miembros de la junta y residentes.
+
+| Term                            | Spanish Equivalent            | Definition                                                                                                                                                      |
+| ------------------------------- | ----------------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **Property Management**         | Administración de propiedades | Actividad encargada de gestionar y supervisar las operaciones administrativas, financieras y de mantenimiento de un condominio o conjunto residencial.          |
+| **Property Manager**            | Administrador                 | Persona responsable de gestionar las actividades administrativas, financieras, operativas y de mantenimiento de un condominio o conjunto residencial.           |
+| **Property Management Company** | Empresa administradora        | Organización que presta servicios de administración y gestión a uno o más condominios o conjuntos residenciales.                                                |
+| **Homeowner Association (HOA)** | Junta de propietarios         | Organización conformada por los propietarios de las unidades de un condominio, encargada de participar en la toma de decisiones y supervisar su administración. |
+| **Board Member**                | Miembro de la junta           | Propietario que forma parte de la junta de propietarios y participa en la supervisión y toma de decisiones relacionadas con el condominio.                      |
+| **Resident**                    | Residente                     | Persona que habita una unidad dentro del condominio, sea propietaria o arrendataria.                                                                            |
+| **Unit**                        | Unidad                        | Espacio residencial individual que forma parte de un condominio o conjunto residencial, como un departamento.                                                   |
+| **Common Area**                 | Área común                    | Espacio del condominio destinado al uso compartido de los residentes, como salones, terrazas, gimnasios o áreas recreativas.                                    |
+| **Reservation**                 | Reserva                       | Solicitud realizada por un residente para utilizar un área común en una fecha y horario determinados.                                                           |
+| **Maintenance**                 | Mantenimiento                 | Conjunto de actividades destinadas a conservar las instalaciones, servicios y áreas comunes del condominio en condiciones adecuadas de funcionamiento.          |
+| **Incident**                    | Incidencia                    | Situación, problema o desperfecto identificado dentro del condominio que requiere atención, seguimiento o solución.                                             |
+| **Monthly Fee**                 | Cuota mensual                 | Pago periódico que corresponde a cada unidad para cubrir los gastos, servicios y actividades relacionados con la administración y mantenimiento del condominio. |
+| **Payment**                     | Pago                          | Cantidad de dinero entregada para cumplir con una obligación económica asociada a una unidad del condominio.                                                    |
+| **Debt**                        | Deuda                         | Monto pendiente de pago asociado a una unidad por cuotas u otras obligaciones económicas vencidas o pendientes.                                                 |
+| **Delinquency**                 | Morosidad                     | Situación en la que una unidad mantiene una obligación de pago vencida y pendiente de regularización.                                                           |
+| **Receipt**                     | Recibo                        | Documento que acredita el registro de un pago realizado por una unidad.                                                                                         |
+| **Expense**                     | Egreso                        | Salida de dinero destinada a cubrir gastos administrativos, servicios, mantenimiento u otras obligaciones del condominio.                                       |
+| **Financial Report**            | Reporte financiero            | Documento que presenta información sobre los ingresos, egresos, pagos y morosidad del condominio durante un periodo determinado.                                |
+| **Subscription Plan**           | Plan de suscripción           | Modalidad de servicio contratada por una empresa administradora de acuerdo con la cantidad de unidades que gestiona y las necesidades del negocio.              |
+| **Official Notice**             | Comunicado oficial            | Información emitida por la administración para comunicar asuntos relevantes a los residentes o propietarios del condominio.                                     |
+| **Document Repository**         | Repositorio de documentos     | Espacio destinado a conservar y consultar documentos relevantes para la administración del condominio, como reglamentos, actas y otros documentos oficiales.    |
+| **Payment Reminder**            | Recordatorio de pago          | Aviso dirigido a un residente o propietario para recordar una obligación de pago pendiente o próxima a vencer.                                                  |
+| **Outstanding Balance**         | Saldo pendiente               | Monto que una unidad aún debe pagar por cuotas, servicios u otras obligaciones económicas.                                                                      |
+| **Assembly**                    | Asamblea                      | Reunión de propietarios en la que se tratan asuntos relacionados con la administración, funcionamiento y toma de decisiones del condominio.                     |
+
+### 2.4. Requirements specification
+
+En esta sección se especifican los requisitos de BuildingFex a partir de las necesidades identificadas en el análisis del problema y de los objetivos del producto. Los requisitos se organizan mediante el **To-Be Scenario Mapping, User Stories, Impact Map y Product Backlog**, permitiendo relacionar las necesidades de los usuarios con las funcionalidades y prioridades del producto.
+
+#### 2.4.1. User Stories
 
 Las User Stories de BuildingFex representan las funcionalidades requeridas para los distintos actores del sistema. Cada historia se encuentra asociada a una épica y contiene criterios de aceptación verificables, redactados bajo la estructura **Given-When-Then**. Asimismo, se consideran las historias técnicas necesarias para funcionalidades internas del sistema y las Spike Stories orientadas a reducir incertidumbres antes de la implementación.
 
@@ -586,7 +620,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Seleccionar plan según número de unidades</td></tr> 
   <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero elegir un plan según el número de unidades para pagar solo por lo que necesito.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> la cantidad de unidades corresponde a un rango de plan disponible.<br> <strong>When:</strong> la empresa administradora selecciona el plan.<br> <strong>Then:</strong> el sistema asocia la suscripción al plan correspondiente.<br><br> <strong>AC02 – Given:</strong> la cantidad de unidades no corresponde a ningún plan disponible.<br> <strong>When:</strong> se intenta seleccionar un plan.<br> <strong>Then:</strong> el sistema rechaza la selección. </td>
   </tr> 
-</table> |
+</table> 
 
 ### US10 – Cambiar plan
 
@@ -815,7 +849,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   </tr> 
 </table>
 
-### Spike Stories
+#### Spike Stories
 
 ### SP01 – Evaluar almacenamiento seguro de documentos
 
