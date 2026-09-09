@@ -886,10 +886,204 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 
 ### 2.5. Strategic-Level Domain-Driven Design
 #### 2.5.1. EventStorming
+Para descubrir los bounded contexts de BuildingFex se realizó una sesión de EventStorming en formato Big Picture, identificando los domain events (hechos relevantes del negocio, expresados en pasado) generados por cada actor del sistema. Estos eventos fueron agrupados posteriormente en clusters temáticos, dando origen a los cuatro bounded contexts que conforman la plataforma.
 ##### 2.5.1.1. Candidate Context Discovery
+En esta etapa se identificaron los domain events (post-its naranjas) generados por los actores (Administrador, Residente, Sistema de Pagos) a lo largo del ciclo de vida del edificio. Los eventos se agruparon por afinidad temática, obteniendo los siguientes clusters candidatos:
+
+**Cluster: Identidad y Suscripciones**
+- AdministradorRegistrado
+- ResidenteCreado
+- CredencialesDeResidenteActualizadas
+- ResidenteEliminado
+- SesionIniciada
+- PlanDeSuscripcionCambiado
+- PagoDeSuscripcionConfirmado
+- LimiteDeResidentesAlcanzado
+
+**Cluster: Finanzas**
+- CuotaCreada
+- EstadoDeCuotaActualizado
+- PagoRegistrado
+- ReciboEmitido
+- ReciboMarcadoComoPagado
+- ConfiguracionFinancieraActualizada
+- KpiFinancieroCalculado
+- GastoAdministrativoRegistrado
+- ServicioCompartidoDistribuido
+- BeneficiarioDePagoFijoRegistrado
+- WebhookDePagoRecibido
+
+**Cluster: Áreas Comunes y Reservas**
+- EspacioComunCreado
+- EspacioComunActualizado
+- EspacioComunEliminado
+- ReservaCreada
+- ReservaRechazadaPorSolapamientoDeHorario
+- InvitadosDeReservaActualizados
+- ReservaEliminada
+
+**Cluster: Incidencias**
+- IncidenciaReportada
+- IncidenciaActualizada
+- IncidenciaResuelta
+- IncidenciaEliminada
+
+Cada cluster reveló un límite natural de responsabilidad y lenguaje propio, confirmando la existencia de cuatro bounded contexts: **Suscripciones (IAM)**, **Finanzas**, **Reservas (Common Areas)** e **Incidencias**.
 ##### 2.5.1.2. Domain Message Flows Modeling
+
+Para cada bounded context se modeló el flujo Comando → Evento → Política/Reacción, mostrando cómo una acción del usuario dispara un evento de dominio que puede activar una reacción automática del sistema.
+
+**Flujo — Suscripciones (IAM)**
+```
+Comando: RegistrarAdministrador
+   → Evento: AdministradorRegistrado
+      → Política: GenerarTokenJWT
+
+Comando: CrearResidente
+   → Política: ValidarLimiteDeResidentesSegunPlan
+      → Evento: ResidenteCreado (si hay cupo)
+      → Evento: LimiteDeResidentesAlcanzado (si no hay cupo, rechazo)
+
+Comando: ConfirmarPagoDeSuscripcion
+   → Evento: PagoDeSuscripcionConfirmado
+      → Política: ActualizarPlanYFechaDeVencimiento
+```
+
+**Flujo — Finanzas**
+```
+Comando: CrearPreferenciaDePago (MercadoPago)
+   → Evento: PreferenciaDePagoCreada
+      → (usuario paga en MercadoPago)
+Evento externo: WebhookDePagoRecibido
+   → Política: ValidarFirmaHMAC
+      → Evento: PagoRegistrado
+         → Política: ActualizarEstadoDeCuota
+            → Evento: EstadoDeCuotaActualizado
+         → Política: MarcarReciboComoPagado
+            → Evento: ReciboMarcadoComoPagado
+```
+
+**Flujo — Reservas**
+```
+Comando: CrearReserva
+   → Política: ValidarSolapamientoDeHorario (ReservationOverlapHelper)
+      → Evento: ReservaCreada (si no hay solapamiento)
+      → Evento: ReservaRechazadaPorSolapamientoDeHorario (si hay conflicto)
+         → Reacción: GenerarGuestInviteToken
+```
+
+**Flujo — Incidencias**
+```
+Comando: ReportarIncidencia
+   → Evento: IncidenciaReportada (estado inicial "open")
+
+Comando: ActualizarIncidencia
+   → Evento: IncidenciaActualizada
+      → Política: ValidarTransicionDeEstado (open → in-progress → resolved)
+      → Evento: IncidenciaResuelta (cuando Status = "resolved")
+```
+
 ##### 2.5.1.3. Bounded Context Canvases
+
+**Canvas — Suscripciones (Identity & Access Management)**
+
+| Campo | Descripción |
+| --- | --- |
+| Nombre | Suscripciones (IAM) |
+| Propósito | Autenticar usuarios, unificar administradores y residentes bajo multi-tenancy, y gestionar el ciclo de vida de los planes de suscripción SaaS. |
+| Clasificación estratégica | **Core Domain** — es el diferenciador que sostiene el modelo de negocio B2B/B2B2C por niveles de suscripción. |
+| Lenguaje ubicuo | User, Admin, Resident, OwnerAdmin, Plan (free/essential/standard/scale), ExternalId, Rol |
+| Agregados | User, SubscriptionPlans |
+| Entrada | Comandos SignIn, RegisterAdmin, CreateResident, UpdateResidentCredentials, DeleteResident |
+| Salida | Provee `OwnerAdminId` y validación de identidad (JWT) a Finanzas, Reservas e Incidencias |
+| Decisiones de negocio | Límite de residentes según plan; un residente pertenece a un único admin |
+| Dependencias | Ninguna (contexto ascendente/upstream) |
+
+**Canvas — Finanzas**
+
+| Campo | Descripción |
+| --- | --- |
+| Nombre | Finanzas (Financial Billing Management) |
+| Propósito | Administrar cuotas, pagos, recibos, KPIs financieros y la integración con la pasarela de pago MercadoPago. |
+| Clasificación estratégica | **Core Domain** — resuelve el dolor principal identificado en el problema de negocio (morosidad y falta de transparencia). |
+| Lenguaje ubicuo | Fee, Payment, Receipt, LateFee, KpiRecord, SharedUtilityService, FixedPayoutRecipient |
+| Agregados | Fee, Payment, Receipt, FinanceSetting, KpiRecord, AdminManagementExpense, SharedUtilityService, FixedPayoutRecipient |
+| Entrada | Consume `OwnerAdminId` validado por Suscripciones (vía FinanceOwnerResolver) |
+| Salida | Expone KPIs consolidados al dashboard del administrador |
+| Decisiones de negocio | Payment es inmutable una vez creado; reconciliación de pagos vía webhook HMAC |
+| Dependencias | Downstream de Suscripciones (IAM); integra sistema externo MercadoPago |
+
+**Canvas — Reservas (Common Areas)**
+
+| Campo | Descripción |
+| --- | --- |
+| Nombre | Reservas (Common Areas Resource Reservation) |
+| Propósito | Administrar el catálogo de espacios comunes y las reservas con validación de solapamiento horario. |
+| Clasificación estratégica | **Supporting Domain** — mejora la convivencia pero no es el diferenciador financiero. |
+| Lenguaje ubicuo | SocialSpace, Reservation, Overlap, GuestInviteToken |
+| Agregados | SocialSpace, Reservation |
+| Entrada | Consume `OwnerAdminId` validado por Suscripciones (vía SocialSpacesOwnerResolver) |
+| Salida | Token público de invitados (guestInviteToken) para acceso sin autenticación |
+| Decisiones de negocio | Dos reservas del mismo espacio no pueden solaparse en fecha/horario |
+| Dependencias | Downstream de Suscripciones (IAM) |
+
+**Canvas — Incidencias**
+
+| Campo | Descripción |
+| --- | --- |
+| Nombre | Incidencias (Incident Maintenance Management) |
+| Propósito | Registrar, actualizar y dar seguimiento a incidencias de mantenimiento reportadas por residentes o administradores. |
+| Clasificación estratégica | **Supporting Domain** |
+| Lenguaje ubicuo | Incident, Status (open/in-progress/resolved), Provider |
+| Agregados | Incident |
+| Entrada | Consume `OwnerAdminId` validado por Suscripciones (IAM) |
+| Salida | Listado de incidencias por edificio para el dashboard del administrador |
+| Decisiones de negocio | `DeleteBehavior.Restrict` evita eliminar un admin con incidencias asociadas |
+| Dependencias | Downstream de Suscripciones (IAM) |
+
+---
+
 #### 2.5.2. Context Mapping
+
+El Context Map de BuildingFex refleja una arquitectura con un contexto **upstream** (Suscripciones/IAM) del cual dependen los tres contextos **downstream** (Finanzas, Reservas e Incidencias), además de la integración con sistemas externos (MercadoPago, API de edificios y Firebase Cloud Messaging).
+
+@startuml
+!theme plain
+skinparam packageStyle rectangle
+
+package "Suscripciones (IAM)\n[Core Domain - Upstream]" as IAM
+
+package "Finanzas\n[Core Domain - Downstream]" as FIN
+package "Reservas\n[Supporting Domain - Downstream]" as RES
+package "Incidencias\n[Supporting Domain - Downstream]" as INC
+
+package "MercadoPago\n[Sistema Externo]" as MP
+package "API de Edificios\n[Sistema Externo]" as EXT
+package "Firebase Cloud Messaging\n[Sistema Externo]" as FCM
+
+IAM --> FIN : Customer/Supplier\n(Conformist)\nOwnerAdminId, rol validado
+IAM --> RES : Customer/Supplier\n(Conformist)\nOwnerAdminId, rol validado
+IAM --> INC : Customer/Supplier\n(Conformist)\nOwnerAdminId, rol validado
+
+FIN --> MP : Anticorruption Layer\n(MercadoPagoService traduce\nel modelo externo)
+FIN ..> EXT : Conformist\n(datos de edificios)
+FIN ..> FCM : Open Host Service\n(notificaciones push)
+INC ..> FCM : Open Host Service\n(notificaciones push)
+
+@enduml
+
+**Explicación del Context Map:**
+
+- **Suscripciones (IAM) → Finanzas / Reservas / Incidencias:** relación de tipo **Customer-Supplier con patrón Conformist**. Los tres contextos downstream no negocian el modelo de `User`: simplemente consumen `OwnerAdminId` y el rol ("admin"/"resident") tal como los expone IAM, a través de resolvers propios (`FinanceOwnerResolver`, `SocialSpacesOwnerResolver`) que llaman a `IUserRepository`. No existe una traducción de modelo, por lo que se conforman al lenguaje ubicuo de IAM.
+
+- **Finanzas → MercadoPago:** relación de **Anticorruption Layer (ACL)**. El `MercadoPagoService` actúa como capa protectora que traduce las respuestas del SDK externo (preferencias, webhooks, pagos con tarjeta) hacia los agregados propios del dominio (`Payment`, `Receipt`), evitando que el modelo de MercadoPago contamine el dominio financiero de BuildingFex.
+
+- **Finanzas / (aplicación en general) → API de Edificios:** relación **Conformist**, ya que el sistema consume datos de edificios de un servicio externo sin capacidad de negociar el contrato.
+
+- **Finanzas e Incidencias → Firebase Cloud Messaging:** relación de tipo **Open Host Service**, dado que FCM expone un protocolo público estandarizado de notificaciones push que ambos contextos consumen de la misma manera, sin necesidad de una traducción particular.
+
+- No se identificó un **Shared Kernel** real entre los contextos: aunque todos comparten la tabla física `users`, cada bounded context accede a ella únicamente a través de la interfaz `IUserRepository` expuesta por IAM, preservando la autonomía de cada contexto y evitando acoplamiento de código compartido.
+
 #### 2.5.3. Software Architecture
 
 En esta sección se describe la arquitectura de software de BuildingFex utilizando el modelo **C4** (Context, Container y Deployment), que permite representar el sistema con distintos niveles de detalle y para audiencias diferentes. El nivel de **contexto** ubica la plataforma frente a sus usuarios (visitantes, administradores) y los servicios externos con los que se integra; el nivel de **contenedores** descompone la aplicación en sus piezas ejecutables principales (aplicación web, API Gateway, módulos de negocio y sus bases de datos); y el nivel de **despliegue** muestra cómo esos contenedores se distribuyen sobre la infraestructura en la nube. Los tres diagramas se elaboraron con Structurizr / notación C4 y se presentan a continuación.
