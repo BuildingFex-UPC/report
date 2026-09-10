@@ -143,10 +143,10 @@ visibilidad a las juntas de propietarios.
 
 | Foto                                                            | Nombre                       | Código     | Carrera                | Descripción de habilidades y conocimientos |
 |-----------------------------------------------------------------|------------------------------|------------|------------------------|--------------------------------------------|
-| ![Mathias Javier Murillo](img/img-profile/MJ.png)               | Mathias Javier Murillo       | U202022211 | Ingeniería de Software | Soy estudiante de 7mo ciclo de Ingeniería de Software en la UPC. Me especializo en desarrollo full stack de webs y aplicaciones móviles. Me caracterizo por ser una persona muy responsable, puntual y organizada. Aporto al equipo apoyo en el diseño, organización y desarrollo de los Sprints. |
-| ![Jude Alessandro Hermoza Quispe](img/img-profile/FotoJude.jpg) | Jude Alessandro Hermoza Quispe | u202318220 | Ingeniería de Software | Soy estudiante de Ingeniería de Software en la UPC con interés en el desarrollo de aplicaciones web y móviles. Me enfoco en el levantamiento de requerimientos, el modelado del backlog y el diseño de la arquitectura de software. Aporto al equipo organización, análisis de entrevistas y documentación técnica del proyecto. |
+| ![Mathias Javier Murillo](img/img-profile/MJ.png)               | Mathias Javier Murillo       | U202022211 | Ingeniería de Software | Soy estudiante de 7mo ciclo de Ingeniería de Software en la UPC. Me especializo en desarrollo full stack de s y aplicaciones móviles. Me caracterizo por ser una persona muy responsable, puntual y organizada. Aporto al equipo apoyo en el diseño, organización y desarrollo de los Sprints. |
+| ![Jude Alessandro Hermoza Quispe](img/img-profile/FotoJude.jpg) | Jude Alessandro Hermoza Quispe | u202318220 | Ingeniería de Software | Soy estudiante de Ingeniería de Software en la UPC con interés en el desarrollo de aplicaciones  y móviles. Me enfoco en el levantamiento de requerimientos, el modelado del backlog y el diseño de la arquitectura de software. Aporto al equipo organización, análisis de entrevistas y documentación técnica del proyecto. |
 | ![Alejandro Jave Chanf](img/img-profile/AJ.jpeg)                | Alejandro Manuel Jave Chang  | U202312510 | Ingenieria de Software | Vengo de la carrera de Ingeniería de software, me gusta explorar diversas soluciones a desafíos tecnológicos y me apasiona aprender nuevas cosas. Mi enfoque dedicado a los proyectos que me apasionan me impulsa a explorar nuevas fronteras en mi carrera. |
-| ![Danitza Ivonne Heredia Hoyos](img/img-profile/DH.webp)        | Danitza Ivonne Heredia Hoyos | U201910803 | Ingeniería de Software | Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en UX/UI Design, enfocado en la creación de interfaces intuitivas y centradas en la experiencia del usuario. Me interesa seguir fortaleciendo mis habilidades tanto en el ámbito del desarrollo de software como en el diseño de soluciones digitales, aportando creatividad y enfoque práctico en cada proyecto. |
+| ![Danitza Ivonne Heredia Hoyos](img/img-profile/DH.p)        | Danitza Ivonne Heredia Hoyos | U201910803 | Ingeniería de Software | Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en UX/UI Design, enfocado en la creación de interfaces intuitivas y centradas en la experiencia del usuario. Me interesa seguir fortaleciendo mis habilidades tanto en el ámbito del desarrollo de software como en el diseño de soluciones digitales, aportando creatividad y enfoque práctico en cada proyecto. |
 |                                                                 |                              |            |                        |  |
 
 ### 1.2. Solution Profile
@@ -187,7 +187,7 @@ perciben una falta de transparencia sobre cómo se invierte su dinero y cómo se
 * Escalar la capacidad operativa de los property managers mediante flujos de trabajo claros y estandarizados.
 
 <b>Restricciones</b><br>
-* La plataforma depende de la conexión a internet para la sincronización de datos en tiempo real entre la aplicación web y los usuarios.
+* La plataforma depende de la conexión a internet para la sincronización de datos en tiempo real entre la aplicación móvil y los usuarios.
 * La adopción del sistema requiere un cambio de hábitos en los residentes, especialmente en aquellos menos familiarizados con herramientas digitales.
 * La gestión de datos financieros y personales exige altos estándares de seguridad y protección de la privacidad.
 
@@ -223,7 +223,7 @@ Nuestro producto resuelve esta fricción al ofrecer BuildingFex, una plataforma 
 
 <b>A través de esta plataforma unificada se cubren los frentes más críticos:</b><br>
 * Los residentes pueden revisar sus deudas, reservar áreas comunes y leer comunicados oficiales desde una misma interfaz.<br>
-* Los administradores y juntas cuentan con una consola web para gestionar proveedores, emitir avisos, llevar el control de accesos y visualizar el estado financiero
+* Los administradores y juntas cuentan con una consola para gestionar proveedores, emitir avisos, llevar el control de accesos y visualizar el estado financiero
 de la comunidad de manera estructurada.<br>
 A diferencia de los métodos improvisados, BuildingFex brinda flujos de trabajo claros, alineados con la ética profesional y términos de servicio transparentes, preparados
 para escalar desde un edificio boutique hasta un gran complejo.<br>
@@ -264,7 +264,7 @@ necesiten.<br>
 
 <b>Features Assumptions</b><br>
 * Creemos que incluir un sistema de recordatorios de cobro será la característica más valorada por los tesoreros.<br>
-* Creemos que la consola web para administradores facilitará la gestión simultánea de múltiples propiedades.<br>
+* Creemos que la consola para administradores facilitará la gestión simultánea de múltiples propiedades.<br>
 * Creemos que ofrecer soporte segmentado (email en días hábiles vs. tiempos de respuesta acordados) aportará valor diferenciado a los planes superiores.<br>
 * Creemos que un dashboard que resuma áreas comunes, cobranzas e incidencias en "una sola vista" será el diferencial principal frente a la competencia.<br>
 
@@ -281,7 +281,7 @@ Obtienen visibilidad clara de las deudas y un sistema de recordatorios.<br>
 * Creemos que optimizaremos la eficiencia del personal de administración y conserjería.<br>
 * Si los property managers<br>
 Obtienen la capacidad de gestionar visitas, solicitudes de mantenimiento y emitir anuncios masivos.<br>
-* Con una consola web unificada que reemplaza los registros en papel y los avisos en ascensores.<br>
+* Con una consola unificada que reemplaza los registros en papel y los avisos en ascensores.<br>
 
 <b>Hypothesis Statement #3</b><br>
 * Creemos que reduciremos las quejas vecinales respecto al uso de las instalaciones.<br>
@@ -306,7 +306,7 @@ La modernización del sector de la gestión de propiedades demuestra que impleme
 
 Para dimensionar correctamente la cuota de mercado (Market Share) a la que apuntamos, hemos definido nuestros segmentos bajo variables geográficas, demográficas y operativas, enfocándonos inicialmente en el mercado inmobiliario de Lima Metropolitana:
 
-- **Segmento 1: Empresas y agencias administradoras de inmuebles (Property Managers B2B).** Compañías constituidas que buscan escalar sus operaciones y gestionar múltiples torres residenciales o condominios bajo una misma consola web estandarizada y eficiente.
+- **Segmento 1: Empresas y agencias administradoras de inmuebles (Property Managers B2B).** Compañías constituidas que buscan escalar sus operaciones y gestionar múltiples torres residenciales o condominios bajo una misma consola estandarizada y eficiente.
   - **Perfil Demográfico y Operativo:** Empresas formales (Mypes y medianas empresas) con equipos operativos conformados por profesionales de entre 24 y 50 años. Manejan portafolios que van desde 3 hasta más de 20 edificios (alcanzando volúmenes de 100 a 700+ departamentos gestionados simultáneamente).
   - **Perfil Geográfico (Market Focus):** Principalmente ubicadas en Lima Metropolitana, con fuerte enfoque en distritos de alta densidad vertical de Lima Moderna y Lima Top (ej. San Borja, Santiago de Surco, Jesús María, Miraflores, San Isidro, Magdalena).
   - **Comportamiento:** Son usuarios altamente tecnológicos y pragmáticos (nativos digitales en muchos casos), que buscan reemplazar el uso excesivo de Excel y WhatsApp por soluciones que reduzcan sus "horas-hombre" y les permitan captar más clientes sin aumentar su plantilla.
@@ -1427,7 +1427,7 @@ INC ..> FCM : Open Host Service\n(notificaciones push)
 
 #### 2.5.3. Software Architecture
 
-En esta sección se describe la arquitectura de software de BuildingFex utilizando el modelo **C4** (Context, Container y Deployment), que permite representar el sistema con distintos niveles de detalle y para audiencias diferentes. El nivel de **contexto** ubica la plataforma frente a sus usuarios (visitantes, administradores) y los servicios externos con los que se integra; el nivel de **contenedores** descompone la aplicación en sus piezas ejecutables principales (aplicación web, API Gateway, módulos de negocio y sus bases de datos); y el nivel de **despliegue** muestra cómo esos contenedores se distribuyen sobre la infraestructura en la nube. Los tres diagramas se presentan a continuación.
+En esta sección se describe la arquitectura de software de BuildingFex utilizando el modelo **C4** (Context, Container y Deployment), que permite representar el sistema con distintos niveles de detalle y para audiencias diferentes. El nivel de **contexto** ubica la plataforma frente a sus usuarios (Residentes, Administradores) y los servicios externos con los que se integra; el nivel de **contenedores** descompone la aplicación en sus piezas ejecutables principales (aplicación móvil, API Gateway, módulos de negocio y base de datos); y el nivel de **despliegue** muestra cómo esos contenedores se distribuyen sobre la infraestructura en la nube. Los tres diagramas se presentan a continuación.
 
 ##### 2.5.3.1. Software Architecture Context Level Diagrams
 
@@ -1437,17 +1437,19 @@ Este diagrama de contexto representa cómo funciona la plataforma BuildingFex: l
 
 ##### 2.5.3.2. Software Architecture Container Level Diagrams
 
-Este diagrama de BuildingFex resume la estructura del sistema: los usuarios interactuan con una aplicación web Angular que envia solicitudes al API Gateway, el cual distribuye el trafico hacia tres modulos principales (reportes, contactos/marketing y planes de suscripcion), cada uno con su propia base de datos. Ademas, el sistema se conecta con un API externo para obtener datos de edificios y con Firebase para enviar notificaciones push. En conjunto, muestra cómo fluye la informacion entre usuarios, aplicación, bases de datos y servicios externos.
+Este diagrama de BuildingFex resume la estructura del sistema: los usuarios interactuan con una aplicación móvil Kotlin que envia solicitudes al API Gateway, el cual distribuye el trafico hacia 4 modulos principales (Incidencias, Reservas, Suscripciones y Finanzas), conectados a una base de datos. Ademas, el sistema se conecta con un API externo para obtener datos de edificios y con Firebase para enviar notificaciones push. En conjunto, muestra cómo fluye la informacion entre usuarios, aplicación, bases de datos y servicios externos.
 
 ![Containerdiagram.png](img/ContainerDiagram.png)
 
 ##### 2.5.3.3. Software Architecture Deployment Diagrams
 
-El Deployment Diagram de BuildingFex muestra la distribución de los principales componentes de la plataforma sobre la infraestructura utilizada para su despliegue. El usuario accede al sistema mediante un navegador web, desde donde interactúa con el frontend desarrollado con Vue.js y Vite, el cual se encuentra alojado en Vercel. El frontend se comunica mediante solicitudes HTTPS con la API desarrollada en ASP.NET Core Web API y desplegada en Railway.
+El Deployment Diagram muestra la distribución de los principales componentes de la solución sobre la infraestructura utilizada para su ejecución y despliegue. El usuario interactúa con el sistema mediante una aplicación móvil desarrollada con Kotlin en Android Studio, la cual se ejecuta directamente sobre el sistema operativo Android del dispositivo. La aplicación móvil se comunica mediante solicitudes HTTPS y una API REST con el backend desarrollado en ASP.NET Core Web API, el cual se encuentra desplegado en Railway.
 
-El backend concentra la lógica de negocio de los principales módulos de la plataforma, entre ellos IAM, Finances, Incidents y SocialSpaces, además de los servicios relacionados con la gestión de información y servicios. La API se conecta con una instancia de base de datos desplegada en Railway, donde se almacenan y consultan los datos necesarios para el funcionamiento de la aplicación.
+El backend concentra la lógica de negocio de los principales módulos de la plataforma, entre ellos IAM, Finances, Incidents y SocialSpaces, además de los servicios relacionados con la gestión de información y funcionalidades de BuildingFex. La API se conecta con una base de datos desplegada en Railway, donde se almacenan y consultan los datos necesarios para el funcionamiento de la aplicación móvil.
 
-Por otro lado, GitHub funciona como repositorio del código fuente y se encuentra integrado con las plataformas de despliegue. De esta manera, los cambios incorporados a la rama principal pueden activar automáticamente los procesos de construcción y despliegue tanto del frontend en Vercel como del backend en Railway. Esta distribución permite separar la interfaz de usuario, la lógica de negocio y el almacenamiento de datos, manteniendo una infraestructura centralizada en la nube.
+Por otro lado, GitHub se utiliza como repositorio para el código fuente de la aplicación móvil y del backend. En el caso del backend, el repositorio se encuentra integrado con Railway, permitiendo ejecutar procesos de construcción y despliegue cuando se incorporan cambios al código. Para la aplicación móvil, el código almacenado en GitHub permite generar los archivos de distribución APK o AAB, los cuales posteriormente pueden ser instalados o distribuidos en dispositivos Android.
+
+Esta distribución permite separar la aplicación móvil, la lógica de negocio y el almacenamiento de datos, manteniendo los servicios backend y la base de datos centralizados en la nube, mientras que la interfaz y las funcionalidades de interacción se ejecutan localmente en el dispositivo Android del usuario.
 
 ![DeploymentDiagram.png](img/DeploymentDiagram.png)
 
