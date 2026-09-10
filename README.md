@@ -4,16 +4,29 @@
 # Universidad Peruana de Ciencias Aplicadas
 ## Carrera de Ingeniería de Software
 
-**Curso:** 1ACC0238 - Aplicaciones para Dispositivos Móviles  
-**NRC:** 4939  
+1ACC0238
+
+Aplicaciones para Dispositivos Móviles  
+
+**NRC** 
+
+4939  
 
 ---
 
 # Informe del Trabajo Final
 
-**Docente:** Quevedo Velasco, David Gerardo  
-**Equipo:** BuildingFex  
-**Proyecto:** BuildingFex  
+**Docente** 
+
+Quevedo Velasco, David Gerardo  
+
+**Equipo** 
+
+BuildingFex  
+
+**Proyecto** 
+
+BuildingFex  
 
 ### Integrantes
 
@@ -25,8 +38,8 @@
 | u201910803 | Heredia Hoyos, Danitza Ivonne |
 |            | Suteau, Antonin |
 
-**Período:** 2026-20  
-**Fecha:** Setiembre 2026
+**Período** 2026-20  
+Setiembre 2026
 
 </div>
 
@@ -36,8 +49,8 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
-| AV1 | 02-09-2026 | Equipo BuildingFex | Estructura inicial correspondiente a la primera entrega. |
-| AV1 | 06-09-2026 | Hermoza Quispe, Jude Alessandro | Redacción de las secciones 2.2 Entrevistas (diseño), 2.4.3 Product Backlog y 2.5.3 Software Architecture; registro de datos personales del integrante. |
+| AV1 | 10-09-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Carátula<br>- Registro de Versiones del informe<br>- Project Report Collaboration Insights<br>- Contenido<br>- Student Outcome<br>- Capítulo I: Presentación<br>- Capítulo II: Requirements Development and Software Solution Design<br>- Conclusiones<br>- Bibliografía<br>- Anexos |
+| TB1 |  | |  |
 
 <div style="page-break-after: always;"></div>
 
@@ -69,56 +82,52 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
     <th>Acciones Realizadas</th>
     <th>Conclusión</th>
   </tr>
+
+  <!-- ================= CRITERIO 1 ================= -->
   <tr>
     <td rowspan="5">Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de ingeniería de software</td>
     <td>Mathias Javier Murillo</td>
     <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td rowspan="5"><b>AV1:</b>Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.</td>
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
     <td><b>AV1:</b> Investigó y aplicó técnicas de entrevista estructurada (sección 2.2), la construcción del Product Backlog —épicas, User Stories, Spike Stories y estimación con Story Points sobre la sucesión de Fibonacci (sección 2.4.3)— y el modelo C4 para la Software Architecture (sección 2.5.3). Reclasificó la US29 de EP01 a EP02 por corresponder a egresos recurrentes e incorporó la Spike Story SP01 sobre almacenamiento seguro de documentos (EP07).</td>
-    <td><b>AV1:</b> Actualizó y consolidó conocimientos de ingeniería de requisitos y de arquitectura de software, aplicándolos directamente en los artefactos del proyecto BuildingFex.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
-    <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Apliqué Tactical DDD para organizar mejor el dominio del proyecto y así ampliar mis conocimientos.</td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b></td>
     <td><b>AV1:</b></td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
     <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
   </tr>
+
+  <!-- ================= CRITERIO 2 ================= -->
   <tr>
     <td rowspan="5">Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software.</td>
     <td>Mathias Javier Murillo</td>
     <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td rowspan="5"><b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.</td>
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
     <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).</td>
-    <td><b>AV1:</b> Demostró disposición al aprendizaje permanente al incorporar prácticas nuevas (Spike Stories, C4) y aplicarlas para mejorar la calidad de la documentación técnica del proyecto.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
-    <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1: El uso de C4 y del diagrama de base de datos me llevó a reconocer la necesidad de seguir aprendiendo sobre cómo representar correctamente la arquitectura y los datos de un sistem</b></td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
     <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b></td>
     <td><b>AV1:</b></td>
   </tr>
 </table>
@@ -146,7 +155,7 @@ visibilidad a las juntas de propietarios.
 | ![Mathias Javier Murillo](img/img-profile/MJ.png)               | Mathias Javier Murillo       | U202022211 | Ingeniería de Software | Soy estudiante de 7mo ciclo de Ingeniería de Software en la UPC. Me especializo en desarrollo full stack de s y aplicaciones móviles. Me caracterizo por ser una persona muy responsable, puntual y organizada. Aporto al equipo apoyo en el diseño, organización y desarrollo de los Sprints. |
 | ![Jude Alessandro Hermoza Quispe](img/img-profile/FotoJude.jpg) | Jude Alessandro Hermoza Quispe | u202318220 | Ingeniería de Software | Soy estudiante de Ingeniería de Software en la UPC con interés en el desarrollo de aplicaciones  y móviles. Me enfoco en el levantamiento de requerimientos, el modelado del backlog y el diseño de la arquitectura de software. Aporto al equipo organización, análisis de entrevistas y documentación técnica del proyecto. |
 | ![Alejandro Jave Chanf](img/img-profile/AJ.jpeg)                | Alejandro Manuel Jave Chang  | U202312510 | Ingenieria de Software | Vengo de la carrera de Ingeniería de software, me gusta explorar diversas soluciones a desafíos tecnológicos y me apasiona aprender nuevas cosas. Mi enfoque dedicado a los proyectos que me apasionan me impulsa a explorar nuevas fronteras en mi carrera. |
-| ![Danitza Ivonne Heredia Hoyos](img/img-profile/DH.p)        | Danitza Ivonne Heredia Hoyos | U201910803 | Ingeniería de Software | Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en UX/UI Design, enfocado en la creación de interfaces intuitivas y centradas en la experiencia del usuario. Me interesa seguir fortaleciendo mis habilidades tanto en el ámbito del desarrollo de software como en el diseño de soluciones digitales, aportando creatividad y enfoque práctico en cada proyecto. |
+| ![Danitza Ivonne Heredia Hoyos](img/img-profile/DH.webp)        | Danitza Ivonne Heredia Hoyos | U201910803 | Ingeniería de Software | Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en UX/UI Design, enfocado en la creación de interfaces intuitivas y centradas en la experiencia del usuario. Me interesa seguir fortaleciendo mis habilidades tanto en el ámbito del desarrollo de software como en el diseño de soluciones digitales, aportando creatividad y enfoque práctico en cada proyecto. |
 |                                                                 |                              |            |                        |  |
 
 ### 1.2. Solution Profile
@@ -3202,6 +3211,18 @@ La relación es **users 1:N incidents**: un usuario admin puede tener múltiples
 <div style="page-break-after: always;"></div>
 
 ## Bibliografía
+
+Castillo Contreras, V. B., Castillo Contreras, F. G., Sánchez Rolando, J. L., & Zarabia Tumay, D. O. (2025). Modelo ProLab: EdiTech – servicio de administración de edificios residenciales a través de una solución digital en Lima [Tesis de maestría, Pontificia Universidad Católica del Perú]. Repositorio Institucional PUCP. http://hdl.handle.net/20.500.12404/30681
+
+El Economista. (2026, 4 de junio). Siete startups de América Latina son seleccionadas para programa de aceleración inmobiliaria. https://www.eleconomista.com.mx/econohabitat/siete-startups-america-latina-son-seleccionadas-programa-aceleracion-inmobiliaria-20260604-816806.html
+
+Infobae. (2026, 10 de junio). ¿Problemas con la administración del edificio? El costo oculto de no saber elegir: lo que todo propietario debe saber. https://www.infobae.com/peru/2026/06/10/problemas-con-la-administracion-del-edificio-el-costo-oculto-de-no-saber-elegir-lo-que-todo-propietario-debe-saber/
+
+Nieto-Cardenas, G., Quevedo-Villalba, F., Villanueva-Llapa, A., & Raymundo, C. (2025). Digital platform to improve the administrative management of condominiums. En Proceedings of the 2025 IEEE 5th International Conference on Advanced Learning Technologies on Education and Research, ICALTER 2025. Institute of Electrical and Electronics Engineers Inc. https://doi.org/10.1109/ICALTER69698.2025.11355122
+
+Ramos Montoya, S. (2026, 17 de junio). La nueva era del Proptech: por qué la consolidación es el futuro de esta industria. Entrepreneur en Español. https://spanish.entrepreneur.com/tecnologia/la-nueva-era-del-proptech-por-que-la-consolidacion-es-el-futuro-de-esta-industria
+
+Rodríguez Botto, T. (2025, 14 de noviembre). PropTech despegan en Latinoamérica: startups crecen hasta 300% y reordenan el negocio inmobiliario. El Diario Inmobiliario. https://eldiarioinmobiliario.cl/destacadas/proptech-despegan-en-latinoamerica-startups-crecen-hasta-300-y-reordenan-el-negocio-inmobiliario/
 
 <div style="page-break-after: always;"></div>
 
