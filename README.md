@@ -4,16 +4,29 @@
 # Universidad Peruana de Ciencias Aplicadas
 ## Carrera de Ingeniería de Software
 
-**Curso:** 1ACC0238 - Aplicaciones para Dispositivos Móviles  
-**NRC:** 4939  
+1ACC0238
+
+Aplicaciones para Dispositivos Móviles  
+
+**NRC** 
+
+4939  
 
 ---
 
 # Informe del Trabajo Final
 
-**Docente:** Quevedo Velasco, David Gerardo  
-**Equipo:** BuildingFex  
-**Proyecto:** BuildingFex  
+**Docente** 
+
+Quevedo Velasco, David Gerardo  
+
+**Equipo** 
+
+BuildingFex  
+
+**Proyecto** 
+
+BuildingFex  
 
 ### Integrantes
 
@@ -25,8 +38,8 @@
 | u201910803 | Heredia Hoyos, Danitza Ivonne |
 |            | Suteau, Antonin |
 
-**Período:** 2026-20  
-**Fecha:** Setiembre 2026
+**Período** 2026-20  
+Setiembre 2026
 
 </div>
 
@@ -36,8 +49,8 @@
 
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
-| AV1 | 02-09-2026 | Equipo BuildingFex | Estructura inicial correspondiente a la primera entrega. |
-| AV1 | 06-09-2026 | Hermoza Quispe, Jude Alessandro | Redacción de las secciones 2.2 Entrevistas (diseño), 2.4.3 Product Backlog y 2.5.3 Software Architecture; registro de datos personales del integrante. |
+| AV1 | 10-09-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Carátula<br>- Registro de Versiones del informe<br>- Project Report Collaboration Insights<br>- Contenido<br>- Student Outcome<br>- Capítulo I: Presentación<br>- Capítulo II: Requirements Development and Software Solution Design<br>- Conclusiones<br>- Bibliografía<br>- Anexos |
+| TB1 |  | |  |
 
 <div style="page-break-after: always;"></div>
 
@@ -69,56 +82,52 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
     <th>Acciones Realizadas</th>
     <th>Conclusión</th>
   </tr>
+
+  <!-- ================= CRITERIO 1 ================= -->
   <tr>
     <td rowspan="5">Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de ingeniería de software</td>
     <td>Mathias Javier Murillo</td>
     <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td rowspan="5"><b>AV1:</b>Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.</td>
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Investigó y aplicó técnicas de entrevista estructurada (sección 2.2), la construcción del Product Backlog —épicas, User Stories, Spike Stories y estimación con Story Points sobre la sucesión de Fibonacci (sección 2.4.3)— y el modelo C4 para la Software Architecture (sección 2.5.3). Reclasificó la US29 de EP01 a EP02 por corresponder a egresos recurrentes e incorporó la Spike Story SP01 sobre almacenamiento seguro de documentos (EP07).</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
-    <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Apliqué Tactical DDD para organizar mejor el dominio del proyecto y así ampliar mis conocimientos.</td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b></td>
     <td><b>AV1:</b></td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
     <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
   </tr>
+
+  <!-- ================= CRITERIO 2 ================= -->
   <tr>
     <td rowspan="5">Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software.</td>
     <td>Mathias Javier Murillo</td>
     <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td rowspan="5"><b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.</td>
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
-    <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1: El uso de C4 y del diagrama de base de datos me llevó a reconocer la necesidad de seguir aprendiendo sobre cómo representar correctamente la arquitectura y los datos de un sistem</b></td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
     <td><b>AV1:</b></td>
-    <td><b>AV1:</b></td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b></td>
     <td><b>AV1:</b></td>
   </tr>
 </table>
@@ -143,8 +152,8 @@ visibilidad a las juntas de propietarios.
 
 | Foto                                                            | Nombre                       | Código     | Carrera                | Descripción de habilidades y conocimientos |
 |-----------------------------------------------------------------|------------------------------|------------|------------------------|--------------------------------------------|
-| ![Mathias Javier Murillo](img/img-profile/MJ.png)               | Mathias Javier Murillo       | U202022211 | Ingeniería de Software | Soy estudiante de 7mo ciclo de Ingeniería de Software en la UPC. Me especializo en desarrollo full stack de webs y aplicaciones móviles. Me caracterizo por ser una persona muy responsable, puntual y organizada. Aporto al equipo apoyo en el diseño, organización y desarrollo de los Sprints. |
-| ![Jude Alessandro Hermoza Quispe](img/img-profile/FotoJude.jpg) | Jude Alessandro Hermoza Quispe | u202318220 | Ingeniería de Software | Soy estudiante de Ingeniería de Software en la UPC con interés en el desarrollo de aplicaciones web y móviles. Me enfoco en el levantamiento de requerimientos, el modelado del backlog y el diseño de la arquitectura de software. Aporto al equipo organización, análisis de entrevistas y documentación técnica del proyecto. |
+| ![Mathias Javier Murillo](img/img-profile/MJ.png)               | Mathias Javier Murillo       | U202022211 | Ingeniería de Software | Soy estudiante de 7mo ciclo de Ingeniería de Software en la UPC. Me especializo en desarrollo full stack de s y aplicaciones móviles. Me caracterizo por ser una persona muy responsable, puntual y organizada. Aporto al equipo apoyo en el diseño, organización y desarrollo de los Sprints. |
+| ![Jude Alessandro Hermoza Quispe](img/img-profile/FotoJude.jpg) | Jude Alessandro Hermoza Quispe | u202318220 | Ingeniería de Software | Soy estudiante de Ingeniería de Software en la UPC con interés en el desarrollo de aplicaciones  y móviles. Me enfoco en el levantamiento de requerimientos, el modelado del backlog y el diseño de la arquitectura de software. Aporto al equipo organización, análisis de entrevistas y documentación técnica del proyecto. |
 | ![Alejandro Jave Chanf](img/img-profile/AJ.jpeg)                | Alejandro Manuel Jave Chang  | U202312510 | Ingenieria de Software | Vengo de la carrera de Ingeniería de software, me gusta explorar diversas soluciones a desafíos tecnológicos y me apasiona aprender nuevas cosas. Mi enfoque dedicado a los proyectos que me apasionan me impulsa a explorar nuevas fronteras en mi carrera. |
 | ![Danitza Ivonne Heredia Hoyos](img/img-profile/DH.webp)        | Danitza Ivonne Heredia Hoyos | U201910803 | Ingeniería de Software | Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en UX/UI Design, enfocado en la creación de interfaces intuitivas y centradas en la experiencia del usuario. Me interesa seguir fortaleciendo mis habilidades tanto en el ámbito del desarrollo de software como en el diseño de soluciones digitales, aportando creatividad y enfoque práctico en cada proyecto. |
 |                                                                 |                              |            |                        |  |
@@ -187,7 +196,7 @@ perciben una falta de transparencia sobre cómo se invierte su dinero y cómo se
 * Escalar la capacidad operativa de los property managers mediante flujos de trabajo claros y estandarizados.
 
 <b>Restricciones</b><br>
-* La plataforma depende de la conexión a internet para la sincronización de datos en tiempo real entre la aplicación web y los usuarios.
+* La plataforma depende de la conexión a internet para la sincronización de datos en tiempo real entre la aplicación móvil y los usuarios.
 * La adopción del sistema requiere un cambio de hábitos en los residentes, especialmente en aquellos menos familiarizados con herramientas digitales.
 * La gestión de datos financieros y personales exige altos estándares de seguridad y protección de la privacidad.
 
@@ -223,7 +232,7 @@ Nuestro producto resuelve esta fricción al ofrecer BuildingFex, una plataforma 
 
 <b>A través de esta plataforma unificada se cubren los frentes más críticos:</b><br>
 * Los residentes pueden revisar sus deudas, reservar áreas comunes y leer comunicados oficiales desde una misma interfaz.<br>
-* Los administradores y juntas cuentan con una consola web para gestionar proveedores, emitir avisos, llevar el control de accesos y visualizar el estado financiero
+* Los administradores y juntas cuentan con una consola para gestionar proveedores, emitir avisos, llevar el control de accesos y visualizar el estado financiero
 de la comunidad de manera estructurada.<br>
 A diferencia de los métodos improvisados, BuildingFex brinda flujos de trabajo claros, alineados con la ética profesional y términos de servicio transparentes, preparados
 para escalar desde un edificio boutique hasta un gran complejo.<br>
@@ -264,7 +273,7 @@ necesiten.<br>
 
 <b>Features Assumptions</b><br>
 * Creemos que incluir un sistema de recordatorios de cobro será la característica más valorada por los tesoreros.<br>
-* Creemos que la consola web para administradores facilitará la gestión simultánea de múltiples propiedades.<br>
+* Creemos que la consola para administradores facilitará la gestión simultánea de múltiples propiedades.<br>
 * Creemos que ofrecer soporte segmentado (email en días hábiles vs. tiempos de respuesta acordados) aportará valor diferenciado a los planes superiores.<br>
 * Creemos que un dashboard que resuma áreas comunes, cobranzas e incidencias en "una sola vista" será el diferencial principal frente a la competencia.<br>
 
@@ -281,7 +290,7 @@ Obtienen visibilidad clara de las deudas y un sistema de recordatorios.<br>
 * Creemos que optimizaremos la eficiencia del personal de administración y conserjería.<br>
 * Si los property managers<br>
 Obtienen la capacidad de gestionar visitas, solicitudes de mantenimiento y emitir anuncios masivos.<br>
-* Con una consola web unificada que reemplaza los registros en papel y los avisos en ascensores.<br>
+* Con una consola unificada que reemplaza los registros en papel y los avisos en ascensores.<br>
 
 <b>Hypothesis Statement #3</b><br>
 * Creemos que reduciremos las quejas vecinales respecto al uso de las instalaciones.<br>
@@ -306,7 +315,7 @@ La modernización del sector de la gestión de propiedades demuestra que impleme
 
 Para dimensionar correctamente la cuota de mercado (Market Share) a la que apuntamos, hemos definido nuestros segmentos bajo variables geográficas, demográficas y operativas, enfocándonos inicialmente en el mercado inmobiliario de Lima Metropolitana:
 
-- **Segmento 1: Empresas y agencias administradoras de inmuebles (Property Managers B2B).** Compañías constituidas que buscan escalar sus operaciones y gestionar múltiples torres residenciales o condominios bajo una misma consola web estandarizada y eficiente.
+- **Segmento 1: Empresas y agencias administradoras de inmuebles (Property Managers B2B).** Compañías constituidas que buscan escalar sus operaciones y gestionar múltiples torres residenciales o condominios bajo una misma consola estandarizada y eficiente.
   - **Perfil Demográfico y Operativo:** Empresas formales (Mypes y medianas empresas) con equipos operativos conformados por profesionales de entre 24 y 50 años. Manejan portafolios que van desde 3 hasta más de 20 edificios (alcanzando volúmenes de 100 a 700+ departamentos gestionados simultáneamente).
   - **Perfil Geográfico (Market Focus):** Principalmente ubicadas en Lima Metropolitana, con fuerte enfoque en distritos de alta densidad vertical de Lima Moderna y Lima Top (ej. San Borja, Santiago de Surco, Jesús María, Miraflores, San Isidro, Magdalena).
   - **Comportamiento:** Son usuarios altamente tecnológicos y pragmáticos (nativos digitales en muchos casos), que buscan reemplazar el uso excesivo de Excel y WhatsApp por soluciones que reduzcan sus "horas-hombre" y les permitan captar más clientes sin aumentar su plantilla.
@@ -1176,7 +1185,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 
 El Product Backlog de BuildingFex consolida y prioriza todas las historias de usuario derivadas de las secciones 2.4.1 (User Stories) y 2.4.2 (Impact Mapping), agrupándolas por *epics* alineados con los bounded contexts del producto (Finanzas, Suscripciones, Gestión de Usuarios, Áreas Comunes, Incidencias) y con las funcionalidades priorizadas en el Lean UX Canvas.
 
-La priorización se define con la escala **Alta / Media / Baja** según el valor para el usuario y su aporte al MVP, y el esfuerzo se estima en **Story Points** usando la sucesión de Fibonacci (1, 2, 3, 5, 8, 13). El backlog es un artefacto vivo: el orden y la estimación se ajustan al cierre de cada Sprint y tras el análisis de entrevistas (sección 2.2.3).
+La priorización se define con la escala **Alta / Media / Baja** según el valor para el usuario y su aporte al MVP, y el esfuerzo se estima en **Story Points** usando la sucesión de Fibonacci (1, 2, 3, 5, 8, 13). El backlog también incorpora las **Spike Stories** (prefijo `SP`) necesarias para reducir incertidumbre técnica antes de la implementación. El backlog es un artefacto vivo: el orden y la estimación se ajustan al cierre de cada Sprint y tras el análisis de entrevistas (sección 2.2.3).
 
 **Épicas**
 
@@ -1223,8 +1232,9 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 | US26 | EP08 | Como administrador, quiero un dashboard con el resumen de cobranzas, reservas e incidencias para tener el estado del edificio en una sola vista. | Alta | 8 |
 | US27 | EP08 | Como miembro de la junta, quiero ver indicadores de morosidad y de incidencias pendientes para tomar decisiones informadas. | Media | 5 |
 | US28 | EP04 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | Baja | 2 |
-| US29 | EP01 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | Baja | 5 |
+| US29 | EP02 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | Baja | 5 |
 | US30 | EP02 | Como administrador, quiero ver la evolución mensual de la morosidad en un gráfico para identificar tendencias. | Baja | 3 |
+| SP01 | EP07 | Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex (Spike Story). | Media | 3 |
 
 ### 2.5. Strategic-Level Domain-Driven Design
 #### 2.5.1. EventStorming
@@ -1424,11 +1434,9 @@ INC ..> FCM : Open Host Service\n(notificaciones push)
 
 - **Finanzas e Incidencias → Firebase Cloud Messaging:** relación de tipo **Open Host Service**, dado que FCM expone un protocolo público estandarizado de notificaciones push que ambos contextos consumen de la misma manera, sin necesidad de una traducción particular.
 
-- No se identificó un **Shared Kernel** real entre los contextos: aunque todos comparten la tabla física `users`, cada bounded context accede a ella únicamente a través de la interfaz `IUserRepository` expuesta por IAM, preservando la autonomía de cada contexto y evitando acoplamiento de código compartido.
-
 #### 2.5.3. Software Architecture
 
-En esta sección se describe la arquitectura de software de BuildingFex utilizando el modelo **C4** (Context, Container y Deployment), que permite representar el sistema con distintos niveles de detalle y para audiencias diferentes. El nivel de **contexto** ubica la plataforma frente a sus usuarios (visitantes, administradores) y los servicios externos con los que se integra; el nivel de **contenedores** descompone la aplicación en sus piezas ejecutables principales (aplicación web, API Gateway, módulos de negocio y sus bases de datos); y el nivel de **despliegue** muestra cómo esos contenedores se distribuyen sobre la infraestructura en la nube. Los tres diagramas se elaboraron con Structurizr / notación C4 y se presentan a continuación.
+En esta sección se describe la arquitectura de software de BuildingFex utilizando el modelo **C4** (Context, Container y Deployment), que permite representar el sistema con distintos niveles de detalle y para audiencias diferentes. El nivel de **contexto** ubica la plataforma frente a sus usuarios (Residentes, Administradores) y los servicios externos con los que se integra; el nivel de **contenedores** descompone la aplicación en sus piezas ejecutables principales (aplicación móvil, API Gateway, módulos de negocio y base de datos); y el nivel de **despliegue** muestra cómo esos contenedores se distribuyen sobre la infraestructura en la nube. Los tres diagramas se presentan a continuación.
 
 ##### 2.5.3.1. Software Architecture Context Level Diagrams
 
@@ -1438,17 +1446,19 @@ Este diagrama de contexto representa cómo funciona la plataforma BuildingFex: l
 
 ##### 2.5.3.2. Software Architecture Container Level Diagrams
 
-Este diagrama de BuildingFex resume la estructura del sistema: los usuarios interactuan con una aplicación web Angular que envia solicitudes al API Gateway, el cual distribuye el trafico hacia tres modulos principales (reportes, contactos/marketing y planes de suscripcion), cada uno con su propia base de datos. Ademas, el sistema se conecta con un API externo para obtener datos de edificios y con Firebase para enviar notificaciones push. En conjunto, muestra cómo fluye la informacion entre usuarios, aplicación, bases de datos y servicios externos.
+Este diagrama de BuildingFex resume la estructura del sistema: los usuarios interactuan con una aplicación móvil Kotlin que envia solicitudes al API Gateway, el cual distribuye el trafico hacia 4 modulos principales (Incidencias, Reservas, Suscripciones y Finanzas), conectados a una base de datos. Ademas, el sistema se conecta con un API externo para obtener datos de edificios y con Firebase para enviar notificaciones push. En conjunto, muestra cómo fluye la informacion entre usuarios, aplicación, bases de datos y servicios externos.
 
 ![Containerdiagram.png](img/ContainerDiagram.png)
 
 ##### 2.5.3.3. Software Architecture Deployment Diagrams
 
-El Deployment Diagram de BuildingFex muestra la distribución de los principales componentes de la plataforma sobre la infraestructura utilizada para su despliegue. El usuario accede al sistema mediante un navegador web, desde donde interactúa con el frontend desarrollado con Vue.js y Vite, el cual se encuentra alojado en Vercel. El frontend se comunica mediante solicitudes HTTPS con la API desarrollada en ASP.NET Core Web API y desplegada en Railway.
+El Deployment Diagram muestra la distribución de los principales componentes de la solución sobre la infraestructura utilizada para su ejecución y despliegue. El usuario interactúa con el sistema mediante una aplicación móvil desarrollada con Kotlin en Android Studio, la cual se ejecuta directamente sobre el sistema operativo Android del dispositivo. La aplicación móvil se comunica mediante solicitudes HTTPS y una API REST con el backend desarrollado en ASP.NET Core Web API, el cual se encuentra desplegado en Railway.
 
-El backend concentra la lógica de negocio de los principales módulos de la plataforma, entre ellos IAM, Finances, Incidents y SocialSpaces, además de los servicios relacionados con la gestión de información y servicios. La API se conecta con una instancia de base de datos desplegada en Railway, donde se almacenan y consultan los datos necesarios para el funcionamiento de la aplicación.
+El backend concentra la lógica de negocio de los principales módulos de la plataforma, entre ellos IAM, Finances, Incidents y SocialSpaces, además de los servicios relacionados con la gestión de información y funcionalidades de BuildingFex. La API se conecta con una base de datos desplegada en Railway, donde se almacenan y consultan los datos necesarios para el funcionamiento de la aplicación móvil.
 
-Por otro lado, GitHub funciona como repositorio del código fuente y se encuentra integrado con las plataformas de despliegue. De esta manera, los cambios incorporados a la rama principal pueden activar automáticamente los procesos de construcción y despliegue tanto del frontend en Vercel como del backend en Railway. Esta distribución permite separar la interfaz de usuario, la lógica de negocio y el almacenamiento de datos, manteniendo una infraestructura centralizada en la nube.
+Por otro lado, GitHub se utiliza como repositorio para el código fuente de la aplicación móvil y del backend. En el caso del backend, el repositorio se encuentra integrado con Railway, permitiendo ejecutar procesos de construcción y despliegue cuando se incorporan cambios al código. Para la aplicación móvil, el código almacenado en GitHub permite generar los archivos de distribución APK o AAB, los cuales posteriormente pueden ser instalados o distribuidos en dispositivos Android.
+
+Esta distribución permite separar la aplicación móvil, la lógica de negocio y el almacenamiento de datos, manteniendo los servicios backend y la base de datos centralizados en la nube, mientras que la interfaz y las funcionalidades de interacción se ejecutan localmente en el dispositivo Android del usuario.
 
 ![DeploymentDiagram.png](img/DeploymentDiagram.png)
 
@@ -1458,7 +1468,7 @@ Por otro lado, GitHub funciona como repositorio del código fuente y se encuentr
 
 #### 2.6.1. Bounded Context: Finanzas
 
-Este contexto gestiona el sistema financiero completo: cuotas, pagos, recibos, configuración, KPIs, gastos administrativos, servicios compartidos y pagos fijos a trabajadores. Incluye integración con MercadoPago.
+El contexto de Finanzas gestiona el sistema financiero completo: cuotas, pagos, recibos, configuración, KPIs, gastos administrativos, servicios compartidos y pagos fijos a trabajadores. Incluye integración con MercadoPago.
 
 ##### 2.6.1.1. Domain Layer
 
@@ -2100,7 +2110,7 @@ Las relaciones son todas de tipo **1:N** desde `users` hacia cada tabla de domin
 
 #### 2.6.2. Bounded Context: Suscripciones
 
-Este contexto administra la autenticación, autorización, registro de administradores y residentes, y la gestión de planes de suscripción SaaS.
+El contexto de Suscripciones administra la autenticación, autorización, registro de administradores y residentes, y la gestión de planes de suscripción SaaS.
 
 ##### 2.6.2.1. Domain Layer
 
@@ -2535,8 +2545,9 @@ La columna clave es `owner_admin_id` que es una FK auto-referenciada a la misma 
 La relación es de tipo **1:N auto-referenciada**: un usuario admin puede tener múltiples residentes a través de `owner_admin_id`, pero un residente pertenece a un solo admin.
 
 ---
+#### 2.6.3. Bounded Context: Reservas
 
-Este contexto gestiona el catálogo de espacios comunes del edificio y el sistema de reservas con validación de solapamiento.
+El contexto de Reservas gestiona el catálogo de espacios comunes del edificio y el sistema de reservas con validación de solapamiento.
 
 ##### 2.6.3.1. Domain Layer
 
@@ -2882,8 +2893,9 @@ La tabla **reservations** es la más compleja, con `id` (PK), `external_id` (UK)
 Las relaciones son: **users 1:N social_spaces** (un usuario tiene muchos espacios), **users 1:N reservations** (un usuario tiene muchas reservas), y **social_spaces 1:N reservations** (un espacio tiene muchas reservas, vinculadas via `external_id` en lugar de `id`).
 
 ---
+#### 2.6.4. Bounded Context: Incidencias
 
-Este contexto gestiona la creación, seguimiento y resolución de incidencias reportadas por residentes o administradores dentro del edificio.
+El contexto de Incidencias gestiona la creación, seguimiento y resolución de incidencias reportadas por residentes o administradores dentro del edificio.
 
 ##### 2.6.4.1. Domain Layer
 
@@ -3190,385 +3202,6 @@ La relación es **users 1:N incidents**: un usuario admin puede tener múltiples
 
 ---
 
-Este contexto provee la infraestructura transversal de auditoría: patrón Result, repositorio base, unidad de trabajo, DbContext y configuración de hosting. Todas las entidades principales implementan `IAuditableEntity` para rastrear timestamps de creación y actualización.
-
-##### 2.6.5.1. Domain Layer
-
-**Diccionario de Clases del Dominio**
-
-- **IBaseRepository<TEntity>** (Interface genérica)
-  - **Propósito:** Contrato CRUD genérico para todas las entidades de dominio.
-  - **Restricción:** `where TEntity : class`
-  - **Métodos:**
-    - `AddAsync(entity, CancellationToken): Task`
-    - `FindByIdAsync(id, CancellationToken): Task<TEntity?>`
-    - `Update(entity): void`
-    - `Remove(entity): void`
-    - `ListAsync(CancellationToken): Task<IEnumerable<TEntity>>`
-
-- **IUnitOfWork** (Interface)
-  - **Propósito:** Contrato del patrón Unidad de Trabajo para confirmar transacciones atómicas.
-  - **Método:** `CompleteAsync(CancellationToken): Task`
-
-- **IAuditableEntity** (Interface)
-  - **Propósito:** Contrato para entidades con campos de auditoría.
-  - **Propiedades:**
-    - `CreatedAt`: DateTimeOffset? (get/set)
-    - `UpdatedAt`: DateTimeOffset? (get/set)
-
-##### 2.6.5.2. Interface Layer
-
-No aplica (este bounded context es transversal y no expone endpoints propios).
-
-##### 2.6.5.3. Application Layer
-
-- **Result<T>** (Modelo genérico)
-  - **Propósito:** Encapsula el éxito o fallo de operaciones, transportando valor, mensaje y error tipado.
-  - **Propiedades:** IsSuccess (bool), IsFailure (bool), Value (T?), Message (string), Error (Enum?)
-  - **Métodos estáticos:** `Success(value): Result<T>`, `Failure(error, message): Result<T>`
-
-- **Result** (hereda de `Result<object>`)
-  - **Métodos estáticos:** `Success(): Result`, `Failure(error, message): Result`
-
-##### 2.6.5.4. Infrastructure Layer
-
-- **BaseRepository<TEntity>** (Implementación genérica)
-  - **Propósito:** Implementación base del repositorio con Entity Framework Core.
-  - **Herencia:** Implementa `IBaseRepository<TEntity>`
-  - **Dependencia:** `AppDbContext` (protected readonly)
-  - **Implementación:** Delega a `Context.Set<TEntity>()` para AddAsync, FindByIdAsync, Update, Remove, ListAsync
-
-- **UnitOfWork** (Implementación)
-  - **Propósito:** Implementación concreta de `IUnitOfWork`.
-  - **Herencia:** Implementa `IUnitOfWork`
-  - **Dependencia:** `AppDbContext`
-  - **Implementación:** `context.SaveChangesAsync()`
-
-- **AppDbContext** (DbContext central)
-  - **Propósito:** DbContext compartido por TODOS los bounded contexts.
-  - **Herencia:** `DbContext`
-  - **Configura en OnModelCreating:**
-    - Entidades de IAM, Incidents, Finances, SocialSpaces, Information (vía extension methods)
-    - Entidades de Support (SupportChat), Import (ImportUpload), Team (TeamWorker) directamente
-    - Convención: `UseSnakeCaseNamingConvention()` para tablas y columnas
-
-- **AppDbContextFactory** (Fábrica para migraciones)
-  - **Propósito:** Crea `AppDbContext` en tiempo de diseño para migraciones EF Core.
-  - **Implementa:** `IDesignTimeDbContextFactory<AppDbContext>`
-  - **Conexión hardcoded:** MySQL localhost (server=localhost, port=3306, user=root, password=root, database=buildingfex)
-
-- **StringExtensions** (Helpers de cadena)
-  - **Métodos:**
-    - `ToSnakeCase(this string text)`: Convierte "PascalCase" a "pascal_case"
-    - `ToPlural(this string text)`: Pluraliza texto vía librería Humanizer
-
-- **ModelBuilderExtensions** (Convención global)
-  - **Método:** `UseSnakeCaseNamingConvention(this ModelBuilder)`
-  - **Lógica:** Recorre todas las entidades y convierte nombres de tablas, columnas, claves, foreign keys e índices a snake_case
-
-- **RailwayHosting** (Configuración de hosting)
-  - **Propósito:** Resolución de variables de entorno para despliegue en Railway.
-  - **Métodos:**
-    - `ConfigureKestrelPort(builder)`: Lee PORT de env y configura Kestrel
-    - `ResolveConnectionString(configuration)`: Resuelve cadena MySQL desde env o appsettings
-    - `ApplySecretsFromEnvironment(builder)`: Inyecta JWT secret, MercadoPago config y connection string desde env
-    - `ValidateProductionSecrets(configuration, environment)`: Valida JWT secret en producción (>= 32 chars)
-    - `IsRailwayDeployment()`: Detecta variables RAILWAY_ENVIRONMENT o PORT
-  - **Variables soportadas:** PORT, RAILWAY_ENVIRONMENT, JWT_SECRET, MP_ACCESS_TOKEN, MP_PUBLIC_KEY, MP_WEBHOOK_SECRET, MP_FRONTEND_BASE_URL, MP_NOTIFICATION_URL, MYSQL_URL, DATABASE_URL, MYSQLHOST, MYSQLPORT, MYSQLUSER, MYSQLPASSWORD, MYSQLDATABASE
-
-##### 2.6.5.5. Bounded Context Software Architecture Component Level Diagrams
-
-@startuml
-!theme plain
-skinparam componentStyle uml2
-
-package "Externos" {
-  component [API Backend - ASP.NET Core] as API
-  component [MySQL 8 - EF Core] as DB
-}
-
-package "Auditoria - Shared Infrastructure" {
-  package "Domain Layer - Interfaces" {
-    component [IBaseRepository\nGeneric CRUD Contract] as IBR
-    component [IUnitOfWork\nTransaction Contract] as IOW
-    component [IAuditableEntity\nAudit Timestamps] as IAE
-  }
-
-  package "Application Layer - Models" {
-    component [Result<T>\nSuccess/Failure Pattern] as ResultT
-    component [Result\nNon-generic Result] as Result
-  }
-
-  package "Infrastructure Layer - Implementations" {
-    component [BaseRepository\nEF Core Implementation] as BR
-    component [UnitOfWork\nSaveChangesAsync] as UOW
-    component [AppDbContext\nCentral DbContext] as AC
-    component [AppDbContextFactory\nDesign-time Factory] as ACF
-    component [ModelBuilderExtensions\nSnakeCase Convention] as MBE
-    component [RailwayHosting\nEnvironment Variables] as RH
-  }
-}
-
-package "Bounded Contexts" {
-  component [Finanzas\nFee, Payment, Receipt, etc.] as Fin
-  component [Suscripciones\nUser, SubscriptionPlans] as Sub
-  component [Reservas\nSocialSpace, Reservation] as Res
-  component [Incidencias\nIncident] as Inc
-}
-
-Fin --> IBR : uses
-Fin --> IOW : uses
-Sub --> IBR : uses
-Sub --> IOW : uses
-Res --> IBR : uses
-Res --> IOW : uses
-Inc --> IBR : uses
-Inc --> IOW : uses
-
-BR --> IBR : implements
-UOW --> IOW : implements
-
-AC --> DB : EF Core
-ACF --> AC : creates
-MBE --> AC : configures
-RH --> AC : configures
-@enduml
-
-**Explicación del Diagrama de Componentes - Auditoría:**
-
-El bounded context de **Auditoría** (Shared Infrastructure) proporciona infraestructura transversal compartida para todos los bounded contexts del sistema.
-
-La **Domain Layer** define 3 interfaces clave: **IBaseRepository** (interfaz genérica para operaciones CRUD: AddAsync, FindByIdAsync, Update, Remove, ListAsync), **IUnitOfWork** (contrato para transacciones atómicas con CompleteAsync) e **IAuditableEntity** (contrato para campos de auditoría CreatedAt y UpdatedAt).
-
-La **Application Layer** contiene los modelos **Result\<T>** (genérico para éxito/fallo con valor tipado, patrón Railway-oriented programming) y **Result** (no genérico para operaciones sin retorno).
-
-La **Infrastructure Layer** implementa: **BaseRepository** (implementación genérica de IBaseRepository con EF Core y lazy loading via AsSplitQuery), **UnitOfWork** (ejecuta SaveChangesAsync para confirmar transacciones), **AppDbContext** (DbContext central que configura todas las entidades con SnakeCase naming convention), **AppDbContextFactory** (factory para tiempo de diseño), **ModelBuilderExtensions** (configura entidades y relaciones) y **RailwayHosting** (configura Kestrel, variables de entorno y connection string para Railway).
-
-Los 4 bounded contexts que dependen de esta infraestructura son **Finanzas** (Fee, Payment, Receipt, FinanceSetting, KpiRecord, AdminManagementExpense, SharedUtilityService, FixedPayoutRecipient), **Suscripciones** (User, SubscriptionPlans), **Reservas** (SocialSpace, Reservation) e **Incidencias** (Incident).
-
-##### 2.6.5.6. Bounded Context Software Architecture Code Level Diagrams
-
-###### 2.6.5.6.1. Bounded Context Domain Layer Class Diagrams
-
-@startuml
-!theme plain
-
-interface IBaseRepository {
-  +Task AddAsync
-  +Task FindByIdAsync
-  +void Update
-  +void Remove
-  +Task ListAsync
-}
-
-interface IUnitOfWork {
-  +Task CompleteAsync
-}
-
-interface IAuditableEntity {
-  +DateTimeOffset? CreatedAt
-  +DateTimeOffset? UpdatedAt
-}
-
-together {
-  class Fee
-  class Payment
-  class Receipt
-  class User
-  class SocialSpace
-  class Reservation
-  class Incident
-}
-
-IAuditableEntity <|.. Fee
-IAuditableEntity <|.. Payment
-IAuditableEntity <|.. Receipt
-IAuditableEntity <|.. User
-IAuditableEntity <|.. SocialSpace
-IAuditableEntity <|.. Reservation
-IAuditableEntity <|.. Incident
-
-class ResultT {
-  +bool IsSuccess
-  +bool IsFailure
-  +T Value
-  +string Message
-  +string Error
-}
-
-class Result {
-  +bool IsSuccess
-  +bool IsFailure
-  +string Message
-  +string Error
-}
-
-class BaseRepository {
-  #AppDbContext context
-  +Task AddAsync
-  +Task FindByIdAsync
-  +void Update
-  +void Remove
-  +Task ListAsync
-}
-
-class UnitOfWork {
-  -AppDbContext context
-  +Task CompleteAsync
-}
-
-class AppDbContext {
-  +DbSet Users
-  +DbSet Incidents
-  +DbSet Fees
-  +DbSet Payments
-  +DbSet Receipts
-  +DbSet SocialSpaces
-  +DbSet Reservations
-}
-
-class AppDbContextFactory {
-  +AppDbContext Create
-}
-
-class RailwayHosting {
-  +void ConfigureKestrelPort
-  +string ResolveConnectionString
-  +void ApplySecretsFromEnvironment
-  +void ValidateProductionSecrets
-  +bool IsRailwayDeployment
-}
-
-interface IUserRepository {
-  +Task FindByEmailAsync
-  +Task FindByExternalIdAsync
-  +Task ExistsByEmailAsync
-  +Task ListByOwnerAdminIdAsync
-  +Task SearchAsync
-  +Task AnyUsersAsync
-  +Task ExistsResidentByCodeAsync
-  +Task CountResidentsByOwnerAdminIdAsync
-}
-
-interface IIncidentRepository {
-  +Task FindByExternalIdAsync
-  +Task ListByOwnerAdminIdAsync
-  +Task AnyIncidentsAsync
-}
-
-IBaseRepository <|-- IUserRepository
-IBaseRepository <|-- IIncidentRepository
-IBaseRepository <|-- BaseRepository
-IUnitOfWork <|-- UnitOfWork
-Result <|-- ResultT
-
-BaseRepository --> AppDbContext
-UnitOfWork --> AppDbContext
-AppDbContextFactory --> AppDbContext
-RailwayHosting --> AppDbContext
-@enduml
-
-**Explicación del Diagrama de Clases - Auditoría (Shared Infrastructure):**
-
-El diagrama de clases de Auditoría muestra la infraestructura compartida del sistema. Define las interfaces y sus relaciones con las entidades de dominio.
-
-**IBaseRepository** es una interfaz genérica con restricción `where TEntity : class` que define 5 operaciones CRUD: `AddAsync`, `FindByIdAsync`, `Update`, `Remove` y `ListAsync`. Las interfaces específicas de repositorio **IUserRepository** e **IIncidentRepository** extienden `IBaseRepository` con operaciones adicionales.
-
-**IUnitOfWork** es una interfaz simple con un solo método `CompleteAsync` que confirma transacciones atómicas.
-
-**IAuditableEntity** es una interfaz con dos propiedades: `CreatedAt` (DateTimeOffset?, get/set) y `UpdatedAt` (DateTimeOffset?, get/set). Las 7 entidades principales (User, Fee, Payment, Receipt, SocialSpace, Reservation, Incident) implementan directamente esta interfaz.
-
-**Result\<T>** y **Result** son clases del patrón Railway-oriented programming. Ambas tienen propiedades `IsSuccess`, `IsFailure`, `Message` y `Error` (Enum), pero Result\<T> agrega `Value` (T).
-
-**BaseRepository** es una clase genérica con campo protegido `#AppDbContext context` que implementa `IBaseRepository`. **UnitOfWork** tiene campo privado `-AppDbContext context` e implementa `IUnitOfWork` ejecutando `SaveChangesAsync()`.
-
-**AppDbContext** es el DbContext central con 7 DbSets. **AppDbContextFactory** crea instancias para tiempo de diseño. **RailwayHosting** es una clase estática con 5 métodos para configurar hosting en Railway.
-
-Las relaciones muestran que `IUserRepository` e `IIncidentRepository` heredan de `IBaseRepository`, `BaseRepository` implementa `IBaseRepository`, `UnitOfWork` implementa `IUnitOfWork`, y ambas implementaciones dependen de `AppDbContext`.
-
-###### 2.6.5.6.2. Bounded Context Database Design Diagram
-
-@startuml
-!theme plain
-
-entity "users" as users {
-  *id : int <<PK>>
-  --
-  external_id : varchar <<UK>>
-  name : varchar
-  role : varchar
-  owner_admin_id : int <<FK>>
-  subscription_plan_id : varchar
-}
-
-entity "incidents" as incidents {
-  *id : int <<PK>>
-  --
-  external_id : varchar <<UK>>
-  owner_admin_id : int <<FK>>
-}
-
-entity "fees" as fees {
-  *id : int <<PK>>
-  --
-  external_id : varchar <<UK>>
-  owner_admin_id : int <<FK>>
-}
-
-entity "payments" as payments {
-  *id : int <<PK>>
-  --
-  external_id : varchar <<UK>>
-  owner_admin_id : int <<FK>>
-}
-
-entity "receipts" as receipts {
-  *id : int <<PK>>
-  --
-  external_id : varchar <<UK>>
-  owner_admin_id : int <<FK>>
-}
-
-entity "social_spaces" as social_spaces {
-  *id : int <<PK>>
-  --
-  external_id : varchar <<UK>>
-  owner_admin_id : int <<FK>>
-}
-
-entity "reservations" as reservations {
-  *id : int <<PK>>
-  --
-  external_id : varchar <<UK>>
-  owner_admin_id : int <<FK>>
-  space_external_id : varchar <<FK>>
-}
-
-users ||--|{ incidents : "1:N"
-users ||--|{ fees : "1:N"
-users ||--|{ payments : "1:N"
-users ||--|{ receipts : "1:N"
-users ||--|{ social_spaces : "1:N"
-users ||--|{ reservations : "1:N"
-@enduml
-
-**Explicación del Diagrama de Base de Datos - Auditoría (Vista Global):**
-
-Este diagrama muestra la vista transversal de todas las tablas del sistema con sus relaciones clave foránea, representando la estructura completa de base de datos de BuildingFex.
-
-La tabla central es **users** que almacena todos los usuarios del sistema (admins y residentes) con `id` (PK), `external_id` (UK), `name`, `role` (max 20), `owner_admin_id` (FK auto-referenciada) y `subscription_plan_id` (default "free"). Todas las demás tablas dependen de esta tabla via `owner_admin_id`.
-
-Las tablas de dominio son **incidents** (reportes de mantenimiento), **fees** (cuotas de mantenimiento), **payments** (pagos registrados), **receipts** (recibos de expensas), **social_spaces** (espacios comunes) y **reservations** (reservas de espacios). Cada una tiene `id` (PK auto-increment), `external_id` (UK, max 64) y `owner_admin_id` (FK a users).
-
-La tabla **reservations** además tiene `space_external_id` como FK a `social_spaces.external_id`, creando una relación adicional entre reservas y espacios.
-
-Las relaciones son todas de tipo **1:N** desde `users` hacia cada tabla de dominio, lo que significa que un usuario admin puede tener múltiples incidencias, cuotas, pagos, recibos, espacios y reservas. La relación **social_spaces 1:N reservations** indica que un espacio puede tener múltiples reservas asociadas.
-
-
-
-
-
-
 
 <div style="page-break-after: always;"></div>
 
@@ -3578,6 +3211,18 @@ Las relaciones son todas de tipo **1:N** desde `users` hacia cada tabla de domin
 <div style="page-break-after: always;"></div>
 
 ## Bibliografía
+
+Castillo Contreras, V. B., Castillo Contreras, F. G., Sánchez Rolando, J. L., & Zarabia Tumay, D. O. (2025). Modelo ProLab: EdiTech – servicio de administración de edificios residenciales a través de una solución digital en Lima [Tesis de maestría, Pontificia Universidad Católica del Perú]. Repositorio Institucional PUCP. http://hdl.handle.net/20.500.12404/30681
+
+El Economista. (2026, 4 de junio). Siete startups de América Latina son seleccionadas para programa de aceleración inmobiliaria. https://www.eleconomista.com.mx/econohabitat/siete-startups-america-latina-son-seleccionadas-programa-aceleracion-inmobiliaria-20260604-816806.html
+
+Infobae. (2026, 10 de junio). ¿Problemas con la administración del edificio? El costo oculto de no saber elegir: lo que todo propietario debe saber. https://www.infobae.com/peru/2026/06/10/problemas-con-la-administracion-del-edificio-el-costo-oculto-de-no-saber-elegir-lo-que-todo-propietario-debe-saber/
+
+Nieto-Cardenas, G., Quevedo-Villalba, F., Villanueva-Llapa, A., & Raymundo, C. (2025). Digital platform to improve the administrative management of condominiums. En Proceedings of the 2025 IEEE 5th International Conference on Advanced Learning Technologies on Education and Research, ICALTER 2025. Institute of Electrical and Electronics Engineers Inc. https://doi.org/10.1109/ICALTER69698.2025.11355122
+
+Ramos Montoya, S. (2026, 17 de junio). La nueva era del Proptech: por qué la consolidación es el futuro de esta industria. Entrepreneur en Español. https://spanish.entrepreneur.com/tecnologia/la-nueva-era-del-proptech-por-que-la-consolidacion-es-el-futuro-de-esta-industria
+
+Rodríguez Botto, T. (2025, 14 de noviembre). PropTech despegan en Latinoamérica: startups crecen hasta 300% y reordenan el negocio inmobiliario. El Diario Inmobiliario. https://eldiarioinmobiliario.cl/destacadas/proptech-despegan-en-latinoamerica-startups-crecen-hasta-300-y-reordenan-el-negocio-inmobiliario/
 
 <div style="page-break-after: always;"></div>
 
