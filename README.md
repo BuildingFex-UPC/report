@@ -1457,7 +1457,7 @@ Por otro lado, GitHub funciona como repositorio del código fuente y se encuentr
 
 #### 2.6.1. Bounded Context: Finanzas
 
-Este contexto gestiona el sistema financiero completo: cuotas, pagos, recibos, configuración, KPIs, gastos administrativos, servicios compartidos y pagos fijos a trabajadores. Incluye integración con MercadoPago.
+El contexto de Finanzas gestiona el sistema financiero completo: cuotas, pagos, recibos, configuración, KPIs, gastos administrativos, servicios compartidos y pagos fijos a trabajadores. Incluye integración con MercadoPago.
 
 ##### 2.6.1.1. Domain Layer
 
@@ -2099,7 +2099,7 @@ Las relaciones son todas de tipo **1:N** desde `users` hacia cada tabla de domin
 
 #### 2.6.2. Bounded Context: Suscripciones
 
-Este contexto administra la autenticación, autorización, registro de administradores y residentes, y la gestión de planes de suscripción SaaS.
+El contexto de Suscripciones administra la autenticación, autorización, registro de administradores y residentes, y la gestión de planes de suscripción SaaS.
 
 ##### 2.6.2.1. Domain Layer
 
@@ -2534,8 +2534,9 @@ La columna clave es `owner_admin_id` que es una FK auto-referenciada a la misma 
 La relación es de tipo **1:N auto-referenciada**: un usuario admin puede tener múltiples residentes a través de `owner_admin_id`, pero un residente pertenece a un solo admin.
 
 ---
+#### 2.6.3. Bounded Context: Reservas
 
-Este contexto gestiona el catálogo de espacios comunes del edificio y el sistema de reservas con validación de solapamiento.
+El contexto de Reservas gestiona el catálogo de espacios comunes del edificio y el sistema de reservas con validación de solapamiento.
 
 ##### 2.6.3.1. Domain Layer
 
@@ -2881,8 +2882,9 @@ La tabla **reservations** es la más compleja, con `id` (PK), `external_id` (UK)
 Las relaciones son: **users 1:N social_spaces** (un usuario tiene muchos espacios), **users 1:N reservations** (un usuario tiene muchas reservas), y **social_spaces 1:N reservations** (un espacio tiene muchas reservas, vinculadas via `external_id` en lugar de `id`).
 
 ---
+#### 2.6.4. Bounded Context: Incidencias
 
-Este contexto gestiona la creación, seguimiento y resolución de incidencias reportadas por residentes o administradores dentro del edificio.
+El contexto de Incidencias gestiona la creación, seguimiento y resolución de incidencias reportadas por residentes o administradores dentro del edificio.
 
 ##### 2.6.4.1. Domain Layer
 
