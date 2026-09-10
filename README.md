@@ -1425,11 +1425,9 @@ INC ..> FCM : Open Host Service\n(notificaciones push)
 
 - **Finanzas e Incidencias → Firebase Cloud Messaging:** relación de tipo **Open Host Service**, dado que FCM expone un protocolo público estandarizado de notificaciones push que ambos contextos consumen de la misma manera, sin necesidad de una traducción particular.
 
-- No se identificó un **Shared Kernel** real entre los contextos: aunque todos comparten la tabla física `users`, cada bounded context accede a ella únicamente a través de la interfaz `IUserRepository` expuesta por IAM, preservando la autonomía de cada contexto y evitando acoplamiento de código compartido.
-
 #### 2.5.3. Software Architecture
 
-En esta sección se describe la arquitectura de software de BuildingFex utilizando el modelo **C4** (Context, Container y Deployment), que permite representar el sistema con distintos niveles de detalle y para audiencias diferentes. El nivel de **contexto** ubica la plataforma frente a sus usuarios (visitantes, administradores) y los servicios externos con los que se integra; el nivel de **contenedores** descompone la aplicación en sus piezas ejecutables principales (aplicación web, API Gateway, módulos de negocio y sus bases de datos); y el nivel de **despliegue** muestra cómo esos contenedores se distribuyen sobre la infraestructura en la nube. Los tres diagramas se elaboraron con Structurizr / notación C4 y se presentan a continuación.
+En esta sección se describe la arquitectura de software de BuildingFex utilizando el modelo **C4** (Context, Container y Deployment), que permite representar el sistema con distintos niveles de detalle y para audiencias diferentes. El nivel de **contexto** ubica la plataforma frente a sus usuarios (visitantes, administradores) y los servicios externos con los que se integra; el nivel de **contenedores** descompone la aplicación en sus piezas ejecutables principales (aplicación web, API Gateway, módulos de negocio y sus bases de datos); y el nivel de **despliegue** muestra cómo esos contenedores se distribuyen sobre la infraestructura en la nube. Los tres diagramas se presentan a continuación.
 
 ##### 2.5.3.1. Software Architecture Context Level Diagrams
 
