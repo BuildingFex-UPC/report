@@ -100,7 +100,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Investigué y apliqué conceptos de Análisis Competitivo, Estrategias y Tácticas frente a Competidores, así como User Stories, Ubiquitous Language y Requirements Specification, para definir y documentar los requisitos de BuildingFlex.</td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
@@ -124,7 +124,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Identifiqué la necesidad de reforzar mis conocimientos sobre análisis competitivo y especificación de requisitos, revisando estos conceptos y aplicándolos en la elaboración de las diferentes secciones de BuildingFlex.</td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
