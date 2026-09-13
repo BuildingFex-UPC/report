@@ -36,7 +36,7 @@ BuildingFex
 | u202318220 | Hermoza Quispe, Jude Alessandro |
 | u202312510 | Jave Chang, Alejandro Manuel |
 | u201910803 | Heredia Hoyos, Danitza Ivonne |
-|            | Suteau, Antonin |
+| u202624026 | Suteau, Antonin |
 
 **Período** 2026-20  
 Setiembre 2026
