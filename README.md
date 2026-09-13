@@ -104,7 +104,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> He aprendido cómo se desarrolla un proyecto académico en Perú y he utilizado por primera vez GitHub, lo que me permitirá, más adelante en mis estudios, llevar a cabo proyectos en grupo. </td>
   </tr>
 
   <!-- ================= CRITERIO 2 ================= -->
@@ -128,7 +128,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo. </td>
   </tr>
 </table>
 
