@@ -1440,13 +1440,13 @@ En esta sección se describe la arquitectura de software de BuildingFex utilizan
 
 ##### 2.5.3.1. Software Architecture Context Level Diagrams
 
-Este diagrama de contexto representa cómo funciona la plataforma BuildingFex: los visitantes envian consultas y revisan informacion de suscripciones, mientras que los administradores analizan las respuestas. El sistema central, la aplicacion, se conecta con un API externo para obtener datos de edificios y con Firebase Cloud Messaging para enviar notificaciones push, mostrando así el flujo de interaccion entre usuarios, la plataforma y servicios externos.
+Este diagrama de contexto representa cómo funciona la plataforma BuildingFex: los residentes realizan pagos, reportan incidencias, reservan espacios entre otros, mientras que los administradores gesstionan las finanzas, publican comunicados y administra espacios sociales. El sistema central, la aplicacion, se conecta con un API externo de Mercado Pago para realizar los pagos y con Firebase Cloud Messaging para enviar notificaciones push, mostrando así el flujo de interaccion entre usuarios, la plataforma y servicios externos.
 
 ![ContextDiagram.png](img/ContextDiagram.png)
 
 ##### 2.5.3.2. Software Architecture Container Level Diagrams
 
-Este diagrama de BuildingFex resume la estructura del sistema: los usuarios interactuan con una aplicación móvil Kotlin que envia solicitudes al API Gateway, el cual distribuye el trafico hacia 4 modulos principales (Incidencias, Reservas, Suscripciones y Finanzas), conectados a una base de datos. Ademas, el sistema se conecta con un API externo para obtener datos de edificios y con Firebase para enviar notificaciones push. En conjunto, muestra cómo fluye la informacion entre usuarios, aplicación, bases de datos y servicios externos.
+Este diagrama de BuildingFex resume la estructura del sistema: los usuarios interactuan con una aplicación móvil Kotlin que envia solicitudes al API Gateway, el cual distribuye el trafico hacia 4 modulos principales (Incidencias, Reservas, Suscripciones y Finanzas), conectados a una base de datos. Ademas, el sistema se conecta con un API externo de Mercado Pago para realizar los pagos de los edificios y con Firebase para enviar notificaciones push. En conjunto, muestra cómo fluye la informacion entre usuarios, aplicación, bases de datos y servicios externos.
 
 ![Containerdiagram.png](img/ContainerDiagram.png)
 
