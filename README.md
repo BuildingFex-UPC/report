@@ -50,7 +50,7 @@ Setiembre 2026
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
 | AV1 | 10-09-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Carátula<br>- Registro de Versiones del informe<br>- Project Report Collaboration Insights<br>- Contenido<br>- Student Outcome<br>- Capítulo I: Presentación<br>- Capítulo II: Requirements Development and Software Solution Design<br>- Conclusiones<br>- Bibliografía<br>- Anexos |
-| TB1 |  | |  |
+
 
 <div style="page-break-after: always;"></div>
 
@@ -60,13 +60,7 @@ Setiembre 2026
 
 Evidencias de colaboración y participación del equipo para la entrega AV1:
 
-| Integrante | Participación |
-| :--- | :--- |
-| Javier Murillo, Mathias |  |
-| Jude Alessandro Hermoza Quispe |  |
-| Alejandro Manuel Jave Chang |  |
-| Danitza Ivonne Heredia Hoyos |  |
-| Antonin Suteau |  |
+![Commits Av1](img/commit-av1.png)
 
 
 <div style="page-break-after: always;"></div>
