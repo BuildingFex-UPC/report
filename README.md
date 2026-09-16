@@ -3205,7 +3205,33 @@ La relación es **users 1:N incidents**: un usuario admin puede tener múltiples
 
 <div style="page-break-after: always;"></div>
 
-## Conclusiones
+### Conclusiones y recomendaciones
+
+El desarrollo de los Capítulos I y II permitió pasar de una intuición inicial sobre la problemática de la administración de condominios a un conjunto de decisiones de producto y de arquitectura sustentadas en evidencia primaria y secundaria. El Problem Statement definido en la sección 1.2.2.1 ubica el núcleo del problema en la gestión fragmentada y manual de cobranzas, áreas comunes, incidencias y comunicados, sostenida sobre herramientas genéricas como Excel y WhatsApp. Las seis entrevistas realizadas (tres por segmento) confirman que este problema es real y se percibe de forma consistente: ambos segmentos identifican la conciliación de pagos y la coordinación de áreas comunes como sus principales fuentes de fricción, lo que respalda la vigencia del Problem Statement sin necesidad de reformularlo en esta etapa.
+
+El contraste entre los assumptions planteados en la sección 1.2.2.2 y el comportamiento real observado introduce, sin embargo, un matiz relevante para el diseño de la solución. En el Segmento 2 (Empresas de Gestión de Edificios), las entrevistas validan con fuerza los assumptions originales: se trata de un perfil de administradores "nativos digitales" (edad promedio de 31 años) saturado por tareas manuales de conciliación, que valora explícitamente una consola unificada capaz de soportar el crecimiento de su cartera de edificios sin aumentar su plantilla. En el Segmento 1 (Juntas de Directiva), en cambio, la edad promedio de los entrevistados (50.3 años, con un rango de 28 a 73 años) y la prioridad que otorgan al trato directo y de confianza en temas sensibles como la morosidad matizan el assumption de una automatización total: la disposición a aceptar recordatorios de cobro completamente automatizados no es homogénea, sino que depende del perfil digital de cada directivo y de su preocupación por la privacidad de la información financiera del edificio.
+
+La siguiente tabla contrasta los Hypothesis Statements definidos en la sección 1.2.2.3 con la evidencia recogida durante las entrevistas y el proceso de Needfinding:
+
+| Hypothesis Statement | Evidencia recogida | Estado |
+| :--- | :--- | :--- |
+| **HS#1** – Puntualidad de pago mediante un módulo de Collections centralizado | Ambos segmentos reportan la cobranza como su flujo de trabajo más frecuente (33.3% de menciones en cada uno); el Segmento 1 condiciona su aceptación a conservar un margen de trato personal | Soportada parcialmente – requiere ajuste de diseño |
+| **HS#2** – Eficiencia de administración y conserjería mediante una consola unificada | Validada de forma consistente por el Segmento 2, que señala la conciliación bancaria y la coordinación con conserjes como sus mayores consumos de tiempo | Soportada |
+| **HS#3** – Reducción de quejas vecinales mediante el módulo de Common Areas | Ambos segmentos reportan la coordinación de áreas comunes como fuente recurrente de conflicto (22.2% de menciones en cada uno) | Soportada |
+| **HS#4** – Crecimiento comercial mediante una estructura de suscripción en tres niveles | Los segmentos confirman carteras de tamaño heterogéneo (de 10 a más de 700 departamentos), lo que sustenta niveles diferenciados; la disposición real de pago aún no se ha probado con una transacción real | Soportada parcialmente – pendiente de validación comercial |
+
+En cuanto a los criterios de éxito establecidos en el proceso de Lean UX (reducción de 25% en la morosidad, reducción de 40% en los tiempos de onboarding y crecimiento del MRR mediante los tres planes de suscripción), es necesario precisar que, al tratarse de métricas cuantitativas de uso, ninguna puede darse por validada en esta etapa: la evidencia disponible hasta el AV1 es de carácter cualitativo y proviene de investigación (entrevistas y análisis competitivo), no de la operación real de la plataforma. Su validación corresponde a las etapas de Product Implementation & Validation y a las Validation Interviews previstas en el Capítulo IV, por lo que estos criterios se mantienen como objetivos a confirmar en las siguientes entregas (AV2 y TB2) con datos de uso real y evaluación heurística.
+
+En paralelo, el Capítulo II tradujo estos hallazgos en una base técnica trazable hacia los User Stories priorizados en el Product Backlog: el análisis competitivo y el SWOT ubicaron la simplicidad y la centralización como el diferencial de BuildingFex frente a competidores como Condo Control, Buildium y ComunidadFeliz, mientras que el modelado estratégico y táctico de Domain-Driven Design (Bounded Contexts de Finanzas, Suscripciones, Reservas e Incidencias) y los diagramas C4 ofrecen una arquitectura modular alineada con los flujos de trabajo identificados en el Needfinding. Esto permite concluir que el equipo cuenta con fundamentos suficientes, tanto de investigación como de diseño, para avanzar hacia el Capítulo III (Solution UI/UX Design) y la implementación, sin necesidad de replantear el modelo de negocio ni el alcance definido para BuildingFex.
+
+**Recomendaciones**
+
+- Diseñar el módulo de Collections de forma configurable, de modo que las Juntas de Directiva puedan optar por recordatorios totalmente automatizados o por flujos híbridos que conserven el trato personal, en lugar de imponer una única automatización para ambos segmentos.
+- Incorporar controles de privacidad visibles para el residente (por ejemplo, restricciones sobre quién puede consultar el detalle de la morosidad ajena) que atiendan las preocupaciones de confidencialidad manifestadas por el Segmento 1.
+- Priorizar en los primeros Sprints las funcionalidades de Cobranzas (Collections) y Áreas Comunes, ya que ambas concentran la mayor frecuencia de menciones como puntos de dolor en el análisis de entrevistas.
+- Ampliar la muestra de validación comercial —actualmente 3 entrevistas por segmento— antes de cerrar definitivamente los montos de suscripción (S/ 40, S/ 80 y S/ 120), idealmente mediante una prueba piloto con edificios reales.
+- Definir desde el primer Sprint la instrumentación de analítica necesaria para medir de forma objetiva los tres criterios de éxito del Lean UX Canvas durante las etapas de Product Implementation & Validation.
+- Actualizar esta sección en las entregas TB1, AV2 y TB2, incorporando los resultados del Video App Validation y de las evaluaciones heurísticas a medida que estén disponibles, conforme al carácter acumulable del informe.
 
 
 <div style="page-break-after: always;"></div>
