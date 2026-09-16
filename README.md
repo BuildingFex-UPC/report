@@ -87,7 +87,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td rowspan="5">Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de ingeniería de software</td>
     <td>Mathias Javier Murillo</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b>Investigué y apliqué conceptos de arquitectura e integración técnica mediante API Web Services (sección 2.5), además de la estructuración de maquetación y diseño de interfaces con HTML y CSS. Esto me permitió actualizar mis competencias técnicas y asegurar una correcta solución de software para el proyecto.</td>
     <td rowspan="5"><b>AV1:</b>Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.</td>
   </tr>
   <tr>
@@ -111,7 +111,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td rowspan="5">Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software.</td>
     <td>Mathias Javier Murillo</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b>Identifiqué la necesidad de profundización en el desarrollo e integración de servicios web y lógica frontend. Asumí un aprendizaje autónomo para consolidar el diseño de interfaces y la comunicación de datos, reconociendo que la actualización continua es clave para responder a los estándares del proyecto.</td>
     <td rowspan="5"><b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.</td>
   </tr>
   <tr>
