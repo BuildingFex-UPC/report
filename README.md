@@ -1172,6 +1172,9 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 
 
 #### 2.4.2. Impact Mapping
+
+![Impact Mapping](img/impactmap.png)
+
 #### 2.4.3. Product Backlog
 
 El Product Backlog de BuildingFex consolida y prioriza todas las historias de usuario derivadas de las secciones 2.4.1 (User Stories) y 2.4.2 (Impact Mapping), agrupándolas por *epics* alineados con los bounded contexts del producto (Finanzas, Suscripciones, Gestión de Usuarios, Áreas Comunes, Incidencias) y con las funcionalidades priorizadas en el Lean UX Canvas.
