@@ -1236,6 +1236,14 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 ### 2.5. Strategic-Level Domain-Driven Design
 #### 2.5.1. EventStorming
 Para descubrir los bounded contexts de BuildingFex se realizó una sesión de EventStorming en formato Big Picture, identificando los domain events (hechos relevantes del negocio, expresados en pasado) generados por cada actor del sistema. Estos eventos fueron agrupados posteriormente en clusters temáticos, dando origen a los cuatro bounded contexts que conforman la plataforma.
+
+link del design-level event storming: https://miro.com/app/board/uXjVJF4TquY=/?share_link_id=348452297177
+
+![designeventstorming1.png](img/designeventstorming1.png)
+
+![designeventstorming2.png](img/designeventstorming2.png)
+
+
 ##### 2.5.1.1. Candidate Context Discovery
 En esta etapa se identificaron los domain events (post-its naranjas) generados por los actores (Administrador, Residente, Sistema de Pagos) a lo largo del ciclo de vida del edificio. Los eventos se agruparon por afinidad temática, obteniendo los siguientes clusters candidatos:
 
