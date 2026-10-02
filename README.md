@@ -50,6 +50,7 @@ Setiembre 2026
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
 | AV1 | 10-09-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Carátula<br>- Registro de Versiones del informe<br>- Project Report Collaboration Insights<br>- Contenido<br>- Student Outcome<br>- Capítulo I: Presentación<br>- Capítulo II: Requirements Development and Software Solution Design<br>- Conclusiones<br>- Bibliografía<br>- Anexos |
+| TP1 | 04-10-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Correciones del AV1<br>- Capitulo III<br>- Capitulo IV<br> |
 
 
 <div style="page-break-after: always;"></div>
@@ -90,7 +91,9 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
-    <td><b>AV1:</b> Apliqué Tactical DDD para organizar mejor el dominio del proyecto y así ampliar mis conocimientos.</td>
+    <td><b>AV1:</b> Apliqué Tactical DDD para organizar mejor el dominio del proyecto y así ampliar mis conocimientos.
+      <br><br><b>TP1:</b> En la elaboración desde la sección Product Design hasta la sección Landing Page Mockup, actualicé mis conocimientos mediante la investigación de patrones modernos de diseño de experiencia de usuario para soluciones SaaS, aplicando un sistema de diseño con estándares de accesibilidad y tipografía escalable, e implementando herramientas de prototipado para estructurar de manera óptima la maquetación y la propuesta de valor de la Landing Page B2B y B2C.</td>
+  </tr>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
@@ -114,7 +117,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
-    <td><b>AV1: El uso de C4 y del diagrama de base de datos me llevó a reconocer la necesidad de seguir aprendiendo sobre cómo representar correctamente la arquitectura y los datos de un sistem</b></td>
+    <td><b>AV1:</b> El uso de C4 y del diagrama de base de datos me llevó a reconocer la necesidad de seguir aprendiendo sobre cómo representar correctamente la arquitectura y los datos de un sistem<br><br><b>TP1:</b> A través del análisis iterativo de las entrevistas en profundidad y el estudio comparativo de soluciones del mercado, reconocí el aprendizaje continuo como una necesidad fundamental para el desarrollo de software, adaptando de forma constante los wireframes y maquetas interactivas a los requerimientos reales de los usuarios antes de la fase de codificación.</td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
@@ -3526,15 +3529,6 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 ### Conclusiones y recomendaciones
 
 La entrega AV1 confirma la vigencia del Problem Statement (sección 1.2.2.1): las seis entrevistas realizadas (tres por segmento) muestran que la conciliación de pagos y la coordinación de áreas comunes son, en ambos segmentos, las principales fuentes de fricción frente a la gestión manual actual (Excel, WhatsApp). Sin embargo, matizan los assumptions de la sección 1.2.2.2: el Segmento 2 (Empresas de Gestión) valida con fuerza la automatización total propuesta, mientras que el Segmento 1 (Juntas de Directiva, edad promedio 50.3 años) prioriza el trato personal y expresa preocupación por la privacidad en temas de morosidad, por lo que la automatización no debe ser homogénea entre segmentos.
-
-La siguiente tabla contrasta los Hypothesis Statements (sección 1.2.2.3) con la evidencia recogida:
-
-| Hypothesis Statement | Estado |
-| :--- | :--- |
-| **HS#1** – Collections centralizado mejora la puntualidad de pago | Soportada parcialmente: ambos segmentos citan la cobranza como su mayor fricción, pero el Segmento 1 exige mantener trato personal |
-| **HS#2** – Consola unificada mejora la eficiencia administrativa | Soportada: validada de forma consistente por el Segmento 2 |
-| **HS#3** – Módulo de Common Areas reduce quejas vecinales | Soportada: ambos segmentos citan las áreas comunes como fuente recurrente de conflicto |
-| **HS#4** – Suscripción en tres niveles impulsa el crecimiento comercial | Soportada parcialmente: se confirma la heterogeneidad de tamaño de cartera, pero falta validar la disposición real de pago |
 
 Los criterios de éxito del Lean UX Canvas (-25% morosidad, -40% onboarding, crecimiento del MRR) aún no pueden darse por validados: son métricas de uso real que solo podrán medirse en el Capítulo IV (Product Implementation & Validation), a partir de AV2. Por su parte, el Capítulo II (análisis competitivo, DDD y arquitectura C4) traduce estos hallazgos en una base técnica trazable al Product Backlog, suficiente para avanzar hacia el Capítulo III sin replantear el modelo de negocio.
 
