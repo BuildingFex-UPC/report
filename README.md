@@ -36,7 +36,7 @@ BuildingFex
 | u202318220 | Hermoza Quispe, Jude Alessandro |
 | u202312510 | Jave Chang, Alejandro Manuel |
 | u201910803 | Heredia Hoyos, Danitza Ivonne |
-|            | Suteau, Antonin |
+| u202624026 | Suteau, Antonin |
 
 **Período** 2026-20  
 Setiembre 2026
@@ -50,7 +50,7 @@ Setiembre 2026
 | Versión | Fecha | Autor | Descripción de modificación |
 | :--- | :--- | :--- | :--- |
 | AV1 | 10-09-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Carátula<br>- Registro de Versiones del informe<br>- Project Report Collaboration Insights<br>- Contenido<br>- Student Outcome<br>- Capítulo I: Presentación<br>- Capítulo II: Requirements Development and Software Solution Design<br>- Conclusiones<br>- Bibliografía<br>- Anexos |
-| TB1 |  | |  |
+
 
 <div style="page-break-after: always;"></div>
 
@@ -60,13 +60,7 @@ Setiembre 2026
 
 Evidencias de colaboración y participación del equipo para la entrega AV1:
 
-| Integrante | Participación |
-| :--- | :--- |
-| Javier Murillo, Mathias |  |
-| Jude Alessandro Hermoza Quispe |  |
-| Alejandro Manuel Jave Chang |  |
-| Danitza Ivonne Heredia Hoyos |  |
-| Antonin Suteau |  |
+![Commits Av1](img/commit-av1.png)
 
 
 <div style="page-break-after: always;"></div>
@@ -87,7 +81,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td rowspan="5">Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de ingeniería de software</td>
     <td>Mathias Javier Murillo</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b>Investigué y apliqué conceptos de arquitectura e integración técnica mediante API Web Services (sección 2.5), además de la estructuración de maquetación y diseño de interfaces con HTML y CSS. Esto me permitió actualizar mis competencias técnicas y asegurar una correcta solución de software para el proyecto.</td>
     <td rowspan="5"><b>AV1:</b>Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.</td>
   </tr>
   <tr>
@@ -100,18 +94,18 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Investigué y apliqué conceptos de Análisis Competitivo, Estrategias y Tácticas frente a Competidores, así como User Stories, Ubiquitous Language y Requirements Specification, para definir y documentar los requisitos de BuildingFlex.</td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> He aprendido cómo se desarrolla un proyecto académico en Perú y he utilizado por primera vez GitHub, lo que me permitirá, más adelante en mis estudios, llevar a cabo proyectos en grupo. </td>
   </tr>
 
   <!-- ================= CRITERIO 2 ================= -->
   <tr>
     <td rowspan="5">Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software.</td>
     <td>Mathias Javier Murillo</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b>Identifiqué la necesidad de profundización en el desarrollo e integración de servicios web y lógica frontend. Asumí un aprendizaje autónomo para consolidar el diseño de interfaces y la comunicación de datos, reconociendo que la actualización continua es clave para responder a los estándares del proyecto.</td>
     <td rowspan="5"><b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.</td>
   </tr>
   <tr>
@@ -124,11 +118,11 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Identifiqué la necesidad de reforzar mis conocimientos sobre análisis competitivo y especificación de requisitos, revisando estos conceptos y aplicándolos en la elaboración de las diferentes secciones de BuildingFlex.</td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b></td>
+    <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo. </td>
   </tr>
 </table>
 
@@ -156,7 +150,7 @@ visibilidad a las juntas de propietarios.
 | ![Jude Alessandro Hermoza Quispe](img/img-profile/FotoJude.jpg) | Jude Alessandro Hermoza Quispe | u202318220 | Ingeniería de Software | Soy estudiante de Ingeniería de Software en la UPC con interés en el desarrollo de aplicaciones  y móviles. Me enfoco en el levantamiento de requerimientos, el modelado del backlog y el diseño de la arquitectura de software. Aporto al equipo organización, análisis de entrevistas y documentación técnica del proyecto. |
 | ![Alejandro Jave Chanf](img/img-profile/AJ.jpeg)                | Alejandro Manuel Jave Chang  | U202312510 | Ingenieria de Software | Vengo de la carrera de Ingeniería de software, me gusta explorar diversas soluciones a desafíos tecnológicos y me apasiona aprender nuevas cosas. Mi enfoque dedicado a los proyectos que me apasionan me impulsa a explorar nuevas fronteras en mi carrera. |
 | ![Danitza Ivonne Heredia Hoyos](img/img-profile/DH.webp)        | Danitza Ivonne Heredia Hoyos | U201910803 | Ingeniería de Software | Soy estudiante de la carrera de Ingeniería de Software. Cuento con conocimientos en UX/UI Design, enfocado en la creación de interfaces intuitivas y centradas en la experiencia del usuario. Me interesa seguir fortaleciendo mis habilidades tanto en el ámbito del desarrollo de software como en el diseño de soluciones digitales, aportando creatividad y enfoque práctico en cada proyecto. |
-|                                                                 |                              |            |                        |  |
+|       <img width="522" height="640" alt="photo antonin suteau" src="https://github.com/user-attachments/assets/82125a78-c5ab-468e-a3de-84f98098b291" />| Antonin Suteau               | U202624026 | Intercambio libre|Soy estudiante en intercambio libre. Estudio ingeniería aeronáutica y aeroespacial en Francia. Me gusta aprender cosas nuevas y nuevas formas de pensar, ya que eso me ayuda a abordar un problema desde distintos ángulos. He aportado al equipo otra forma de enfocar un proyecto académico.|
 
 ### 1.2. Solution Profile
 El nombre de nuestro producto es <b>“BuildingFex”</b>. Este término fusiona la palabra inglesa "Building" (edificio), haciendo referencia directa a nuestro rubro inmobiliario,
@@ -1242,6 +1236,14 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 ### 2.5. Strategic-Level Domain-Driven Design
 #### 2.5.1. EventStorming
 Para descubrir los bounded contexts de BuildingFex se realizó una sesión de EventStorming en formato Big Picture, identificando los domain events (hechos relevantes del negocio, expresados en pasado) generados por cada actor del sistema. Estos eventos fueron agrupados posteriormente en clusters temáticos, dando origen a los cuatro bounded contexts que conforman la plataforma.
+
+link del design-level event storming: https://miro.com/app/board/uXjVJF4TquY=/?share_link_id=348452297177
+
+![designeventstorming1.png](img/designeventstorming1.png)
+
+![designeventstorming2.png](img/designeventstorming2.png)
+
+
 ##### 2.5.1.1. Candidate Context Discovery
 En esta etapa se identificaron los domain events (post-its naranjas) generados por los actores (Administrador, Residente, Sistema de Pagos) a lo largo del ciclo de vida del edificio. Los eventos se agruparon por afinidad temática, obteniendo los siguientes clusters candidatos:
 
@@ -3521,8 +3523,27 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 ---
 <div style="page-break-after: always;"></div>
 
-## Conclusiones
+### Conclusiones y recomendaciones
 
+La entrega AV1 confirma la vigencia del Problem Statement (sección 1.2.2.1): las seis entrevistas realizadas (tres por segmento) muestran que la conciliación de pagos y la coordinación de áreas comunes son, en ambos segmentos, las principales fuentes de fricción frente a la gestión manual actual (Excel, WhatsApp). Sin embargo, matizan los assumptions de la sección 1.2.2.2: el Segmento 2 (Empresas de Gestión) valida con fuerza la automatización total propuesta, mientras que el Segmento 1 (Juntas de Directiva, edad promedio 50.3 años) prioriza el trato personal y expresa preocupación por la privacidad en temas de morosidad, por lo que la automatización no debe ser homogénea entre segmentos.
+
+La siguiente tabla contrasta los Hypothesis Statements (sección 1.2.2.3) con la evidencia recogida:
+
+| Hypothesis Statement | Estado |
+| :--- | :--- |
+| **HS#1** – Collections centralizado mejora la puntualidad de pago | Soportada parcialmente: ambos segmentos citan la cobranza como su mayor fricción, pero el Segmento 1 exige mantener trato personal |
+| **HS#2** – Consola unificada mejora la eficiencia administrativa | Soportada: validada de forma consistente por el Segmento 2 |
+| **HS#3** – Módulo de Common Areas reduce quejas vecinales | Soportada: ambos segmentos citan las áreas comunes como fuente recurrente de conflicto |
+| **HS#4** – Suscripción en tres niveles impulsa el crecimiento comercial | Soportada parcialmente: se confirma la heterogeneidad de tamaño de cartera, pero falta validar la disposición real de pago |
+
+Los criterios de éxito del Lean UX Canvas (-25% morosidad, -40% onboarding, crecimiento del MRR) aún no pueden darse por validados: son métricas de uso real que solo podrán medirse en el Capítulo IV (Product Implementation & Validation), a partir de AV2. Por su parte, el Capítulo II (análisis competitivo, DDD y arquitectura C4) traduce estos hallazgos en una base técnica trazable al Product Backlog, suficiente para avanzar hacia el Capítulo III sin replantear el modelo de negocio.
+
+**Recomendaciones**
+
+- Diseñar el módulo de Collections de forma configurable (automatización total u opción de trato personal, con controles de privacidad), en vez de un único flujo para ambos segmentos.
+- Priorizar en los primeros Sprints las funcionalidades de Cobranzas y Áreas Comunes, por ser los puntos de dolor más mencionados.
+- Ampliar la muestra de validación (3 entrevistas por segmento) antes de cerrar los montos de suscripción (S/ 40, 80 y 120).
+- Definir desde el Sprint 1 la instrumentación de analítica necesaria para medir los tres criterios de éxito del Lean UX Canvas en las siguientes entregas.
 
 <div style="page-break-after: always;"></div>
 
@@ -3544,3 +3565,13 @@ Rodríguez Botto, T. (2025, 14 de noviembre). PropTech despegan en Latinoaméric
 
 ## Anexos
 
+- **Repositorios del Proyecto:**
+  - Reporte y Documentación (BuildingFex-UPC): [https://github.com/BuildingFex-UPC/report](https://github.com/BuildingFex-UPC/report)
+
+- **Entrevistas:**
+  - [Entrevista 1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202316829_upc_edu_pe/IQAjOrj36WAbS7yjtkqR3BOjAYmhb5EJho0nURxlr5DQ3h0?e=ruuATc)
+  - [Entrevista 2](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202217853_upc_edu_pe/IQACC1SIKVjvTagwZh1y0u4aAXk8Tw2TAlffNsDCWQMPQrc?e=pekn9G&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+  - [Entrevista 3](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202316829_upc_edu_pe/IQCeaFiAnHVMS4osYS6VReweAdCzF57CR0YvpEt6g_Fkdjc?e=Vk1CG6&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+  - [Entrevista 4](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQAEMbg8JmgaQaVqskOQem9iAb1I7oRMsDqavQquDJIMQeA?e=dLkD0t&nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D)
+  - [Entrevista 5](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQAb0fPmezaQR4uOkVXODq7XAYk47uCjZoA2l1mIjnWkvAA?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=qppxed)
+  - [Entrevista 6](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQCU3cNsBGklT4-T2l_crjfeAfIA-zu4Aj5K_0AmkObByA8?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJTdHJlYW1XZWJBcHAiLCJyZWZlcnJhbFZpZXciOiJTaGFyZURpYWxvZy1MaW5rIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXcifX0%3D&e=12dNB5)
