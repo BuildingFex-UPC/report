@@ -3598,6 +3598,33 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
 ---
 <div style="page-break-after: always;"></div>
 
+
+
+#### 4.3.2. Registro de Entrevistas
+
+A continuación, se detalla el registro de las sesiones de validación realizadas con los usuarios seleccionados, grabando la pantalla y la interacción directa con el sistema. 
+
+
+##### Segmento 2: Empresas de Gestión de Edificios 
+
+**Entrevista 4**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Manuel Mera |
+| **Edad** | 45 |
+| **Distrito** | San Borja |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-tb1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQABePlFaPELQ5hsQKzrfSPaAeuMbvpn07GJ22l0BkUM0AY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZPzvKj) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 17:44 |
+| **Screenshot** | ![Entrevista 4](img/validacion4-manuel.png) |
+| **Resumen de Apreciaciones**| Manuel Mera valora BuildingFlex como una solución estructurada y pragmática que aporta transparencia y elimina la informalidad en la gestión de condominios, destacando especialmente la consola centralizada para el control financiero sin hojas de cálculo dispersas, el módulo de incidencias para asegurar contratistas calificados con garantía y el envío oficial de comunicados que incrementa el profesionalismo, respaldando la viabilidad del modelo de suscripción escalable en soles siempre que incorpore pasarelas bancarias y evaluación de proveedores. |
+
+
+<div style="page-break-after: always;"></div>
+
+
+
+
 ### Conclusiones y recomendaciones
 
 La entrega AV1 confirma la vigencia del Problem Statement (sección 1.2.2.1): las seis entrevistas realizadas (tres por segmento) muestran que la conciliación de pagos y la coordinación de áreas comunes son, en ambos segmentos, las principales fuentes de fricción frente a la gestión manual actual (Excel, WhatsApp). Sin embargo, matizan los assumptions de la sección 1.2.2.2: el Segmento 2 (Empresas de Gestión) valida con fuerza la automatización total propuesta, mientras que el Segmento 1 (Juntas de Directiva, edad promedio 50.3 años) prioriza el trato personal y expresa preocupación por la privacidad en temas de morosidad, por lo que la automatización no debe ser homogénea entre segmentos.
