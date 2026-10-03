@@ -3526,6 +3526,78 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 ---
 <div style="page-break-after: always;"></div>
 
+
+### 4.3. Validation Interviews
+
+En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
+
+---
+
+#### 4.3.1. Diseño de entrevistas
+
+##### Preguntas generales
+*(Comunes para cualquier entrevistado antes de pasar a la sección de su perfil)*
+
+1. ¿Cómo te llamas?
+2. ¿Cuántos años tienes?
+3. ¿En qué distrito vives o en qué zona opera principalmente tu gestión?
+4. ¿Cuál es tu ocupación, profesión o cargo actual en el edificio?
+5. ¿Qué dispositivos utilizas más en tu día a día para gestionar temas del edificio (smartphone, laptop/computadora)?
+6. ¿Qué canales o herramientas usas actualmente para comunicarte con los vecinos o la administración (WhatsApp, Excel, correo, avisos impresos)?
+7. Después de ver la presentación / prototipo de la aplicación, ¿cuál fue tu primera impresión sobre BuildingFlex?
+
+---
+
+#### Segmento 1: Juntas de Directiva y Residentes
+
+* **Objetivo de Validación:** Comprobar la claridad de los estados de cuenta presentados y la lógica del flujo para la provisión de reservas de áreas comunes.
+* **Escenarios de Demostración (User Flows):**
+  * **Dashboard y Finanzas:** Se proyectará el panel principal del residente, navegando hacia el detalle de la deuda y simulando el flujo exacto de la pasarela de pago.
+  * **Servicios:** Se mostrará en pantalla el calendario visual, seleccionando una fecha para el "GYM" y generando el código QR de acceso.
+
+* **Preguntas realizadas:**
+* 1. Después de ver la aplicación, ¿crees que BuildingFlex te ayudaría a reducir la morosidad y a cobrar las cuotas de mantenimiento de manera más sencilla?
+* 2. ¿La pantalla principal (Dashboard) te parece clara y fácil de entender para ver el estado general del edificio?
+* 3. ¿Consideras útil la función de enviar recordatorios automáticos de cobro a los vecinos para evitar el desgaste o incomodidad de cobrarles en persona?
+* 4. ¿La información mostrada en el módulo de finanzas (ingresos, egresos, estado de cuenta por departamento) te parece suficiente para rendir cuentas en una asamblea de propietarios?
+* 5. ¿Qué opinas sobre la posibilidad de que los vecinos puedan reservar áreas comunes (como parrillas o SUM) directamente desde la aplicación según las reglas del edificio?
+* 6. ¿Consideras que tener un repositorio seguro en la nube para reglamentos, actas y avisos facilitaría la transparencia con los residentes?
+* 7. ¿Crees que la plataforma facilitaría el traspaso de información (cuentas, historial, documentos) cuando cambie la directiva del condominio?
+* 8. ¿Qué aspecto de la aplicación te gustó más?
+* 9. ¿Qué mejorarías o agregarías para que sea más intuitiva para vecinos de mayor edad o con poca experiencia digital?
+* 10. ¿Recomendarías BuildingFlex a juntas directivas de otros condominios? ¿Por qué?
+
+---
+
+#### Segmento 2: Empresas de Gestión de Edificios (Administradores)
+
+* **Objetivo de Validación:** Medir la percepción de eficiencia técnica al visualizar la gestión de volúmenes operativos, el alta de nuevos usuarios y la asignación de mantenimiento.
+* **Escenarios de Demostración (User Flows):**
+  * **Panel de Control:** Se mostrará el dashboard con los datos más relevantes para el administrador.
+  * **Gestión Avanzada:** Se ejecutará frente al usuario el registro manual de un nuevo residente en la plataforma, asignando sus datos y unidad correspondiente para actualizar el directorio del condominio además de la creación de espacios públicos.
+  * **Registro de residentes:** Se mostrará el proceso para permitir que los residentes creen sus cuentas en la plataforma a través del enlace de invitación del administrador.
+  * **Importación:** Se presentará la opción para subir archivos administrativos a la plataforma.
+  * **Finanzas:** Se mostrará al usuario la vista de finanzas y los estados de los pagos.
+  * **Generación:** Se ejecutará frente al usuario la generación de reservas de espacios e invitados.
+  * **Incidencias:** Se navegará hacia el panel de fallas reportadas y se realizará el cambio de estado asignando a un proveedor técnico para despachar el servicio.
+  * **Información:** Se ejecutará frente al usuario la generación de comunicados con su nivel de prioridad y duración.
+  * **Ayuda a residentes:** Se mostrará el chat asíncrono de ayuda a los residentes.
+  * **Recaudación y gastos de gestión:** Se presentará al usuario la recaudación de las cuotas de los residentes y la creación de gastos administrativos y montos fijos.
+  * **Ajustes:** Se presentará al usuario la vista para visualizar los datos de su cuenta y selección del plan de suscripción.
+
+* **Preguntas realizadas:**
+* 1. Después de ver la aplicación, ¿crees que BuildingFlex podría ayudarte a gestionar múltiples edificios o condominios desde una sola consola centralizada?
+* 2. ¿Te parece clara la forma en que se consolida la información financiera y el estado de cobranzas de cada propiedad?
+* 3. ¿Consideras útil el módulo de registro de gastos e incidencias para mantener el control del mantenimiento y contratistas en cada edificio?
+* 4. ¿Qué opinas sobre la estructura de planes de suscripción (Essential, Standard, Scale) según la cantidad de departamentos que gestiona tu empresa?
+* 5. ¿Crees que el registro digital de visitas y la emisión de comunicados masivos mejoraría la percepción de profesionalismo que perciben los residentes sobre tu empresa?
+* 6. ¿La aplicación te parece lo suficientemente ágil para reducir el tiempo que tu equipo dedica a conciliar pagos y actualizar hojas de cálculo?
+* 7. ¿Qué funcionalidad te parece la más crítica o valiosa para acelerar el proceso de integración (*onboarding*) de un nuevo edificio a tu cartera?
+* 8. ¿Qué mejorarías o qué integración (ej. pasarelas de pago, bancos) considerarías indispensable para que la herramienta sea aún más práctica en tu operativa diaria?
+* 9. ¿Estarías dispuesto a contratar BuildingFlex bajo un modelo de suscripción mensual en soles (PEN) para administrar las propiedades a tu cargo? ¿Por qué?
+---
+<div style="page-break-after: always;"></div>
+
 ### Conclusiones y recomendaciones
 
 La entrega AV1 confirma la vigencia del Problem Statement (sección 1.2.2.1): las seis entrevistas realizadas (tres por segmento) muestran que la conciliación de pagos y la coordinación de áreas comunes son, en ambos segmentos, las principales fuentes de fricción frente a la gestión manual actual (Excel, WhatsApp). Sin embargo, matizan los assumptions de la sección 1.2.2.2: el Segmento 2 (Empresas de Gestión) valida con fuerza la automatización total propuesta, mientras que el Segmento 1 (Juntas de Directiva, edad promedio 50.3 años) prioriza el trato personal y expresa preocupación por la privacidad en temas de morosidad, por lo que la automatización no debe ser homogénea entre segmentos.
