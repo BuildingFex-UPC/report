@@ -3600,7 +3600,7 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
 
 
 
-#### 5.3.2. Registro de Entrevistas
+#### 4.3.2. Registro de Entrevistas
 
 A continuación, se detalla el registro de las sesiones de validación realizadas con los usuarios seleccionados, grabando la pantalla y la interacción directa con el sistema. 
 
