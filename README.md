@@ -3652,6 +3652,61 @@ public interface IIncidentRepository
 
 Para documentación se mantendrán encabezados numerados, tablas legibles, enlaces descriptivos y rutas relativas válidas a imágenes. Antes de integrar cambios se utilizará el formateo del IDE y se revisará la compilación. No se afirmará la ejecución de linters o pruebas automatizadas cuando no exista una comprobación registrada.
 
+#### 4.1.4. Software Deployment Configuration
+
+La configuración de despliegue distingue tres productos: la landing page accesible desde un navegador, la API que procesa las operaciones y la aplicación Android que se instalará en los dispositivos de validación. Los siguientes procedimientos documentan cómo preparar o reproducir sus entregas.
+
+**Landing page — Vercel**
+
+La landing del proyecto se encuentra en [https://buildingfex.vercel.app/](https://buildingfex.vercel.app/), enlace proporcionado por el equipo y accesible durante la revisión. Su código corresponde a [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git).
+
+Para reproducir o actualizar su despliegue:
+
+1. Importar el repositorio LandingPage en Vercel y verificar la rama de producción; se establece `main` como referencia para las entregas estables.
+2. Seleccionar la configuración de Vite, instalar dependencias con `npm ci` y construir con `npm run build`.
+3. Configurar `dist` como directorio de salida, salvo que la configuración de Vite declare otro destino.
+4. Publicar y comprobar navegación, carga de recursos, adaptación a pantallas móviles y enlaces de contacto.
+5. Registrar la URL, el commit desplegado y las capturas pertinentes para la entrega académica.
+
+Este procedimiento se apoya en la documentación de [Vite on Vercel](https://vercel.com/docs/frameworks/frontend/vite). La disponibilidad de la URL no acredita por sí sola la rama, la integración continua ni la configuración privada del panel de Vercel; esos datos se confirmarán mediante evidencia del equipo.
+
+**Backend — ASP.NET Core, PostgreSQL y Render**
+
+El [Dockerfile de BackEnd](https://github.com/BuildingFex-UPC/BackEnd/blob/main/Dockerfile) contempla la publicación de la API en configuración Release y su ejecución con ASP.NET Core 10. El [Blueprint de Render](https://github.com/BuildingFex-UPC/BackEnd/blob/main/render.yaml) define un servicio Docker y una comprobación de salud en `/health`.
+
+Para reproducir el despliegue:
+
+1. Conectar BackEnd a Render y crear el servicio a partir de `render.yaml`, revisando los recursos y el plan antes de aprovisionarlos.
+2. Preparar PostgreSQL y registrar `ConnectionStrings__DefaultConnection` con el formato esperado por Npgsql.
+3. Configurar `TokenSettings__Secret` y, cuando corresponda, las variables `MercadoPago__*` y `Cors__AllowedOrigins`, según [deploy.env.example](https://github.com/BuildingFex-UPC/BackEnd/blob/main/deploy.env.example).
+4. Construir el contenedor y revisar su arranque, conectividad con PostgreSQL y endpoint `/health`.
+5. Confirmar la URL HTTPS y comprobar desde el cliente las operaciones de autenticación y una consulta representativa antes de registrar evidencias de ejecución.
+
+El repositorio también incluye [railway.toml](https://github.com/BuildingFex-UPC/BackEnd/blob/main/railway.toml), como configuración alternativa de despliegue Docker con comprobación en `/health`. Su presencia no implica que Railway sea el proveedor actualmente utilizado ni modifica el proveedor PostgreSQL declarado por la API.
+
+**Aplicación Android — compilación y distribución para validación**
+
+La aplicación se gestionará desde [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git). Su configuración declara `https://backend-1-lgr7.onrender.com` en `BuildConfig.API_BASE_URL` para las variantes de desarrollo y release. Esta dirección corresponde a la configuración del código; deberá comprobarse su disponibilidad antes de validar la aplicación, sin asumir que el servicio está operativo.
+
+El procedimiento previsto para obtener un APK de pruebas es:
+
+1. Sincronizar Gradle y revisar la URL base, las dependencias y los permisos de comunicación con la API.
+2. Seleccionar la variante `debug` y ejecutar en Windows, desde la raíz de FrontEnd:
+
+~~~powershell
+.\gradlew.bat assembleDebug
+~~~
+
+3. Localizar el artefacto generado en `app/build/outputs/apk/debug/app-debug.apk` e instalarlo en un emulador o dispositivo compatible.
+4. Comprobar el inicio de sesión, acceso a la información por rol y una operación de los módulos priorizados, incluyendo la respuesta ante errores de red.
+5. Registrar versión, commit, dispositivo, versión de Android, fecha, resultados y capturas; compartir el APK mediante el canal académico acordado por el equipo.
+
+El APK debug se destinará a pruebas académicas. Una entrega release requerirá configurar su firma y custodiar la clave correspondiente; no se contempla publicación en Google Play en este avance. Las claves del backend y credenciales de servicios no se incorporarán al APK ni al repositorio.
+
+La generación, instalación y validación del APK permanecen pendientes de comprobación. Este apartado describe el procedimiento y la configuración encontrada en los repositorios; las evidencias de ejecución se incorporarán cuando el equipo realice esas actividades.
+
+<div style="page-break-after: always;"></div>
+
 ### 4.3. Validation Interviews
 
 En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
