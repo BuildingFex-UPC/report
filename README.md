@@ -3572,11 +3572,11 @@ Para el Sprint 1 se definieron cinco aspectos de trabajo, alineados con los requ
 
 | Team Member (Last Name, First Name) | GitHub Username | Landing Page | IAM | Finanzas | Áreas Comunes | Aplicación Móvil |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| Javier Murillo, Mathias | K1ngHulk | L | C | - | - | C |
-| Hermoza Quispe, Jude Alessandro | JvnnDev | - | C | L | C | - |
-| Jave Chang, Alejandro Manuel | alejandro202312510 | - | L | C | - | L |
-| Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | - | L | C |
-| Suteau, Antonin | antoninsuteau | C | - | C | C | C |
+| Javier Murillo, Mathias | K1ngHulk | - | C | - | - | L |
+| Hermoza Quispe, Jude Alessandro | JvnnDev | C | L | - | - | - |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | L | C | L | - | C |
+| Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | C | L | C |
+| Suteau, Antonin | antoninsuteau | - | - | C | C | C |
 
 ##### 4.2.1.3. Sprint Backlog 1
 
@@ -3592,41 +3592,41 @@ El objetivo del Sprint 1 es entregar el flujo base de BuildingFex en sus tres pr
   <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
 
   <tr><td rowspan="3">US31</td><td rowspan="3">Información de BuildingFex en la Landing Page</td>
-      <td>T01</td><td>Secciones de la Landing Page</td><td>Implementar con Vue 3 y Vite las secciones Hero, Features, Subscriptions, Videos, CTA y Footer según el mock-up (3.1.3.2).</td><td>10</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T02</td><td>Internacionalización</td><td>Implementar el cambio de idioma español / inglés con vue-i18n y el componente LocaleSwitcher.</td><td>4</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T03</td><td>Despliegue en Vercel</td><td>Configurar vercel.json y publicar la Landing Page desde la rama main.</td><td>2</td><td>[COMPLETAR]</td><td>Done</td></tr>
+      <td>T01</td><td>Secciones de la Landing Page</td><td>Implementar con Vue 3 y Vite las secciones Hero, Features, Subscriptions, Videos, CTA y Footer según el mock-up (3.1.3.2).</td><td>10</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T02</td><td>Internacionalización</td><td>Implementar el cambio de idioma español / inglés con vue-i18n y el componente LocaleSwitcher.</td><td>4</td><td>Heredia Hoyos, Danitza Ivonne</td><td>Done</td></tr>
+  <tr><td>T03</td><td>Despliegue en Vercel</td><td>Configurar vercel.json y publicar la Landing Page desde la rama main.</td><td>2</td><td>Hermoza Quispe, Jude Alessandro</td><td>Done</td></tr>
 
   <tr><td rowspan="2">US12</td><td rowspan="2">Registrar cuenta y edificios</td>
-      <td>T04</td><td>Registro de administrador</td><td>Implementar el endpoint POST /api/v1/authentication/register-admin y la validación de correo (check-email).</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T05</td><td>Registro de edificios</td><td>Implementar la entidad Edificio y su asociación con la cuenta del administrador.</td><td>6</td><td>[COMPLETAR]</td><td>To-do</td></tr>
+      <td>T04</td><td>Registro de administrador</td><td>Implementar el endpoint POST /api/v1/authentication/register-admin y la validación de correo (check-email).</td><td>5</td><td>Hermoza Quispe, Jude Alessandro</td><td>Done</td></tr>
+  <tr><td>T05</td><td>Registro de edificios</td><td>Implementar la entidad Edificio y su asociación con la cuenta del administrador.</td><td>6</td><td>Hermoza Quispe, Jude Alessandro</td><td>To-do</td></tr>
 
   <tr><td rowspan="3">US14</td><td rowspan="3">Iniciar sesión</td>
-      <td>T06</td><td>Autenticación con JWT</td><td>Implementar POST /api/v1/authentication/sign-in con contraseñas cifradas con BCrypt y emisión de token JWT.</td><td>6</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T07</td><td>Pantalla de autenticación</td><td>Implementar AuthScreen en la aplicación móvil conectada al endpoint de sign-in.</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T08</td><td>Despliegue de Web Services</td><td>Migrar la base de datos de MySQL a PostgreSQL y desplegar la API en Render con variables de entorno.</td><td>6</td><td>[COMPLETAR]</td><td>Done</td></tr>
+      <td>T06</td><td>Autenticación con JWT</td><td>Implementar POST /api/v1/authentication/sign-in con contraseñas cifradas con BCrypt y emisión de token JWT.</td><td>6</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T07</td><td>Pantalla de autenticación</td><td>Implementar AuthScreen en la aplicación móvil conectada al endpoint de sign-in.</td><td>5</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
+  <tr><td>T08</td><td>Despliegue de Web Services</td><td>Migrar la base de datos de MySQL a PostgreSQL y desplegar la API en Render con variables de entorno.</td><td>6</td><td>Hermoza Quispe, Jude Alessandro</td><td>Done</td></tr>
 
   <tr><td rowspan="2">US13</td><td rowspan="2">Invitar residentes</td>
-      <td>T09</td><td>Endpoints de invitación</td><td>Implementar GET residents/invite y POST residents/set-credentials para que el residente active su cuenta con el código de invitación.</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T10</td><td>Pantalla de residentes</td><td>Implementar ResidentsScreen para que el administrador liste, registre y elimine residentes.</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
+      <td>T09</td><td>Endpoints de invitación</td><td>Implementar GET residents/invite y POST residents/set-credentials para que el residente active su cuenta con el código de invitación.</td><td>5</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T10</td><td>Pantalla de residentes</td><td>Implementar ResidentsScreen para que el administrador liste, registre y elimine residentes.</td><td>5</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
 
   <tr><td rowspan="2">US01</td><td rowspan="2">Registrar cuotas mensuales</td>
-      <td>T11</td><td>Endpoints de cuotas</td><td>Implementar en el bounded context Finances el registro, consulta y actualización de cuotas (fees).</td><td>6</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T12</td><td>Pantallas de cobranzas</td><td>Implementar FinanceScreen y CollectionsScreen con el estado de cobranza por unidad.</td><td>6</td><td>[COMPLETAR]</td><td>Done</td></tr>
+      <td>T11</td><td>Endpoints de cuotas</td><td>Implementar en el bounded context Finances el registro, consulta y actualización de cuotas (fees).</td><td>6</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T12</td><td>Pantallas de cobranzas</td><td>Implementar FinanceScreen y CollectionsScreen con el estado de cobranza por unidad.</td><td>6</td><td>Suteau, Antonin</td><td>Done</td></tr>
 
   <tr><td>US02</td><td>Consultar deudas</td>
-      <td>T13</td><td>Pantalla de finanzas del residente</td><td>Implementar ResidentFinanceScreen con las cuotas pendientes y pagadas del residente.</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
+      <td>T13</td><td>Pantalla de finanzas del residente</td><td>Implementar ResidentFinanceScreen con las cuotas pendientes y pagadas del residente.</td><td>5</td><td>Heredia Hoyos, Danitza Ivonne</td><td>Done</td></tr>
 
   <tr><td rowspan="2">US03</td><td rowspan="2">Registrar pago</td>
-      <td>T14</td><td>Integración con Mercado Pago</td><td>Implementar los endpoints de /api/v1/payments (preference, checkout, confirm y webhook) con modo demo cuando no hay credenciales.</td><td>8</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T15</td><td>Pagos y recibos</td><td>Implementar el registro de pagos y la generación de recibos asociados a cada cuota.</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
+      <td>T14</td><td>Integración con Mercado Pago</td><td>Implementar los endpoints de /api/v1/payments (preference, checkout, confirm y webhook) con modo demo cuando no hay credenciales.</td><td>8</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T15</td><td>Pagos y recibos</td><td>Implementar el registro de pagos y la generación de recibos asociados a cada cuota.</td><td>5</td><td>Suteau, Antonin</td><td>Done</td></tr>
 
   <tr><td rowspan="2">US16</td><td rowspan="2">Consultar áreas comunes</td>
-      <td>T16</td><td>Endpoints de espacios comunes</td><td>Implementar en el bounded context SocialSpaces el registro, consulta, actualización y eliminación de espacios comunes.</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T17</td><td>Pantalla de espacios</td><td>Implementar SpacesScreen y ServicesScreen con los espacios y sus reglas.</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
+      <td>T16</td><td>Endpoints de espacios comunes</td><td>Implementar en el bounded context SocialSpaces el registro, consulta, actualización y eliminación de espacios comunes.</td><td>5</td><td>Heredia Hoyos, Danitza Ivonne</td><td>Done</td></tr>
+  <tr><td>T17</td><td>Pantalla de espacios</td><td>Implementar SpacesScreen y ServicesScreen con los espacios y sus reglas.</td><td>5</td><td>Heredia Hoyos, Danitza Ivonne</td><td>Done</td></tr>
 
   <tr><td rowspan="2">US17</td><td rowspan="2">Reservar área común</td>
-      <td>T18</td><td>Endpoints de reservas</td><td>Implementar el registro, consulta y cancelación de reservas de espacios comunes.</td><td>5</td><td>[COMPLETAR]</td><td>Done</td></tr>
-  <tr><td>T19</td><td>Pantalla de reservas</td><td>Implementar MyReservationsScreen con las reservas del residente.</td><td>4</td><td>[COMPLETAR]</td><td>Done</td></tr>
+      <td>T18</td><td>Endpoints de reservas</td><td>Implementar el registro, consulta y cancelación de reservas de espacios comunes.</td><td>5</td><td>Suteau, Antonin</td><td>Done</td></tr>
+  <tr><td>T19</td><td>Pantalla de reservas</td><td>Implementar MyReservationsScreen con las reservas del residente.</td><td>4</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
 </table>
 
 ##### 4.2.1.4. Development Evidence for Sprint Review
