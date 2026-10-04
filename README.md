@@ -3868,7 +3868,7 @@ Durante el Sprint 1 se realizó el despliegue de los tres productos digitales de
 **3. Configuración de la aplicación móvil**
 
 1. En el archivo `build.gradle.kts` se definió la constante `API_BASE_URL` apuntando a los Web Services desplegados en Render, tanto para la variante debug como para release.
-2. Se generó el APK de la aplicación con Android Studio y se instaló en un dispositivo para verificar la comunicación con los Web Services desplegados.
+2. 2. Se generó el APK de la aplicación (`app-debug.apk`) con Android Studio y se ejecutó en un emulador Android (Pixel 5) para verificar la comunicación con los Web Services desplegados.
 3. La distribución de la aplicación mediante Firebase App Distribution se realizará en un Sprint posterior.
 
 ![Android Studio – Build APK](img/sprint1-deploy-apk.png)
