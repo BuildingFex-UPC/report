@@ -3527,6 +3527,22 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 <div style="page-break-after: always;"></div>
 
 
+## Capítulo IV: Product Implementation & Validation
+
+### 4. Product Implementation & Validation
+
+Este capítulo presenta la configuración técnica necesaria para implementar y validar la solución móvil de BuildingFex. La aplicación Android permitirá a administradores y residentes acceder a los servicios de gestión de condominios desde sus dispositivos, utilizando el backend del proyecto para las operaciones de autenticación, finanzas, incidencias y reservas. La landing page se mantiene como punto de presentación comercial de la solución.
+
+Para esta etapa se reutilizan los componentes pertinentes del proyecto anterior y se incorpora el desarrollo móvil con Kotlin. La documentación se organiza conforme a los apartados de configuración del entorno, gestión del código fuente, convenciones y despliegue requeridos por el curso de Aplicaciones para Dispositivos Móviles.
+
+Los repositorios actuales permiten identificar la configuración del producto; sin embargo, su existencia no constituye evidencia de compilación, ejecución ni validación con usuarios. La distribución del APK y sus resultados de prueba se documentarán cuando se realicen esas actividades.
+
+### 4.1. Software Configuration Management
+
+La gestión de configuración de BuildingFex establece los recursos y procedimientos para mantener versiones coherentes del informe, la landing page, la aplicación Android y la API. Su propósito es facilitar el trabajo del equipo, reproducir los entornos de desarrollo y conservar la trazabilidad entre requisitos, cambios y entregas.
+
+La referencia técnica de este capítulo son los repositorios de la organización [BuildingFex-UPC](https://github.com/BuildingFex-UPC). El backend actual utiliza ASP.NET Core con PostgreSQL y dispone de configuración de despliegue en Render. Esta configuración corresponde a la etapa móvil y actualiza la referencia de MySQL y Railway descrita en los apartados arquitectónicos anteriores del informe; la actualización de esos diagramas y descripciones queda pendiente de su revisión.
+
 ### 4.3. Validation Interviews
 
 En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
