@@ -3543,6 +3543,38 @@ La gestión de configuración de BuildingFex establece los recursos y procedimie
 
 La referencia técnica de este capítulo son los repositorios de la organización [BuildingFex-UPC](https://github.com/BuildingFex-UPC). El backend actual utiliza ASP.NET Core con PostgreSQL y dispone de configuración de despliegue en Render. Esta configuración corresponde a la etapa móvil y actualiza la referencia de MySQL y Railway descrita en los apartados arquitectónicos anteriores del informe; la actualización de esos diagramas y descripciones queda pendiente de su revisión.
 
+#### 4.1.1. Software Development Environment Configuration
+
+El entorno de desarrollo combina herramientas para la aplicación Android y para los componentes reutilizados. Cada integrante deberá emplear las versiones declaradas en los archivos de configuración de los repositorios, evitando cambios individuales que alteren la compilación del proyecto.
+
+| Herramienta o tecnología | Propósito en BuildingFex | Configuración de referencia |
+| :--- | :--- | :--- |
+| **Android Studio** | Edición, compilación y depuración de la aplicación móvil. | Abrir el repositorio FrontEnd, sincronizar Gradle y configurar un JDK compatible con el Android Gradle Plugin declarado. |
+| **Kotlin y Jetpack Compose** | Desarrollo de la lógica del cliente y de las interfaces Android. | Utilizar el catálogo de versiones y las dependencias del módulo `app`, conservando la configuración compartida. |
+| **Android SDK y emulador o dispositivo físico** | Ejecución y comprobación de la aplicación en Android. | Instalar el SDK solicitado por el proyecto y preparar un dispositivo compatible con su versión mínima. |
+| **Gradle Wrapper** | Gestión de dependencias y tareas de compilación. | Ejecutar el wrapper incluido en FrontEnd para utilizar la distribución definida por el repositorio. |
+| **Git y GitHub** | Control de versiones y colaboración sobre los productos del proyecto. | Configurar la identidad de cada integrante y trabajar con los repositorios de BuildingFex-UPC. |
+| **Visual Studio Code y Node.js/npm** | Edición y ejecución local de la landing page. | Instalar las dependencias declaradas en `package.json` y utilizar los scripts de Vite. |
+| **Vue 3 y Vite** | Componentes y construcción de la landing page. | Mantener las dependencias de LandingPage y sus scripts `dev`, `build` y `preview`. |
+| **SDK de .NET 10** | Restauración, compilación y ejecución del backend ASP.NET Core. | Consultar `global.json` y el proyecto `BuildingFex.Api.csproj`, cuyo framework objetivo es `net10.0`. |
+| **PostgreSQL y Docker** | Persistencia del backend y reproducción de su entorno local. | Configurar la conexión PostgreSQL; el repositorio incluye `docker-compose.yml` y un Dockerfile para la API. |
+
+**Preparación de la aplicación Android**
+
+1. Clonar el repositorio [FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) y abrir su carpeta raíz en Android Studio.
+2. Revisar `gradle/libs.versions.toml`, `gradle/wrapper/gradle-wrapper.properties` y `app/build.gradle.kts`; sincronizar las dependencias utilizando el wrapper del proyecto.
+3. Instalar el SDK requerido. En la configuración revisada, `compileSdk` y `targetSdk` corresponden a API 37 y `minSdk` a API 29. Estos valores describen el repositorio y deberán comprobarse al preparar el entorno.
+4. Crear un dispositivo virtual compatible o habilitar la depuración USB en un dispositivo físico.
+5. Revisar la URL de la API y ejecutar la variante de desarrollo para comprobar el inicio de la aplicación y la comunicación con el backend.
+
+El repositorio declara Kotlin 2.2.10 y dependencias de Compose, Retrofit, OkHttp y coroutines. Estas versiones se mantendrán alineadas con el [catálogo de dependencias de FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/gradle/libs.versions.toml). La configuración Android y la URL base están declaradas en [app/build.gradle.kts](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/app/build.gradle.kts). El procedimiento de ejecución se apoya en la documentación de [Android Developers: Build and run your app](https://developer.android.com/studio/run).
+
+**Preparación de los componentes reutilizados**
+
+Para la landing page, se clonará LandingPage y se ejecutarán `npm ci`, `npm run dev` y `npm run build` para instalar las dependencias del lockfile, iniciar el entorno local y generar la distribución. Los comandos de desarrollo y construcción están definidos en su [package.json](https://github.com/BuildingFex-UPC/LandingPage/blob/main/package.json).
+
+Para la API, se clonará BackEnd y se preparará una instancia PostgreSQL local o mediante Docker. Desde la carpeta `BuildingFex.Api` se ejecutarán `dotnet restore`, `dotnet build` y `dotnet run`, usando una conexión de desarrollo y la configuración de autenticación correspondiente. Las instrucciones del [repositorio BackEnd](https://github.com/BuildingFex-UPC/BackEnd) servirán como referencia para reproducir el entorno.
+
 ### 4.3. Validation Interviews
 
 En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
