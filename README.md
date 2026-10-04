@@ -3580,11 +3580,11 @@ Para el Sprint 1 se definieron cinco aspectos de trabajo, alineados con los requ
 
 ##### 4.2.1.3. Sprint Backlog 1
 
-El objetivo del Sprint 1 es entregar el flujo base de BuildingFex en sus tres productos: la Landing Page desplegada en Vercel, los Web Services de IAM, Finances y SocialSpaces desplegados en Render, y las pantallas core de la aplicación móvil Android. Cada User Story seleccionada en el Sprint Planning se descompuso en tareas técnicas (Work Items) para el backend, siguiendo la arquitectura DDD por bounded contexts (Domain, Application, Infrastructure e Interfaces), y para la aplicación móvil. Las tareas se asignaron según la matriz de Aspect Leaders and Collaborators y su seguimiento se realizó en un tablero de [COMPLETAR: Trello / Jira] con las columnas To-do, In-Process, To-Review y Done.
+El objetivo del Sprint 1 es entregar el flujo base de BuildingFex en sus tres productos: la Landing Page desplegada en Vercel, los Web Services de IAM, Finances y SocialSpaces desplegados en Render, y las pantallas core de la aplicación móvil Android. Cada User Story seleccionada en el Sprint Planning se descompuso en tareas técnicas (Work Items) para el backend, siguiendo la arquitectura DDD por bounded contexts (Domain, Application, Infrastructure e Interfaces), y para la aplicación móvil. Las tareas se asignaron según la matriz de Aspect Leaders and Collaborators y su seguimiento se realizó en un tablero de Trello con las columnas To-do, In-Process, To-Review y Done.
 
 ![Sprint Backlog 1](img/sprint1-backlog.png)
 
-**URL del tablero:** [COMPLETAR: enlace público]
+**URL del tablero:** https://trello.com/b/OJ4Gi5vO/buildingfex-sprint-1
 
 <table>
   <tr><th colspan="2">Sprint #</th><th colspan="6">Sprint 1</th></tr>
