@@ -3525,7 +3525,25 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 
 ---
 <div style="page-break-after: always;"></div>
+### 4.2. Landing Page, Services & Applications Implementation
 
+#### 4.2.1. Sprint 1
+
+En esta sección se registra el avance del equipo BuildingFex durante el Sprint 1, correspondiente a la entrega TB1. El Sprint se centra en desplegar la Landing Page, implementar los primeros Web Services de los bounded contexts priorizados y construir las pantallas principales de la aplicación móvil, siguiendo el marco de trabajo Scrum.
+
+##### 4.2.1.1. Sprint Planning 1
+
+##### 4.2.1.2. Aspect Leaders and Collaborators
+
+Para el Sprint 1 se definieron cinco aspectos de trabajo: **Landing Page**, **IAM (Gestión de Usuarios)**, **Finanzas**, **Áreas Comunes** y **Aplicación Móvil**. Cada aspecto cuenta con un líder (L), responsable de coordinar su avance, revisar los Pull Requests y asegurar su integración con el resto del producto, y con uno o más colaboradores (C) que participan en su implementación. Esta distribución se refleja en las tareas asignadas en el Sprint Backlog 1.
+
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page | IAM | Finanzas | Áreas Comunes | Aplicación Móvil |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| Javier Murillo, Mathias | K1ngHulk | L | C | - | - | C |
+| Hermoza Quispe, Jude Alessandro | JvnnDev | - | C | L | C | - |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | - | L | C | - | C |
+| Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | - | L | C |
+| Suteau, Antonin | antoninsuteau | C | - | C | C | L |
 
 ### 4.3. Validation Interviews
 
