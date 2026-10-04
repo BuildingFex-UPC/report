@@ -3529,6 +3529,285 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 ---
 <div style="page-break-after: always;"></div>
 
+
+## Capítulo IV: Product Implementation & Validation
+
+### 4. Product Implementation & Validation
+
+Este capítulo presenta la configuración técnica necesaria para implementar y validar la solución móvil de BuildingFex. La aplicación Android permitirá a administradores y residentes acceder a los servicios de gestión de condominios desde sus dispositivos, utilizando el backend del proyecto para las operaciones de autenticación, finanzas, incidencias y reservas. La landing page se mantiene como punto de presentación comercial de la solución.
+
+Para esta etapa se reutilizan los componentes pertinentes del proyecto anterior y se incorpora el desarrollo móvil con Kotlin. La documentación se organiza conforme a los apartados de configuración del entorno, gestión del código fuente, convenciones y despliegue requeridos por el curso de Aplicaciones para Dispositivos Móviles.
+
+Los repositorios actuales permiten identificar la configuración del producto; sin embargo, su existencia no constituye evidencia de compilación, ejecución ni validación con usuarios. La distribución del APK y sus resultados de prueba se documentarán cuando se realicen esas actividades.
+
+### 4.1. Software Configuration Management
+
+La gestión de configuración de BuildingFex establece los recursos y procedimientos para mantener versiones coherentes del informe, la landing page, la aplicación Android y la API. Su propósito es facilitar el trabajo del equipo, reproducir los entornos de desarrollo y conservar la trazabilidad entre requisitos, cambios y entregas.
+
+La referencia técnica de este capítulo son los repositorios de la organización [BuildingFex-UPC](https://github.com/BuildingFex-UPC). El backend actual utiliza ASP.NET Core con PostgreSQL y dispone de configuración de despliegue en Render. Esta configuración corresponde a la etapa móvil y actualiza la referencia de MySQL y Railway descrita en los apartados arquitectónicos anteriores del informe; la actualización de esos diagramas y descripciones queda pendiente de su revisión.
+
+#### 4.1.1. Software Development Environment Configuration
+
+El entorno de desarrollo combina herramientas para la aplicación Android y para los componentes reutilizados. Cada integrante deberá emplear las versiones declaradas en los archivos de configuración de los repositorios, evitando cambios individuales que alteren la compilación del proyecto.
+
+| Herramienta o tecnología | Propósito en BuildingFex | Configuración de referencia |
+| :--- | :--- | :--- |
+| **Android Studio** | Edición, compilación y depuración de la aplicación móvil. | Abrir el repositorio FrontEnd, sincronizar Gradle y configurar un JDK compatible con el Android Gradle Plugin declarado. |
+| **Kotlin y Jetpack Compose** | Desarrollo de la lógica del cliente y de las interfaces Android. | Utilizar el catálogo de versiones y las dependencias del módulo `app`, conservando la configuración compartida. |
+| **Android SDK y emulador o dispositivo físico** | Ejecución y comprobación de la aplicación en Android. | Instalar el SDK solicitado por el proyecto y preparar un dispositivo compatible con su versión mínima. |
+| **Gradle Wrapper** | Gestión de dependencias y tareas de compilación. | Ejecutar el wrapper incluido en FrontEnd para utilizar la distribución definida por el repositorio. |
+| **Git y GitHub** | Control de versiones y colaboración sobre los productos del proyecto. | Configurar la identidad de cada integrante y trabajar con los repositorios de BuildingFex-UPC. |
+| **Visual Studio Code y Node.js/npm** | Edición y ejecución local de la landing page. | Instalar las dependencias declaradas en `package.json` y utilizar los scripts de Vite. |
+| **Vue 3 y Vite** | Componentes y construcción de la landing page. | Mantener las dependencias de LandingPage y sus scripts `dev`, `build` y `preview`. |
+| **SDK de .NET 10** | Restauración, compilación y ejecución del backend ASP.NET Core. | Consultar `global.json` y el proyecto `BuildingFex.Api.csproj`, cuyo framework objetivo es `net10.0`. |
+| **PostgreSQL y Docker** | Persistencia del backend y reproducción de su entorno local. | Configurar la conexión PostgreSQL; el repositorio incluye `docker-compose.yml` y un Dockerfile para la API. |
+
+**Preparación de la aplicación Android**
+
+1. Clonar el repositorio [FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) y abrir su carpeta raíz en Android Studio.
+2. Revisar `gradle/libs.versions.toml`, `gradle/wrapper/gradle-wrapper.properties` y `app/build.gradle.kts`; sincronizar las dependencias utilizando el wrapper del proyecto.
+3. Instalar el SDK requerido. En la configuración revisada, `compileSdk` y `targetSdk` corresponden a API 37 y `minSdk` a API 29. Estos valores describen el repositorio y deberán comprobarse al preparar el entorno.
+4. Crear un dispositivo virtual compatible o habilitar la depuración USB en un dispositivo físico.
+5. Revisar la URL de la API y ejecutar la variante de desarrollo para comprobar el inicio de la aplicación y la comunicación con el backend.
+
+El repositorio declara Kotlin 2.2.10 y dependencias de Compose, Retrofit, OkHttp y coroutines. Estas versiones se mantendrán alineadas con el [catálogo de dependencias de FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/gradle/libs.versions.toml). La configuración Android y la URL base están declaradas en [app/build.gradle.kts](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/app/build.gradle.kts). El procedimiento de ejecución se apoya en la documentación de [Android Developers: Build and run your app](https://developer.android.com/studio/run).
+
+**Preparación de los componentes reutilizados**
+
+Para la landing page, se clonará LandingPage y se ejecutarán `npm ci`, `npm run dev` y `npm run build` para instalar las dependencias del lockfile, iniciar el entorno local y generar la distribución. Los comandos de desarrollo y construcción están definidos en su [package.json](https://github.com/BuildingFex-UPC/LandingPage/blob/main/package.json).
+
+Para la API, se clonará BackEnd y se preparará una instancia PostgreSQL local o mediante Docker. Desde la carpeta `BuildingFex.Api` se ejecutarán `dotnet restore`, `dotnet build` y `dotnet run`, usando una conexión de desarrollo y la configuración de autenticación correspondiente. Las instrucciones del [repositorio BackEnd](https://github.com/BuildingFex-UPC/BackEnd) servirán como referencia para reproducir el entorno.
+
+#### 4.1.2. Source Code Management
+
+Los productos de BuildingFex se gestionan en repositorios separados para mantener su historial y distinguir las responsabilidades del informe, la aplicación móvil, la API y la landing page.
+
+| Producto | Repositorio oficial | Contenido |
+| :--- | :--- | :--- |
+| **Informe** | [BuildingFex-UPC/report](https://github.com/BuildingFex-UPC/report.git) | Documento académico en Markdown y recursos gráficos. |
+| **Backend** | [BuildingFex-UPC/BackEnd](https://github.com/BuildingFex-UPC/BackEnd.git) | API ASP.NET Core, persistencia y archivos de despliegue. |
+| **Aplicación móvil** | [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) | Proyecto Android desarrollado con Kotlin y Jetpack Compose. |
+| **Landing page** | [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git) | Sitio de presentación comercial desarrollado con Vue y Vite. |
+
+**Estrategia de ramas**
+
+Se establece un flujo de trabajo basado en GitFlow. El repositorio local del informe ya dispone de las ramas `main`, `develop` y `feature/hermoza`; las siguientes convenciones servirán como política de integración para los productos del equipo, sin asumir que todas las ramas o protecciones están configuradas en cada repositorio.
+
+| Rama | Responsabilidad | Origen y destino de integración |
+| :--- | :--- | :--- |
+| `main` | Mantener una versión estable del producto correspondiente. | Recibe versiones aprobadas y correcciones urgentes. |
+| `develop` | Integrar los cambios de la siguiente entrega. | Recibe funcionalidades y correcciones antes de preparar una versión estable. |
+| `feature/<descripcion>` | Desarrollar una funcionalidad o un cambio documental. | Se crea desde `develop` y se integra a `develop` mediante pull request. |
+| `release/<version>` | Preparar y revisar una entrega. | Se crea desde `develop` y se integra a `main` y `develop`. |
+| `hotfix/<descripcion>` | Corregir un problema crítico de la versión estable. | Se crea desde `main` y se integra a `main` y `develop`. |
+
+Antes de solicitar la integración, cada integrante revisará su diff y realizará las comprobaciones pertinentes: compilación del componente afectado o revisión de enlaces y formato para el informe. El pull request describirá el cambio, su relación con la historia de usuario o apartado del documento y las verificaciones realizadas. La revisión por otro integrante permitirá detectar inconsistencias antes de incorporar los cambios.
+
+Los mensajes de commit seguirán [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), con el formato `<tipo>(<alcance>): <descripcion>`. Se utilizarán `feat` para funcionalidades, `fix` para correcciones, `docs` para documentación, `style` para formato, `refactor` para reorganización, `test` para pruebas y `chore` para mantenimiento. Los tipos distintos de `feat` y `fix` son convenciones del equipo.
+
+Ejemplos de mensajes para este proyecto:
+
+~~~text
+feat(incidents): add incident report screen
+fix(auth): handle expired session
+docs(chapter-4): document mobile development environment
+chore(android): update build configuration
+~~~
+
+Las entregas aprobadas podrán identificarse mediante etiquetas `v<major>.<minor>.<patch>`, asociadas al commit correspondiente y a sus artefactos. El informe registrará las evidencias de colaboración cuando estén disponibles; este apartado define el procedimiento y no acredita revisiones todavía no realizadas.
+
+#### 4.1.3. Source Code Style Guide & Conventions
+
+Las convenciones de código buscan mantener una base comprensible entre los integrantes y facilitar la revisión de los componentes reutilizados y del cliente Android. Se conservará el estilo de cada repositorio, aplicando las siguientes reglas a los cambios nuevos.
+
+| Tecnología | Convenciones del proyecto | Referencia |
+| :--- | :--- | :--- |
+| **Kotlin** | Indentación de 4 espacios; clases en `PascalCase`; funciones y variables en `camelCase`; constantes en `UPPER_SNAKE_CASE`; preferir `val` cuando no se requiera mutación. | [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html) |
+| **Jetpack Compose** | Funciones de interfaz que devuelven `Unit` en `PascalCase`, como `IncidentScreen`; separar presentación, estado y acceso a datos. | [Convenciones de Kotlin para funciones Composable](https://kotlinlang.org/docs/coding-conventions.html#function-names) |
+| **C#** | Indentación de 4 espacios; tipos y métodos públicos en `PascalCase`; parámetros y variables locales en `camelCase`; interfaces con prefijo `I` y métodos asíncronos con sufijo `Async`. | [Microsoft: C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) |
+| **HTML** | Indentación de 2 espacios, etiquetas y atributos en minúsculas, atributos entre comillas dobles y estructura semántica. Incluir texto alternativo pertinente en imágenes. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **CSS** | Indentación de 2 espacios, clases en `kebab-case` y reglas agrupadas por componente; evitar estilos duplicados y selectores innecesariamente complejos. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **JavaScript y Vue** | Usar `const` por defecto y `let` cuando sea necesario; variables y funciones en `camelCase`, componentes en `PascalCase` y archivos Vue con plantilla, lógica y estilos separados. | [Vue Style Guide](https://vuejs.org/style-guide/), complementada por las convenciones del equipo. |
+
+La guía de Vue se utilizará como referencia orientativa, considerando que su propia documentación indica que necesita actualización. No se impondrá un cambio de API ni una reorganización del código reutilizado únicamente por adoptar estas convenciones.
+
+En Android se conservará la separación existente entre recursos compartidos de `core` y funcionalidades, evitando incorporar llamadas HTTP directamente en las funciones de interfaz. En el backend se mantendrán las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` de cada bounded context. Los identificadores técnicos y mensajes de commit se escribirán en inglés; los textos de la interfaz seguirán los recursos de idioma definidos por el producto.
+
+Los siguientes ejemplos ilustran nombres y formato; no constituyen evidencia de funcionalidades implementadas:
+
+~~~kotlin
+data class IncidentSummary(
+    val id: String,
+    val description: String
+)
+
+fun hasIncidentDescription(description: String): Boolean {
+    return description.isNotBlank()
+}
+~~~
+
+~~~csharp
+public interface IIncidentRepository
+{
+    Task<Incident?> FindByExternalIdAsync(string externalId);
+}
+~~~
+
+Para documentación se mantendrán encabezados numerados, tablas legibles, enlaces descriptivos y rutas relativas válidas a imágenes. Antes de integrar cambios se utilizará el formateo del IDE y se revisará la compilación. No se afirmará la ejecución de linters o pruebas automatizadas cuando no exista una comprobación registrada.
+
+#### 4.1.4. Software Deployment Configuration
+
+La configuración de despliegue distingue tres productos: la landing page accesible desde un navegador, la API que procesa las operaciones y la aplicación Android que se instalará en los dispositivos de validación. Los siguientes procedimientos documentan cómo preparar o reproducir sus entregas.
+
+**Landing page — Vercel**
+
+La landing del proyecto se encuentra en [https://buildingfex.vercel.app/](https://buildingfex.vercel.app/), enlace proporcionado por el equipo y accesible durante la revisión. Su código corresponde a [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git).
+
+Para reproducir o actualizar su despliegue:
+
+1. Importar el repositorio LandingPage en Vercel y verificar la rama de producción; se establece `main` como referencia para las entregas estables.
+2. Seleccionar la configuración de Vite, instalar dependencias con `npm ci` y construir con `npm run build`.
+3. Configurar `dist` como directorio de salida, salvo que la configuración de Vite declare otro destino.
+4. Publicar y comprobar navegación, carga de recursos, adaptación a pantallas móviles y enlaces de contacto.
+5. Registrar la URL, el commit desplegado y las capturas pertinentes para la entrega académica.
+
+Este procedimiento se apoya en la documentación de [Vite on Vercel](https://vercel.com/docs/frameworks/frontend/vite). La disponibilidad de la URL no acredita por sí sola la rama, la integración continua ni la configuración privada del panel de Vercel; esos datos se confirmarán mediante evidencia del equipo.
+
+**Backend — ASP.NET Core, PostgreSQL y Render**
+
+El [Dockerfile de BackEnd](https://github.com/BuildingFex-UPC/BackEnd/blob/main/Dockerfile) contempla la publicación de la API en configuración Release y su ejecución con ASP.NET Core 10. El [Blueprint de Render](https://github.com/BuildingFex-UPC/BackEnd/blob/main/render.yaml) define un servicio Docker y una comprobación de salud en `/health`.
+
+Para reproducir el despliegue:
+
+1. Conectar BackEnd a Render y crear el servicio a partir de `render.yaml`, revisando los recursos y el plan antes de aprovisionarlos.
+2. Preparar PostgreSQL y registrar `ConnectionStrings__DefaultConnection` con el formato esperado por Npgsql.
+3. Configurar `TokenSettings__Secret` y, cuando corresponda, las variables `MercadoPago__*` y `Cors__AllowedOrigins`, según [deploy.env.example](https://github.com/BuildingFex-UPC/BackEnd/blob/main/deploy.env.example).
+4. Construir el contenedor y revisar su arranque, conectividad con PostgreSQL y endpoint `/health`.
+5. Confirmar la URL HTTPS y comprobar desde el cliente las operaciones de autenticación y una consulta representativa antes de registrar evidencias de ejecución.
+
+El repositorio también incluye [railway.toml](https://github.com/BuildingFex-UPC/BackEnd/blob/main/railway.toml), como configuración alternativa de despliegue Docker con comprobación en `/health`. Su presencia no implica que Railway sea el proveedor actualmente utilizado ni modifica el proveedor PostgreSQL declarado por la API.
+
+**Aplicación Android — compilación y distribución para validación**
+
+La aplicación se gestionará desde [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git). Su configuración declara `https://backend-1-lgr7.onrender.com` en `BuildConfig.API_BASE_URL` para las variantes de desarrollo y release. Esta dirección corresponde a la configuración del código; deberá comprobarse su disponibilidad antes de validar la aplicación, sin asumir que el servicio está operativo.
+
+El procedimiento previsto para obtener un APK de pruebas es:
+
+1. Sincronizar Gradle y revisar la URL base, las dependencias y los permisos de comunicación con la API.
+2. Seleccionar la variante `debug` y ejecutar en Windows, desde la raíz de FrontEnd:
+
+~~~powershell
+.\gradlew.bat assembleDebug
+~~~
+
+3. Localizar el artefacto generado en `app/build/outputs/apk/debug/app-debug.apk` e instalarlo en un emulador o dispositivo compatible.
+4. Comprobar el inicio de sesión, acceso a la información por rol y una operación de los módulos priorizados, incluyendo la respuesta ante errores de red.
+5. Registrar versión, commit, dispositivo, versión de Android, fecha, resultados y capturas; compartir el APK mediante el canal académico acordado por el equipo.
+
+El APK debug se destinará a pruebas académicas. Una entrega release requerirá configurar su firma y custodiar la clave correspondiente; no se contempla publicación en Google Play en este avance. Las claves del backend y credenciales de servicios no se incorporarán al APK ni al repositorio.
+
+La generación, instalación y validación del APK permanecen pendientes de comprobación. Este apartado describe el procedimiento y la configuración encontrada en los repositorios; las evidencias de ejecución se incorporarán cuando el equipo realice esas actividades.
+
+<div style="page-break-after: always;"></div>
+
+### 4.3. Validation Interviews
+
+En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
+
+---
+
+#### 4.3.1. Diseño de entrevistas
+
+##### Preguntas generales
+*(Comunes para cualquier entrevistado antes de pasar a la sección de su perfil)*
+
+1. ¿Cómo te llamas?
+2. ¿Cuántos años tienes?
+3. ¿En qué distrito vives o en qué zona opera principalmente tu gestión?
+4. ¿Cuál es tu ocupación, profesión o cargo actual en el edificio?
+5. ¿Qué dispositivos utilizas más en tu día a día para gestionar temas del edificio (smartphone, laptop/computadora)?
+6. ¿Qué canales o herramientas usas actualmente para comunicarte con los vecinos o la administración (WhatsApp, Excel, correo, avisos impresos)?
+7. Después de ver la presentación / prototipo de la aplicación, ¿cuál fue tu primera impresión sobre BuildingFlex?
+
+---
+
+#### Segmento 1: Juntas de Directiva y Residentes
+
+* **Objetivo de Validación:** Comprobar la claridad de los estados de cuenta presentados y la lógica del flujo para la provisión de reservas de áreas comunes.
+* **Escenarios de Demostración (User Flows):**
+  * **Dashboard y Finanzas:** Se proyectará el panel principal del residente, navegando hacia el detalle de la deuda y simulando el flujo exacto de la pasarela de pago.
+  * **Servicios:** Se mostrará en pantalla el calendario visual, seleccionando una fecha para el "GYM" y generando el código QR de acceso.
+
+* **Preguntas realizadas:**
+* 1. Después de ver la aplicación, ¿crees que BuildingFlex te ayudaría a reducir la morosidad y a cobrar las cuotas de mantenimiento de manera más sencilla?
+* 2. ¿La pantalla principal (Dashboard) te parece clara y fácil de entender para ver el estado general del edificio?
+* 3. ¿Consideras útil la función de enviar recordatorios automáticos de cobro a los vecinos para evitar el desgaste o incomodidad de cobrarles en persona?
+* 4. ¿La información mostrada en el módulo de finanzas (ingresos, egresos, estado de cuenta por departamento) te parece suficiente para rendir cuentas en una asamblea de propietarios?
+* 5. ¿Qué opinas sobre la posibilidad de que los vecinos puedan reservar áreas comunes (como parrillas o SUM) directamente desde la aplicación según las reglas del edificio?
+* 6. ¿Consideras que tener un repositorio seguro en la nube para reglamentos, actas y avisos facilitaría la transparencia con los residentes?
+* 7. ¿Crees que la plataforma facilitaría el traspaso de información (cuentas, historial, documentos) cuando cambie la directiva del condominio?
+* 8. ¿Qué aspecto de la aplicación te gustó más?
+* 9. ¿Qué mejorarías o agregarías para que sea más intuitiva para vecinos de mayor edad o con poca experiencia digital?
+* 10. ¿Recomendarías BuildingFlex a juntas directivas de otros condominios? ¿Por qué?
+
+---
+
+#### Segmento 2: Empresas de Gestión de Edificios (Administradores)
+
+* **Objetivo de Validación:** Medir la percepción de eficiencia técnica al visualizar la gestión de volúmenes operativos, el alta de nuevos usuarios y la asignación de mantenimiento.
+* **Escenarios de Demostración (User Flows):**
+  * **Panel de Control:** Se mostrará el dashboard con los datos más relevantes para el administrador.
+  * **Gestión Avanzada:** Se ejecutará frente al usuario el registro manual de un nuevo residente en la plataforma, asignando sus datos y unidad correspondiente para actualizar el directorio del condominio además de la creación de espacios públicos.
+  * **Registro de residentes:** Se mostrará el proceso para permitir que los residentes creen sus cuentas en la plataforma a través del enlace de invitación del administrador.
+  * **Importación:** Se presentará la opción para subir archivos administrativos a la plataforma.
+  * **Finanzas:** Se mostrará al usuario la vista de finanzas y los estados de los pagos.
+  * **Generación:** Se ejecutará frente al usuario la generación de reservas de espacios e invitados.
+  * **Incidencias:** Se navegará hacia el panel de fallas reportadas y se realizará el cambio de estado asignando a un proveedor técnico para despachar el servicio.
+  * **Información:** Se ejecutará frente al usuario la generación de comunicados con su nivel de prioridad y duración.
+  * **Ayuda a residentes:** Se mostrará el chat asíncrono de ayuda a los residentes.
+  * **Recaudación y gastos de gestión:** Se presentará al usuario la recaudación de las cuotas de los residentes y la creación de gastos administrativos y montos fijos.
+  * **Ajustes:** Se presentará al usuario la vista para visualizar los datos de su cuenta y selección del plan de suscripción.
+
+* **Preguntas realizadas:**
+* 1. Después de ver la aplicación, ¿crees que BuildingFlex podría ayudarte a gestionar múltiples edificios o condominios desde una sola consola centralizada?
+* 2. ¿Te parece clara la forma en que se consolida la información financiera y el estado de cobranzas de cada propiedad?
+* 3. ¿Consideras útil el módulo de registro de gastos e incidencias para mantener el control del mantenimiento y contratistas en cada edificio?
+* 4. ¿Qué opinas sobre la estructura de planes de suscripción (Essential, Standard, Scale) según la cantidad de departamentos que gestiona tu empresa?
+* 5. ¿Crees que el registro digital de visitas y la emisión de comunicados masivos mejoraría la percepción de profesionalismo que perciben los residentes sobre tu empresa?
+* 6. ¿La aplicación te parece lo suficientemente ágil para reducir el tiempo que tu equipo dedica a conciliar pagos y actualizar hojas de cálculo?
+* 7. ¿Qué funcionalidad te parece la más crítica o valiosa para acelerar el proceso de integración (*onboarding*) de un nuevo edificio a tu cartera?
+* 8. ¿Qué mejorarías o qué integración (ej. pasarelas de pago, bancos) considerarías indispensable para que la herramienta sea aún más práctica en tu operativa diaria?
+* 9. ¿Estarías dispuesto a contratar BuildingFlex bajo un modelo de suscripción mensual en soles (PEN) para administrar las propiedades a tu cargo? ¿Por qué?
+---
+<div style="page-break-after: always;"></div>
+
+
+
+#### 4.3.2. Registro de Entrevistas
+
+A continuación, se detalla el registro de las sesiones de validación realizadas con los usuarios seleccionados, grabando la pantalla y la interacción directa con el sistema. 
+
+
+##### Segmento 2: Empresas de Gestión de Edificios 
+
+**Entrevista 4**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Manuel Mera |
+| **Edad** | 45 |
+| **Distrito** | San Borja |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-tb1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQABePlFaPELQ5hsQKzrfSPaAeuMbvpn07GJ22l0BkUM0AY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZPzvKj) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 17:44 |
+| **Screenshot** | ![Entrevista 4](img/validacion4-manuel.png) |
+| **Resumen de Apreciaciones**| Manuel Mera valora BuildingFlex como una solución estructurada y pragmática que aporta transparencia y elimina la informalidad en la gestión de condominios, destacando especialmente la consola centralizada para el control financiero sin hojas de cálculo dispersas, el módulo de incidencias para asegurar contratistas calificados con garantía y el envío oficial de comunicados que incrementa el profesionalismo, respaldando la viabilidad del modelo de suscripción escalable en soles siempre que incorpore pasarelas bancarias y evaluación de proveedores. |
+
+
+<div style="page-break-after: always;"></div>
+
+
+
+
 ### Conclusiones y recomendaciones
 
 La entrega AV1 confirma la vigencia del Problem Statement (sección 1.2.2.1): las seis entrevistas realizadas (tres por segmento) muestran que la conciliación de pagos y la coordinación de áreas comunes son, en ambos segmentos, las principales fuentes de fricción frente a la gestión manual actual (Excel, WhatsApp). Sin embargo, matizan los assumptions de la sección 1.2.2.2: el Segmento 2 (Empresas de Gestión) valida con fuerza la automatización total propuesta, mientras que el Segmento 1 (Juntas de Directiva, edad promedio 50.3 años) prioriza el trato personal y expresa preocupación por la privacidad en temas de morosidad, por lo que la automatización no debe ser homogénea entre segmentos.
