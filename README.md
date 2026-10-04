@@ -3575,6 +3575,44 @@ Para la landing page, se clonará LandingPage y se ejecutarán `npm ci`, `npm ru
 
 Para la API, se clonará BackEnd y se preparará una instancia PostgreSQL local o mediante Docker. Desde la carpeta `BuildingFex.Api` se ejecutarán `dotnet restore`, `dotnet build` y `dotnet run`, usando una conexión de desarrollo y la configuración de autenticación correspondiente. Las instrucciones del [repositorio BackEnd](https://github.com/BuildingFex-UPC/BackEnd) servirán como referencia para reproducir el entorno.
 
+#### 4.1.2. Source Code Management
+
+Los productos de BuildingFex se gestionan en repositorios separados para mantener su historial y distinguir las responsabilidades del informe, la aplicación móvil, la API y la landing page.
+
+| Producto | Repositorio oficial | Contenido |
+| :--- | :--- | :--- |
+| **Informe** | [BuildingFex-UPC/report](https://github.com/BuildingFex-UPC/report.git) | Documento académico en Markdown y recursos gráficos. |
+| **Backend** | [BuildingFex-UPC/BackEnd](https://github.com/BuildingFex-UPC/BackEnd.git) | API ASP.NET Core, persistencia y archivos de despliegue. |
+| **Aplicación móvil** | [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) | Proyecto Android desarrollado con Kotlin y Jetpack Compose. |
+| **Landing page** | [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git) | Sitio de presentación comercial desarrollado con Vue y Vite. |
+
+**Estrategia de ramas**
+
+Se establece un flujo de trabajo basado en GitFlow. El repositorio local del informe ya dispone de las ramas `main`, `develop` y `feature/hermoza`; las siguientes convenciones servirán como política de integración para los productos del equipo, sin asumir que todas las ramas o protecciones están configuradas en cada repositorio.
+
+| Rama | Responsabilidad | Origen y destino de integración |
+| :--- | :--- | :--- |
+| `main` | Mantener una versión estable del producto correspondiente. | Recibe versiones aprobadas y correcciones urgentes. |
+| `develop` | Integrar los cambios de la siguiente entrega. | Recibe funcionalidades y correcciones antes de preparar una versión estable. |
+| `feature/<descripcion>` | Desarrollar una funcionalidad o un cambio documental. | Se crea desde `develop` y se integra a `develop` mediante pull request. |
+| `release/<version>` | Preparar y revisar una entrega. | Se crea desde `develop` y se integra a `main` y `develop`. |
+| `hotfix/<descripcion>` | Corregir un problema crítico de la versión estable. | Se crea desde `main` y se integra a `main` y `develop`. |
+
+Antes de solicitar la integración, cada integrante revisará su diff y realizará las comprobaciones pertinentes: compilación del componente afectado o revisión de enlaces y formato para el informe. El pull request describirá el cambio, su relación con la historia de usuario o apartado del documento y las verificaciones realizadas. La revisión por otro integrante permitirá detectar inconsistencias antes de incorporar los cambios.
+
+Los mensajes de commit seguirán [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), con el formato `<tipo>(<alcance>): <descripcion>`. Se utilizarán `feat` para funcionalidades, `fix` para correcciones, `docs` para documentación, `style` para formato, `refactor` para reorganización, `test` para pruebas y `chore` para mantenimiento. Los tipos distintos de `feat` y `fix` son convenciones del equipo.
+
+Ejemplos de mensajes para este proyecto:
+
+~~~text
+feat(incidents): add incident report screen
+fix(auth): handle expired session
+docs(chapter-4): document mobile development environment
+chore(android): update build configuration
+~~~
+
+Las entregas aprobadas podrán identificarse mediante etiquetas `v<major>.<minor>.<patch>`, asociadas al commit correspondiente y a sus artefactos. El informe registrará las evidencias de colaboración cuando estén disponibles; este apartado define el procedimiento y no acredita revisiones todavía no realizadas.
+
 ### 4.3. Validation Interviews
 
 En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
