@@ -3734,6 +3734,49 @@ Feature: US17 - Reservar un área común
 | BuildingFex-UPC/frontend | develop | 55abe34 | test: add acceptance test for US02 | - | 04/10/2026 |
 | BuildingFex-UPC/frontend | develop | d1cbd8b | test: add acceptance test for US17 | - | 04/10/2026 |
 
+##### 4.2.1.6. Execution Evidence for Sprint Review
+
+Al cierre del Sprint 1, BuildingFex cuenta con sus tres productos en funcionamiento. La Landing Page se encuentra desplegada en Vercel y presenta la propuesta de valor, los beneficios, los planes de suscripción (Essential, Standard y Scale), los videos del producto y del equipo, en español e inglés. Los Web Services se encuentran desplegados en Render y son consumidos por la aplicación móvil Android, en la que el administrador puede iniciar sesión, registrar e invitar residentes, gestionar las cuotas y consultar el estado de cobranza, mientras que el residente puede activar su cuenta con un código de invitación, consultar y pagar sus deudas, y reservar áreas comunes.
+
+**Landing Page:** [COMPLETAR: URL de Vercel]
+
+A continuación se presentan las principales vistas implementadas.
+
+**Landing Page – Sección principal**
+
+![Landing Page Hero](img/sprint1-landing-hero.png)
+
+**Landing Page – Planes de suscripción**
+
+![Landing Page Planes](img/sprint1-landing-planes.png)
+
+**Aplicación móvil – Inicio de sesión**
+
+![Inicio de sesión](img/sprint1-app-login.png)
+
+**Aplicación móvil – Gestión de residentes (administrador)**
+
+![Residentes](img/sprint1-app-residentes.png)
+
+**Aplicación móvil – Cobranzas (administrador)**
+
+![Cobranzas](img/sprint1-app-cobranzas.png)
+
+**Aplicación móvil – Mis deudas y pago (residente)**
+
+![Finanzas residente](img/sprint1-app-deudas.png)
+
+**Aplicación móvil – Áreas comunes y reservas (residente)**
+
+![Áreas comunes](img/sprint1-app-areas.png)
+
+**Video de navegación**
+
+En el video se recorren la Landing Page en sus dos idiomas y los principales flujos de la aplicación móvil: el inicio de sesión del administrador, la invitación de un residente, el registro de cuotas, la activación de la cuenta del residente, la consulta y pago de su deuda, y la reserva de un área común.
+
+[![Video de navegación](img/sprint1-video.png)]([COMPLETAR: URL OneDrive])
+
+**URL del video:** [upc-pre-202620-1acc0238-4939-BuildingFex-productnavigation-tb1.mp4]([COMPLETAR: URL OneDrive])
 
 ### 4.3. Validation Interviews
 
