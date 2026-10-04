@@ -3543,7 +3543,7 @@ Para el Sprint 1 se definieron cinco aspectos de trabajo: **Landing Page**, **IA
 | Hermoza Quispe, Jude Alessandro | JvnnDev | - | C | L | C | - |
 | Jave Chang, Alejandro Manuel | alejandro202312510 | - | L | C | - | C |
 | Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | - | L | C |
-| Suteau, Antonin | antoninsuteau | C | - | C | C | L |
+| Suteau, Antonin | antoninsuteau | C | - | C | C | C |
 
 ### 4.3. Validation Interviews
 
