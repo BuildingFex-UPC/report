@@ -3555,8 +3555,6 @@ El Sprint Planning 1 se realizó con la participación de todos los integrantes 
 
 ##### 4.2.1.2. Aspect Leaders and Collaborators
 
-##### 4.2.1.2. Aspect Leaders and Collaborators
-
 Para el Sprint 1 se definieron cinco aspectos de trabajo, alineados con los requisitos de la entrega TB1 y con los principales puntos de dolor identificados en las entrevistas: **Landing Page**, **IAM (Gestión de Usuarios)**, **Finanzas**, **Áreas Comunes** y **Aplicación Móvil**. Cada aspecto cuenta con un líder (L), responsable de coordinar su avance, revisar los cambios y asegurar su integración con el resto del producto, y con uno o más colaboradores (C) que participan en su implementación. Los bounded contexts de Incidencias y Comunicados se abordarán en el Sprint 2. Esta distribución se refleja en las tareas asignadas en el Sprint Backlog 1.
 
 | Team Member (Last Name, First Name) | GitHub Username | Landing Page | IAM | Finanzas | Áreas Comunes | Aplicación Móvil |
@@ -3569,7 +3567,7 @@ Para el Sprint 1 se definieron cinco aspectos de trabajo, alineados con los requ
 
 ### 4.3. Validation Interviews
 
-En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
+En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
 
 ---
 
