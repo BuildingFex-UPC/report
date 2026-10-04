@@ -3777,13 +3777,6 @@ En el video se recorren la Landing Page en sus dos idiomas y los principales flu
 [![Video de navegación](img/sprint1-video.png)]([COMPLETAR: URL OneDrive])
 
 **URL del video:** [upc-pre-202620-1acc0238-4939-BuildingFex-productnavigation-tb1.mp4]([COMPLETAR: URL OneDrive])
-
-### 4.3. Validation Interviews
-
-En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
-
----
-
 ##### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
 Durante el Sprint 1 se documentaron con OpenAPI, mediante Swagger UI, los Web Services de los bounded contexts IAM, Finances y SocialSpaces. La documentación se genera automáticamente a partir de los controladores de la API en .NET 10 y se encuentra disponible en el entorno desplegado en Render, lo que permite al equipo y al cliente móvil probar cada endpoint con datos de muestra. Los endpoints protegidos requieren el token JWT obtenido en el inicio de sesión.
@@ -3826,21 +3819,6 @@ A continuación se muestra la prueba del endpoint de inicio de sesión en Swagge
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | BuildingFex-UPC/backend | main | 8fc59f6 | Initial commit: BuildingFex API backend | Incluye la configuración de Swagger (OpenAPI) y los controladores documentados. | 29/09/2026 |
 | BuildingFex-UPC/backend | main | 2e176db | docs: update module statuses, add repositories section and MP demo mode note | - | 01/10/2026 |
-
-#### 4.3.1. Diseño de entrevistas
-
-##### Preguntas generales
-*(Comunes para cualquier entrevistado antes de pasar a la sección de su perfil)*
-
-1. ¿Cómo te llamas?
-2. ¿Cuántos años tienes?
-3. ¿En qué distrito vives o en qué zona opera principalmente tu gestión?
-4. ¿Cuál es tu ocupación, profesión o cargo actual en el edificio?
-5. ¿Qué dispositivos utilizas más en tu día a día para gestionar temas del edificio (smartphone, laptop/computadora)?
-6. ¿Qué canales o herramientas usas actualmente para comunicarte con los vecinos o la administración (WhatsApp, Excel, correo, avisos impresos)?
-7. Después de ver la presentación / prototipo de la aplicación, ¿cuál fue tu primera impresión sobre BuildingFlex?
-
----
 
 ##### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
@@ -3912,6 +3890,31 @@ A continuación se presentan los analíticos de colaboración de GitHub (Insight
 En el repositorio de la Landing Page se registraron [COMPLETAR: N] commits, con participación de [COMPLETAR: integrantes]. En el repositorio de Web Services se registraron [COMPLETAR: N] commits; la mayor actividad se concentró el 29/09/2026, día en que se migró la base de datos a PostgreSQL y se corrigieron los errores del despliegue en Render. En el repositorio de la aplicación móvil se registraron [COMPLETAR: N] commits, entre ellos los correspondientes a las pruebas de aceptación de las User Stories del Sprint.
 
 Los analíticos evidencian que, durante este primer Sprint, la construcción de la estructura base de los tres productos estuvo concentrada en el líder técnico del equipo, mientras que el resto de integrantes participó [COMPLETAR: en qué — p. ej. en la implementación de secciones de la Landing Page, pantallas de la aplicación y pruebas]. Como acción de mejora para el Sprint 2, el equipo acordó distribuir de forma más equilibrada los commits entre los integrantes, trabajar en ramas `feature/*` integradas mediante Pull Requests hacia `develop`, y aplicar Conventional Commits en todos los mensajes.
+
+
+### 4.3. Validation Interviews
+
+En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
+
+---
+
+
+
+#### 4.3.1. Diseño de entrevistas
+
+##### Preguntas generales
+*(Comunes para cualquier entrevistado antes de pasar a la sección de su perfil)*
+
+1. ¿Cómo te llamas?
+2. ¿Cuántos años tienes?
+3. ¿En qué distrito vives o en qué zona opera principalmente tu gestión?
+4. ¿Cuál es tu ocupación, profesión o cargo actual en el edificio?
+5. ¿Qué dispositivos utilizas más en tu día a día para gestionar temas del edificio (smartphone, laptop/computadora)?
+6. ¿Qué canales o herramientas usas actualmente para comunicarte con los vecinos o la administración (WhatsApp, Excel, correo, avisos impresos)?
+7. Después de ver la presentación / prototipo de la aplicación, ¿cuál fue tu primera impresión sobre BuildingFlex?
+
+---
+
 
 #### Segmento 1: Juntas de Directiva y Residentes
 
