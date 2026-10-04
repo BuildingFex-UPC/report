@@ -3832,6 +3832,7 @@ A continuación se muestra la prueba del endpoint de inicio de sesión en Swagge
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | BuildingFex-UPC/backend | main | 8fc59f6 | Initial commit: BuildingFex API backend | Incluye la configuración de Swagger (OpenAPI) y los controladores documentados. | 29/09/2026 |
 | BuildingFex-UPC/backend | main | 2e176db | docs: update module statuses, add repositories section and MP demo mode note | - | 01/10/2026 |
+| BuildingFex-UPC/backend | main | 0077af8 | fix: match swagger security scheme reference name so bearer token is sent | Corrige la referencia del esquema de seguridad para que Swagger UI envíe el token JWT en las peticiones protegidas. | 04/10/2026 |
 
 ##### 4.2.1.8. Software Deployment Evidence for Sprint Review
 
