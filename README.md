@@ -3784,6 +3784,49 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
 
 ---
 
+##### 4.2.1.7. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 se documentaron con OpenAPI, mediante Swagger UI, los Web Services de los bounded contexts IAM, Finances y SocialSpaces. La documentación se genera automáticamente a partir de los controladores de la API en .NET 10 y se encuentra disponible en el entorno desplegado en Render, lo que permite al equipo y al cliente móvil probar cada endpoint con datos de muestra. Los endpoints protegidos requieren el token JWT obtenido en el inicio de sesión.
+
+**Documentación desplegada (Swagger UI):** https://backend-1-lgr7.onrender.com/swagger
+
+**Repositorio de Web Services:** https://github.com/BuildingFex-UPC/backend
+
+| Bounded Context | Acción | Verbo HTTP | Sintaxis de llamada | Parámetros | Ejemplo de response | Explicación del response |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| IAM | Iniciar sesión | POST | `/api/v1/authentication/sign-in` | Body: `email`, `password` | `{ "user": { "id": "admin-seed-1", "name": "Admin BuildingFex", "email": "admin@buildingfex.test", "role": "admin" }, "token": "eyJhbGci..." }` | 200 OK con los datos del usuario y el token JWT. 400 si las credenciales son inválidas. |
+| IAM | Registrar administrador | POST | `/api/v1/authentication/register-admin` | Body: `name`, `email`, `password`, `dni`, `address`, `company`, `ruc` | `{ "user": { "id": "...", "role": "admin", ... }, "token": "eyJhbGci..." }` | Crea la cuenta del administrador y retorna su sesión iniciada. |
+| IAM | Verificar correo | GET | `/api/v1/authentication/check-email?email={email}` | Query: `email` | `{ "exists": false }` | Indica si el correo ya está registrado antes de crear la cuenta. |
+| IAM | Consultar invitación | GET | `/api/v1/authentication/residents/invite?code={code}` | Query: `code` | `{ "id": "resident-seed-1", "name": "...", "floor": "3", "hasCredentials": false }` | Retorna el residente asociado al código de invitación. 404 si el código no existe. |
+| IAM | Activar cuenta de residente | POST | `/api/v1/authentication/residents/set-credentials` | Body: `code`, `email`, `password` | `{ "user": { "role": "resident", ... }, "token": "eyJhbGci..." }` | Asigna correo y contraseña al residente invitado y le permite ingresar a la aplicación. |
+| IAM | Listar residentes | GET | `/users?ownerAdminId={id}&role=resident` | Query: `ownerAdminId`, `role`, `email`, `code` | `[ { "id": "resident-seed-1", "name": "...", "role": "resident", "floor": "3" } ]` | Lista los usuarios del administrador filtrados por rol. |
+| IAM | Registrar residente | POST | `/users` | Body: `name`, `role`, `floor`, `ownerAdminId` | `{ "id": "...", "code": "...", "role": "resident" }` | Crea al residente y genera su código de invitación. |
+| IAM | Eliminar residente | DELETE | `/users/{id}` | Path: `id` | `204 No Content` | Elimina al residente indicado. |
+| Finances | Listar cuotas | GET | `/fees?ownerAdminId={id}&residentId={id}` | Query: `ownerAdminId`, `residentId` | `[ { "id": "...", "residentId": "resident-seed-1", "amount": 150 } ]` | Lista las cuotas registradas por administrador o por residente. |
+| Finances | Consultar deudas (recibos) | GET | `/receipts?residentId={id}` | Query: `ownerAdminId`, `residentId` | `[ { "id": "receipt-seed-1", "concept": "Mantenimiento Junio 2026", "amount": 150, "dueDate": "2026-07-31", "status": "Pending" } ]` | Retorna los recibos del residente con su monto, vencimiento y estado de pago. |
+| Finances | Iniciar pago | POST | `/api/v1/payments/checkout` | Body: datos del recibo a pagar | `{ "checkoutUrl": "https://..." }` | Crea la preferencia de pago en Mercado Pago. En modo demo simula el pago sin llamar a Mercado Pago. |
+| Finances | Confirmar pago | POST | `/api/v1/payments/confirm` | Body: identificador del pago | `{ "status": "approved" }` | Confirma el pago y marca el recibo como pagado. |
+| SocialSpaces | Listar áreas comunes | GET | `/socialSpaces?ownerAdminId={id}` | Query: `ownerAdminId` | `[ { "id": "...", "name": "Parrilla", "capacity": 10, "description": "..." } ]` | Lista las áreas comunes del edificio con su capacidad y descripción. |
+| SocialSpaces | Registrar área común | POST | `/socialSpaces` | Body: `name`, `capacity`, `description`, `imageUrl`, `ownerAdminId` | `{ "id": "...", "name": "SUM", "capacity": 30 }` | Crea un área común para el edificio. |
+| SocialSpaces | Listar reservas | GET | `/reservations?spaceId={id}&date={fecha}` | Query: `ownerAdminId`, `spaceId`, `residentId`, `date` | `[ { "id": "...", "spaceId": "...", "date": "2026-10-10", "startTime": "18:00", "endTime": "20:00" } ]` | Lista las reservas filtradas por espacio, residente o fecha. |
+| SocialSpaces | Registrar reserva | POST | `/reservations` | Body: `spaceId`, `residentId`, `date`, `startTime`, `endTime`, `guests` | `{ "id": "...", "spaceId": "...", "date": "2026-10-10", "startTime": "18:00", "endTime": "20:00" }` | Crea la reserva del residente para el área común. |
+| SocialSpaces | Cancelar reserva | DELETE | `/reservations/{id}` | Path: `id` | `204 No Content` | Cancela la reserva indicada. |
+
+**Interacción con la documentación**
+
+A continuación se muestra la prueba del endpoint de inicio de sesión en Swagger UI con el usuario de muestra `admin@buildingfex.test`, donde se obtiene el token JWT que luego se utiliza para consultar los recibos del residente.
+
+![Swagger – Vista general](img/sprint1-swagger-general.png)
+
+![Swagger – Sign-in](img/sprint1-swagger-signin.png)
+
+![Swagger – Recibos](img/sprint1-swagger-receipts.png)
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/backend | main | 8fc59f6 | Initial commit: BuildingFex API backend | Incluye la configuración de Swagger (OpenAPI) y los controladores documentados. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 2e176db | docs: update module statuses, add repositories section and MP demo mode note | - | 01/10/2026 |
+
 #### 4.3.1. Diseño de entrevistas
 
 ##### Preguntas generales
@@ -3798,6 +3841,77 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
 7. Después de ver la presentación / prototipo de la aplicación, ¿cuál fue tu primera impresión sobre BuildingFlex?
 
 ---
+
+##### 4.2.1.8. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 1 se realizó el despliegue de los tres productos digitales de BuildingFex. La Landing Page se desplegó en Vercel, los Web Services se desplegaron como contenedor Docker en Render junto con una base de datos PostgreSQL gestionada por la misma plataforma, y la aplicación móvil Android se configuró para consumir los Web Services desplegados. A continuación se describen los pasos realizados para cada producto.
+
+**1. Despliegue de la Landing Page (Vercel)**
+
+1. Se creó una cuenta en Vercel vinculada a la organización de GitHub BuildingFex-UPC.
+2. Se importó el repositorio `landingpage` como nuevo proyecto, seleccionando Vite como framework, `npm run build` como comando de compilación y `dist` como directorio de salida.
+3. Se agregó el archivo `vercel.json` con una regla de reescritura hacia `index.html`, para que las rutas del router de Vue (términos, privacidad) funcionen al acceder directamente a ellas.
+4. Se configuraron las variables de entorno `VITE_WEB_APP_URL`, `VITE_YOUTUBE_PRODUCT_ID` y `VITE_YOUTUBE_TEAM_ID`.
+5. Vercel despliega automáticamente cada cambio enviado a la rama `main`.
+
+**URL de la Landing Page:** [COMPLETAR: URL de Vercel]
+
+![Vercel – Proyecto](img/sprint1-deploy-vercel.png)
+
+**2. Despliegue de los Web Services (Render)**
+
+1. Se creó una cuenta en Render vinculada a la organización de GitHub BuildingFex-UPC.
+2. Se creó una base de datos PostgreSQL en Render. Dado que Render no ofrece MySQL gestionado, la API se migró de MySQL a PostgreSQL (commit `9709964`).
+3. Se agregó al repositorio un `Dockerfile` multi-stage (SDK de .NET 10 para compilar y runtime de ASP.NET para ejecutar) y el archivo `render.yaml`, que define el servicio web, el health check en `/health` y el despliegue automático.
+4. Se configuraron en Render las variables de entorno: la cadena de conexión `ConnectionStrings__DefaultConnection`, el secreto JWT `TokenSettings__Secret`, generado por Render, y las credenciales de Mercado Pago. Ningún secreto se almacena en el repositorio (commit `84d49d5`).
+5. Se corrigieron los errores detectados en el primer despliegue: el puerto por defecto de PostgreSQL (`fa6b220`), los tipos `longtext` incompatibles (`d86ff51`) y las fechas en UTC (`81d2008`).
+
+**URL de los Web Services:** https://backend-1-lgr7.onrender.com
+**Documentación:** https://backend-1-lgr7.onrender.com/swagger
+
+![Render – Servicio web](img/sprint1-deploy-render.png)
+
+![Render – Base de datos PostgreSQL](img/sprint1-deploy-render-db.png)
+
+**3. Configuración de la aplicación móvil**
+
+1. En el archivo `build.gradle.kts` se definió la constante `API_BASE_URL` apuntando a los Web Services desplegados en Render, tanto para la variante debug como para release.
+2. Se generó el APK de la aplicación con Android Studio y se instaló en un dispositivo para verificar la comunicación con los Web Services desplegados.
+3. La distribución de la aplicación mediante Firebase App Distribution se realizará en un Sprint posterior.
+
+![Android Studio – Build APK](img/sprint1-deploy-apk.png)
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/landingpage | main | 0872ca4 | feat: add landing page project structure and components | Incluye el archivo vercel.json para el despliegue en Vercel. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | a8263d5 | Add Render blueprint and fail fast on misconfigured production env | Add render.yaml with the full service definition and deploy.env.example documenting every variable. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 84d49d5 | Read MercadoPago credentials from environment instead of hardcoding them | - | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 9709964 | Migrate from MySQL to PostgreSQL for Render | Render does not offer managed MySQL, so running everything there means PostgreSQL. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | fa6b220 | fix: puerto 5432 por defecto al parsear connection strings sin puerto | Render omite el puerto en el connection string interno. | 29/09/2026 |
+
+##### 4.2.1.9. Team Collaboration Insights during Sprint
+
+Durante el Sprint 1 el equipo organizó la implementación según la matriz de Aspect Leaders and Collaborators (sección 4.2.1.2). Cada líder coordinó el avance de su aspecto y distribuyó las tareas del Sprint Backlog entre los colaboradores, mientras que el seguimiento se realizó en el tablero del Sprint y en reuniones virtuales por Google Meet. El trabajo se desarrolló en tres repositorios de la organización BuildingFex-UPC, uno por producto: `landingpage` para la Landing Page, `backend` para los Web Services y `frontend` para la aplicación móvil Android. Los cambios se registraron mediante commits siguiendo la convención Conventional Commits (`feat`, `fix`, `docs`, `test`).
+
+A continuación se presentan los analíticos de colaboración de GitHub (Insights) de cada repositorio, que muestran la cantidad de commits realizados por cada integrante durante el Sprint.
+
+**Landing Page – https://github.com/BuildingFex-UPC/landingpage**
+
+![Insights Landing Page – Contributors](img/sprint1-insights-landing.png)
+
+**Web Services – https://github.com/BuildingFex-UPC/backend**
+
+![Insights Web Services – Contributors](img/sprint1-insights-backend.png)
+
+**Aplicación móvil – https://github.com/BuildingFex-UPC/frontend**
+
+![Insights Aplicación móvil – Contributors](img/sprint1-insights-frontend.png)
+
+**Interpretación de los analíticos**
+
+En el repositorio de la Landing Page se registraron [COMPLETAR: N] commits, con participación de [COMPLETAR: integrantes]. En el repositorio de Web Services se registraron [COMPLETAR: N] commits; la mayor actividad se concentró el 29/09/2026, día en que se migró la base de datos a PostgreSQL y se corrigieron los errores del despliegue en Render. En el repositorio de la aplicación móvil se registraron [COMPLETAR: N] commits, entre ellos los correspondientes a las pruebas de aceptación de las User Stories del Sprint.
+
+Los analíticos evidencian que, durante este primer Sprint, la construcción de la estructura base de los tres productos estuvo concentrada en el líder técnico del equipo, mientras que el resto de integrantes participó [COMPLETAR: en qué — p. ej. en la implementación de secciones de la Landing Page, pantallas de la aplicación y pruebas]. Como acción de mejora para el Sprint 2, el equipo acordó distribuir de forma más equilibrada los commits entre los integrantes, trabajar en ramas `feature/*` integradas mediante Pull Requests hacia `develop`, y aplicar Conventional Commits en todos los mensajes.
 
 #### Segmento 1: Juntas de Directiva y Residentes
 
