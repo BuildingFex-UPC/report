@@ -3785,7 +3785,7 @@ A continuación se presentan las principales vistas implementadas.
 
 **Video de navegación**
 
-En el video se recorren la Landing Page en sus dos idiomas y los principales flujos de la aplicación móvil: el inicio de sesión del administrador, la invitación de un residente, el registro de cuotas, la activación de la cuenta del residente, la consulta y pago de su deuda, y la reserva de un área común.
+En el video se recorren la Landing Page en sus dos idiomas y los principales flujos de la aplicación móvil: el inicio de sesión del administrador, la gestión de residentes y de sus códigos de invitación, el estado de cobranza de las cuotas y la gestión de áreas comunes; y, desde la cuenta del residente, la consulta de sus deudas y la reserva de un área común.
 
 [![Video de navegación](img/sprint1-video.png)]([COMPLETAR: URL OneDrive])
 
