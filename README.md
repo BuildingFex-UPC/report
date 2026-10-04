@@ -1163,6 +1163,17 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   </tr> 
 </table>
 
+### US31 – Información en la Landing Page
+
+<table> 
+  <tr>
+  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
+  <tr><td>US31</td><td>Visitante</td><td>Alta</td><td>EP09 – Presencia digital</td></tr> 
+  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Conocer la propuesta de valor y los planes de BuildingFex</td></tr> 
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> el visitante accede a la Landing Page.<br> <strong>When:</strong> recorre la página principal.<br> <strong>Then:</strong> el sistema presenta la propuesta de valor, los beneficios y los videos del producto y del equipo.<br><br> <strong>AC02 – Given:</strong> el visitante desea conocer los precios.<br> <strong>When:</strong> accede a la sección de planes.<br> <strong>Then:</strong> el sistema muestra los planes Essential, Standard y Scale con sus características.<br><br> <strong>AC03 – Given:</strong> el visitante prefiere otro idioma.<br> <strong>When:</strong> selecciona el idioma español o inglés.<br> <strong>Then:</strong> el sistema muestra todo el contenido en el idioma seleccionado. </td>
+  </tr> 
+</table>
+
 #### Spike Stories
 
 ### SP01 – Evaluar almacenamiento seguro de documentos
@@ -1234,6 +1245,7 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 | US28 | EP04 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | Baja | 2 |
 | US29 | EP02 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | Baja | 5 |
 | US30 | EP02 | Como administrador, quiero ver la evolución mensual de la morosidad en un gráfico para identificar tendencias. | Baja | 3 |
+| US31 | EP08 | Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme. | Alta | 5 |
 | SP01 | EP07 | Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex (Spike Story). | Media | 3 |
 
 ### 2.5. Strategic-Level Domain-Driven Design
