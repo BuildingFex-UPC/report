@@ -3729,10 +3729,10 @@ Feature: US17 - Reservar un área común
 | Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
 | :--- | :--- | :--- | :--- | :--- | :--- |
 | BuildingFex-UPC/frontend | develop | fe3a524 | BuildingFex Android client (Kotlin + Jetpack Compose) | Incluye las pruebas unitarias InviteCodesTest y DepartmentNumberTest. | 30/09/2026 |
-| BuildingFex-UPC/frontend | develop | [COMPLETAR] | test: add acceptance test for US14 | - | 04/10/2026 |
-| BuildingFex-UPC/frontend | develop | [COMPLETAR] | test: add acceptance test for US13 | - | 04/10/2026 |
-| BuildingFex-UPC/frontend | develop | [COMPLETAR] | test: add acceptance test for US02 | - | 04/10/2026 |
-| BuildingFex-UPC/frontend | develop | [COMPLETAR] | test: add acceptance test for US17 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | 4350c6b | test: add acceptance test for US14 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | ceaebc1 | test: add acceptance test for US13 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | 55abe34 | test: add acceptance test for US02 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | d1cbd8b | test: add acceptance test for US17 | - | 04/10/2026 |
 
 
 ### 4.3. Validation Interviews
