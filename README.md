@@ -3572,11 +3572,11 @@ Para el Sprint 1 se definieron cinco aspectos de trabajo, alineados con los requ
 
 | Team Member (Last Name, First Name) | GitHub Username | Landing Page | IAM | Finanzas | Áreas Comunes | Aplicación Móvil |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| Javier Murillo, Mathias | K1ngHulk | L | C | - | - | [?] |
-| Hermoza Quispe, Jude Alessandro | JvnnDev | - | C | L | C | [?] |
-| Jave Chang, Alejandro Manuel | alejandro202312510 | - | L | C | - | [?] |
-| Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | - | L | [?] |
-| Suteau, Antonin | antoninsuteau | C | - | C | C | [?] |
+| Javier Murillo, Mathias | K1ngHulk | L | C | - | - | C |
+| Hermoza Quispe, Jude Alessandro | JvnnDev | - | C | L | C | - |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | - | L | C | - | L |
+| Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | - | L | C |
+| Suteau, Antonin | antoninsuteau | C | - | C | C | C |
 
 ##### 4.2.1.3. Sprint Backlog 1
 
@@ -3751,7 +3751,7 @@ Feature: US17 - Reservar un área común
 
 Al cierre del Sprint 1, BuildingFex cuenta con sus tres productos en funcionamiento. La Landing Page se encuentra desplegada en Vercel y presenta la propuesta de valor, los beneficios, los planes de suscripción (Essential, Standard y Scale), los videos del producto y del equipo, en español e inglés. Los Web Services se encuentran desplegados en Render y son consumidos por la aplicación móvil Android, en la que el administrador puede iniciar sesión, registrar e invitar residentes, gestionar las cuotas y consultar el estado de cobranza, mientras que el residente puede activar su cuenta con un código de invitación, consultar y pagar sus deudas, y reservar áreas comunes.
 
-**Landing Page:** [COMPLETAR: URL de Vercel]
+**Landing Page:** https://buildingfex.vercel.app/
 
 A continuación se presentan las principales vistas implementadas.
 
@@ -3846,7 +3846,7 @@ Durante el Sprint 1 se realizó el despliegue de los tres productos digitales de
 4. Se configuraron las variables de entorno `VITE_WEB_APP_URL`, `VITE_YOUTUBE_PRODUCT_ID` y `VITE_YOUTUBE_TEAM_ID`.
 5. Vercel despliega automáticamente cada cambio enviado a la rama `main`.
 
-**URL de la Landing Page:** [COMPLETAR: URL de Vercel]
+**URL de la Landing Page:** https://buildingfex.vercel.app/
 
 ![Vercel – Proyecto](img/sprint1-deploy-vercel.png)
 
