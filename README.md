@@ -1210,6 +1210,7 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 | EP06 | Gestión de incidencias | Reporte, seguimiento y resolución de incidencias del edificio. | Incidencias |
 | EP07 | Comunicaciones y documentos | Comunicados oficiales y repositorio de reglamentos y actas. | Gestión de Usuarios / Transversal |
 | EP08 | Dashboard unificado | Vista única con cobranzas, áreas comunes e incidencias. | Transversal |
+| EP09 | Presencia digital | Landing Page que presenta la propuesta de valor, los beneficios y los planes de suscripción a los visitantes. | Marketing / Landing Page |
 
 **Product Backlog priorizado**
 
@@ -1245,7 +1246,7 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 | US28 | EP04 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | Baja | 2 |
 | US29 | EP02 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | Baja | 5 |
 | US30 | EP02 | Como administrador, quiero ver la evolución mensual de la morosidad en un gráfico para identificar tendencias. | Baja | 3 |
-| US31 | EP08 | Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme. | Alta | 5 |
+| US31 | EP09 | Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme. | Alta | 5 |
 | SP01 | EP07 | Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex (Spike Story). | Media | 3 |
 
 ### 2.5. Strategic-Level Domain-Driven Design
