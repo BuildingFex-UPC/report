@@ -3525,25 +3525,47 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 
 ---
 <div style="page-break-after: always;"></div>
+
+## Capítulo IV: Product Implementation, Validation & Deployment
+
 ### 4.2. Landing Page, Services & Applications Implementation
 
 #### 4.2.1. Sprint 1
 
-En esta sección se registra el avance del equipo BuildingFex durante el Sprint 1, correspondiente a la entrega TB1. El Sprint se centra en desplegar la Landing Page, implementar los primeros Web Services de los bounded contexts priorizados y construir las pantallas principales de la aplicación móvil, siguiendo el marco de trabajo Scrum.
+En esta sección se registra el avance del equipo BuildingFex durante el Sprint 1, correspondiente a la entrega TB1. Durante este Sprint se desplegó la Landing Page (Vue 3) en Vercel, se implementaron y desplegaron en Render los Web Services (.NET 10 con PostgreSQL) de los bounded contexts IAM, Finances, SocialSpaces, Incidents e Information, y se construyeron las pantallas principales de la aplicación móvil Android (Kotlin con Jetpack Compose), siguiendo el marco de trabajo Scrum.
 
 ##### 4.2.1.1. Sprint Planning 1
 
+El Sprint Planning 1 se realizó con la participación de todos los integrantes del equipo. En la reunión se revisó el Product Backlog (sección 2.4.3), se definió el Sprint Goal y se seleccionaron las User Stories que aportan directamente a dicho objetivo, priorizando las funcionalidades de cobranzas y áreas comunes, identificadas en las entrevistas como los principales puntos de dolor de ambos segmentos.
+
+| Sprint # | Sprint 1 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | [COMPLETAR: DD-MM-2026] |
+| Time | [COMPLETAR: HH:MM PM] |
+| Location | Reunión virtual vía [COMPLETAR: Discord / Google Meet / Teams] |
+| Prepared By | Suteau, Antonin |
+| Attendees (to planning meeting) | Javier Murillo, Mathias / Hermoza Quispe, Jude Alessandro / Jave Chang, Alejandro Manuel / Heredia Hoyos, Danitza Ivonne / Suteau, Antonin |
+| Sprint 0 Review Summary | Al ser el primer Sprint de implementación, no existe un Sprint previo de desarrollo. Como punto de partida se toman los artefactos de la entrega AV1: el Product Backlog priorizado, los bounded contexts, la arquitectura C4 y el diseño UI del Capítulo III. |
+| Sprint 0 Retrospective Summary | Durante la elaboración del AV1 el equipo identificó como oportunidades de mejora: aplicar de forma consistente Conventional Commits y GitFlow, distribuir el trabajo de manera más equilibrada entre los integrantes y fijar fechas internas de revisión antes de cada entrega. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | **Our focus is on** ofrecer una primera versión funcional de BuildingFex en la que el administrador gestione residentes, cobranzas, áreas comunes, incidencias y comunicados desde la aplicación móvil, y en la que los visitantes conozcan la propuesta de valor en la Landing Page.<br>**We believe it delivers** la centralización de la operación del edificio en una sola plataforma para administradores y residentes, reemplazando el uso de Excel y WhatsApp.<br>**This will be confirmed when** un administrador inicia sesión, registra a un residente y una cuota, y dicho residente puede consultar y pagar su deuda, reservar un área común y reportar una incidencia desde la aplicación. |
+| Sprint 1 Velocity | 55 |
+| Sum of Story Points | 55 |
+
 ##### 4.2.1.2. Aspect Leaders and Collaborators
 
-Para el Sprint 1 se definieron cinco aspectos de trabajo: **Landing Page**, **IAM (Gestión de Usuarios)**, **Finanzas**, **Áreas Comunes** y **Aplicación Móvil**. Cada aspecto cuenta con un líder (L), responsable de coordinar su avance, revisar los Pull Requests y asegurar su integración con el resto del producto, y con uno o más colaboradores (C) que participan en su implementación. Esta distribución se refleja en las tareas asignadas en el Sprint Backlog 1.
+##### 4.2.1.2. Aspect Leaders and Collaborators
+
+Para el Sprint 1 se definieron cinco aspectos de trabajo, alineados con los requisitos de la entrega TB1 y con los principales puntos de dolor identificados en las entrevistas: **Landing Page**, **IAM (Gestión de Usuarios)**, **Finanzas**, **Áreas Comunes** y **Aplicación Móvil**. Cada aspecto cuenta con un líder (L), responsable de coordinar su avance, revisar los cambios y asegurar su integración con el resto del producto, y con uno o más colaboradores (C) que participan en su implementación. Los bounded contexts de Incidencias y Comunicados se abordarán en el Sprint 2. Esta distribución se refleja en las tareas asignadas en el Sprint Backlog 1.
 
 | Team Member (Last Name, First Name) | GitHub Username | Landing Page | IAM | Finanzas | Áreas Comunes | Aplicación Móvil |
 | :--- | :--- | :---: | :---: | :---: | :---: | :---: |
-| Javier Murillo, Mathias | K1ngHulk | L | C | - | - | C |
-| Hermoza Quispe, Jude Alessandro | JvnnDev | - | C | L | C | - |
-| Jave Chang, Alejandro Manuel | alejandro202312510 | - | L | C | - | C |
-| Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | - | L | C |
-| Suteau, Antonin | antoninsuteau | C | - | C | C | C |
+| Javier Murillo, Mathias | K1ngHulk | L | C | - | - | [?] |
+| Hermoza Quispe, Jude Alessandro | JvnnDev | - | C | L | C | [?] |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | - | L | C | - | [?] |
+| Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | - | L | [?] |
+| Suteau, Antonin | antoninsuteau | C | - | C | C | [?] |
 
 ### 4.3. Validation Interviews
 
