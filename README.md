@@ -3613,6 +3613,45 @@ chore(android): update build configuration
 
 Las entregas aprobadas podrán identificarse mediante etiquetas `v<major>.<minor>.<patch>`, asociadas al commit correspondiente y a sus artefactos. El informe registrará las evidencias de colaboración cuando estén disponibles; este apartado define el procedimiento y no acredita revisiones todavía no realizadas.
 
+#### 4.1.3. Source Code Style Guide & Conventions
+
+Las convenciones de código buscan mantener una base comprensible entre los integrantes y facilitar la revisión de los componentes reutilizados y del cliente Android. Se conservará el estilo de cada repositorio, aplicando las siguientes reglas a los cambios nuevos.
+
+| Tecnología | Convenciones del proyecto | Referencia |
+| :--- | :--- | :--- |
+| **Kotlin** | Indentación de 4 espacios; clases en `PascalCase`; funciones y variables en `camelCase`; constantes en `UPPER_SNAKE_CASE`; preferir `val` cuando no se requiera mutación. | [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html) |
+| **Jetpack Compose** | Funciones de interfaz que devuelven `Unit` en `PascalCase`, como `IncidentScreen`; separar presentación, estado y acceso a datos. | [Convenciones de Kotlin para funciones Composable](https://kotlinlang.org/docs/coding-conventions.html#function-names) |
+| **C#** | Indentación de 4 espacios; tipos y métodos públicos en `PascalCase`; parámetros y variables locales en `camelCase`; interfaces con prefijo `I` y métodos asíncronos con sufijo `Async`. | [Microsoft: C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) |
+| **HTML** | Indentación de 2 espacios, etiquetas y atributos en minúsculas, atributos entre comillas dobles y estructura semántica. Incluir texto alternativo pertinente en imágenes. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **CSS** | Indentación de 2 espacios, clases en `kebab-case` y reglas agrupadas por componente; evitar estilos duplicados y selectores innecesariamente complejos. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **JavaScript y Vue** | Usar `const` por defecto y `let` cuando sea necesario; variables y funciones en `camelCase`, componentes en `PascalCase` y archivos Vue con plantilla, lógica y estilos separados. | [Vue Style Guide](https://vuejs.org/style-guide/), complementada por las convenciones del equipo. |
+
+La guía de Vue se utilizará como referencia orientativa, considerando que su propia documentación indica que necesita actualización. No se impondrá un cambio de API ni una reorganización del código reutilizado únicamente por adoptar estas convenciones.
+
+En Android se conservará la separación existente entre recursos compartidos de `core` y funcionalidades, evitando incorporar llamadas HTTP directamente en las funciones de interfaz. En el backend se mantendrán las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` de cada bounded context. Los identificadores técnicos y mensajes de commit se escribirán en inglés; los textos de la interfaz seguirán los recursos de idioma definidos por el producto.
+
+Los siguientes ejemplos ilustran nombres y formato; no constituyen evidencia de funcionalidades implementadas:
+
+~~~kotlin
+data class IncidentSummary(
+    val id: String,
+    val description: String
+)
+
+fun hasIncidentDescription(description: String): Boolean {
+    return description.isNotBlank()
+}
+~~~
+
+~~~csharp
+public interface IIncidentRepository
+{
+    Task<Incident?> FindByExternalIdAsync(string externalId);
+}
+~~~
+
+Para documentación se mantendrán encabezados numerados, tablas legibles, enlaces descriptivos y rutas relativas válidas a imágenes. Antes de integrar cambios se utilizará el formateo del IDE y se revisará la compilación. No se afirmará la ejecución de linters o pruebas automatizadas cuando no exista una comprobación registrada.
+
 ### 4.3. Validation Interviews
 
 En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
