@@ -3541,9 +3541,9 @@ El Sprint Planning 1 se realizó con la participación de todos los integrantes 
 | Sprint # | Sprint 1 |
 | :--- | :--- |
 | **Sprint Planning Background** | |
-| Date | [COMPLETAR: DD-MM-2026] |
-| Time | [COMPLETAR: HH:MM PM] |
-| Location | Reunión virtual vía [COMPLETAR: Discord / Google Meet / Teams] |
+| Date | 28-09-2026 |
+| Time | 08:00 PM |
+| Location | Reunión virtual vía Google Meet |
 | Prepared By | Suteau, Antonin |
 | Attendees (to planning meeting) | Javier Murillo, Mathias / Hermoza Quispe, Jude Alessandro / Jave Chang, Alejandro Manuel / Heredia Hoyos, Danitza Ivonne / Suteau, Antonin |
 | Sprint 0 Review Summary | Al ser el primer Sprint de implementación, no existe un Sprint previo de desarrollo. Como punto de partida se toman los artefactos de la entrega AV1: el Product Backlog priorizado, los bounded contexts, la arquitectura C4 y el diseño UI del Capítulo III. |
@@ -3639,6 +3639,100 @@ A continuación se presentan los commits relacionados con la implementación en 
 | BuildingFex-UPC/frontend | develop | 0fad52e | Initial commit | - | 30/09/2026 |
 | BuildingFex-UPC/frontend | develop | fe3a524 | BuildingFex Android client (Kotlin + Jetpack Compose) | - | 30/09/2026 |
 | BuildingFex-UPC/frontend | main | 8602c98 | Add BuildingFex logo to login screen and drawer header | - | 30/09/2026 |
+
+##### 4.2.1.5. Testing Suite Evidence for Sprint Review
+
+Durante el Sprint 1 se elaboraron pruebas unitarias para la lógica de la aplicación móvil y pruebas de aceptación bajo el enfoque BDD (Behavior-Driven Development) para las User Stories implementadas. Las pruebas unitarias se desarrollaron con JUnit sobre las clases utilitarias que soportan el flujo de invitación de residentes y la gestión de unidades. Las pruebas de aceptación se redactaron en lenguaje Gherkin a partir de los criterios de aceptación definidos en la sección 2.4.1. Las pruebas de integración de los Web Services se incorporarán en el Sprint 2.
+
+**Repositorio de pruebas:** https://github.com/BuildingFex-UPC/frontend
+
+**Unit Tests**
+
+| Clase de prueba | User Story | Comportamiento verificado |
+| :--- | :--- | :--- |
+| InviteCodesTest | US13 | Extracción del código de invitación a partir de un código simple, un código etiquetado o el mensaje completo compartido por el administrador; detección de mensajes y rechazo de textos inválidos (10 casos). |
+| DepartmentNumberTest | US13 | Obtención del piso a partir del número de departamento, separación del sufijo aleatorio y generación de sufijos de cuatro caracteres no ambiguos (3 casos). |
+
+**Acceptance Tests**
+
+```gherkin
+Feature: US14 - Iniciar sesión de forma segura
+  Como usuario
+  quiero iniciar sesión de forma segura
+  para proteger la información del edificio
+
+  Scenario: Inicio de sesión con credenciales válidas
+    Given el usuario posee una cuenta registrada con credenciales válidas
+    When inicia sesión con su correo y contraseña
+    Then el sistema autentica al usuario
+    And le permite acceder al dashboard correspondiente a su rol
+
+  Scenario: Inicio de sesión con credenciales inválidas
+    Given el usuario ingresa una contraseña incorrecta
+    When intenta iniciar sesión
+    Then el sistema rechaza la autenticación
+    And muestra un mensaje de credenciales inválidas
+```
+
+```gherkin
+Feature: US13 - Invitar residentes y asignar unidad
+  Como administrador
+  quiero invitar residentes y asignarles una unidad
+  para que accedan al sistema
+
+  Scenario: Generación de invitación para una unidad existente
+    Given existe una unidad registrada en el edificio
+    And los datos del residente son válidos
+    When el administrador genera la invitación
+    Then el sistema crea un código de invitación asociado a la unidad
+
+  Scenario: Activación de cuenta con código de invitación
+    Given el residente recibió un código de invitación válido
+    When ingresa el código y define su correo y contraseña
+    Then el sistema activa su cuenta asociada a la unidad
+```
+
+```gherkin
+Feature: US02 - Consultar deudas y estado de pago
+  Como residente
+  quiero visualizar mis deudas y su estado de pago
+  para saber cuánto y cuándo debo pagar
+
+  Scenario: Residente con cuotas pendientes
+    Given el residente tiene cuotas registradas
+    When consulta su estado de cuenta
+    Then el sistema muestra las cuotas pendientes con su monto y estado de pago
+
+  Scenario: Residente sin deudas pendientes
+    Given el residente no tiene cuotas pendientes
+    When consulta su estado de cuenta
+    Then el sistema indica que no existen cuotas pendientes
+```
+
+```gherkin
+Feature: US17 - Reservar un área común
+  Como residente
+  quiero reservar un área común en una fecha y hora
+  para asegurar su uso sin conflictos
+
+  Scenario: Reserva en un horario disponible
+    Given el área común está disponible en la fecha y hora solicitadas
+    When el residente registra la reserva
+    Then el sistema crea la reserva asociada al residente
+
+  Scenario: Reserva en un horario no disponible
+    Given el horario solicitado ya está reservado
+    When el residente intenta registrar la reserva
+    Then el sistema rechaza la solicitud
+```
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/frontend | develop | fe3a524 | BuildingFex Android client (Kotlin + Jetpack Compose) | Incluye las pruebas unitarias InviteCodesTest y DepartmentNumberTest. | 30/09/2026 |
+| BuildingFex-UPC/frontend | develop | [COMPLETAR] | test: add acceptance test for US14 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | [COMPLETAR] | test: add acceptance test for US13 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | [COMPLETAR] | test: add acceptance test for US02 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | [COMPLETAR] | test: add acceptance test for US17 | - | 04/10/2026 |
 
 
 ### 4.3. Validation Interviews
