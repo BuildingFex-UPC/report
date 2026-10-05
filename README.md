@@ -101,7 +101,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b> He aprendido cómo se desarrolla un proyecto académico en Perú y he utilizado por primera vez GitHub, lo que me permitirá, más adelante en mis estudios, llevar a cabo proyectos en grupo. </td>
+        <td><b>AV1:</b> He aprendido cómo se desarrolla un proyecto académico en Perú y he utilizado por primera vez GitHub, lo que me permitirá, más adelante en mis estudios, llevar a cabo proyectos en grupo.<br><br><b>TB1:</b> En la elaboración de la sección 4.2.1 (Sprint 1) actualicé mis conocimientos sobre el marco de trabajo Scrum: Sprint Planning, Sprint Goal, Sprint Backlog y matriz de líderes y colaboradores. Aprendí a redactar pruebas de aceptación en lenguaje Gherkin bajo el enfoque BDD, a documentar y probar Web Services con Swagger (OpenAPI) utilizando autenticación JWT, y a ejecutar la aplicación móvil en Android Studio con un emulador. Además, identifiqué y corregí un error de configuración en la documentación Swagger del backend.</td>
   </tr>
 
   <!-- ================= CRITERIO 2 ================= -->
@@ -125,7 +125,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo. </td>
+        <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo.<br><br><b>TB1:</b> Durante este Sprint reconocí que necesitaba aprender de forma autónoma herramientas que no conocía, como Android Studio, Trello, Swagger y la grabación de videos de navegación del producto. También comprendí la importancia de aplicar Conventional Commits y GitFlow para que el trabajo de cada integrante quede registrado. Las entrevistas de validación con usuarios reales me mostraron que es necesario seguir aprendiendo a escuchar al usuario para mejorar el producto.</td>
   </tr>
 </table>
 
