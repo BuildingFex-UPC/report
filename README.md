@@ -3861,9 +3861,7 @@ Durante el Sprint 1 se realizó el despliegue de los tres productos digitales de
 **URL de los Web Services:** https://backend-1-lgr7.onrender.com
 **Documentación:** https://backend-1-lgr7.onrender.com/swagger
 
-![Render – Servicio web](img/sprint1-deploy-render.png)
-
-![Render – Base de datos PostgreSQL](img/sprint1-deploy-render-db.png)
+![Render – Web Services desplegados y accesibles en producción](img/sprint1-deploy-render.png)
 
 **3. Configuración de la aplicación móvil**
 
