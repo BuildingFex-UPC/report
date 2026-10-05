@@ -3588,7 +3588,7 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 ![deudas](img/Misdeudasypago-redisente-mockup.png)
 ![areas](img/Areascomunesyreservas-residentr-mockup.png)
 ##### 3.1.4.1. Mobile Applications User Flow Diagrams
-![userflow-diagram](img/UserFlowDiagrams.png)
+![userflow-diagram](img/UserFlow-Diagrams.png)
 ##### 3.1.4.1. Mobile Applications Prototyping
 **Aplicación móvil – Inicio de sesión**
 
