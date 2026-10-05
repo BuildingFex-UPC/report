@@ -113,7 +113,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).</td>
+    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).<br><br><b>TP1:</b> Reconoció la necesidad de mantener actualizados sus conocimientos al adaptar la documentación del curso anterior al desarrollo móvil. Consultó documentación oficial y los archivos de configuración de los repositorios para identificar diferencias entre la arquitectura descrita en el informe y el stack actual, dejando señalada la revisión pendiente de MySQL/Railway frente a PostgreSQL/Render. Diferenció los procedimientos previstos de las evidencias de ejecución todavía pendientes, evitando presentar la compilación o validación del APK como actividades realizadas. Este proceso reforzó la importancia del aprendizaje continuo y de verificar las fuentes técnicas antes de incorporarlas al informe del equipo.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
