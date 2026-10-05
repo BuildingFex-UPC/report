@@ -4017,8 +4017,20 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Screenshot** | ![Entrevista Luz Quispe](img/validacion-luz.png) |
 | **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
 
+##### Segmento 1: Juntas de Directiva y Residentes
 
+**Entrevista 6**
 
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Gaël Gauthier |
+| **Edad** | 21 |
+| **Distrito** | Miraflores |
+| **Perfil** | Residente del edificio |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-gael-tb1](LIEN_DRIVE) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 07:20 |
+| **Screenshot** | ![Entrevista Gaël Gauthier](img/validacion-gael.png) |
+| **Resumen de Apreciaciones** | Gaël Gauthier, residente del edificio, recorrió la Landing Page y la aplicación móvil desde el perfil de residente. Destacó la interfaz y la facilidad de manejo de la aplicación, así como su utilidad para consultar sus cuotas y su estado de pago. También valoró la seguridad que transmite la plataforma, ya que centralizar los pagos en un canal oficial del edificio ayuda a evitar estafas. Como mejora, propuso incorporar un chat en vivo para comunicarse directamente con la administración. Afirmó que sí utilizaría BuildingFex, porque la considera simple de usar y práctica en el día a día. |
 
 ### Conclusiones y recomendaciones
 
