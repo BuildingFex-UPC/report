@@ -1228,17 +1228,20 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 
 #### 2.4.3. Product Backlog
 
-El Product Backlog de BuildingFex consolida las historias de usuario y de investigación derivadas de las secciones 2.4.1 (User Stories) y 2.4.2 (Impact Mapping). Sus elementos representan el trabajo del producto y se priorizan según su aporte al MVP y la precedencia de las funcionalidades.
+El Product Backlog de BuildingFex consolida las historias de usuario y de investigación derivadas de las secciones 2.4.1 (User Stories) y 2.4.2 (Impact Mapping). Sus elementos representan el trabajo del producto y se ordenan por prioridad y, dentro de cada nivel, por Story Points de mayor a menor.
 
 La priorización se define con la escala **Alta / Media / Baja** según el valor para el usuario y su aporte al MVP, y el esfuerzo se estima en **Story Points** usando la sucesión de Fibonacci (1, 2, 3, 5, 8, 13). El backlog también incorpora las **Spike Stories** (prefijo `SP`) necesarias para reducir incertidumbre técnica antes de la implementación. El backlog es un artefacto vivo: el orden y la estimación se ajustan al cierre de cada Sprint y tras el análisis de entrevistas (sección 2.2.3).
 
-**Orden por importancia y precedencia**
+**Orden por prioridad y Story Points**
 
-La posición de cada fila representa el orden de atención del backlog; los identificadores de las historias se conservan y no determinan su posición. Se priorizan las funcionalidades de mayor valor para el MVP, comenzando por el registro, el acceso y la incorporación de residentes, y continuando con las operaciones centrales de cobranzas, reservas, incidencias y comunicaciones. Las mejoras complementarias y las funcionalidades de prioridad baja se sitúan después de esa base.
+La tabla presenta primero las historias de prioridad **Alta**, luego las de prioridad **Media** y finalmente las de prioridad **Baja**. Dentro de cada nivel, las historias se ordenan por **Story Points de mayor a menor**: 8, 5, 3 y 2, según las estimaciones del backlog. Por ello, US06 y US26, ambas de prioridad alta y 8 puntos, ocupan las primeras posiciones.
 
-La precedencia se respeta antes de seleccionar una funcionalidad dependiente. Por ello, una historia de prioridad media puede adelantarse cuando proporciona información necesaria para otra de prioridad alta, sin cambiar su prioridad ni su estimación. En este backlog, US07 precede a US06 porque el reporte consolidado de ingresos y egresos necesita el registro de gastos.
+Los identificadores, las descripciones, las prioridades y las estimaciones se conservan. Cuando dos historias tienen la misma prioridad y los mismos Story Points, se mantiene su orden relativo.
 
-Las principales relaciones que justifican la secuencia son:
+**Precedencia para la planificación del Sprint**
+
+Las dependencias se consideran al seleccionar las historias de cada Sprint y organizar su implementación. El orden de la tabla expresa la prioridad y el esfuerzo estimado; las funcionalidades que requieren datos o capacidades de otras historias se planifican tomando en cuenta esas relaciones.
+Las principales dependencias para la planificación son:
 
 - **US12 → US14 → US13:** registro de la administradora, acceso autenticado e incorporación de residentes.
 - **US01 → US02 → US03:** registro de cuotas, consulta de deudas y registro de pagos.
@@ -1252,38 +1255,38 @@ Las principales relaciones que justifican la secuencia son:
 
 | ID | Historia de usuario | Story Points | Prioridad |
 | :--- | :--- | :---: | :--- |
+| US06 | Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea. | 8 | Alta |
+| US26 | Como administrador, quiero un dashboard con el resumen de cobranzas, reservas e incidencias para tener el estado del edificio en una sola vista. | 8 | Alta |
 | US12 | Como empresa administradora, quiero registrar mi cuenta y dar de alta los edificios que gestiono para empezar a operar en la plataforma. | 5 | Alta |
-| US14 | Como usuario, quiero iniciar sesión de forma segura para proteger mi información y la del edificio. | 3 | Alta |
 | US13 | Como administrador, quiero invitar a los residentes de un edificio y asignarles su unidad para que accedan a la app. | 5 | Alta |
 | US01 | Como administrador, quiero registrar las cuotas mensuales de cada unidad para automatizar la cobranza del edificio. | 5 | Alta |
-| US02 | Como residente, quiero visualizar mis deudas y su estado de pago para saber cuánto y cuándo debo pagar. | 3 | Alta |
 | US03 | Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para que quede constancia. | 5 | Alta |
 | US04 | Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes morosos para reducir la morosidad. | 5 | Alta |
 | US09 | Como empresa administradora, quiero elegir un plan de suscripción según el número de unidades para pagar solo por lo que necesito. | 5 | Alta |
-| US07 | Como administrador, quiero registrar los gastos administrativos y servicios compartidos para reflejarlos en el estado de cuenta del edificio. | 5 | Media |
-| US06 | Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea. | 8 | Alta |
-| US16 | Como residente, quiero ver el catálogo de áreas comunes con sus reglas y disponibilidad para saber qué puedo reservar. | 3 | Alta |
 | US18 | Como sistema, quiero validar que una reserva no se solape con otra existente para evitar dobles reservas. | 5 | Alta |
 | US17 | Como residente, quiero reservar un área común en una fecha y hora para asegurar su uso sin conflictos. | 5 | Alta |
 | US20 | Como residente, quiero reportar una incidencia con descripción y foto para que la administración la atienda. | 5 | Alta |
 | US21 | Como administrador, quiero dar seguimiento al estado de cada incidencia (abierta, en proceso, resuelta) para controlar las reparaciones. | 5 | Alta |
-| US23 | Como administrador, quiero publicar comunicados oficiales para que todos los residentes los reciban en la app. | 3 | Alta |
 | US31 | Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme. | 5 | Alta |
-| US26 | Como administrador, quiero un dashboard con el resumen de cobranzas, reservas e incidencias para tener el estado del edificio en una sola vista. | 8 | Alta |
+| US14 | Como usuario, quiero iniciar sesión de forma segura para proteger mi información y la del edificio. | 3 | Alta |
+| US02 | Como residente, quiero visualizar mis deudas y su estado de pago para saber cuánto y cuándo debo pagar. | 3 | Alta |
+| US16 | Como residente, quiero ver el catálogo de áreas comunes con sus reglas y disponibilidad para saber qué puedo reservar. | 3 | Alta |
+| US23 | Como administrador, quiero publicar comunicados oficiales para que todos los residentes los reciban en la app. | 3 | Alta |
+| US07 | Como administrador, quiero registrar los gastos administrativos y servicios compartidos para reflejarlos en el estado de cuenta del edificio. | 5 | Media |
 | US15 | Como administrador, quiero definir roles (administrador, miembro de junta, residente) para controlar qué puede hacer cada usuario. | 5 | Media |
+| US10 | Como empresa administradora, quiero cambiar de plan cuando incorporo o retiro edificios para ajustar mi facturación. | 5 | Media |
+| US25 | Como residente, quiero recibir notificaciones push de los comunicados importantes para no perderme información relevante. | 5 | Media |
+| US27 | Como miembro de la junta, quiero ver indicadores de morosidad y de incidencias pendientes para tomar decisiones informadas. | 5 | Media |
 | US19 | Como administrador, quiero configurar las reglas y el mantenimiento de cada espacio para mantener el orden en su uso. | 3 | Media |
 | US05 | Como residente, quiero recibir un recibo digital al confirmarse mi pago para tener respaldo de la transacción. | 3 | Media |
-| US10 | Como empresa administradora, quiero cambiar de plan cuando incorporo o retiro edificios para ajustar mi facturación. | 5 | Media |
 | US11 | Como responsable de pagos, quiero recibir la facturación mensual en soles (PEN) para agilizar la aprobación del presupuesto. | 3 | Media |
 | US08 | Como miembro de la junta, quiero exportar los reportes financieros en PDF para compartirlos con los propietarios. | 3 | Media |
 | US22 | Como residente, quiero recibir una notificación cuando cambie el estado de mi incidencia para estar informado. | 3 | Media |
 | SP01 | Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex (Spike Story). | 3 | Media |
 | US24 | Como residente, quiero consultar el reglamento interno y las actas en la nube para revisarlos cuando lo necesite. | 3 | Media |
-| US25 | Como residente, quiero recibir notificaciones push de los comunicados importantes para no perderme información relevante. | 5 | Media |
-| US27 | Como miembro de la junta, quiero ver indicadores de morosidad y de incidencias pendientes para tomar decisiones informadas. | 5 | Media |
-| US28 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | 2 | Baja |
 | US29 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | 5 | Baja |
 | US30 | Como administrador, quiero ver la evolución mensual de la morosidad en un gráfico para identificar tendencias. | 3 | Baja |
+| US28 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | 2 | Baja |
 
 ### 2.5. Strategic-Level Domain-Driven Design
 #### 2.5.1. EventStorming
