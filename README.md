@@ -129,7 +129,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
 </tr>
 <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).<br><br><b>TP1:</b> Reconoció la necesidad de mantener actualizados sus conocimientos al adaptar la documentación del curso anterior al desarrollo móvil. Consultó documentación oficial y los archivos de configuración de los repositorios para identificar diferencias entre la arquitectura descrita en el informe y el stack actual, dejando señalada la revisión pendiente de MySQL/Railway frente a PostgreSQL/Render. Diferenció los procedimientos previstos de las evidencias de ejecución todavía pendientes, evitando presentar la compilación o validación del APK como actividades realizadas. Este proceso reforzó la importancia del aprendizaje continuo y de verificar las fuentes técnicas antes de incorporarlas al informe del equipo.</td>
+    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).<br><br><b>TP1:</b> Reconoció la necesidad de actualizar sus conocimientos sobre configuración de aplicaciones móviles y despliegue de servicios. Consultó documentación oficial y los archivos de los repositorios para identificar el uso de Kotlin con Jetpack Compose y ASP.NET Core con PostgreSQL en Render. Contrastó la sección 4.1 con las evidencias del Sprint 1, incorporando las referencias a la generación del APK debug y su ejecución en el emulador Pixel 5, documentadas en 4.2.1.8. Este proceso reforzó la importancia de revisar la coherencia del informe conforme el equipo incorpora nuevas evidencias de desarrollo.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
@@ -3613,6 +3613,146 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 
 ## Capítulo IV: Product Implementation, Validation & Deployment
 
+### 4. Product Implementation & Validation
+
+Este capítulo documenta la implementación y validación de BuildingFex durante el Sprint 1: la Landing Page desarrollada con Vue 3 y desplegada en Vercel, los Web Services de IAM, Finances y SocialSpaces desarrollados con ASP.NET Core 10 y PostgreSQL en Render, y la aplicación Android construida con Kotlin y Jetpack Compose.
+
+La sección 4.1 describe el entorno, los repositorios, las convenciones de código y la configuración de despliegue de estos tres productos. La sección 4.2 reúne la planificación, el desarrollo, las pruebas y las evidencias del Sprint; la sección 4.3 presenta las entrevistas y la evaluación de la experiencia de usuario.
+
+La generación del APK debug y su ejecución en el emulador Pixel 5 están documentadas en 4.2.1.8. Las pantallas ejecutadas y la interacción con los servicios se presentan en 4.2.1.6 y 4.2.1.7.
+
+### 4.1. Software Configuration Management
+
+La gestión de configuración de BuildingFex establece los recursos y procedimientos para mantener versiones coherentes del informe, la landing page, la aplicación Android y la API. Su propósito es facilitar el trabajo del equipo, reproducir los entornos de desarrollo y conservar la trazabilidad entre requisitos, cambios y entregas.
+
+Los repositorios de [BuildingFex-UPC](https://github.com/BuildingFex-UPC) centralizan el informe, la aplicación Android, los Web Services y la Landing Page. Para el Sprint 1, la API utiliza PostgreSQL y se despliega en Render; la migración desde MySQL y la configuración del servicio están documentadas en 4.2.1.8.
+
+#### 4.1.1. Software Development Environment Configuration
+
+El entorno de BuildingFex utiliza Android Studio para la aplicación móvil, Node.js/npm para la Landing Page y el SDK de .NET 10 con PostgreSQL para los Web Services. La aplicación se ejecutó en un emulador Pixel 5, como se muestra en 4.2.1.6 y 4.2.1.8. Las versiones y dependencias se mantienen en los archivos de configuración de cada repositorio.
+
+| Herramienta o tecnología | Propósito en BuildingFex | Configuración de referencia |
+| :--- | :--- | :--- |
+| **Android Studio** | Edición, compilación y depuración de la aplicación móvil. | Abrir el repositorio FrontEnd, sincronizar Gradle y configurar un JDK compatible con el Android Gradle Plugin declarado. |
+| **Kotlin y Jetpack Compose** | Desarrollo de la lógica del cliente y de las interfaces Android. | Utilizar el catálogo de versiones y las dependencias del módulo `app`, conservando la configuración compartida. |
+| **Android SDK y emulador o dispositivo físico** | Ejecución y comprobación de la aplicación en Android. | Instalar el SDK solicitado por el proyecto y preparar un dispositivo compatible con su versión mínima. |
+| **Gradle Wrapper** | Gestión de dependencias y tareas de compilación. | Ejecutar el wrapper incluido en FrontEnd para utilizar la distribución definida por el repositorio. |
+| **Git y GitHub** | Control de versiones y colaboración sobre los productos del proyecto. | Configurar la identidad de cada integrante y trabajar con los repositorios de BuildingFex-UPC. |
+| **Visual Studio Code y Node.js/npm** | Edición y ejecución local de la landing page. | Instalar las dependencias declaradas en `package.json` y utilizar los scripts de Vite. |
+| **Vue 3 y Vite** | Componentes y construcción de la landing page. | Mantener las dependencias de LandingPage y sus scripts `dev`, `build` y `preview`. |
+| **SDK de .NET 10** | Restauración, compilación y ejecución del backend ASP.NET Core. | Consultar `global.json` y el proyecto `BuildingFex.Api.csproj`, cuyo framework objetivo es `net10.0`. |
+| **PostgreSQL y Docker** | Persistencia del backend y reproducción de su entorno local. | Configurar la conexión PostgreSQL; el repositorio incluye `docker-compose.yml` y un Dockerfile para la API. |
+
+**Preparación de la aplicación Android**
+
+1. Clonar el repositorio [FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) y abrir su carpeta raíz en Android Studio.
+2. Revisar `gradle/libs.versions.toml`, `gradle/wrapper/gradle-wrapper.properties` y `app/build.gradle.kts`; sincronizar las dependencias utilizando el wrapper del proyecto.
+3. Instalar el SDK definido en el módulo Android: `compileSdk` y `targetSdk` corresponden a API 37 y `minSdk` a API 29.
+4. Crear un dispositivo virtual compatible o habilitar la depuración USB en un dispositivo físico.
+5. Revisar la URL de la API y ejecutar la variante de desarrollo para comprobar el inicio de la aplicación y la comunicación con el backend.
+
+El repositorio declara Kotlin 2.2.10 y dependencias de Compose, Retrofit, OkHttp y coroutines. Estas versiones se mantendrán alineadas con el [catálogo de dependencias de FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/gradle/libs.versions.toml). La configuración Android y la URL base están declaradas en [app/build.gradle.kts](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/app/build.gradle.kts). El procedimiento de ejecución se apoya en la documentación de [Android Developers: Build and run your app](https://developer.android.com/studio/run).
+
+**Configuración local de la Landing Page y los Web Services**
+
+La Landing Page utiliza `npm ci` para instalar las dependencias del lockfile, `npm run dev` para iniciar el entorno local y `npm run build` para generar la distribución. Los scripts están definidos en [package.json](https://github.com/BuildingFex-UPC/LandingPage/blob/main/package.json).
+
+Los Web Services utilizan PostgreSQL como persistencia. Para ejecutar la API localmente, se configura una instancia de desarrollo y, desde `BuildingFex.Api`, se ejecutan `dotnet restore`, `dotnet build` y `dotnet run`. La conexión y la autenticación se configuran según las instrucciones de [BackEnd](https://github.com/BuildingFex-UPC/BackEnd).
+
+#### 4.1.2. Source Code Management
+
+Los productos de BuildingFex se gestionan en repositorios separados para mantener su historial y distinguir las responsabilidades del informe, la aplicación móvil, la API y la landing page.
+
+| Producto | Repositorio oficial | Contenido |
+| :--- | :--- | :--- |
+| **Informe** | [BuildingFex-UPC/report](https://github.com/BuildingFex-UPC/report.git) | Documento académico en Markdown y recursos gráficos. |
+| **Backend** | [BuildingFex-UPC/BackEnd](https://github.com/BuildingFex-UPC/BackEnd.git) | API ASP.NET Core, persistencia y archivos de despliegue. |
+| **Aplicación móvil** | [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) | Proyecto Android desarrollado con Kotlin y Jetpack Compose. |
+| **Landing page** | [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git) | Sitio de presentación comercial desarrollado con Vue y Vite. |
+
+**Estrategia de ramas**
+
+El informe se gestiona mediante ramas `feature/*`, pull requests hacia `develop` e integración de entregas en `main`. Los PR [#24](https://github.com/BuildingFex-UPC/report/pull/24) y [#26](https://github.com/BuildingFex-UPC/report/pull/26) registran la incorporación del capítulo IV y del Student Outcome. Las siguientes convenciones organizan las ramas del proyecto.
+
+| Rama | Responsabilidad | Origen y destino de integración |
+| :--- | :--- | :--- |
+| `main` | Mantener una versión estable del producto correspondiente. | Recibe versiones aprobadas y correcciones urgentes. |
+| `develop` | Integrar los cambios de la siguiente entrega. | Recibe funcionalidades y correcciones antes de preparar una versión estable. |
+| `feature/<descripcion>` | Desarrollar una funcionalidad o un cambio documental. | Se crea desde `develop` y se integra a `develop` mediante pull request. |
+| `release/<version>` | Preparar y revisar una entrega. | Se crea desde `develop` y se integra a `main` y `develop`. |
+| `hotfix/<descripcion>` | Corregir un problema crítico de la versión estable. | Se crea desde `main` y se integra a `main` y `develop`. |
+
+Antes de solicitar la integración, cada integrante revisará su diff y realizará las comprobaciones pertinentes: compilación del componente afectado o revisión de enlaces y formato para el informe. El pull request describirá el cambio, su relación con la historia de usuario o apartado del documento y las verificaciones realizadas. La revisión por otro integrante permitirá detectar inconsistencias antes de incorporar los cambios.
+
+Los mensajes de commit seguirán [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), con el formato `<tipo>(<alcance>): <descripcion>`. Se utilizarán `feat` para funcionalidades, `fix` para correcciones, `docs` para documentación, `style` para formato, `refactor` para reorganización, `test` para pruebas y `chore` para mantenimiento. Los tipos distintos de `feat` y `fix` son convenciones del equipo.
+
+Ejemplos de mensajes para este proyecto:
+
+~~~text
+feat(incidents): add incident report screen
+fix(auth): handle expired session
+docs(chapter-4): document mobile development environment
+chore(android): update build configuration
+~~~
+
+Cada entrega se relaciona con su commit y pull request. Las evidencias de participación en los repositorios de los tres productos se presentan en 4.2.1.9, junto con la organización de Aspect Leaders and Collaborators del Sprint 1.
+
+#### 4.1.3. Source Code Style Guide & Conventions
+
+Las convenciones de BuildingFex distinguen el cliente Android, los Web Services en C# y la Landing Page en Vue. La revisión de los cambios mantiene nombres, indentación y separación de responsabilidades coherentes con cada repositorio.
+
+| Tecnología | Convenciones del proyecto | Referencia |
+| :--- | :--- | :--- |
+| **Kotlin** | Indentación de 4 espacios; clases en `PascalCase`; funciones y variables en `camelCase`; constantes en `UPPER_SNAKE_CASE`; preferir `val` cuando no se requiera mutación. | [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html) |
+| **Jetpack Compose** | Funciones de interfaz que devuelven `Unit` en `PascalCase`, como `IncidentScreen`; separar presentación, estado y acceso a datos. | [Convenciones de Kotlin para funciones Composable](https://kotlinlang.org/docs/coding-conventions.html#function-names) |
+| **C#** | Indentación de 4 espacios; tipos y métodos públicos en `PascalCase`; parámetros y variables locales en `camelCase`; interfaces con prefijo `I` y métodos asíncronos con sufijo `Async`. | [Microsoft: C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) |
+| **HTML** | Indentación de 2 espacios, etiquetas y atributos en minúsculas, atributos entre comillas dobles y estructura semántica. Incluir texto alternativo pertinente en imágenes. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **CSS** | Indentación de 2 espacios, clases en `kebab-case` y reglas agrupadas por componente; evitar estilos duplicados y selectores innecesariamente complejos. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **JavaScript y Vue** | Usar `const` por defecto y `let` cuando sea necesario; variables y funciones en `camelCase`, componentes en `PascalCase` y archivos Vue con plantilla, lógica y estilos separados. | [Vue Style Guide](https://vuejs.org/style-guide/), complementada por las convenciones del equipo. |
+
+Los componentes de la Landing Page mantienen su estructura Vue; las convenciones se aplican a los cambios de cada componente.
+
+En Android se conservará la separación existente entre recursos compartidos de `core` y funcionalidades, evitando incorporar llamadas HTTP directamente en las funciones de interfaz. En el backend se mantendrán las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` de cada bounded context. Los identificadores técnicos y mensajes de commit se escribirán en inglés; los textos de la interfaz seguirán los recursos de idioma definidos por el producto.
+
+En el cliente Android, `MainActivity.kt` y `core/data/network/NetworkModule.kt` utilizan nombres en PascalCase para las clases y los archivos. En los Web Services, `IIncidentRepository` utiliza el prefijo I para identificar la interfaz de persistencia. Esta organización permite localizar los puntos de entrada y el acceso a datos de cada producto.
+
+El informe mantiene encabezados numerados, tablas, enlaces a los repositorios y rutas relativas a las capturas. La revisión de cada pull request comprueba el formato y la coherencia con las evidencias del Sprint.
+
+#### 4.1.4. Software Deployment Configuration
+
+Durante el Sprint 1 se desplegaron la Landing Page en Vercel y los Web Services en Render, y se generó el APK debug del cliente Android. La configuración se resume a continuación; sus capturas y registros de despliegue se presentan en 4.2.1.8.
+
+**Landing Page — Vercel**
+
+- **Repositorio:** [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage).
+- **URL:** [https://buildingfex.vercel.app/](https://buildingfex.vercel.app/).
+- **Framework y construcción:** Vue 3 con Vite, comando `npm run build` y directorio de salida `dist`.
+- **Publicación:** despliegue automático desde `main`; `vercel.json` configura la reescritura hacia `index.html` para las rutas del sitio.
+- **Variables:** `VITE_WEB_APP_URL`, `VITE_YOUTUBE_PRODUCT_ID` y `VITE_YOUTUBE_TEAM_ID`, según la configuración registrada en 4.2.1.8.
+
+**Web Services — ASP.NET Core, PostgreSQL y Render**
+
+- **Repositorio:** [BuildingFex-UPC/BackEnd](https://github.com/BuildingFex-UPC/BackEnd).
+- **URL:** [https://backend-1-lgr7.onrender.com](https://backend-1-lgr7.onrender.com).
+- **Documentación:** [Swagger UI](https://backend-1-lgr7.onrender.com/swagger); las pruebas de autenticación y consulta de recibos se presentan en 4.2.1.7.
+- **Construcción:** `Dockerfile` multi-stage con SDK y runtime de .NET 10; `render.yaml` define el servicio y la comprobación de salud en `/health`.
+- **Persistencia y autenticación:** PostgreSQL mediante `ConnectionStrings__DefaultConnection` y JWT mediante `TokenSettings__Secret`.
+- **Integraciones:** credenciales `MercadoPago__*` y orígenes `Cors__AllowedOrigins`, configurados mediante variables de entorno conforme a [deploy.env.example](https://github.com/BuildingFex-UPC/BackEnd/blob/main/deploy.env.example).
+
+**Aplicación Android — APK debug**
+
+El cliente del repositorio [FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd) utiliza `BuildConfig.API_BASE_URL` con la URL HTTPS de Render en las variantes debug y release. El archivo `app-debug.apk` se generó con Android Studio y se ejecutó en el emulador Pixel 5 para consumir los Web Services desplegados, según las evidencias de 4.2.1.6 y 4.2.1.8.
+
+Para regenerar el artefacto desde Windows, se sincronizan las dependencias y se ejecuta el wrapper desde la raíz de FrontEnd:
+
+~~~powershell
+.\gradlew.bat assembleDebug
+~~~
+
+El APK resultante se encuentra en `app/build/outputs/apk/debug/app-debug.apk`. La captura de Android Studio en 4.2.1.8 muestra el mensaje de generación satisfactoria del APK. La distribución mediante Firebase App Distribution corresponde a un Sprint posterior.
+
+<div style="page-break-after: always;"></div>
+
 ### 4.2. Landing Page, Services & Applications Implementation
 
 #### 4.2.1. Sprint 1
@@ -3975,186 +4115,6 @@ En el repositorio de la Landing Page se registraron 2 commits en la rama `main`,
 
 Los analíticos evidencian que, durante este primer Sprint, la construcción de la estructura base de los tres productos estuvo concentrada en el líder técnico del equipo, Alejandro Jave Chang, mientras que Antonin Suteau participó en las pruebas de aceptación y en la corrección de la documentación de los Web Services. Esta concentración se explica porque el Sprint 1 se enfocó en establecer la arquitectura base de los tres productos. Como acción de mejora para el Sprint 2, el equipo acordó distribuir de forma más equilibrada los commits entre todos los integrantes según la matriz de Aspect Leaders and Collaborators, trabajar en ramas `feature/*` integradas mediante Pull Requests hacia `develop`, y aplicar Conventional Commits en todos los mensajes.
 
-
-## Capítulo IV: Product Implementation & Validation
-
-### 4. Product Implementation & Validation
-
-Este capítulo presenta la configuración técnica necesaria para implementar y validar la solución móvil de BuildingFex. La aplicación Android permitirá a administradores y residentes acceder a los servicios de gestión de condominios desde sus dispositivos, utilizando el backend del proyecto para las operaciones de autenticación, finanzas, incidencias y reservas. La landing page se mantiene como punto de presentación comercial de la solución.
-
-Para esta etapa se reutilizan los componentes pertinentes del proyecto anterior y se incorpora el desarrollo móvil con Kotlin. La documentación se organiza conforme a los apartados de configuración del entorno, gestión del código fuente, convenciones y despliegue requeridos por el curso de Aplicaciones para Dispositivos Móviles.
-
-Los repositorios actuales permiten identificar la configuración del producto; sin embargo, su existencia no constituye evidencia de compilación, ejecución ni validación con usuarios. La distribución del APK y sus resultados de prueba se documentarán cuando se realicen esas actividades.
-
-### 4.1. Software Configuration Management
-
-La gestión de configuración de BuildingFex establece los recursos y procedimientos para mantener versiones coherentes del informe, la landing page, la aplicación Android y la API. Su propósito es facilitar el trabajo del equipo, reproducir los entornos de desarrollo y conservar la trazabilidad entre requisitos, cambios y entregas.
-
-La referencia técnica de este capítulo son los repositorios de la organización [BuildingFex-UPC](https://github.com/BuildingFex-UPC). El backend actual utiliza ASP.NET Core con PostgreSQL y dispone de configuración de despliegue en Render. Esta configuración corresponde a la etapa móvil y actualiza la referencia de MySQL y Railway descrita en los apartados arquitectónicos anteriores del informe; la actualización de esos diagramas y descripciones queda pendiente de su revisión.
-
-#### 4.1.1. Software Development Environment Configuration
-
-El entorno de desarrollo combina herramientas para la aplicación Android y para los componentes reutilizados. Cada integrante deberá emplear las versiones declaradas en los archivos de configuración de los repositorios, evitando cambios individuales que alteren la compilación del proyecto.
-
-| Herramienta o tecnología | Propósito en BuildingFex | Configuración de referencia |
-| :--- | :--- | :--- |
-| **Android Studio** | Edición, compilación y depuración de la aplicación móvil. | Abrir el repositorio FrontEnd, sincronizar Gradle y configurar un JDK compatible con el Android Gradle Plugin declarado. |
-| **Kotlin y Jetpack Compose** | Desarrollo de la lógica del cliente y de las interfaces Android. | Utilizar el catálogo de versiones y las dependencias del módulo `app`, conservando la configuración compartida. |
-| **Android SDK y emulador o dispositivo físico** | Ejecución y comprobación de la aplicación en Android. | Instalar el SDK solicitado por el proyecto y preparar un dispositivo compatible con su versión mínima. |
-| **Gradle Wrapper** | Gestión de dependencias y tareas de compilación. | Ejecutar el wrapper incluido en FrontEnd para utilizar la distribución definida por el repositorio. |
-| **Git y GitHub** | Control de versiones y colaboración sobre los productos del proyecto. | Configurar la identidad de cada integrante y trabajar con los repositorios de BuildingFex-UPC. |
-| **Visual Studio Code y Node.js/npm** | Edición y ejecución local de la landing page. | Instalar las dependencias declaradas en `package.json` y utilizar los scripts de Vite. |
-| **Vue 3 y Vite** | Componentes y construcción de la landing page. | Mantener las dependencias de LandingPage y sus scripts `dev`, `build` y `preview`. |
-| **SDK de .NET 10** | Restauración, compilación y ejecución del backend ASP.NET Core. | Consultar `global.json` y el proyecto `BuildingFex.Api.csproj`, cuyo framework objetivo es `net10.0`. |
-| **PostgreSQL y Docker** | Persistencia del backend y reproducción de su entorno local. | Configurar la conexión PostgreSQL; el repositorio incluye `docker-compose.yml` y un Dockerfile para la API. |
-
-**Preparación de la aplicación Android**
-
-1. Clonar el repositorio [FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) y abrir su carpeta raíz en Android Studio.
-2. Revisar `gradle/libs.versions.toml`, `gradle/wrapper/gradle-wrapper.properties` y `app/build.gradle.kts`; sincronizar las dependencias utilizando el wrapper del proyecto.
-3. Instalar el SDK requerido. En la configuración revisada, `compileSdk` y `targetSdk` corresponden a API 37 y `minSdk` a API 29. Estos valores describen el repositorio y deberán comprobarse al preparar el entorno.
-4. Crear un dispositivo virtual compatible o habilitar la depuración USB en un dispositivo físico.
-5. Revisar la URL de la API y ejecutar la variante de desarrollo para comprobar el inicio de la aplicación y la comunicación con el backend.
-
-El repositorio declara Kotlin 2.2.10 y dependencias de Compose, Retrofit, OkHttp y coroutines. Estas versiones se mantendrán alineadas con el [catálogo de dependencias de FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/gradle/libs.versions.toml). La configuración Android y la URL base están declaradas en [app/build.gradle.kts](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/app/build.gradle.kts). El procedimiento de ejecución se apoya en la documentación de [Android Developers: Build and run your app](https://developer.android.com/studio/run).
-
-**Preparación de los componentes reutilizados**
-
-Para la landing page, se clonará LandingPage y se ejecutarán `npm ci`, `npm run dev` y `npm run build` para instalar las dependencias del lockfile, iniciar el entorno local y generar la distribución. Los comandos de desarrollo y construcción están definidos en su [package.json](https://github.com/BuildingFex-UPC/LandingPage/blob/main/package.json).
-
-Para la API, se clonará BackEnd y se preparará una instancia PostgreSQL local o mediante Docker. Desde la carpeta `BuildingFex.Api` se ejecutarán `dotnet restore`, `dotnet build` y `dotnet run`, usando una conexión de desarrollo y la configuración de autenticación correspondiente. Las instrucciones del [repositorio BackEnd](https://github.com/BuildingFex-UPC/BackEnd) servirán como referencia para reproducir el entorno.
-
-#### 4.1.2. Source Code Management
-
-Los productos de BuildingFex se gestionan en repositorios separados para mantener su historial y distinguir las responsabilidades del informe, la aplicación móvil, la API y la landing page.
-
-| Producto | Repositorio oficial | Contenido |
-| :--- | :--- | :--- |
-| **Informe** | [BuildingFex-UPC/report](https://github.com/BuildingFex-UPC/report.git) | Documento académico en Markdown y recursos gráficos. |
-| **Backend** | [BuildingFex-UPC/BackEnd](https://github.com/BuildingFex-UPC/BackEnd.git) | API ASP.NET Core, persistencia y archivos de despliegue. |
-| **Aplicación móvil** | [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) | Proyecto Android desarrollado con Kotlin y Jetpack Compose. |
-| **Landing page** | [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git) | Sitio de presentación comercial desarrollado con Vue y Vite. |
-
-**Estrategia de ramas**
-
-Se establece un flujo de trabajo basado en GitFlow. El repositorio local del informe ya dispone de las ramas `main`, `develop` y `feature/hermoza`; las siguientes convenciones servirán como política de integración para los productos del equipo, sin asumir que todas las ramas o protecciones están configuradas en cada repositorio.
-
-| Rama | Responsabilidad | Origen y destino de integración |
-| :--- | :--- | :--- |
-| `main` | Mantener una versión estable del producto correspondiente. | Recibe versiones aprobadas y correcciones urgentes. |
-| `develop` | Integrar los cambios de la siguiente entrega. | Recibe funcionalidades y correcciones antes de preparar una versión estable. |
-| `feature/<descripcion>` | Desarrollar una funcionalidad o un cambio documental. | Se crea desde `develop` y se integra a `develop` mediante pull request. |
-| `release/<version>` | Preparar y revisar una entrega. | Se crea desde `develop` y se integra a `main` y `develop`. |
-| `hotfix/<descripcion>` | Corregir un problema crítico de la versión estable. | Se crea desde `main` y se integra a `main` y `develop`. |
-
-Antes de solicitar la integración, cada integrante revisará su diff y realizará las comprobaciones pertinentes: compilación del componente afectado o revisión de enlaces y formato para el informe. El pull request describirá el cambio, su relación con la historia de usuario o apartado del documento y las verificaciones realizadas. La revisión por otro integrante permitirá detectar inconsistencias antes de incorporar los cambios.
-
-Los mensajes de commit seguirán [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), con el formato `<tipo>(<alcance>): <descripcion>`. Se utilizarán `feat` para funcionalidades, `fix` para correcciones, `docs` para documentación, `style` para formato, `refactor` para reorganización, `test` para pruebas y `chore` para mantenimiento. Los tipos distintos de `feat` y `fix` son convenciones del equipo.
-
-Ejemplos de mensajes para este proyecto:
-
-~~~text
-feat(incidents): add incident report screen
-fix(auth): handle expired session
-docs(chapter-4): document mobile development environment
-chore(android): update build configuration
-~~~
-
-Las entregas aprobadas podrán identificarse mediante etiquetas `v<major>.<minor>.<patch>`, asociadas al commit correspondiente y a sus artefactos. El informe registrará las evidencias de colaboración cuando estén disponibles; este apartado define el procedimiento y no acredita revisiones todavía no realizadas.
-
-#### 4.1.3. Source Code Style Guide & Conventions
-
-Las convenciones de código buscan mantener una base comprensible entre los integrantes y facilitar la revisión de los componentes reutilizados y del cliente Android. Se conservará el estilo de cada repositorio, aplicando las siguientes reglas a los cambios nuevos.
-
-| Tecnología | Convenciones del proyecto | Referencia |
-| :--- | :--- | :--- |
-| **Kotlin** | Indentación de 4 espacios; clases en `PascalCase`; funciones y variables en `camelCase`; constantes en `UPPER_SNAKE_CASE`; preferir `val` cuando no se requiera mutación. | [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html) |
-| **Jetpack Compose** | Funciones de interfaz que devuelven `Unit` en `PascalCase`, como `IncidentScreen`; separar presentación, estado y acceso a datos. | [Convenciones de Kotlin para funciones Composable](https://kotlinlang.org/docs/coding-conventions.html#function-names) |
-| **C#** | Indentación de 4 espacios; tipos y métodos públicos en `PascalCase`; parámetros y variables locales en `camelCase`; interfaces con prefijo `I` y métodos asíncronos con sufijo `Async`. | [Microsoft: C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) |
-| **HTML** | Indentación de 2 espacios, etiquetas y atributos en minúsculas, atributos entre comillas dobles y estructura semántica. Incluir texto alternativo pertinente en imágenes. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
-| **CSS** | Indentación de 2 espacios, clases en `kebab-case` y reglas agrupadas por componente; evitar estilos duplicados y selectores innecesariamente complejos. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
-| **JavaScript y Vue** | Usar `const` por defecto y `let` cuando sea necesario; variables y funciones en `camelCase`, componentes en `PascalCase` y archivos Vue con plantilla, lógica y estilos separados. | [Vue Style Guide](https://vuejs.org/style-guide/), complementada por las convenciones del equipo. |
-
-La guía de Vue se utilizará como referencia orientativa, considerando que su propia documentación indica que necesita actualización. No se impondrá un cambio de API ni una reorganización del código reutilizado únicamente por adoptar estas convenciones.
-
-En Android se conservará la separación existente entre recursos compartidos de `core` y funcionalidades, evitando incorporar llamadas HTTP directamente en las funciones de interfaz. En el backend se mantendrán las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` de cada bounded context. Los identificadores técnicos y mensajes de commit se escribirán en inglés; los textos de la interfaz seguirán los recursos de idioma definidos por el producto.
-
-Los siguientes ejemplos ilustran nombres y formato; no constituyen evidencia de funcionalidades implementadas:
-
-~~~kotlin
-data class IncidentSummary(
-    val id: String,
-    val description: String
-)
-
-fun hasIncidentDescription(description: String): Boolean {
-    return description.isNotBlank()
-}
-~~~
-
-~~~csharp
-public interface IIncidentRepository
-{
-    Task<Incident?> FindByExternalIdAsync(string externalId);
-}
-~~~
-
-Para documentación se mantendrán encabezados numerados, tablas legibles, enlaces descriptivos y rutas relativas válidas a imágenes. Antes de integrar cambios se utilizará el formateo del IDE y se revisará la compilación. No se afirmará la ejecución de linters o pruebas automatizadas cuando no exista una comprobación registrada.
-
-#### 4.1.4. Software Deployment Configuration
-
-La configuración de despliegue distingue tres productos: la landing page accesible desde un navegador, la API que procesa las operaciones y la aplicación Android que se instalará en los dispositivos de validación. Los siguientes procedimientos documentan cómo preparar o reproducir sus entregas.
-
-**Landing page — Vercel**
-
-La landing del proyecto se encuentra en [https://buildingfex.vercel.app/](https://buildingfex.vercel.app/), enlace proporcionado por el equipo y accesible durante la revisión. Su código corresponde a [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git).
-
-Para reproducir o actualizar su despliegue:
-
-1. Importar el repositorio LandingPage en Vercel y verificar la rama de producción; se establece `main` como referencia para las entregas estables.
-2. Seleccionar la configuración de Vite, instalar dependencias con `npm ci` y construir con `npm run build`.
-3. Configurar `dist` como directorio de salida, salvo que la configuración de Vite declare otro destino.
-4. Publicar y comprobar navegación, carga de recursos, adaptación a pantallas móviles y enlaces de contacto.
-5. Registrar la URL, el commit desplegado y las capturas pertinentes para la entrega académica.
-
-Este procedimiento se apoya en la documentación de [Vite on Vercel](https://vercel.com/docs/frameworks/frontend/vite). La disponibilidad de la URL no acredita por sí sola la rama, la integración continua ni la configuración privada del panel de Vercel; esos datos se confirmarán mediante evidencia del equipo.
-
-**Backend — ASP.NET Core, PostgreSQL y Render**
-
-El [Dockerfile de BackEnd](https://github.com/BuildingFex-UPC/BackEnd/blob/main/Dockerfile) contempla la publicación de la API en configuración Release y su ejecución con ASP.NET Core 10. El [Blueprint de Render](https://github.com/BuildingFex-UPC/BackEnd/blob/main/render.yaml) define un servicio Docker y una comprobación de salud en `/health`.
-
-Para reproducir el despliegue:
-
-1. Conectar BackEnd a Render y crear el servicio a partir de `render.yaml`, revisando los recursos y el plan antes de aprovisionarlos.
-2. Preparar PostgreSQL y registrar `ConnectionStrings__DefaultConnection` con el formato esperado por Npgsql.
-3. Configurar `TokenSettings__Secret` y, cuando corresponda, las variables `MercadoPago__*` y `Cors__AllowedOrigins`, según [deploy.env.example](https://github.com/BuildingFex-UPC/BackEnd/blob/main/deploy.env.example).
-4. Construir el contenedor y revisar su arranque, conectividad con PostgreSQL y endpoint `/health`.
-5. Confirmar la URL HTTPS y comprobar desde el cliente las operaciones de autenticación y una consulta representativa antes de registrar evidencias de ejecución.
-
-El repositorio también incluye [railway.toml](https://github.com/BuildingFex-UPC/BackEnd/blob/main/railway.toml), como configuración alternativa de despliegue Docker con comprobación en `/health`. Su presencia no implica que Railway sea el proveedor actualmente utilizado ni modifica el proveedor PostgreSQL declarado por la API.
-
-**Aplicación Android — compilación y distribución para validación**
-
-La aplicación se gestionará desde [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git). Su configuración declara `https://backend-1-lgr7.onrender.com` en `BuildConfig.API_BASE_URL` para las variantes de desarrollo y release. Esta dirección corresponde a la configuración del código; deberá comprobarse su disponibilidad antes de validar la aplicación, sin asumir que el servicio está operativo.
-
-El procedimiento previsto para obtener un APK de pruebas es:
-
-1. Sincronizar Gradle y revisar la URL base, las dependencias y los permisos de comunicación con la API.
-2. Seleccionar la variante `debug` y ejecutar en Windows, desde la raíz de FrontEnd:
-
-~~~powershell
-.\gradlew.bat assembleDebug
-~~~
-
-3. Localizar el artefacto generado en `app/build/outputs/apk/debug/app-debug.apk` e instalarlo en un emulador o dispositivo compatible.
-4. Comprobar el inicio de sesión, acceso a la información por rol y una operación de los módulos priorizados, incluyendo la respuesta ante errores de red.
-5. Registrar versión, commit, dispositivo, versión de Android, fecha, resultados y capturas; compartir el APK mediante el canal académico acordado por el equipo.
-
-El APK debug se destinará a pruebas académicas. Una entrega release requerirá configurar su firma y custodiar la clave correspondiente; no se contempla publicación en Google Play en este avance. Las claves del backend y credenciales de servicios no se incorporarán al APK ni al repositorio.
-
-La generación, instalación y validación del APK permanecen pendientes de comprobación. Este apartado describe el procedimiento y la configuración encontrada en los repositorios; las evidencias de ejecución se incorporarán cuando el equipo realice esas actividades.
-
-<div style="page-break-after: always;"></div>
 
 ### 4.3. Validation Interviews
 
