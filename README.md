@@ -87,7 +87,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b> Investigó y aplicó técnicas de entrevista estructurada (sección 2.2), la construcción del Product Backlog —épicas, User Stories, Spike Stories y estimación con Story Points sobre la sucesión de Fibonacci (sección 2.4.3)— y el modelo C4 para la Software Architecture (sección 2.5.3). Reclasificó la US29 de EP01 a EP02 por corresponder a egresos recurrentes e incorporó la Spike Story SP01 sobre almacenamiento seguro de documentos (EP07).</td>
+    <td><b>AV1:</b> Investigó y aplicó técnicas de entrevista estructurada (sección 2.2), la construcción del Product Backlog —épicas, User Stories, Spike Stories y estimación con Story Points sobre la sucesión de Fibonacci (sección 2.4.3)— y el modelo C4 para la Software Architecture (sección 2.5.3). Reclasificó la US29 de EP01 a EP02 por corresponder a egresos recurrentes e incorporó la Spike Story SP01 sobre almacenamiento seguro de documentos (EP07).<br><br><b>TP1:</b> Elaboró las secciones 4., 4.1. y 4.1.1–4.1.4 del capítulo Product Implementation &amp; Validation, investigando la configuración del entorno Android con Kotlin y Jetpack Compose, las convenciones de código y los procedimientos de despliegue de BuildingFex. Contrastó los repositorios actuales para documentar ASP.NET Core/PostgreSQL y Render, y aplicó GitFlow mediante una rama feature, cinco commits pequeños con Conventional Commits y su integración en develop mediante el <a href="https://github.com/BuildingFex-UPC/report/pull/24">PR #24</a>. Esta actividad consolidó sus conocimientos de gestión de configuración y trazabilidad de cambios en un proyecto colaborativo.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
@@ -113,7 +113,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).</td>
+    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).<br><br><b>TP1:</b> Reconoció la necesidad de mantener actualizados sus conocimientos al adaptar la documentación del curso anterior al desarrollo móvil. Consultó documentación oficial y los archivos de configuración de los repositorios para identificar diferencias entre la arquitectura descrita en el informe y el stack actual, dejando señalada la revisión pendiente de MySQL/Railway frente a PostgreSQL/Render. Diferenció los procedimientos previstos de las evidencias de ejecución todavía pendientes, evitando presentar la compilación o validación del APK como actividades realizadas. Este proceso reforzó la importancia del aprendizaje continuo y de verificar las fuentes técnicas antes de incorporarlas al informe del equipo.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
