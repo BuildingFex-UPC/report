@@ -4266,7 +4266,138 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
 
 
+### 4.3.3. Evaluaciones según heurísticas
 
+Esta sección presenta el proceso de evaluación de la experiencia propuesta para BuildingFex a partir de las sesiones de validación realizadas. La evaluación considera principios de **usabilidad, arquitectura de información e inclusive design**, tomando como referencia las principales pantallas de la Landing Page y de la aplicación móvil desarrolladas durante el Sprint 1.
+
+La evaluación permitió identificar problemas relacionados principalmente con la claridad de las opciones disponibles, la organización de la información y la comunicación del estado de determinadas funcionalidades. Para cada problema identificado se estableció un nivel de severidad y una recomendación de mejora.
+
+#### UX Heuristics & Principles Evaluation
+
+**Usability - Inclusive Design - Information Architecture**
+
+**CARRERA:** Ingeniería de Software  
+**CURSO:** 1acc0238 Aplicaciones para dispositivos móviles  
+**NRC:** 4939  
+**PROFESOR:** David Gerardo Quevedo Velasco  
+**AUDITOR CLIENTE(S):** Danitza Ivonne Heredia Hoyos, Jude Alessandro Hermoza Quispe, Alejandro Manuel Jave Chang, Mathias Javier Murillo y Antonin Suteau  
+**SITE O APP A EVALUAR:** BuildingFex – Landing Page y aplicación móvil
+
+#### Tareas a evaluar
+
+Durante la evaluación se consideraron las principales tareas correspondientes al alcance funcional del Sprint 1:
+
+- Iniciar sesión en la aplicación.
+- Registrar una cuenta de administrador.
+- Activar una cuenta mediante código de invitación.
+- Consultar y gestionar residentes.
+- Configurar parámetros financieros.
+- Generar recibos.
+- Consultar información financiera.
+- Consultar deudas y pagos.
+- Configurar el método de pago mediante Mercado Pago.
+- Consultar áreas comunes.
+- Realizar reservas de áreas comunes.
+- Revisar la propuesta de valor y los planes de suscripción de la Landing Page.
+
+No se consideraron las funcionalidades de incidencias, comunicados y documentos, debido a que corresponden al Sprint 2 y no forman parte del alcance funcional evaluado en esta sesión.
+
+#### Escala de severidad
+
+| Nivel | Descripción |
+|---|---|
+| **1 – Superficial** | Problema menor que no afecta significativamente la experiencia del usuario. |
+| **2 – Menor** | Problema que puede generar cierta dificultad o confusión, pero permite completar la tarea. |
+| **3 – Mayor** | Problema que afecta de manera importante la comprensión o realización de una tarea. |
+| **4 – Muy grave** | Problema crítico que impide o dificulta considerablemente completar una tarea. |
+
+#### Tabla resumen
+
+| # | Problema | Escala de severidad | Heurística / Principio violado(a) |
+|---|---|---:|---|
+| **1** | Las opciones de inicio de sesión, registro de administrador y activación mediante código de invitación se presentan dentro del mismo contexto de acceso, lo que puede generar dudas sobre qué opción corresponde a cada usuario. | **2 – Menor** | **Usability: Recognition rather than recall** |
+| **2** | La configuración financiera y las automatizaciones se presentan dentro de una misma sección, aunque corresponden a acciones con objetivos diferentes. | **2 – Menor** | **Information Architecture: Clear** |
+| **3** | Los indicadores de monto pendiente y total pagado en S/0 no permiten identificar claramente el estado de las cuotas o si todavía no se han generado recibos. | **3 – Mayor** | **Usability: Visibility of system status** |
+| **4** | El control para habilitar Mercado Pago no comunica de manera suficientemente clara su estado actual ni el efecto de activarlo. | **2 – Menor** | **Usability: Visibility of system status** |
+| **5** | Los planes de la Landing Page muestran precio y cantidad de departamentos, pero no permiten comparar claramente las funcionalidades incluidas en cada plan. | **2 – Menor** | **Information Architecture: Complete / Clear** |
+
+#### Descripción de problemas
+
+##### PROBLEMA #1
+
+**Severidad:** 2 – Menor
+
+**Heurística violada:** Usability: Recognition rather than recall
+
+**Problema:**  
+En la pantalla de acceso se presentan las opciones para iniciar sesión, registrar un administrador y activar una cuenta mediante un código de invitación. Al encontrarse dentro del mismo contexto, un usuario nuevo podría no identificar inmediatamente cuál de estas opciones corresponde a su situación. Esto puede generar confusión especialmente para los residentes, quienes utilizan un código de invitación para activar su cuenta en lugar de realizar un registro convencional.
+
+**Screenshot:** `img/Login-mockup.png`
+
+**Recomendación:**  
+Diferenciar visualmente las opciones según el tipo de usuario y utilizar textos de apoyo breves que permitan identificar la acción correspondiente. Por ejemplo, se puede presentar una opción específica para administradores y otra para usuarios que poseen un código de invitación.
+
+##### PROBLEMA #2
+
+**Severidad:** 2 – Menor
+
+**Heurística violada:** Information Architecture: Clear
+
+**Problema:**  
+Dentro de la sección de finanzas se presentan elementos relacionados con la configuración de parámetros financieros, como la cuota mensual base y la tasa de mora, junto con acciones de automatización como generar el recibo del mes y crear recibos vencidos. Estas acciones tienen objetivos diferentes: unas permiten establecer reglas y otras ejecutar procesos. Presentarlas dentro de la misma sección puede dificultar la diferenciación entre configuración y acciones operativas.
+
+**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+
+**Recomendación:**  
+Separar visualmente ambos grupos mediante subtítulos, tarjetas o bloques diferenciados. Se recomienda mantener un bloque destinado a la configuración financiera y otro destinado a las automatizaciones y acciones operativas.
+
+##### PROBLEMA #3
+
+**Severidad:** 3 – Mayor
+
+**Heurística violada:** Usability: Visibility of system status
+
+**Problema:**  
+En la sección de finanzas se muestran indicadores como “monto pendiente” y “total pagado”. Cuando estos valores aparecen en S/0, el usuario puede no identificar con claridad si esto significa que no existen deudas, que todas las cuotas ya fueron pagadas o que todavía no se han generado recibos. El valor numérico por sí solo no comunica completamente el estado actual del proceso financiero.
+
+**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+
+**Recomendación:**  
+Complementar los indicadores con un mensaje contextual que explique el significado del valor mostrado. Por ejemplo, se podría indicar “No existen cuotas generadas”, “Todas las cuotas están pagadas” o “No existen pagos registrados”, según corresponda al estado real del sistema.
+
+##### PROBLEMA #4
+
+**Severidad:** 2 – Menor
+
+**Heurística violada:** Usability: Visibility of system status
+
+**Problema:**  
+La configuración de pago mediante Mercado Pago se presenta mediante un control que permite activar el método. Sin embargo, el usuario puede necesitar información adicional para identificar si el método se encuentra actualmente activo y qué efecto tendrá sobre el proceso de pago al modificar esta configuración.
+
+**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+
+**Recomendación:**  
+Mostrar explícitamente el estado actual del método de pago, por ejemplo, “Mercado Pago activo” o “Mercado Pago inactivo”. Asimismo, se puede incorporar una breve descripción que explique qué sucede cuando el administrador activa o desactiva esta opción.
+
+##### PROBLEMA #5
+
+**Severidad:** 2 – Menor
+
+**Heurística violada:** Information Architecture: Complete / Clear
+
+**Problema:**  
+La sección de suscripciones de la Landing Page presenta los planes Esencial, Estándar y Escala junto con su precio mensual y el rango de departamentos correspondiente. Sin embargo, la información mostrada no permite identificar claramente las diferencias funcionales entre las alternativas. Esto puede dificultar que un administrador o junta de propietarios determine rápidamente qué plan se adapta mejor a sus necesidades.
+
+**Screenshot:** `img/sprint1-landing-planes.png`
+
+**Recomendación:**  
+Incluir una comparación breve de las principales funcionalidades disponibles en cada plan o agregar una opción como “Ver características” que permita consultar las diferencias entre las alternativas antes de seleccionar el botón “Suscribirse”.
+
+#### Conclusión de la evaluación
+
+A partir de la evaluación heurística realizada, se identificaron principalmente oportunidades de mejora relacionadas con la **claridad de las opciones, la organización de la información y la visibilidad del estado de determinadas funcionalidades**. Los problemas encontrados no impiden de manera general la ejecución de las tareas evaluadas, pero pueden generar confusión o requerir una interpretación adicional por parte de los usuarios.
+
+Las recomendaciones propuestas buscan mejorar la comprensión de las acciones disponibles, diferenciar los tipos de información dentro de las secciones financieras y comunicar de manera más explícita los estados del sistema. Estas mejoras pueden ser consideradas para las siguientes iteraciones del producto, especialmente durante la evolución de las funcionalidades del Sprint 2.
 
 ### Conclusiones y recomendaciones
 
