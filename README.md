@@ -82,12 +82,20 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td rowspan="5">Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de ingeniería de software</td>
     <td>Mathias Javier Murillo</td>
-    <td><b>AV1:</b>Investigué y apliqué conceptos de arquitectura e integración técnica mediante API Web Services (sección 2.5), además de la estructuración de maquetación y diseño de interfaces con HTML y CSS. Esto me permitió actualizar mis competencias técnicas y asegurar una correcta solución de software para el proyecto.</td>
-    <td rowspan="5"><b>AV1:</b>Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.</td>
+    <td>
+        <b>AV1:</b> Investigué y apliqué conceptos de arquitectura e integración técnica mediante API Web Services (sección 2.5), además de la estructuración de maquetación y diseño de interfaces con HTML y CSS. Esto me permitió actualizar mis competencias técnicas y asegurar una correcta solución de software para el proyecto.
+        <br><br>
+        <b>TP1:</b> Investigué y apliqué conceptos avanzados de UX/UI mediante la elaboración de wireframes y mockups de la aplicación móvil, así como el modelado de la arquitectura e interacciones del sistema a través de diagramas clave. Esto me permitió fortalecer mis competencias en diseño de soluciones móviles y documentación técnica para el proyecto.
+    </td>
+    <td rowspan="5">
+        <b>AV1:</b> Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.
+        <br><br>
+        <b>TP1:</b> Como equipo, integramos técnicas de diseño de interfaces y modelado de sistemas para la solución móvil, lo que nos permitió consolidar nuestros conocimientos arquitectónicos y asegurar la trazabilidad del desarrollo profesional en el proyecto.
+    </td>
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b> Investigó y aplicó técnicas de entrevista estructurada (sección 2.2), la construcción del Product Backlog —épicas, User Stories, Spike Stories y estimación con Story Points sobre la sucesión de Fibonacci (sección 2.4.3)— y el modelo C4 para la Software Architecture (sección 2.5.3). Reclasificó la US29 de EP01 a EP02 por corresponder a egresos recurrentes e incorporó la Spike Story SP01 sobre almacenamiento seguro de documentos (EP07).</td>
+    <td><b>AV1:</b> Investigó y aplicó técnicas de entrevista estructurada (sección 2.2), la construcción del Product Backlog —épicas, User Stories, Spike Stories y estimación con Story Points sobre la sucesión de Fibonacci (sección 2.4.3)— y el modelo C4 para la Software Architecture (sección 2.5.3). Reclasificó la US29 de EP01 a EP02 por corresponder a egresos recurrentes e incorporó la Spike Story SP01 sobre almacenamiento seguro de documentos (EP07).<br><br><b>TP1:</b> Elaboró las secciones 4., 4.1. y 4.1.1–4.1.4 del capítulo Product Implementation &amp; Validation, investigando la configuración del entorno Android con Kotlin y Jetpack Compose, las convenciones de código y los procedimientos de despliegue de BuildingFex. Contrastó los repositorios actuales para documentar ASP.NET Core/PostgreSQL y Render, y aplicó GitFlow mediante una rama feature, cinco commits pequeños con Conventional Commits y su integración en develop mediante el <a href="https://github.com/BuildingFex-UPC/report/pull/24">PR #24</a>. Esta actividad consolidó sus conocimientos de gestión de configuración y trazabilidad de cambios en un proyecto colaborativo.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
@@ -108,12 +116,20 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td rowspan="5">Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software.</td>
     <td>Mathias Javier Murillo</td>
-    <td><b>AV1:</b>Identifiqué la necesidad de profundización en el desarrollo e integración de servicios web y lógica frontend. Asumí un aprendizaje autónomo para consolidar el diseño de interfaces y la comunicación de datos, reconociendo que la actualización continua es clave para responder a los estándares del proyecto.</td>
-    <td rowspan="5"><b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.</td>
-  </tr>
-  <tr>
+    <td>
+        <b>AV1:</b> Identifiqué la necesidad de profundización en el desarrollo e integración de servicios web y lógica frontend. Asumí un aprendizaje autónomo para consolidar el diseño de interfaces y la comunicación de datos, reconociendo que la actualización continua es clave para responder a los estándares del proyecto.
+        <br><br>
+        <b>TP1:</b> Reconocí la importancia de profundizar de forma autónoma en metodologías de diseño UX/UI para dispositivos móviles y estándares de modelado visual mediante diagramas. Esto me impulsó a investigar mejores prácticas para estructurar wireframes, mockups y flujos de arquitectura, asegurando que la solución responda de manera óptima a las necesidades del usuario y del proyecto.
+    </td>
+    <td rowspan="5">
+        <b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.
+        <br><br>
+        <b>TP1:</b> El trabajo colaborativo en esta etapa nos incentivó a investigar de manera continua y unificar criterios de diseño y modelado, fortaleciendo nuestra capacidad de adaptación técnica y el aprendizaje continuo como equipo.
+    </td>
+</tr>
+<tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).</td>
+    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).<br><br><b>TP1:</b> Reconoció la necesidad de mantener actualizados sus conocimientos al adaptar la documentación del curso anterior al desarrollo móvil. Consultó documentación oficial y los archivos de configuración de los repositorios para identificar diferencias entre la arquitectura descrita en el informe y el stack actual, dejando señalada la revisión pendiente de MySQL/Railway frente a PostgreSQL/Render. Diferenció los procedimientos previstos de las evidencias de ejecución todavía pendientes, evitando presentar la compilación o validación del APK como actividades realizadas. Este proceso reforzó la importancia del aprendizaje continuo y de verificar las fuentes técnicas antes de incorporarlas al informe del equipo.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
@@ -839,7 +855,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <tr> <td>US01</td><td>Administrador</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar cuotas mensuales</td></tr> 
   <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero registrar las cuotas mensuales de cada unidad para gestionar la cobranza del edificio.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existen unidades registradas.<br> <strong>When:</strong> el administrador registra una cuota mensual válida.<br> <strong>Then:</strong> el sistema crea la cuota asociada a la unidad y al período correspondiente.<br><br> <strong>AC02 – Given:</strong> existe una cuota registrada para la misma unidad y período.<br> <strong>When:</strong> el administrador intenta registrar otra cuota para ese período.<br> <strong>Then:</strong> el sistema rechaza el registro duplicado.<br><br> <strong>AC03 – Given:</strong> faltan datos requeridos para registrar la cuota.<br> <strong>When:</strong> el administrador intenta registrarla.<br> <strong>Then:</strong> el sistema rechaza el registro e informa la validación correspondiente. </td>
+  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen unidades registradas.<br> <strong>When:</strong> El administrador registra una cuota mensual válida.<br> <strong>Then:</strong> El sistema crea la cuota asociada a la unidad y al período correspondiente.<br><br> <strong>AC02 – Given:</strong> Existe una cuota registrada para la misma unidad y período.<br> <strong>When:</strong> El administrador intenta registrar otra cuota para ese período.<br> <strong>Then:</strong> El sistema rechaza el registro e informa que ya existe una cuota para la unidad y período indicados. <br><br> <strong>AC03 – Given:</strong> Faltan datos requeridos para registrar la cuota.<br> <strong>When:</strong> El administrador intenta registrar la cuota.<br> <strong>Then:</strong> El sistema rechaza el registro e informa los datos que deben completarse. </td>
   </tr> 
 </table>
 
@@ -851,7 +867,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <tr><td>US02</td><td>Residente</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar deudas y estado de pago</td></tr> 
   <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero visualizar mis deudas y su estado de pago para saber cuánto y cuándo debo pagar.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> el residente tiene cuotas registradas.<br> <strong>When:</strong> consulta su estado de cuenta.<br> <strong>Then:</strong> el sistema proporciona las cuotas pendientes y su estado de pago.<br><br> <strong>AC02 – Given:</strong> el residente no tiene deudas pendientes.<br> <strong>When:</strong> consulta su estado de cuenta.<br> <strong>Then:</strong> el sistema indica que no existen cuotas pendientes.<br><br> <strong>AC03 – Given:</strong> el usuario no está asociado a una unidad.<br> <strong>When:</strong> intenta consultar información financiera.<br> <strong>Then:</strong> el sistema rechaza el acceso. </td>
+  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El residente tiene cuotas registradas.<br> <strong>When:</strong> El residente consulta su estado de cuenta.<br> <strong>Then:</strong> El sistema muestra las cuotas pendientes y su estado de pago.<br><br> <strong>AC02 – Given:</strong> El residente no tiene deudas pendientes.<br> <strong>When:</strong> El residente consulta su estado de cuenta.<br> <strong>Then:</strong> El sistema informa que no existen cuotas pendientes.<br><br> <strong>AC03 – Given:</strong> El usuario no está asociado a una unidad.<br> <strong>When:</strong> El usuario intenta consultar información financiera.<br> <strong>Then:</strong> El sistema rechaza el acceso a la información financiera. </td>
   </tr> 
 </table>
 
@@ -863,7 +879,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <tr><td>US03</td><td>Residente</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar pago y comprobante</td></tr> 
   <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para dejar constancia del pago realizado.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe una cuota pendiente asociada al residente.<br> <strong>When:</strong> el residente registra un pago válido y adjunta el comprobante.<br> <strong>Then:</strong> el sistema registra el pago asociado a la cuota y conserva el comprobante.<br><br> <strong>AC02 – Given:</strong> no existe una cuota pendiente asociada al residente.<br> <strong>When:</strong> el residente intenta registrar un pago.<br> <strong>Then:</strong> el sistema rechaza el registro.<br><br> <strong>AC03 – Given:</strong> falta el comprobante requerido.<br> <strong>When:</strong> el residente intenta registrar el pago.<br> <strong>Then:</strong> el sistema rechaza el registro por información incompleta. </td>
+  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una cuota pendiente asociada al residente.<br> <strong>When:</strong> El residente registra un pago válido y adjunta el comprobante.<br> <strong>Then:</strong> El sistema registra el pago asociado a la cuota y conserva el comprobante.<br><br> <strong>AC02 – Given:</strong> No existe una cuota pendiente asociada al residente.<br> <strong>When:</strong> El residente intenta registrar un pago.<br> <strong>Then:</strong> El sistema rechaza el registro del pago..<br><br> <strong>AC03 – Given:</strong> Falta el comprobante requerido.<br> <strong>When:</strong> El residente intenta registrar el pago.<br> <strong>Then:</strong> El sistema rechaza el registro e informa que debe adjuntar el comprobante. </td>
   </tr> 
 </table>
 
@@ -876,7 +892,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <tr><td>US04</td><td>Administrador</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Enviar recordatorios automáticos de cobro</td></tr> 
   <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes para reducir la morosidad.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> un residente presenta una cuota vencida.<br> <strong>When:</strong> se ejecuta el proceso de recordatorios.<br> <strong>Then:</strong> el sistema envía un recordatorio de cobro al residente.<br><br> <strong>AC02 – Given:</strong> un residente no presenta cuotas vencidas.<br> <strong>When:</strong> se ejecuta el proceso de recordatorios.<br> <strong>Then:</strong> el sistema no envía un recordatorio de morosidad.<br><br> <strong>AC03 – Given:</strong> un recordatorio no puede ser enviado.<br> <strong>When:</strong> se ejecuta el proceso de notificación.<br> <strong>Then:</strong> el sistema registra el resultado del intento de envío. </td>
+  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Un residente presenta una cuota vencida.<br> <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br> <strong>Then:</strong> El sistema envía un recordatorio de cobro al residente.<br><br> <strong>AC02 – Given:</strong> Un residente no presenta cuotas vencidas.<br> <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br> <strong>Then:</strong> El sistema no envía un recordatorio de morosidad al residente.<br><br> <strong>AC03 – Given:</strong> Existe un recordatorio pendiente de envío.<br> <strong>When:</strong> El sistema intenta enviar la notificación.<br> <strong>Then:</strong> El sistema registra el resultado del intento de envío. </td>
   </tr> 
 </table>
 
@@ -888,7 +904,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <tr><td>US05</td><td>Residente</td><td>Media</td><td>EP01 – Gestión de cobranzas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir recibo digital</td></tr> 
   <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir un recibo digital al confirmarse mi pago para tener respaldo.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> un pago se encuentra confirmado.<br> <strong>When:</strong> el sistema procesa la confirmación.<br> <strong>Then:</strong> genera un recibo digital asociado al pago.<br><br> <strong>AC02 – Given:</strong> un pago no se encuentra confirmado.<br> <strong>When:</strong> el sistema procesa su estado.<br> <strong>Then:</strong> no genera un recibo como pago confirmado. </td>
+  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un pago confirmado.<br> <strong>When:</strong> El sistema procesa la confirmación del pago.<br> <strong>Then:</strong> El sistema genera un recibo digital asociado al pago.<br><br> <strong>AC02 – Given:</strong> El pago no se encuentra confirmado.<br> <strong>When:</strong> El sistema procesa el estado del pago.<br> <strong>Then:</strong> El sistema no genera un recibo como pago confirmado. </td>
   </tr> 
 </table>
 
@@ -899,7 +915,8 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US06</td><td>Miembro de la junta</td><td>Alta</td><td>EP02 – Reportes financieros</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar reporte financiero consolidado</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existen registros financieros del período solicitado.<br> <strong>When:</strong> el miembro de la junta consulta el reporte.<br> <strong>Then:</strong> el sistema proporciona los ingresos, egresos y morosidad correspondientes.<br><br> <strong>AC02 – Given:</strong> no existen registros financieros para el período.<br> <strong>When:</strong> se solicita el reporte.<br> <strong>Then:</strong> el sistema genera un reporte sin movimientos registrados.<br><br> <strong>AC03 – Given:</strong> el usuario no tiene permisos de junta.<br> <strong>When:</strong> solicita información financiera consolidada.<br> <strong>Then:</strong> el sistema rechaza el acceso. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea.</td></tr> 
+  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen registros financieros del período solicitado.<br> <strong>When:</strong> El miembro de la junta consulta el reporte.<br> <strong>Then:</strong> El sistema proporciona los ingresos, egresos y morosidad correspondientes.<br><br> <strong>AC02 – Given:</strong> No existen registros financieros para el período.<br> <strong>When:</strong>El miembro de la junta solicita el reporte.<br> <strong>Then:</strong> El sistema genera un reporte sin movimientos registrados.<br><br> <strong>AC03 – Given:</strong> El usuario no tiene permisos de miembro de la junta.<br> <strong>When:</strong> El usuario solicita información financiera consolidada.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td>
   </tr> 
 </table>
 
@@ -910,7 +927,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US07</td><td>Administrador</td><td>Media</td><td>EP02 – Reportes financieros</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar gastos administrativos</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero registrar los gastos administrativos y servicios compartidos para reflejarlos en el estado de cuenta.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> los datos del gasto son válidos.<br> <strong>When:</strong> el administrador registra el gasto.<br> <strong>Then:</strong> el sistema almacena el gasto asociado al período correspondiente.<br><br> <strong>AC02 – Given:</strong> faltan datos requeridos.<br> <strong>When:</strong> el administrador intenta registrar el gasto.<br> <strong>Then:</strong> el sistema rechaza el registro.<br><br> <strong>AC03 – Given:</strong> existe un gasto registrado.<br> <strong>When:</strong> se genera el estado de cuenta correspondiente.<br> <strong>Then:</strong> el sistema incluye dicho gasto en el resultado. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero registrar los gastos administrativos y servicios compartidos para reflejarlos en el estado de cuenta.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Los datos del gasto son válidos.<br> <strong>When:</strong> El administrador registra el gasto.<br> <strong>Then:</strong> El sistema almacena el gasto asociado al período correspondiente.<br><br> <strong>AC02 – Given:</strong> Faltan datos requeridos para registrar el gasto.<br> <strong>When:</strong> El administrador intenta registrar el gasto.<br> <strong>Then:</strong> El sistema rechaza el registro e informa los datos faltantes.<br><br> <strong>AC03 – Given:</strong> Existe un gasto registrado.<br> <strong>When:</strong> Se genera el estado de cuenta correspondiente.<br> <strong>Then:</strong> El sistema incluye el gasto registrado en el resultado. </td>
   </tr> 
 </table>
 
@@ -921,7 +938,8 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US08</td><td>Miembro de la junta</td><td>Media</td><td>EP02 – Reportes financieros</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Exportar reportes financieros en PDF</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero exportar los reportes financieros en PDF para compartirlos.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe un reporte financiero generado.<br> <strong>When:</strong> el miembro de la junta solicita su exportación.<br> <strong>Then:</strong> el sistema genera un archivo PDF con la información del reporte.<br><br> <strong>AC02 – Given:</strong> el usuario no tiene permisos para consultar reportes.<br> <strong>When:</strong> solicita una exportación.<br> <strong>Then:</strong> el sistema rechaza la operación. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero exportar los reportes financieros en PDF para compartirlos.</td></tr> 
+  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un reporte financiero generado.<br> <strong>When:</strong> El miembro de la junta solicita su exportación.<br> <strong>Then:</strong> El sistema genera un archivo PDF con la información del reporte.<br><br> <strong>AC02 – Given:</strong> El usuario no tiene permisos para consultar reportes financieros.<br> <strong>When:</strong> El usuario solicita la exportación de un reporte.<br> <strong>Then:</strong> El sistema rechaza la solicitud de exportación. </td>
   </tr> 
 </table>
 
@@ -932,7 +950,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US09</td><td>Empresa administradora</td><td>Alta</td><td>EP03 – Planes de suscripción</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Seleccionar plan según número de unidades</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero elegir un plan según el número de unidades para pagar solo por lo que necesito.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> la cantidad de unidades corresponde a un rango de plan disponible.<br> <strong>When:</strong> la empresa administradora selecciona el plan.<br> <strong>Then:</strong> el sistema asocia la suscripción al plan correspondiente.<br><br> <strong>AC02 – Given:</strong> la cantidad de unidades no corresponde a ningún plan disponible.<br> <strong>When:</strong> se intenta seleccionar un plan.<br> <strong>Then:</strong> el sistema rechaza la selección. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero elegir un plan según el número de unidades para pagar solo por lo que necesito.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> La cantidad de unidades corresponde a un rango de plan disponible.<br> <strong>When:</strong> La empresa administradora selecciona el plan.<br> <strong>Then:</strong> El sistema asocia la suscripción al plan correspondiente.<br><br> <strong>AC02 – Given:</strong> La cantidad de unidades no corresponde a ningún plan disponible.<br> <strong>When:</strong> La empresa administradora intenta seleccionar un plan.<br> <strong>Then:</strong> El sistema rechaza la selección e informa que no existe un plan aplicable. </td>
   </tr> 
 </table> 
 
@@ -943,7 +961,8 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US10</td><td>Empresa administradora</td><td>Media</td><td>EP03 – Planes de suscripción</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Cambiar plan de suscripción</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero cambiar de plan cuando incorporo o retiro edificios para ajustar mi facturación.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> la cantidad de unidades de la empresa cambia.<br> <strong>When:</strong> se actualiza la suscripción.<br> <strong>Then:</strong> el sistema determina el plan correspondiente a la nueva cantidad de unidades.<br><br> <strong>AC02 – Given:</strong> el nuevo plan tiene una tarifa diferente.<br> <strong>When:</strong> se actualiza la suscripción.<br> <strong>Then:</strong> el sistema aplica la nueva tarifa en la facturación correspondiente.<br><br> <strong>AC03 – Given:</strong> la cantidad de unidades no corresponde a un plan disponible.<br> <strong>When:</strong> se intenta actualizar la suscripción.<br> <strong>Then:</strong> el sistema rechaza el cambio. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero cambiar de plan cuando incorporo o retiro edificios para ajustar mi facturación.</td></tr> 
+  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> La cantidad de unidades asociadas a la empresa ha cambiado.<br> <strong>When:</strong>La empresa administradora actualiza su suscripción.<br> <strong>Then:</strong> El sistema determina el plan correspondiente a la nueva cantidad de unidades.<br><br> <strong>AC02 – Given:</strong> El nuevo plan tiene una tarifa diferente al plan actual.<br> <strong>When:</strong> La empresa administradora confirma el cambio de plan.<br> <strong>Then:</strong> El sistema aplica la nueva tarifa a la facturación correspondiente.<br><br> <strong>AC03 – Given:</strong> La nueva cantidad de unidades no corresponde a un plan disponible.<br> <strong>When:</strong> La empresa administradora intenta actualizar la suscripción.<br> <strong>Then:</strong> El sistema rechaza el cambio de plan. </td>
   </tr> 
 </table>
 
@@ -954,7 +973,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US11</td><td>Responsable de pagos</td><td>Media</td><td>EP03 – Planes de suscripción</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir facturación mensual en soles</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como responsable de pagos, quiero recibir la facturación mensual en soles (PEN) para agilizar su aprobación.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe una suscripción activa.<br> <strong>When:</strong> se genera la facturación mensual.<br> <strong>Then:</strong> el sistema genera el importe expresado en soles (PEN).<br><br> <strong>AC02 – Given:</strong> la facturación mensual se genera correctamente.<br> <strong>When:</strong> el responsable de pagos consulta la facturación.<br> <strong>Then:</strong> el sistema proporciona el monto correspondiente en PEN. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como responsable de pagos, quiero recibir la facturación mensual en soles (PEN) para agilizar su aprobación.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una suscripción activa.<br> <strong>When:</strong> El sistema genera la facturación mensual.<br> <strong>Then:</strong> El sistema genera la factura con el importe expresado en soles (PEN).<br><br> <strong>AC02 – Given:</strong> La facturación mensual ha sido generada correctamente.<br> <strong>When:</strong> El responsable de pagos consulta la facturación.<br> <strong>Then:</strong> El sistema muestra el monto correspondiente en soles (PEN). </td>
   </tr> 
 </table>
 
@@ -965,7 +984,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US12</td><td>Empresa administradora</td><td>Alta</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar cuenta y edificios</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero registrar mi cuenta y dar de alta edificios para empezar a operar.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> los datos de la empresa son válidos.<br> <strong>When:</strong> se registra la cuenta.<br> <strong>Then:</strong> el sistema crea la cuenta de la empresa administradora.<br><br> <strong>AC02 – Given:</strong> la cuenta de la empresa está registrada.<br> <strong>When:</strong> se registra un edificio con datos válidos.<br> <strong>Then:</strong> el sistema asocia el edificio a la empresa.<br><br> <strong>AC03 – Given:</strong> los datos requeridos son inválidos o incompletos.<br> <strong>When:</strong> se intenta registrar la cuenta o edificio.<br> <strong>Then:</strong> el sistema rechaza el registro. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero registrar mi cuenta y dar de alta edificios para empezar a operar.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Los datos de la empresa son válidos.<br> <strong>When:</strong> La empresa administradora registra su cuenta.<br> <strong>Then:</strong> El sistema crea la cuenta de la empresa administradora.<br><br> <strong>AC02 – Given:</strong> La cuenta de la empresa está registrada.<br> <strong>When:</strong> La empresa administradora registra un edificio con datos válidos.<br> <strong>Then:</strong> El sistema asocia el edificio a la empresa.<br><br> <strong>AC03 – Given:</strong> Los datos requeridos de la cuenta o del edificio son inválidos o están incompletos.<br> <strong>When:</strong> La empresa administradora intenta realizar el registro.<br> <strong>Then:</strong> El sistema rechaza el registro e informa los datos que deben corregirse.</td>
   </tr> 
 </table>
 
@@ -976,7 +995,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US13</td><td>Administrador</td><td>Alta</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Invitar residentes y asignar unidad</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero invitar residentes y asignarles una unidad para que accedan al sistema.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe una unidad registrada y los datos del residente son válidos.<br> <strong>When:</strong> el administrador genera la invitación.<br> <strong>Then:</strong> el sistema crea la invitación asociada a la unidad.<br><br> <strong>AC02 – Given:</strong> la unidad indicada no existe.<br> <strong>When:</strong> el administrador intenta generar la invitación.<br> <strong>Then:</strong> el sistema rechaza la operación.<br><br> <strong>AC03 – Given:</strong> el residente ya tiene una invitación activa.<br> <strong>When:</strong> el administrador intenta generar otra invitación.<br> <strong>Then:</strong> el sistema evita duplicar la invitación activa. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero invitar residentes y asignarles una unidad para que accedan al sistema.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una unidad registrada y los datos del residente son válidos.<br> <strong>When:</strong> El administrador genera la invitación.<br> <strong>Then:</strong> El sistema crea la invitación asociada a la unidad.<br><br> <strong>AC02 – Given:</strong> La unidad indicada no existe.<br> <strong>When:</strong> El administrador intenta generar la invitación.<br> <strong>Then:</strong> El sistema rechaza la operación.<br><br> <strong>AC03 – Given:</strong> El residente ya tiene una invitación activa.<br> <strong>When:</strong> El administrador intenta generar otra invitación.<br> <strong>Then:</strong> El sistema evita duplicar una invitación duplicada. </td>
   </tr> 
 </table>
 
@@ -987,7 +1006,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US14</td><td>Usuario</td><td>Alta</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Iniciar sesión de forma segura</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como usuario, quiero iniciar sesión de forma segura para proteger la información.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> el usuario posee credenciales válidas.<br> <strong>When:</strong> inicia sesión.<br> <strong>Then:</strong> el sistema autentica al usuario y permite el acceso autorizado.<br><br> <strong>AC02 – Given:</strong> las credenciales proporcionadas son inválidas.<br> <strong>When:</strong> el usuario intenta iniciar sesión.<br> <strong>Then:</strong> el sistema rechaza la autenticación.<br><br> <strong>AC03 – Given:</strong> la cuenta del usuario no está habilitada.<br> <strong>When:</strong> intenta iniciar sesión.<br> <strong>Then:</strong> el sistema rechaza el acceso. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como usuario, quiero iniciar sesión de forma segura para proteger la información.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El usuario posee credenciales válidas.<br> <strong>When:</strong>El usuario inicia sesión.<br> <strong>Then:</strong> El sistema autentica al usuario y permite el acceso autorizado.<br><br> <strong>AC02 – Given:</strong> Las credenciales proporcionadas son inválidas.<br> <strong>When:</strong> El usuario intenta iniciar sesión.<br> <strong>Then:</strong> El sistema rechaza la autenticación e informa que las credenciales no son válidas.<br><br> <strong>AC03 – Given:</strong> La cuenta del usuario no está habilitada.<br> <strong>When:</strong> El usuario intenta iniciar sesión.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td>
   </tr> 
 </table>
 
@@ -998,7 +1017,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US15</td><td>Administrador</td><td>Media</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Definir roles y permisos</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero definir roles (admin, junta, residente) para controlar permisos.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe un usuario registrado.<br> <strong>When:</strong> el administrador asigna un rol válido.<br> <strong>Then:</strong> el sistema registra el rol asociado al usuario.<br><br> <strong>AC02 – Given:</strong> un usuario posee un rol determinado.<br> <strong>When:</strong> solicita una operación restringida.<br> <strong>Then:</strong> el sistema permite o rechaza la operación según los permisos de su rol.<br><br> <strong>AC03 – Given:</strong> un usuario sin permisos de administración intenta modificar roles.<br> <strong>When:</strong> realiza la operación.<br> <strong>Then:</strong> el sistema rechaza la modificación. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero definir roles (admin, junta, residente) para controlar permisos.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un usuario registrado.<br> <strong>When:</strong> El administrador asigna un rol válido.<br> <strong>Then:</strong> El sistema registra el rol asociado al usuario.<br><br> <strong>AC02 – Given:</strong>El usuario tiene un rol asignado.<br> <strong>When:</strong> El usuario solicita una operación restringida a su rol.<br> <strong>Then:</strong> El sistema permite la operación únicamente si el rol del usuario posee el permiso requerido.<br><br> <strong>AC03 – Given:</strong>El usuario no posee permisos de administración.<br> <strong>When:</strong> El usuario intenta modificar los roles de otros usuarios.<br> <strong>Then:</strong> El sistema rechaza la modificación. </td>
   </tr> 
 </table>
 
@@ -1007,7 +1026,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 <table> <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US16</td><td>Residente</td><td>Alta</td><td>EP05 – Áreas comunes y reservas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar catálogo de áreas comunes</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero ver el catálogo de áreas comunes con reglas y disponibilidad para saber qué puedo reservar.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existen áreas comunes configuradas.<br> <strong>When:</strong> el residente consulta el catálogo.<br> <strong>Then:</strong> el sistema proporciona las áreas, sus reglas y su disponibilidad.<br><br> <strong>AC02 – Given:</strong> un área se encuentra en mantenimiento.<br> <strong>When:</strong> el residente consulta su disponibilidad.<br> <strong>Then:</strong> el sistema indica que el área no está disponible para reserva.<br><br> <strong>AC03 – Given:</strong> no existen áreas comunes registradas.<br> <strong>When:</strong> el residente consulta el catálogo.<br> <strong>Then:</strong> el sistema informa que no existen áreas disponibles. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero ver el catálogo de áreas comunes con reglas y disponibilidad para saber qué puedo reservar.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen áreas comunes configuradas.<br> <strong>When:</strong> El residente consulta el catálogo.<br> <strong>Then:</strong> El sistema proporciona las áreas, sus reglas y su disponibilidad.<br><br> <strong>AC02 – Given:</strong> Un área se encuentra en mantenimiento.<br> <strong>When:</strong> El residente consulta su disponibilidad.<br> <strong>Then:</strong> El sistema indica que el área no está disponible para reserva.<br><br> <strong>AC03 – Given:</strong> No existen áreas comunes registradas.<br> <strong>When:</strong> El residente consulta el catálogo.<br> <strong>Then:</strong> El sistema informa que no existen áreas disponibles. </td>
   </tr> 
 </table>
 
@@ -1018,7 +1037,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US17</td><td>Residente</td><td>Alta</td><td>EP05 – Áreas comunes y reservas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Reservar un área común</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero reservar un área común en fecha y hora para asegurar su uso sin conflictos.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> el área común está disponible y la solicitud cumple las reglas establecidas.<br> <strong>When:</strong> el residente registra la reserva.<br> <strong>Then:</strong> el sistema crea la reserva asociada al residente.<br><br> <strong>AC02 – Given:</strong> el horario solicitado no está disponible.<br> <strong>When:</strong> el residente intenta registrar la reserva.<br> <strong>Then:</strong> el sistema rechaza la solicitud.<br><br> <strong>AC03 – Given:</strong> la solicitud incumple las reglas del área común.<br> <strong>When:</strong> el residente intenta reservarla.<br> <strong>Then:</strong> el sistema rechaza la reserva. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero reservar un área común en fecha y hora para asegurar su uso sin conflictos.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El área común está disponible y la solicitud cumple las reglas establecidas.<br> <strong>When:</strong> El residente registra la reserva.<br> <strong>Then:</strong> El sistema crea la reserva asociada al residente.<br><br> <strong>AC02 – Given:</strong> El horario solicitado no está disponible.<br> <strong>When:</strong> El residente intenta registrar la reserva.<br> <strong>Then:</strong> El sistema rechaza la solicitud.<br><br> <strong>AC03 – Given:</strong> La solicitud incumple las reglas del área común.<br> <strong>When:</strong> El residente intenta reservarla.<br> <strong>Then:</strong> El sistema rechaza la reserva. </td>
   </tr> 
 </table>
 
@@ -1029,7 +1048,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US18</td><td>Developer</td><td>Alta</td><td>EP05 – Áreas comunes y reservas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Validar solapamiento de reservas</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como Developer, quiero validar el solapamiento de reservas para evitar reservas incompatibles.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe una reserva para la misma área y un horario que se solapa.<br> <strong>When:</strong> el servicio recibe una solicitud de nueva reserva.<br> <strong>Then:</strong> rechaza la solicitud con una respuesta de conflicto y no crea la reserva.<br><br> <strong>AC02 – Given:</strong> no existe una reserva que se solape y la solicitud contiene datos válidos.<br> <strong>When:</strong> el servicio recibe la solicitud.<br> <strong>Then:</strong> acepta la creación y devuelve una respuesta exitosa.<br><br> <strong>AC03 – Given:</strong> la solicitud no contiene los datos requeridos.<br> <strong>When:</strong> el servicio recibe la solicitud.<br> <strong>Then:</strong> devuelve una respuesta de validación y no crea la reserva.<br><br> <strong>AC04 – Given:</strong> existen solicitudes concurrentes para el mismo horario.<br> <strong>When:</strong> el servicio procesa las solicitudes.<br> <strong>Then:</strong> confirma únicamente las reservas compatibles y evita la duplicidad del horario. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como Developer, quiero validar el solapamiento de reservas para evitar reservas incompatibles.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una reserva para la misma área y un horario que se solapa.<br> <strong>When:</strong> El servicio recibe una solicitud de nueva reserva.<br> <strong>Then:</strong> El servicio rechaza la solicitud con una respuesta de conflicto y no crea la reserva.<br><br> <strong>AC02 – Given:</strong> No existe una reserva que se solape y la solicitud contiene datos válidos.<br> <strong>When:</strong> El servicio recibe la solicitud.<br> <strong>Then:</strong> El servicio acepta la creación y devuelve una respuesta exitosa.<br><br> <strong>AC03 – Given:</strong> La solicitud no contiene los datos requeridos.<br> <strong>When:</strong> El servicio recibe la solicitud.<br> <strong>Then:</strong> El servicio devuelve una respuesta de validación y no crea la reserva.<br><br> <strong>AC04 – Given:</strong> Existen solicitudes concurrentes para la misma área y horario.<br> <strong>When:</strong> El servicio procesa las solicitudes de reserva.<br> <strong>Then:</strong> El sistema registra únicamente una reserva para el horario disponible y rechaza las solicitudes que generen solapamiento.</td>
   </tr> 
 </table>
 
@@ -1040,7 +1059,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US19</td><td>Administrador</td><td>Media</td><td>EP05 – Áreas comunes y reservas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Configurar reglas y mantenimiento de áreas</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero configurar reglas y mantenimiento de cada espacio para gestionar su disponibilidad.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe un área común registrada.<br> <strong>When:</strong> el administrador configura sus reglas.<br> <strong>Then:</strong> el sistema almacena las reglas asociadas al área.<br><br> <strong>AC02 – Given:</strong> un área requiere mantenimiento.<br> <strong>When:</strong> el administrador registra su estado de mantenimiento.<br> <strong>Then:</strong> el sistema actualiza su disponibilidad.<br><br> <strong>AC03 – Given:</strong> un usuario sin permisos administrativos intenta modificar la configuración.<br> <strong>When:</strong> realiza la operación.<br> <strong>Then:</strong> el sistema rechaza el cambio. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero configurar reglas y mantenimiento de cada espacio para gestionar su disponibilidad.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un área común registrada.<br> <strong>When:</strong> El administrador configura sus reglas.<br> <strong>Then:</strong> El sistema almacena las reglas asociadas al área.<br><br> <strong>AC02 – Given:</strong> Un área requiere mantenimiento.<br> <strong>When:</strong> El administrador registra su estado de mantenimiento.<br> <strong>Then:</strong> El sistema actualiza su disponibilidad.<br><br> <strong>AC03 – Given:</strong> Un usuario sin permisos administrativos intenta modificar la configuración.<br> <strong>When:</strong> El usuario intenta modificar la configuración de un área.<br> <strong>Then:</strong> el sistema rechaza el cambio. </td>
   </tr> 
 </table>
 
@@ -1051,7 +1070,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US20</td><td>Residente</td><td>Alta</td><td>EP06 – Gestión de incidencias</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Reportar una incidencia</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero reportar una incidencia con descripción y foto para dejar constancia del problema.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> el residente proporciona una descripción válida y una foto.<br> <strong>When:</strong> registra la incidencia.<br> <strong>Then:</strong> el sistema crea la incidencia con estado abierta.<br><br> <strong>AC02 – Given:</strong> falta la descripción requerida.<br> <strong>When:</strong> el residente intenta registrar la incidencia.<br> <strong>Then:</strong> el sistema rechaza el registro.<br><br> <strong>AC03 – Given:</strong> la incidencia se registra correctamente.<br> <strong>When:</strong> finaliza el registro.<br> <strong>Then:</strong> el sistema asocia la incidencia al residente correspondiente. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero reportar una incidencia con descripción y foto para dejar constancia del problema.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El residente proporciona una descripción válida y una fotografía.<br> <strong>When:</strong> El residente registra la incidencia.<br> <strong>Then:</strong> El sistema crea la incidencia con estado "Abierta" y la asocia al residente.<br><br> <strong>AC02 – Given:</strong> Falta la descripción requerida.<br> <strong>When:</strong> El residente intenta registrar la incidencia.<br> <strong>Then:</strong> El sistema rechaza el registro.<br><br> <strong>AC03 – Given:</strong> La incidencia ha sido registrada correctamente.<br> <strong>When:</strong> El residente consulta sus incidencias.<br> <strong>Then:</strong> El sistema asocia la incidencia registrada con su estado actual. </td>
   </tr> 
 </table>
 
@@ -1062,7 +1081,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US21</td><td>Administrador</td><td>Alta</td><td>EP06 – Gestión de incidencias</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Actualizar estado de incidencias</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero dar seguimiento al estado de cada incidencia (abierta, en proceso, resuelta) para controlar su resolución.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe una incidencia abierta.<br> <strong>When:</strong> el administrador inicia su atención.<br> <strong>Then:</strong> el sistema actualiza el estado a en proceso.<br><br> <strong>AC02 – Given:</strong> una incidencia se encuentra en proceso.<br> <strong>When:</strong> el administrador registra su resolución.<br> <strong>Then:</strong> el sistema actualiza el estado a resuelta.<br><br> <strong>AC03 – Given:</strong> el estado indicado no pertenece a los estados permitidos.<br> <strong>When:</strong> el administrador intenta actualizar la incidencia.<br> <strong>Then:</strong> el sistema rechaza el cambio. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero dar seguimiento al estado de cada incidencia (abierta, en proceso, resuelta) para controlar su resolución.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una incidencia abierta.<br> <strong>When:</strong> El administrador inicia su atención.<br> <strong>Then:</strong> El sistema actualiza el estado a en proceso.<br><br> <strong>AC02 – Given:</strong> Una incidencia se encuentra en proceso.<br> <strong>When:</strong> El administrador registra su resolución.<br> <strong>Then:</strong> El sistema actualiza el estado a resuelta.<br><br> <strong>AC03 – Given:</strong> El estado indicado no pertenece a los estados permitidos.<br> <strong>When:</strong> El administrador intenta actualizar la incidencia.<br> <strong>Then:</strong> El sistema rechaza el cambio de estado. </td>
   </tr> 
 </table>
 
@@ -1073,7 +1092,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US22</td><td>Residente</td><td>Media</td><td>EP06 – Gestión de incidencias</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir notificaciones sobre incidencias</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir notificación cuando cambie el estado de mi incidencia para conocer su avance.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe una incidencia asociada al residente.<br> <strong>When:</strong> el administrador cambia su estado.<br> <strong>Then:</strong> el sistema envía una notificación al residente.<br><br> <strong>AC02 – Given:</strong> el estado de la incidencia no cambia.<br> <strong>When:</strong> se procesa la incidencia.<br> <strong>Then:</strong> el sistema no genera una notificación de cambio de estado. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir notificación cuando cambie el estado de mi incidencia para conocer su avance.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una incidencia asociada al residente.<br> <strong>When:</strong> El administrador modifica el estado de la incidencia.<br> <strong>Then:</strong> El sistema envía una notificación al residente informado sobre el nuevo estado.<br><br> <strong>AC02 – Given:</strong> El estado actual de la incidencia no cambia.<br> <strong>When:</strong> El sistema procesa la incidencia.<br> <strong>Then:</strong> El sistema no genera una notificación de cambio de estado. </td>
   </tr> 
 </table>
 
@@ -1084,7 +1103,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US23</td><td>Administrador</td><td>Alta</td><td>EP07 – Comunicaciones y documentos</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Publicar comunicados oficiales</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero publicar comunicados oficiales para que los residentes los reciban.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> el administrador proporciona información válida.<br> <strong>When:</strong> publica un comunicado.<br> <strong>Then:</strong> el sistema registra el comunicado y lo asocia al edificio correspondiente.<br><br> <strong>AC02 – Given:</strong> el comunicado no contiene información requerida.<br> <strong>When:</strong> el administrador intenta publicarlo.<br> <strong>Then:</strong> el sistema rechaza la publicación.<br><br> <strong>AC03 – Given:</strong> un usuario no posee permisos administrativos.<br> <strong>When:</strong> intenta publicar un comunicado.<br> <strong>Then:</strong> el sistema rechaza la operación. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero publicar comunicados oficiales para que los residentes los reciban.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El administrador proporciona información válida.<br> <strong>When:</strong> El administrador publica un comunicado.<br> <strong>Then:</strong> El sistema registra el comunicado y lo asocia al edificio correspondiente.<br><br> <strong>AC02 – Given:</strong> El comunicado no contiene información requerida.<br> <strong>When:</strong> El administrador intenta publicarlo.<br> <strong>Then:</strong> El sistema rechaza la publicación.<br><br> <strong>AC03 – Given:</strong> El usuario no posee permisos administrativos.<br> <strong>When:</strong> El usuario intenta publicar un comunicado.<br> <strong>Then:</strong> El sistema rechaza la operación. </td>
   </tr> 
 </table>
 
@@ -1094,8 +1113,8 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <tr>
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US24</td><td>Residente</td><td>Media</td><td>EP07 – Comunicaciones y documentos</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar reglamento y actas en la nube para acceder a los documentos oficiales del edificio.</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero consultar reglamento y actas en la nube.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existen documentos disponibles para el edificio.<br> <strong>When:</strong> el residente consulta el repositorio.<br> <strong>Then:</strong> el sistema proporciona los documentos a los que tiene acceso.<br><br> <strong>AC02 – Given:</strong> el residente no pertenece al edificio asociado al documento.<br> <strong>When:</strong> intenta acceder al documento.<br> <strong>Then:</strong> el sistema rechaza el acceso.<br><br> <strong>AC03 – Given:</strong> no existen documentos disponibles.<br> <strong>When:</strong> el residente consulta el repositorio.<br> <strong>Then:</strong> el sistema informa que no existen documentos disponibles. </td>
+  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar documentos oficiales</td></tr> 
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero consultar el reglamento y las actas del edificio para acceder a sus documentos oficiales.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen documentos disponibles para el edificio.<br> <strong>When:</strong> El residente consulta el repositorio.<br> <strong>Then:</strong> El sistema proporciona los documentos a los que tiene acceso.<br><br> <strong>AC02 – Given:</strong> El residente no pertenece al edificio asociado al documento.<br> <strong>When:</strong> El residente intenta acceder al documento.<br> <strong>Then:</strong> El sistema rechaza el acceso al documento.<br><br> <strong>AC03 – Given:</strong> No existen documentos disponibles.<br> <strong>When:</strong> El residente consulta el repositorio.<br> <strong>Then:</strong> El sistema informa que no existen documentos disponibles. </td>
   </tr> 
 </table>
 
@@ -1106,7 +1125,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US25</td><td>Residente</td><td>Media</td><td>EP07 – Comunicaciones y documentos</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir notificaciones push de comunicados importantes</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir notificaciones push de comunicados importantes para conocer información relevante del edificio.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe un comunicado marcado como importante.<br> <strong>When:</strong> el administrador lo publica.<br> <strong>Then:</strong> el sistema envía una notificación push a los residentes correspondientes.<br><br> <strong>AC02 – Given:</strong> un comunicado no está marcado como importante.<br> <strong>When:</strong> se publica.<br> <strong>Then:</strong> el sistema no genera una notificación push de importancia.<br><br> <strong>AC03 – Given:</strong> el envío de una notificación falla.<br> <strong>When:</strong> el sistema procesa el comunicado.<br> <strong>Then:</strong> registra el resultado del intento de envío. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir notificaciones push de comunicados importantes para conocer información relevante del edificio.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un comunicado marcado como importante.<br> <strong>When:</strong> El administrador publica el comunicado.<br> <strong>Then:</strong> El sistema envía una notificación push a los residentes correspondientes.<br><br> <strong>AC02 – Given:</strong> Un comunicado no está marcado como importante.<br> <strong>When:</strong> El administrador publica el comunicado.<br> <strong>Then:</strong> El sistema no genera una notificación push de importancia.<br><br> <strong>AC03 – Given:</strong> El envío de una notificación falla.<br> <strong>When:</strong> El sistema procesa el comunicado.<br> <strong>Then:</strong> El sistema registra el resultado del intento de envío. </td>
   </tr> 
 </table>
 
@@ -1117,7 +1136,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US26</td><td>Administrador</td><td>Alta</td><td>EP08 – Dashboard unificado</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar dashboard unificado</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero consultar un dashboard con resumen de cobranzas, reservas e incidencias para conocer el estado general del edificio.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existen datos de cobranzas, reservas e incidencias.<br> <strong>When:</strong> el administrador consulta el dashboard.<br> <strong>Then:</strong> el sistema proporciona un resumen actualizado de las tres categorías.<br><br> <strong>AC02 – Given:</strong> una de las categorías no contiene registros.<br> <strong>When:</strong> se consulta el dashboard.<br> <strong>Then:</strong> el sistema muestra la categoría sin registros sin afectar las demás.<br><br> <strong>AC03 – Given:</strong> el usuario no tiene permisos administrativos.<br> <strong>When:</strong> intenta consultar el dashboard administrativo.<br> <strong>Then:</strong> el sistema rechaza el acceso. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero consultar un dashboard con resumen de cobranzas, reservas e incidencias para conocer el estado general del edificio.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen datos de cobranzas, reservas e incidencias.<br> <strong>When:</strong> El administrador consulta el dashboard.<br> <strong>Then:</strong> El sistema proporciona un resumen actualizado de las tres categorías.<br><br> <strong>AC02 – Given:</strong> Una de las categorías no contiene registros.<br> <strong>When:</strong> El administrador consulta el dashboard.<br> <strong>Then:</strong> El sistema muestra la categoría sin registros sin afectar las demás.<br><br> <strong>AC03 – Given:</strong> El usuario no tiene permisos administrativos.<br> <strong>When:</strong> El usuario intenta consultar el dashboard administrativo.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td>
   </tr> 
 </table>
 
@@ -1128,7 +1147,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US27</td><td>Miembro de la junta</td><td>Media</td><td>EP08 – Dashboard unificado</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar indicadores de morosidad e incidencias</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero consultar indicadores de morosidad e incidencias pendientes.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existen cuotas pendientes e incidencias registradas.<br> <strong>When:</strong> el miembro de la junta consulta los indicadores.<br> <strong>Then:</strong> el sistema proporciona los indicadores de morosidad e incidencias pendientes.<br><br> <strong>AC02 – Given:</strong> no existen cuotas pendientes.<br> <strong>When:</strong> se consultan los indicadores.<br> <strong>Then:</strong> el sistema muestra un indicador de morosidad igual a cero.<br><br> <strong>AC03 – Given:</strong> el usuario no pertenece a la junta.<br> <strong>When:</strong> intenta consultar estos indicadores.<br> <strong>Then:</strong> el sistema rechaza el acceso. </td></tr> 
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero consultar indicadores de morosidad e incidencias pendientes.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen cuotas pendientes e incidencias registradas.<br> <strong>When:</strong> El miembro de la junta consulta los indicadores.<br> <strong>Then:</strong> El sistema proporciona los indicadores de morosidad e incidencias pendientes.<br><br> <strong>AC02 – Given:</strong> No existen cuotas pendientes.<br> <strong>When:</strong> El miembro de la junta consulta los indicadores.<br> <strong>Then:</strong> El sistema muestra un indicador de morosidad igual a cero.<br><br> <strong>AC03 – Given:</strong> El usuario no pertenece a la junta.<br> <strong>When:</strong> El sistema intenta consultar estos indicadores.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td></tr> 
 </table>
 
 ### US28 – Recuperar contraseña
@@ -1138,7 +1157,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US28</td><td>Usuario</td><td>Baja</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recuperar contraseña</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existe una cuenta asociada al identificador proporcionado.<br> <strong>When:</strong> el usuario solicita recuperar su contraseña.<br> <strong>Then:</strong> el sistema genera un mecanismo de recuperación válido.<br><br> <strong>AC02 – Given:</strong> no existe una cuenta asociada al identificador proporcionado.<br> <strong>When:</strong> el usuario solicita recuperar su contraseña.<br> <strong>Then:</strong> el sistema no genera credenciales de recuperación.<br><br> <strong>AC03 – Given:</strong> el mecanismo de recuperación ha expirado.<br> <strong>When:</strong> el usuario intenta utilizarlo.<br> <strong>Then:</strong> el sistema rechaza la recuperación. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una cuenta asociada al identificador proporcionado.<br> <strong>When:</strong> El usuario solicita recuperar su contraseña.<br> <strong>Then:</strong> El sistema genera y envía un mecanismo válido para restablecer la contraseña..<br><br> <strong>AC02 – Given:</strong> No existe una cuenta asociada al identificador proporcionado.<br> <strong>When:</strong> El usuario solicita recuperar su contraseña.<br> <strong>Then:</strong> El sistema no genera credenciales de recuperación.<br><br> <strong>AC03 – Given:</strong> El mecanismo de recuperación ha expirado.<br> <strong>When:</strong> El usuario intenta utilizarlo.<br> <strong>Then:</strong> El sistema rechaza la recuperación. </td>
   </tr> 
 </table>
 
@@ -1149,7 +1168,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US29</td><td>Administrador</td><td>Baja</td><td>EP02 – Reportes financieros</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Configurar pagos fijos periódicos</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero configurar pagos fijos periódicos para automatizar egresos recurrentes.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> los datos del pago recurrente son válidos.<br> <strong>When:</strong> el administrador configura el pago periódico.<br> <strong>Then:</strong> el sistema registra la periodicidad, monto y concepto del egreso.<br><br> <strong>AC02 – Given:</strong> existe una configuración de pago recurrente activa.<br> <strong>When:</strong> llega el período programado.<br> <strong>Then:</strong> el sistema genera el egreso correspondiente según la configuración registrada.<br><br> <strong>AC03 – Given:</strong> la configuración contiene datos inválidos o incompletos.<br> <strong>When:</strong> el administrador intenta registrarla.<br> <strong>Then:</strong> el sistema rechaza la configuración. </td></tr> 
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero configurar pagos fijos periódicos para automatizar egresos recurrentes.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Los datos del pago recurrente son válidos.<br> <strong>When:</strong> El administrador configura el pago periódico.<br> <strong>Then:</strong> El sistema registra la periodicidad, monto y concepto del egreso.<br><br> <strong>AC02 – Given:</strong> Existe una configuración de pago recurrente activa.<br> <strong>When:</strong> Llega el período programado.<br> <strong>Then:</strong> El sistema genera el egreso correspondiente según la configuración registrada.<br><br> <strong>AC03 – Given:</strong> La configuración contiene datos inválidos o incompletos.<br> <strong>When:</strong> El administrador intenta registrarla.<br> <strong>Then:</strong> El sistema rechaza la configuración. </td></tr> 
 </table>
 
 ### US30 – Evolución de morosidad
@@ -1159,7 +1178,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>US30</td><td>Administrador</td><td>Baja</td><td>EP02 – Reportes financieros</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar evolución mensual de morosidad</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero consultar la evolución mensual de morosidad en un gráfico para identificar tendencias.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> existen registros históricos de morosidad.<br> <strong>When:</strong> el administrador consulta su evolución mensual.<br> <strong>Then:</strong> el sistema proporciona los valores correspondientes a cada período.<br><br> <strong>AC02 – Given:</strong> existen datos de varios períodos.<br> <strong>When:</strong> se consulta la evolución.<br> <strong>Then:</strong> el sistema presenta los datos en orden cronológico.<br><br> <strong>AC03 – Given:</strong> no existen registros históricos.<br> <strong>When:</strong> el administrador consulta la evolución.<br> <strong>Then:</strong> el sistema informa que no existen datos suficientes para mostrar una tendencia. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero consultar la evolución mensual de morosidad en un gráfico para identificar tendencias.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen registros históricos de morosidad.<br> <strong>When:</strong> El administrador consulta su evolución mensual.<br> <strong>Then:</strong> El sistema proporciona los valores correspondientes a cada período.<br><br> <strong>AC02 – Given:</strong> Existen datos de varios períodos.<br> <strong>When:</strong> El administrador consulta la evolución.<br> <strong>Then:</strong> El sistema presenta los datos en orden cronológico.<br><br> <strong>AC03 – Given:</strong> No existen registros históricos.<br> <strong>When:</strong> El administrador consulta la evolución.<br> <strong>Then:</strong> El sistema informa que no existen datos suficientes para mostrar la evolución. </td>
   </tr> 
 </table>
 
@@ -1183,7 +1202,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
   <tr><td>SP01</td><td>Developer</td><td>Media</td><td>EP07 – Comunicaciones y documentos</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Evaluar almacenamiento seguro de documentos</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> BuildingFex requiere almacenar reglamentos, actas y otros documentos.<br> <strong>When:</strong> se investigan alternativas de almacenamiento.<br> <strong>Then:</strong> se documentan sus capacidades, limitaciones y requisitos técnicos.<br><br> <strong>AC02 – Given:</strong> la plataforma maneja información que requiere protección.<br> <strong>When:</strong> se evalúan las alternativas.<br> <strong>Then:</strong> se documentan sus mecanismos de seguridad, control de acceso y protección de datos.<br><br> <strong>AC03 – Given:</strong> existen al menos dos alternativas viables.<br> <strong>When:</strong> finaliza la evaluación.<br> <strong>Then:</strong> se documenta una comparación, una recomendación técnica y los riesgos identificados.<br><br> <strong>AC04 – Given:</strong> se selecciona una alternativa recomendada.<br> <strong>When:</strong> finaliza el spike.<br> <strong>Then:</strong> quedan documentadas las conclusiones y los siguientes pasos para su implementación. </td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> BuildingFex requiere almacenar reglamentos, actas y otros documentos.<br> <strong>When:</strong> Se investigan alternativas de almacenamiento.<br> <strong>Then:</strong> Se documentan sus capacidades, limitaciones y requisitos técnicos.<br><br> <strong>AC02 – Given:</strong> La plataforma maneja información que requiere protección.<br> <strong>When:</strong> Se evalúan las alternativas.<br> <strong>Then:</strong> Se documentan sus mecanismos de seguridad, control de acceso y protección de datos.<br><br> <strong>AC03 – Given:</strong> Existen al menos dos alternativas viables.<br> <strong>When:</strong> Finaliza la evaluación de las alternativas.<br> <strong>Then:</strong> Se documenta la comparación, la alternativa recomendada y los riesgos identificados.<br><br> <strong>AC04 – Given:</strong> Se ha seleccionado una alternativa recomendada.<br> <strong>When:</strong> Finaliza el spike.<br> <strong>Then:</strong> Se documentan las conclusiones y los siguientes pasos para su implementación. </td>
   </tr> 
 </table>
 
@@ -3940,6 +3959,186 @@ En el repositorio de la Landing Page se registraron 2 commits en la rama `main`,
 Los analíticos evidencian que, durante este primer Sprint, la construcción de la estructura base de los tres productos estuvo concentrada en el líder técnico del equipo, Alejandro Jave Chang, mientras que Antonin Suteau participó en las pruebas de aceptación y en la corrección de la documentación de los Web Services. Esta concentración se explica porque el Sprint 1 se enfocó en establecer la arquitectura base de los tres productos. Como acción de mejora para el Sprint 2, el equipo acordó distribuir de forma más equilibrada los commits entre todos los integrantes según la matriz de Aspect Leaders and Collaborators, trabajar en ramas `feature/*` integradas mediante Pull Requests hacia `develop`, y aplicar Conventional Commits en todos los mensajes.
 
 
+## Capítulo IV: Product Implementation & Validation
+
+### 4. Product Implementation & Validation
+
+Este capítulo presenta la configuración técnica necesaria para implementar y validar la solución móvil de BuildingFex. La aplicación Android permitirá a administradores y residentes acceder a los servicios de gestión de condominios desde sus dispositivos, utilizando el backend del proyecto para las operaciones de autenticación, finanzas, incidencias y reservas. La landing page se mantiene como punto de presentación comercial de la solución.
+
+Para esta etapa se reutilizan los componentes pertinentes del proyecto anterior y se incorpora el desarrollo móvil con Kotlin. La documentación se organiza conforme a los apartados de configuración del entorno, gestión del código fuente, convenciones y despliegue requeridos por el curso de Aplicaciones para Dispositivos Móviles.
+
+Los repositorios actuales permiten identificar la configuración del producto; sin embargo, su existencia no constituye evidencia de compilación, ejecución ni validación con usuarios. La distribución del APK y sus resultados de prueba se documentarán cuando se realicen esas actividades.
+
+### 4.1. Software Configuration Management
+
+La gestión de configuración de BuildingFex establece los recursos y procedimientos para mantener versiones coherentes del informe, la landing page, la aplicación Android y la API. Su propósito es facilitar el trabajo del equipo, reproducir los entornos de desarrollo y conservar la trazabilidad entre requisitos, cambios y entregas.
+
+La referencia técnica de este capítulo son los repositorios de la organización [BuildingFex-UPC](https://github.com/BuildingFex-UPC). El backend actual utiliza ASP.NET Core con PostgreSQL y dispone de configuración de despliegue en Render. Esta configuración corresponde a la etapa móvil y actualiza la referencia de MySQL y Railway descrita en los apartados arquitectónicos anteriores del informe; la actualización de esos diagramas y descripciones queda pendiente de su revisión.
+
+#### 4.1.1. Software Development Environment Configuration
+
+El entorno de desarrollo combina herramientas para la aplicación Android y para los componentes reutilizados. Cada integrante deberá emplear las versiones declaradas en los archivos de configuración de los repositorios, evitando cambios individuales que alteren la compilación del proyecto.
+
+| Herramienta o tecnología | Propósito en BuildingFex | Configuración de referencia |
+| :--- | :--- | :--- |
+| **Android Studio** | Edición, compilación y depuración de la aplicación móvil. | Abrir el repositorio FrontEnd, sincronizar Gradle y configurar un JDK compatible con el Android Gradle Plugin declarado. |
+| **Kotlin y Jetpack Compose** | Desarrollo de la lógica del cliente y de las interfaces Android. | Utilizar el catálogo de versiones y las dependencias del módulo `app`, conservando la configuración compartida. |
+| **Android SDK y emulador o dispositivo físico** | Ejecución y comprobación de la aplicación en Android. | Instalar el SDK solicitado por el proyecto y preparar un dispositivo compatible con su versión mínima. |
+| **Gradle Wrapper** | Gestión de dependencias y tareas de compilación. | Ejecutar el wrapper incluido en FrontEnd para utilizar la distribución definida por el repositorio. |
+| **Git y GitHub** | Control de versiones y colaboración sobre los productos del proyecto. | Configurar la identidad de cada integrante y trabajar con los repositorios de BuildingFex-UPC. |
+| **Visual Studio Code y Node.js/npm** | Edición y ejecución local de la landing page. | Instalar las dependencias declaradas en `package.json` y utilizar los scripts de Vite. |
+| **Vue 3 y Vite** | Componentes y construcción de la landing page. | Mantener las dependencias de LandingPage y sus scripts `dev`, `build` y `preview`. |
+| **SDK de .NET 10** | Restauración, compilación y ejecución del backend ASP.NET Core. | Consultar `global.json` y el proyecto `BuildingFex.Api.csproj`, cuyo framework objetivo es `net10.0`. |
+| **PostgreSQL y Docker** | Persistencia del backend y reproducción de su entorno local. | Configurar la conexión PostgreSQL; el repositorio incluye `docker-compose.yml` y un Dockerfile para la API. |
+
+**Preparación de la aplicación Android**
+
+1. Clonar el repositorio [FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) y abrir su carpeta raíz en Android Studio.
+2. Revisar `gradle/libs.versions.toml`, `gradle/wrapper/gradle-wrapper.properties` y `app/build.gradle.kts`; sincronizar las dependencias utilizando el wrapper del proyecto.
+3. Instalar el SDK requerido. En la configuración revisada, `compileSdk` y `targetSdk` corresponden a API 37 y `minSdk` a API 29. Estos valores describen el repositorio y deberán comprobarse al preparar el entorno.
+4. Crear un dispositivo virtual compatible o habilitar la depuración USB en un dispositivo físico.
+5. Revisar la URL de la API y ejecutar la variante de desarrollo para comprobar el inicio de la aplicación y la comunicación con el backend.
+
+El repositorio declara Kotlin 2.2.10 y dependencias de Compose, Retrofit, OkHttp y coroutines. Estas versiones se mantendrán alineadas con el [catálogo de dependencias de FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/gradle/libs.versions.toml). La configuración Android y la URL base están declaradas en [app/build.gradle.kts](https://github.com/BuildingFex-UPC/FrontEnd/blob/main/app/build.gradle.kts). El procedimiento de ejecución se apoya en la documentación de [Android Developers: Build and run your app](https://developer.android.com/studio/run).
+
+**Preparación de los componentes reutilizados**
+
+Para la landing page, se clonará LandingPage y se ejecutarán `npm ci`, `npm run dev` y `npm run build` para instalar las dependencias del lockfile, iniciar el entorno local y generar la distribución. Los comandos de desarrollo y construcción están definidos en su [package.json](https://github.com/BuildingFex-UPC/LandingPage/blob/main/package.json).
+
+Para la API, se clonará BackEnd y se preparará una instancia PostgreSQL local o mediante Docker. Desde la carpeta `BuildingFex.Api` se ejecutarán `dotnet restore`, `dotnet build` y `dotnet run`, usando una conexión de desarrollo y la configuración de autenticación correspondiente. Las instrucciones del [repositorio BackEnd](https://github.com/BuildingFex-UPC/BackEnd) servirán como referencia para reproducir el entorno.
+
+#### 4.1.2. Source Code Management
+
+Los productos de BuildingFex se gestionan en repositorios separados para mantener su historial y distinguir las responsabilidades del informe, la aplicación móvil, la API y la landing page.
+
+| Producto | Repositorio oficial | Contenido |
+| :--- | :--- | :--- |
+| **Informe** | [BuildingFex-UPC/report](https://github.com/BuildingFex-UPC/report.git) | Documento académico en Markdown y recursos gráficos. |
+| **Backend** | [BuildingFex-UPC/BackEnd](https://github.com/BuildingFex-UPC/BackEnd.git) | API ASP.NET Core, persistencia y archivos de despliegue. |
+| **Aplicación móvil** | [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git) | Proyecto Android desarrollado con Kotlin y Jetpack Compose. |
+| **Landing page** | [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git) | Sitio de presentación comercial desarrollado con Vue y Vite. |
+
+**Estrategia de ramas**
+
+Se establece un flujo de trabajo basado en GitFlow. El repositorio local del informe ya dispone de las ramas `main`, `develop` y `feature/hermoza`; las siguientes convenciones servirán como política de integración para los productos del equipo, sin asumir que todas las ramas o protecciones están configuradas en cada repositorio.
+
+| Rama | Responsabilidad | Origen y destino de integración |
+| :--- | :--- | :--- |
+| `main` | Mantener una versión estable del producto correspondiente. | Recibe versiones aprobadas y correcciones urgentes. |
+| `develop` | Integrar los cambios de la siguiente entrega. | Recibe funcionalidades y correcciones antes de preparar una versión estable. |
+| `feature/<descripcion>` | Desarrollar una funcionalidad o un cambio documental. | Se crea desde `develop` y se integra a `develop` mediante pull request. |
+| `release/<version>` | Preparar y revisar una entrega. | Se crea desde `develop` y se integra a `main` y `develop`. |
+| `hotfix/<descripcion>` | Corregir un problema crítico de la versión estable. | Se crea desde `main` y se integra a `main` y `develop`. |
+
+Antes de solicitar la integración, cada integrante revisará su diff y realizará las comprobaciones pertinentes: compilación del componente afectado o revisión de enlaces y formato para el informe. El pull request describirá el cambio, su relación con la historia de usuario o apartado del documento y las verificaciones realizadas. La revisión por otro integrante permitirá detectar inconsistencias antes de incorporar los cambios.
+
+Los mensajes de commit seguirán [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/), con el formato `<tipo>(<alcance>): <descripcion>`. Se utilizarán `feat` para funcionalidades, `fix` para correcciones, `docs` para documentación, `style` para formato, `refactor` para reorganización, `test` para pruebas y `chore` para mantenimiento. Los tipos distintos de `feat` y `fix` son convenciones del equipo.
+
+Ejemplos de mensajes para este proyecto:
+
+~~~text
+feat(incidents): add incident report screen
+fix(auth): handle expired session
+docs(chapter-4): document mobile development environment
+chore(android): update build configuration
+~~~
+
+Las entregas aprobadas podrán identificarse mediante etiquetas `v<major>.<minor>.<patch>`, asociadas al commit correspondiente y a sus artefactos. El informe registrará las evidencias de colaboración cuando estén disponibles; este apartado define el procedimiento y no acredita revisiones todavía no realizadas.
+
+#### 4.1.3. Source Code Style Guide & Conventions
+
+Las convenciones de código buscan mantener una base comprensible entre los integrantes y facilitar la revisión de los componentes reutilizados y del cliente Android. Se conservará el estilo de cada repositorio, aplicando las siguientes reglas a los cambios nuevos.
+
+| Tecnología | Convenciones del proyecto | Referencia |
+| :--- | :--- | :--- |
+| **Kotlin** | Indentación de 4 espacios; clases en `PascalCase`; funciones y variables en `camelCase`; constantes en `UPPER_SNAKE_CASE`; preferir `val` cuando no se requiera mutación. | [Kotlin Coding Conventions](https://kotlinlang.org/docs/coding-conventions.html) |
+| **Jetpack Compose** | Funciones de interfaz que devuelven `Unit` en `PascalCase`, como `IncidentScreen`; separar presentación, estado y acceso a datos. | [Convenciones de Kotlin para funciones Composable](https://kotlinlang.org/docs/coding-conventions.html#function-names) |
+| **C#** | Indentación de 4 espacios; tipos y métodos públicos en `PascalCase`; parámetros y variables locales en `camelCase`; interfaces con prefijo `I` y métodos asíncronos con sufijo `Async`. | [Microsoft: C# Coding Conventions](https://learn.microsoft.com/en-us/dotnet/csharp/fundamentals/coding-style/coding-conventions) |
+| **HTML** | Indentación de 2 espacios, etiquetas y atributos en minúsculas, atributos entre comillas dobles y estructura semántica. Incluir texto alternativo pertinente en imágenes. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **CSS** | Indentación de 2 espacios, clases en `kebab-case` y reglas agrupadas por componente; evitar estilos duplicados y selectores innecesariamente complejos. | [Google HTML/CSS Style Guide](https://google.github.io/styleguide/htmlcssguide.html) |
+| **JavaScript y Vue** | Usar `const` por defecto y `let` cuando sea necesario; variables y funciones en `camelCase`, componentes en `PascalCase` y archivos Vue con plantilla, lógica y estilos separados. | [Vue Style Guide](https://vuejs.org/style-guide/), complementada por las convenciones del equipo. |
+
+La guía de Vue se utilizará como referencia orientativa, considerando que su propia documentación indica que necesita actualización. No se impondrá un cambio de API ni una reorganización del código reutilizado únicamente por adoptar estas convenciones.
+
+En Android se conservará la separación existente entre recursos compartidos de `core` y funcionalidades, evitando incorporar llamadas HTTP directamente en las funciones de interfaz. En el backend se mantendrán las capas `Domain`, `Application`, `Infrastructure` e `Interfaces` de cada bounded context. Los identificadores técnicos y mensajes de commit se escribirán en inglés; los textos de la interfaz seguirán los recursos de idioma definidos por el producto.
+
+Los siguientes ejemplos ilustran nombres y formato; no constituyen evidencia de funcionalidades implementadas:
+
+~~~kotlin
+data class IncidentSummary(
+    val id: String,
+    val description: String
+)
+
+fun hasIncidentDescription(description: String): Boolean {
+    return description.isNotBlank()
+}
+~~~
+
+~~~csharp
+public interface IIncidentRepository
+{
+    Task<Incident?> FindByExternalIdAsync(string externalId);
+}
+~~~
+
+Para documentación se mantendrán encabezados numerados, tablas legibles, enlaces descriptivos y rutas relativas válidas a imágenes. Antes de integrar cambios se utilizará el formateo del IDE y se revisará la compilación. No se afirmará la ejecución de linters o pruebas automatizadas cuando no exista una comprobación registrada.
+
+#### 4.1.4. Software Deployment Configuration
+
+La configuración de despliegue distingue tres productos: la landing page accesible desde un navegador, la API que procesa las operaciones y la aplicación Android que se instalará en los dispositivos de validación. Los siguientes procedimientos documentan cómo preparar o reproducir sus entregas.
+
+**Landing page — Vercel**
+
+La landing del proyecto se encuentra en [https://buildingfex.vercel.app/](https://buildingfex.vercel.app/), enlace proporcionado por el equipo y accesible durante la revisión. Su código corresponde a [BuildingFex-UPC/LandingPage](https://github.com/BuildingFex-UPC/LandingPage.git).
+
+Para reproducir o actualizar su despliegue:
+
+1. Importar el repositorio LandingPage en Vercel y verificar la rama de producción; se establece `main` como referencia para las entregas estables.
+2. Seleccionar la configuración de Vite, instalar dependencias con `npm ci` y construir con `npm run build`.
+3. Configurar `dist` como directorio de salida, salvo que la configuración de Vite declare otro destino.
+4. Publicar y comprobar navegación, carga de recursos, adaptación a pantallas móviles y enlaces de contacto.
+5. Registrar la URL, el commit desplegado y las capturas pertinentes para la entrega académica.
+
+Este procedimiento se apoya en la documentación de [Vite on Vercel](https://vercel.com/docs/frameworks/frontend/vite). La disponibilidad de la URL no acredita por sí sola la rama, la integración continua ni la configuración privada del panel de Vercel; esos datos se confirmarán mediante evidencia del equipo.
+
+**Backend — ASP.NET Core, PostgreSQL y Render**
+
+El [Dockerfile de BackEnd](https://github.com/BuildingFex-UPC/BackEnd/blob/main/Dockerfile) contempla la publicación de la API en configuración Release y su ejecución con ASP.NET Core 10. El [Blueprint de Render](https://github.com/BuildingFex-UPC/BackEnd/blob/main/render.yaml) define un servicio Docker y una comprobación de salud en `/health`.
+
+Para reproducir el despliegue:
+
+1. Conectar BackEnd a Render y crear el servicio a partir de `render.yaml`, revisando los recursos y el plan antes de aprovisionarlos.
+2. Preparar PostgreSQL y registrar `ConnectionStrings__DefaultConnection` con el formato esperado por Npgsql.
+3. Configurar `TokenSettings__Secret` y, cuando corresponda, las variables `MercadoPago__*` y `Cors__AllowedOrigins`, según [deploy.env.example](https://github.com/BuildingFex-UPC/BackEnd/blob/main/deploy.env.example).
+4. Construir el contenedor y revisar su arranque, conectividad con PostgreSQL y endpoint `/health`.
+5. Confirmar la URL HTTPS y comprobar desde el cliente las operaciones de autenticación y una consulta representativa antes de registrar evidencias de ejecución.
+
+El repositorio también incluye [railway.toml](https://github.com/BuildingFex-UPC/BackEnd/blob/main/railway.toml), como configuración alternativa de despliegue Docker con comprobación en `/health`. Su presencia no implica que Railway sea el proveedor actualmente utilizado ni modifica el proveedor PostgreSQL declarado por la API.
+
+**Aplicación Android — compilación y distribución para validación**
+
+La aplicación se gestionará desde [BuildingFex-UPC/FrontEnd](https://github.com/BuildingFex-UPC/FrontEnd.git). Su configuración declara `https://backend-1-lgr7.onrender.com` en `BuildConfig.API_BASE_URL` para las variantes de desarrollo y release. Esta dirección corresponde a la configuración del código; deberá comprobarse su disponibilidad antes de validar la aplicación, sin asumir que el servicio está operativo.
+
+El procedimiento previsto para obtener un APK de pruebas es:
+
+1. Sincronizar Gradle y revisar la URL base, las dependencias y los permisos de comunicación con la API.
+2. Seleccionar la variante `debug` y ejecutar en Windows, desde la raíz de FrontEnd:
+
+~~~powershell
+.\gradlew.bat assembleDebug
+~~~
+
+3. Localizar el artefacto generado en `app/build/outputs/apk/debug/app-debug.apk` e instalarlo en un emulador o dispositivo compatible.
+4. Comprobar el inicio de sesión, acceso a la información por rol y una operación de los módulos priorizados, incluyendo la respuesta ante errores de red.
+5. Registrar versión, commit, dispositivo, versión de Android, fecha, resultados y capturas; compartir el APK mediante el canal académico acordado por el equipo.
+
+El APK debug se destinará a pruebas académicas. Una entrega release requerirá configurar su firma y custodiar la clave correspondiente; no se contempla publicación en Google Play en este avance. Las claves del backend y credenciales de servicios no se incorporarán al APK ni al repositorio.
+
+La generación, instalación y validación del APK permanecen pendientes de comprobación. Este apartado describe el procedimiento y la configuración encontrada en los repositorios; las evidencias de ejecución se incorporarán cuando el equipo realice esas actividades.
+
+<div style="page-break-after: always;"></div>
+
 ### 4.3. Validation Interviews
 
 En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
@@ -4067,7 +4266,138 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
 
 
+### 4.3.3. Evaluaciones según heurísticas
 
+Esta sección presenta el proceso de evaluación de la experiencia propuesta para BuildingFex a partir de las sesiones de validación realizadas. La evaluación considera principios de **usabilidad, arquitectura de información e inclusive design**, tomando como referencia las principales pantallas de la Landing Page y de la aplicación móvil desarrolladas durante el Sprint 1.
+
+La evaluación permitió identificar problemas relacionados principalmente con la claridad de las opciones disponibles, la organización de la información y la comunicación del estado de determinadas funcionalidades. Para cada problema identificado se estableció un nivel de severidad y una recomendación de mejora.
+
+#### UX Heuristics & Principles Evaluation
+
+**Usability - Inclusive Design - Information Architecture**
+
+**CARRERA:** Ingeniería de Software  
+**CURSO:** 1acc0238 Aplicaciones para dispositivos móviles  
+**NRC:** 4939  
+**PROFESOR:** David Gerardo Quevedo Velasco  
+**AUDITOR CLIENTE(S):** Danitza Ivonne Heredia Hoyos, Jude Alessandro Hermoza Quispe, Alejandro Manuel Jave Chang, Mathias Javier Murillo y Antonin Suteau  
+**SITE O APP A EVALUAR:** BuildingFex – Landing Page y aplicación móvil
+
+#### Tareas a evaluar
+
+Durante la evaluación se consideraron las principales tareas correspondientes al alcance funcional del Sprint 1:
+
+- Iniciar sesión en la aplicación.
+- Registrar una cuenta de administrador.
+- Activar una cuenta mediante código de invitación.
+- Consultar y gestionar residentes.
+- Configurar parámetros financieros.
+- Generar recibos.
+- Consultar información financiera.
+- Consultar deudas y pagos.
+- Configurar el método de pago mediante Mercado Pago.
+- Consultar áreas comunes.
+- Realizar reservas de áreas comunes.
+- Revisar la propuesta de valor y los planes de suscripción de la Landing Page.
+
+No se consideraron las funcionalidades de incidencias, comunicados y documentos, debido a que corresponden al Sprint 2 y no forman parte del alcance funcional evaluado en esta sesión.
+
+#### Escala de severidad
+
+| Nivel | Descripción |
+|---|---|
+| **1 – Superficial** | Problema menor que no afecta significativamente la experiencia del usuario. |
+| **2 – Menor** | Problema que puede generar cierta dificultad o confusión, pero permite completar la tarea. |
+| **3 – Mayor** | Problema que afecta de manera importante la comprensión o realización de una tarea. |
+| **4 – Muy grave** | Problema crítico que impide o dificulta considerablemente completar una tarea. |
+
+#### Tabla resumen
+
+| # | Problema | Escala de severidad | Heurística / Principio violado(a) |
+|---|---|---:|---|
+| **1** | Las opciones de inicio de sesión, registro de administrador y activación mediante código de invitación se presentan dentro del mismo contexto de acceso, lo que puede generar dudas sobre qué opción corresponde a cada usuario. | **2 – Menor** | **Usability: Recognition rather than recall** |
+| **2** | La configuración financiera y las automatizaciones se presentan dentro de una misma sección, aunque corresponden a acciones con objetivos diferentes. | **2 – Menor** | **Information Architecture: Clear** |
+| **3** | Los indicadores de monto pendiente y total pagado en S/0 no permiten identificar claramente el estado de las cuotas o si todavía no se han generado recibos. | **3 – Mayor** | **Usability: Visibility of system status** |
+| **4** | El control para habilitar Mercado Pago no comunica de manera suficientemente clara su estado actual ni el efecto de activarlo. | **2 – Menor** | **Usability: Visibility of system status** |
+| **5** | Los planes de la Landing Page muestran precio y cantidad de departamentos, pero no permiten comparar claramente las funcionalidades incluidas en cada plan. | **2 – Menor** | **Information Architecture: Complete / Clear** |
+
+#### Descripción de problemas
+
+##### PROBLEMA #1
+
+**Severidad:** 2 – Menor
+
+**Heurística violada:** Usability: Recognition rather than recall
+
+**Problema:**  
+En la pantalla de acceso se presentan las opciones para iniciar sesión, registrar un administrador y activar una cuenta mediante un código de invitación. Al encontrarse dentro del mismo contexto, un usuario nuevo podría no identificar inmediatamente cuál de estas opciones corresponde a su situación. Esto puede generar confusión especialmente para los residentes, quienes utilizan un código de invitación para activar su cuenta en lugar de realizar un registro convencional.
+
+**Screenshot:** `img/Login-mockup.png`
+
+**Recomendación:**  
+Diferenciar visualmente las opciones según el tipo de usuario y utilizar textos de apoyo breves que permitan identificar la acción correspondiente. Por ejemplo, se puede presentar una opción específica para administradores y otra para usuarios que poseen un código de invitación.
+
+##### PROBLEMA #2
+
+**Severidad:** 2 – Menor
+
+**Heurística violada:** Information Architecture: Clear
+
+**Problema:**  
+Dentro de la sección de finanzas se presentan elementos relacionados con la configuración de parámetros financieros, como la cuota mensual base y la tasa de mora, junto con acciones de automatización como generar el recibo del mes y crear recibos vencidos. Estas acciones tienen objetivos diferentes: unas permiten establecer reglas y otras ejecutar procesos. Presentarlas dentro de la misma sección puede dificultar la diferenciación entre configuración y acciones operativas.
+
+**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+
+**Recomendación:**  
+Separar visualmente ambos grupos mediante subtítulos, tarjetas o bloques diferenciados. Se recomienda mantener un bloque destinado a la configuración financiera y otro destinado a las automatizaciones y acciones operativas.
+
+##### PROBLEMA #3
+
+**Severidad:** 3 – Mayor
+
+**Heurística violada:** Usability: Visibility of system status
+
+**Problema:**  
+En la sección de finanzas se muestran indicadores como “monto pendiente” y “total pagado”. Cuando estos valores aparecen en S/0, el usuario puede no identificar con claridad si esto significa que no existen deudas, que todas las cuotas ya fueron pagadas o que todavía no se han generado recibos. El valor numérico por sí solo no comunica completamente el estado actual del proceso financiero.
+
+**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+
+**Recomendación:**  
+Complementar los indicadores con un mensaje contextual que explique el significado del valor mostrado. Por ejemplo, se podría indicar “No existen cuotas generadas”, “Todas las cuotas están pagadas” o “No existen pagos registrados”, según corresponda al estado real del sistema.
+
+##### PROBLEMA #4
+
+**Severidad:** 2 – Menor
+
+**Heurística violada:** Usability: Visibility of system status
+
+**Problema:**  
+La configuración de pago mediante Mercado Pago se presenta mediante un control que permite activar el método. Sin embargo, el usuario puede necesitar información adicional para identificar si el método se encuentra actualmente activo y qué efecto tendrá sobre el proceso de pago al modificar esta configuración.
+
+**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+
+**Recomendación:**  
+Mostrar explícitamente el estado actual del método de pago, por ejemplo, “Mercado Pago activo” o “Mercado Pago inactivo”. Asimismo, se puede incorporar una breve descripción que explique qué sucede cuando el administrador activa o desactiva esta opción.
+
+##### PROBLEMA #5
+
+**Severidad:** 2 – Menor
+
+**Heurística violada:** Information Architecture: Complete / Clear
+
+**Problema:**  
+La sección de suscripciones de la Landing Page presenta los planes Esencial, Estándar y Escala junto con su precio mensual y el rango de departamentos correspondiente. Sin embargo, la información mostrada no permite identificar claramente las diferencias funcionales entre las alternativas. Esto puede dificultar que un administrador o junta de propietarios determine rápidamente qué plan se adapta mejor a sus necesidades.
+
+**Screenshot:** `img/sprint1-landing-planes.png`
+
+**Recomendación:**  
+Incluir una comparación breve de las principales funcionalidades disponibles en cada plan o agregar una opción como “Ver características” que permita consultar las diferencias entre las alternativas antes de seleccionar el botón “Suscribirse”.
+
+#### Conclusión de la evaluación
+
+A partir de la evaluación heurística realizada, se identificaron principalmente oportunidades de mejora relacionadas con la **claridad de las opciones, la organización de la información y la visibilidad del estado de determinadas funcionalidades**. Los problemas encontrados no impiden de manera general la ejecución de las tareas evaluadas, pero pueden generar confusión o requerir una interpretación adicional por parte de los usuarios.
+
+Las recomendaciones propuestas buscan mejorar la comprensión de las acciones disponibles, diferenciar los tipos de información dentro de las secciones financieras y comunicar de manera más explícita los estados del sistema. Estas mejoras pueden ser consideradas para las siguientes iteraciones del producto, especialmente durante la evolución de las funcionalidades del Sprint 2.
 
 ### Conclusiones y recomendaciones
 
