@@ -82,8 +82,16 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td rowspan="5">Actualiza conceptos y conocimientos necesarios para su desarrollo profesional y en especial para su proyecto en soluciones de ingeniería de software</td>
     <td>Mathias Javier Murillo</td>
-    <td><b>AV1:</b>Investigué y apliqué conceptos de arquitectura e integración técnica mediante API Web Services (sección 2.5), además de la estructuración de maquetación y diseño de interfaces con HTML y CSS. Esto me permitió actualizar mis competencias técnicas y asegurar una correcta solución de software para el proyecto.</td>
-    <td rowspan="5"><b>AV1:</b>Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.</td>
+    <td>
+        <b>AV1:</b> Investigué y apliqué conceptos de arquitectura e integración técnica mediante API Web Services (sección 2.5), además de la estructuración de maquetación y diseño de interfaces con HTML y CSS. Esto me permitió actualizar mis competencias técnicas y asegurar una correcta solución de software para el proyecto.
+        <br><br>
+        <b>TP1:</b> Investigué y apliqué conceptos avanzados de UX/UI mediante la elaboración de wireframes y mockups de la aplicación móvil, así como el modelado de la arquitectura e interacciones del sistema a través de diagramas clave. Esto me permitió fortalecer mis competencias en diseño de soluciones móviles y documentación técnica para el proyecto.
+    </td>
+    <td rowspan="5">
+        <b>AV1:</b> Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.
+        <br><br>
+        <b>TP1:</b> Como equipo, integramos técnicas de diseño de interfaces y modelado de sistemas para la solución móvil, lo que nos permitió consolidar nuestros conocimientos arquitectónicos y asegurar la trazabilidad del desarrollo profesional en el proyecto.
+    </td>
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
@@ -108,10 +116,18 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td rowspan="5">Reconoce la necesidad del aprendizaje permanente para el desempeño profesional y el desarrollo de proyectos en soluciones de tecnologías de ingeniería de software.</td>
     <td>Mathias Javier Murillo</td>
-    <td><b>AV1:</b>Identifiqué la necesidad de profundización en el desarrollo e integración de servicios web y lógica frontend. Asumí un aprendizaje autónomo para consolidar el diseño de interfaces y la comunicación de datos, reconociendo que la actualización continua es clave para responder a los estándares del proyecto.</td>
-    <td rowspan="5"><b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.</td>
-  </tr>
-  <tr>
+    <td>
+        <b>AV1:</b> Identifiqué la necesidad de profundización en el desarrollo e integración de servicios web y lógica frontend. Asumí un aprendizaje autónomo para consolidar el diseño de interfaces y la comunicación de datos, reconociendo que la actualización continua es clave para responder a los estándares del proyecto.
+        <br><br>
+        <b>TP1:</b> Reconocí la importancia de profundizar de forma autónoma en metodologías de diseño UX/UI para dispositivos móviles y estándares de modelado visual mediante diagramas. Esto me impulsó a investigar mejores prácticas para estructurar wireframes, mockups y flujos de arquitectura, asegurando que la solución responda de manera óptima a las necesidades del usuario y del proyecto.
+    </td>
+    <td rowspan="5">
+        <b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.
+        <br><br>
+        <b>TP1:</b> El trabajo colaborativo en esta etapa nos incentivó a investigar de manera continua y unificar criterios de diseño y modelado, fortaleciendo nuestra capacidad de adaptación técnica y el aprendizaje continuo como equipo.
+    </td>
+</tr>
+<tr>
     <td>Jude Alessandro Hermoza Quispe</td>
     <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).<br><br><b>TP1:</b> Reconoció la necesidad de mantener actualizados sus conocimientos al adaptar la documentación del curso anterior al desarrollo móvil. Consultó documentación oficial y los archivos de configuración de los repositorios para identificar diferencias entre la arquitectura descrita en el informe y el stack actual, dejando señalada la revisión pendiente de MySQL/Railway frente a PostgreSQL/Render. Diferenció los procedimientos previstos de las evidencias de ejecución todavía pendientes, evitando presentar la compilación o validación del APK como actividades realizadas. Este proceso reforzó la importancia del aprendizaje continuo y de verificar las fuentes técnicas antes de incorporarlas al informe del equipo.</td>
   </tr>
