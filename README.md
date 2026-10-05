@@ -102,10 +102,10 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
     <td><b>AV1:</b> Apliqué Tactical DDD para organizar mejor el dominio del proyecto y así ampliar mis conocimientos.
       <br><br><b>TP1:</b> En la elaboración desde la sección Product Design hasta la sección Landing Page Mockup, actualicé mis conocimientos mediante la investigación de patrones modernos de diseño de experiencia de usuario para soluciones SaaS, aplicando un sistema de diseño con estándares de accesibilidad y tipografía escalable, e implementando herramientas de prototipado para estructurar de manera óptima la maquetación y la propuesta de valor de la Landing Page B2B y B2C.</td>
   </tr>
-  </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b> Investigué y apliqué conceptos de Análisis Competitivo, Estrategias y Tácticas frente a Competidores, así como User Stories, Ubiquitous Language y Requirements Specification, para definir y documentar los requisitos de BuildingFlex.</td>
+    <td><b>AV1:</b> Investigué y apliqué conceptos de Análisis Competitivo, Estrategias y Tácticas frente a Competidores, así como User Stories, Ubiquitous Language y Requirements Specification, para definir y documentar los requisitos de BuildingFlex.
+      <br><br><b>TP1:</b> A través de la evaluación de heurísticas y la revisión de los criterios de aceptación de las User Stories, actualicé y reforcé mis conocimientos sobre usabilidad, experiencia de usuario y especificación de requisitos, aplicándolos para mejorar la calidad y coherencia de la propuesta.</td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
@@ -137,7 +137,8 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
-    <td><b>AV1:</b> Identifiqué la necesidad de reforzar mis conocimientos sobre análisis competitivo y especificación de requisitos, revisando estos conceptos y aplicándolos en la elaboración de las diferentes secciones de BuildingFlex.</td>
+    <td><b>AV1:</b> Identifiqué la necesidad de reforzar mis conocimientos sobre análisis competitivo y especificación de requisitos, revisando estos conceptos y aplicándolos en la elaboración de las diferentes secciones de BuildingFlex.
+      <br><br><b>TP1:</b> Reconocí la necesidad de seguir fortaleciendo mis conocimientos sobre heurísticas de usabilidad y definición de requisitos, ya que su correcta aplicación requiere revisar y aprender continuamente buenas prácticas para evaluar y mejorar una solución de software.</td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
