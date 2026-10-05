@@ -4289,11 +4289,14 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Nombres y Apellidos** | Carlos Chang |
 | **Edad** | 24 |
 | **Distrito** | San Borja |
-| **Perfil** | [rol de Carlos: administrador, miembro de junta, etc.] |
 | **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-carlos-tb1](LINK_DEL_VIDEO_DE_CARLOS) |
-| **Timing y Duración** | Inicio: 00:00 / Duración: [duración del video de Carlos] |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 10:38 |
 | **Screenshot** | ![Entrevista Carlos Chang](img/validacion6-carlos.png) |
-| **Resumen de Apreciaciones** | [resumen de lo que dijo Carlos: qué le gustó, qué mejoraría y si usaría la app] |
+| **Resumen de Apreciaciones** | Carlos percibe que el formulario para el registro manual de nuevos inquilinos es mucho más claro y seguro frente al uso tradicional de hojas de Excel, un método que él considera un riesgo constante de errores operativos. Valora que el sistema le permita asignar directamente la unidad y los datos del residente, actualizando el directorio al instante, lo que le brinda una mayor tranquilidad y un control absoluto sobre la información del condominio.
+
+El entrevistado resalta la rapidez en la transición entre las distintas pantallas, como al momento de pasar del panel general al módulo de incidencias. Menciona que, en su rol de administrador, suele saltar de un tema a otro constantemente durante el día, por lo que una interfaz que responde de inmediato y sin pantallas de carga le permite trabajar a su propio ritmo con una herramienta que se siente directa y eficiente.
+
+Respecto al flujo para el despacho de incidencias, Carlos lo califica como perfecto por ir directo al grano. Aprecia que el sistema omita pasos intermedios burocráticos o módulos destinados a brindar asistencia y guiar al vecino, permitiendo que la gestión se enfoque pura y exclusivamente en visualizar la falla reportada, asignar a un proveedor técnico y ejecutar el servicio. Subraya que este nivel de automatización y practicidad es exactamente lo que busca para poder escalar su negocio. |
 
 ### 4.3.3. Evaluaciones según heurísticas
 
