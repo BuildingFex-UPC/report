@@ -4272,17 +4272,6 @@ Esta sección presenta el proceso de evaluación de la experiencia propuesta par
 
 La evaluación permitió identificar problemas relacionados principalmente con la claridad de las opciones disponibles, la organización de la información y la comunicación del estado de determinadas funcionalidades. Para cada problema identificado se estableció un nivel de severidad y una recomendación de mejora.
 
-#### UX Heuristics & Principles Evaluation
-
-**Usability - Inclusive Design - Information Architecture**
-
-**CARRERA:** Ingeniería de Software  
-**CURSO:** 1acc0238 Aplicaciones para dispositivos móviles  
-**NRC:** 4939  
-**PROFESOR:** David Gerardo Quevedo Velasco  
-**AUDITOR CLIENTE(S):** Danitza Ivonne Heredia Hoyos, Jude Alessandro Hermoza Quispe, Alejandro Manuel Jave Chang, Mathias Javier Murillo y Antonin Suteau  
-**SITE O APP A EVALUAR:** BuildingFex – Landing Page y aplicación móvil
-
 #### Tareas a evaluar
 
 Durante la evaluación se consideraron las principales tareas correspondientes al alcance funcional del Sprint 1:
