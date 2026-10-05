@@ -109,7 +109,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b> He aprendido cómo se desarrolla un proyecto académico en Perú y he utilizado por primera vez GitHub, lo que me permitirá, más adelante en mis estudios, llevar a cabo proyectos en grupo. </td>
+        <td><b>AV1:</b> He aprendido cómo se desarrolla un proyecto académico en Perú y he utilizado por primera vez GitHub, lo que me permitirá, más adelante en mis estudios, llevar a cabo proyectos en grupo.<br><br><b>TB1:</b> En la elaboración de la sección 4.2.1 (Sprint 1) actualicé mis conocimientos sobre el marco de trabajo Scrum: Sprint Planning, Sprint Goal, Sprint Backlog y matriz de líderes y colaboradores. Aprendí a redactar pruebas de aceptación en lenguaje Gherkin bajo el enfoque BDD, a documentar y probar Web Services con Swagger (OpenAPI) utilizando autenticación JWT, y a ejecutar la aplicación móvil en Android Studio con un emulador. Además, identifiqué y corregí un error de configuración en la documentación Swagger del backend.</td>
   </tr>
 
   <!-- ================= CRITERIO 2 ================= -->
@@ -141,7 +141,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-    <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo. </td>
+        <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo.<br><br><b>TB1:</b> Durante este Sprint reconocí que necesitaba aprender de forma autónoma herramientas que no conocía, como Android Studio, Trello, Swagger y la grabación de videos de navegación del producto. También comprendí la importancia de aplicar Conventional Commits y GitFlow para que el trabajo de cada integrante quede registrado. Las entrevistas de validación con usuarios reales me mostraron que es necesario seguir aprendiendo a escuchar al usuario para mejorar el producto.</td>
   </tr>
 </table>
 
@@ -1182,6 +1182,17 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   </tr> 
 </table>
 
+### US31 – Información en la Landing Page
+
+<table> 
+  <tr>
+  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
+  <tr><td>US31</td><td>Visitante</td><td>Alta</td><td>EP09 – Presencia digital</td></tr> 
+  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Conocer la propuesta de valor y los planes de BuildingFex</td></tr> 
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> el visitante accede a la Landing Page.<br> <strong>When:</strong> recorre la página principal.<br> <strong>Then:</strong> el sistema presenta la propuesta de valor, los beneficios y los videos del producto y del equipo.<br><br> <strong>AC02 – Given:</strong> el visitante desea conocer los precios.<br> <strong>When:</strong> accede a la sección de planes.<br> <strong>Then:</strong> el sistema muestra los planes Essential, Standard y Scale con sus características.<br><br> <strong>AC03 – Given:</strong> el visitante prefiere otro idioma.<br> <strong>When:</strong> selecciona el idioma español o inglés.<br> <strong>Then:</strong> el sistema muestra todo el contenido en el idioma seleccionado. </td>
+  </tr> 
+</table>
+
 #### Spike Stories
 
 ### SP01 – Evaluar almacenamiento seguro de documentos
@@ -1218,6 +1229,7 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 | EP06 | Gestión de incidencias | Reporte, seguimiento y resolución de incidencias del edificio. | Incidencias |
 | EP07 | Comunicaciones y documentos | Comunicados oficiales y repositorio de reglamentos y actas. | Gestión de Usuarios / Transversal |
 | EP08 | Dashboard unificado | Vista única con cobranzas, áreas comunes e incidencias. | Transversal |
+| EP09 | Presencia digital | Landing Page que presenta la propuesta de valor, los beneficios y los planes de suscripción a los visitantes. | Marketing / Landing Page |
 
 **Product Backlog priorizado**
 
@@ -1253,6 +1265,7 @@ La priorización se define con la escala **Alta / Media / Baja** según el valor
 | US28 | EP04 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | Baja | 2 |
 | US29 | EP02 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | Baja | 5 |
 | US30 | EP02 | Como administrador, quiero ver la evolución mensual de la morosidad en un gráfico para identificar tendencias. | Baja | 3 |
+| US31 | EP09 | Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme. | Alta | 5 |
 | SP01 | EP07 | Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex (Spike Story). | Media | 3 |
 
 ### 2.5. Strategic-Level Domain-Driven Design
@@ -3539,11 +3552,411 @@ Sección de cards explicando al cliente por que somos mejores que la competencia
 
 Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la izquierda y las preguntas a la derecha con pequeños detalles que resaltan el interfaz. 
 
+##### 3.1.4. Mobile Applications UX/UI Design**
+##### 3.1.4.1. Mobile Applications Wireframes
+![login](img/Login.png)
+![gestion](img/GestionResidente-Admin.png)
+![finanzas](img/GestionFinanzas-Admin.png)
+![deudas](img/Misdeudasypago-redisente.png)
+![areas](img/Areascomunesyreservas-residentr.png)
+##### 3.1.4.1. Mobile Applications Wireframes Diagrams
+![diagram-wireframe](img/wireframediagram.png)
+##### 3.1.4.1. Mobile Applications Mockups
+![login](img/Login-mockup.png)
+![gestion](img/GestionResidente-Admin-mockup.png)
+![finanzas](img/GestionFinanzas-Admin-mockup.png)
+![deudas](img/Misdeudasypago-redisente-mockup.png)
+![areas](img/Areascomunesyreservas-residentr-mockup.png)
+##### 3.1.4.1. Mobile Applications User Flow Diagrams
+![userflow-diagram](img/UserFlowDiagrams.png)
+##### 3.1.4.1. Mobile Applications Prototyping
+**Aplicación móvil – Inicio de sesión**
 
+![Inicio de sesión](img/sprint1-app-login.png)
+
+**Aplicación móvil – Gestión de residentes (administrador)**
+
+![Residentes](img/sprint1-app-residentes.png)
+
+**Aplicación móvil – Cobranzas (administrador)**
+
+![Cobranzas](img/sprint1-app-cobranzas.png)
+
+**Aplicación móvil – Mis deudas y pago (residente)**
+
+![Finanzas residente](img/sprint1-app-deudas.png)
+
+**Aplicación móvil – Áreas comunes y reservas (residente)**
+
+![Áreas comunes](img/sprint1-app-areas.png)
 
 
 ---
 <div style="page-break-after: always;"></div>
+
+## Capítulo IV: Product Implementation, Validation & Deployment
+
+### 4.2. Landing Page, Services & Applications Implementation
+
+#### 4.2.1. Sprint 1
+
+En esta sección se registra el avance del equipo BuildingFex durante el Sprint 1, correspondiente a la entrega TB1. Durante este Sprint se desplegó la Landing Page (Vue 3) en Vercel, se implementaron y desplegaron en Render los Web Services (.NET 10 con PostgreSQL) de los bounded contexts IAM, Finances y SocialSpaces, y se construyeron las pantallas core de la aplicación móvil Android (Kotlin con Jetpack Compose), siguiendo el marco de trabajo Scrum.
+
+##### 4.2.1.1. Sprint Planning 1
+
+El Sprint Planning 1 se realizó con la participación de todos los integrantes del equipo. En la reunión se revisó el Product Backlog (sección 2.4.3), se definió el Sprint Goal y se seleccionaron las User Stories que aportan directamente a dicho objetivo, priorizando las funcionalidades de cobranzas y áreas comunes, identificadas en las entrevistas como los principales puntos de dolor de ambos segmentos.
+
+| Sprint # | Sprint 1 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 28-09-2026 |
+| Time | 08:00 PM |
+| Location | Reunión virtual vía Google Meet |
+| Prepared By | Suteau, Antonin |
+| Attendees (to planning meeting) | Javier Murillo, Mathias / Hermoza Quispe, Jude Alessandro / Jave Chang, Alejandro Manuel / Heredia Hoyos, Danitza Ivonne / Suteau, Antonin |
+| Sprint 0 Review Summary | Al ser el primer Sprint de implementación, no existe un Sprint previo de desarrollo. Como punto de partida se toman los artefactos de la entrega AV1: el Product Backlog priorizado, los bounded contexts, la arquitectura C4 y el diseño UI del Capítulo III. |
+| Sprint 0 Retrospective Summary | Durante la elaboración del AV1 el equipo identificó como oportunidades de mejora: aplicar de forma consistente Conventional Commits y GitFlow, distribuir el trabajo de manera más equilibrada entre los integrantes y fijar fechas internas de revisión antes de cada entrega. |
+| **Sprint Goal & User Stories** | |
+| Sprint 1 Goal | **Our focus is on** ofrecer una primera versión funcional de BuildingFex en la que el administrador registre su cuenta, invite a sus residentes y gestione las cuotas, y en la que los residentes consulten y paguen su deuda y reserven áreas comunes desde la aplicación móvil, mientras los visitantes conocen la propuesta de valor en la Landing Page.<br>**We believe it delivers** la centralización de la cobranza y del uso de áreas comunes, los dos principales puntos de dolor de administradores y residentes, reemplazando el uso de Excel y WhatsApp.<br>**This will be confirmed when** un administrador inicia sesión, invita a un residente y le registra una cuota, y dicho residente puede consultar y pagar su deuda y reservar un área común desde la aplicación. |
+| Sprint 1 Velocity | 34 |
+| Sum of Story Points | 39 |
+
+##### 4.2.1.2. Aspect Leaders and Collaborators
+
+Para el Sprint 1 se definieron cinco aspectos de trabajo, alineados con los requisitos de la entrega TB1 y con los principales puntos de dolor identificados en las entrevistas: **Landing Page**, **IAM (Gestión de Usuarios)**, **Finanzas**, **Áreas Comunes** y **Aplicación Móvil**. Cada aspecto cuenta con un líder (L), responsable de coordinar su avance, revisar los cambios y asegurar su integración con el resto del producto, y con uno o más colaboradores (C) que participan en su implementación. Los bounded contexts de Incidencias y Comunicados se abordarán en el Sprint 2. Esta distribución se refleja en las tareas asignadas en el Sprint Backlog 1.
+
+| Team Member (Last Name, First Name) | GitHub Username | Landing Page | IAM | Finanzas | Áreas Comunes | Aplicación Móvil |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: |
+| Javier Murillo, Mathias | K1ngHulk | - | C | - | - | L |
+| Hermoza Quispe, Jude Alessandro | JvnnDev | C | L | - | - | - |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | L | C | L | - | C |
+| Heredia Hoyos, Danitza Ivonne | UDnTzh | C | - | C | L | C |
+| Suteau, Antonin | antoninsuteau | - | - | C | C | C |
+
+##### 4.2.1.3. Sprint Backlog 1
+
+El objetivo del Sprint 1 es entregar el flujo base de BuildingFex en sus tres productos: la Landing Page desplegada en Vercel, los Web Services de IAM, Finances y SocialSpaces desplegados en Render, y las pantallas core de la aplicación móvil Android. Cada User Story seleccionada en el Sprint Planning se descompuso en tareas técnicas (Work Items) para el backend, siguiendo la arquitectura DDD por bounded contexts (Domain, Application, Infrastructure e Interfaces), y para la aplicación móvil. Las tareas se asignaron según la matriz de Aspect Leaders and Collaborators y su seguimiento se realizó en un tablero de Trello con las columnas To-do, In-Process, To-Review y Done.
+
+![Sprint Backlog 1](img/sprint1-backlog.png)
+
+**URL del tablero:** https://trello.com/b/OJ4Gi5vO/buildingfex-sprint-1
+
+<table>
+  <tr><th colspan="2">Sprint #</th><th colspan="6">Sprint 1</th></tr>
+  <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
+  <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
+
+  <tr><td rowspan="3">US31</td><td rowspan="3">Información de BuildingFex en la Landing Page</td>
+      <td>T01</td><td>Secciones de la Landing Page</td><td>Implementar con Vue 3 y Vite las secciones Hero, Features, Subscriptions, Videos, CTA y Footer según el mock-up (3.1.3.2).</td><td>10</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T02</td><td>Internacionalización</td><td>Implementar el cambio de idioma español / inglés con vue-i18n y el componente LocaleSwitcher.</td><td>4</td><td>Heredia Hoyos, Danitza Ivonne</td><td>Done</td></tr>
+  <tr><td>T03</td><td>Despliegue en Vercel</td><td>Configurar vercel.json y publicar la Landing Page desde la rama main.</td><td>2</td><td>Hermoza Quispe, Jude Alessandro</td><td>Done</td></tr>
+
+  <tr><td rowspan="2">US12</td><td rowspan="2">Registrar cuenta y edificios</td>
+      <td>T04</td><td>Registro de administrador</td><td>Implementar el endpoint POST /api/v1/authentication/register-admin y la validación de correo (check-email).</td><td>5</td><td>Hermoza Quispe, Jude Alessandro</td><td>Done</td></tr>
+  <tr><td>T05</td><td>Registro de edificios</td><td>Implementar la entidad Edificio y su asociación con la cuenta del administrador.</td><td>6</td><td>Hermoza Quispe, Jude Alessandro</td><td>To-do</td></tr>
+
+  <tr><td rowspan="3">US14</td><td rowspan="3">Iniciar sesión</td>
+      <td>T06</td><td>Autenticación con JWT</td><td>Implementar POST /api/v1/authentication/sign-in con contraseñas cifradas con BCrypt y emisión de token JWT.</td><td>6</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T07</td><td>Pantalla de autenticación</td><td>Implementar AuthScreen en la aplicación móvil conectada al endpoint de sign-in.</td><td>5</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
+  <tr><td>T08</td><td>Despliegue de Web Services</td><td>Migrar la base de datos de MySQL a PostgreSQL y desplegar la API en Render con variables de entorno.</td><td>6</td><td>Hermoza Quispe, Jude Alessandro</td><td>Done</td></tr>
+
+  <tr><td rowspan="2">US13</td><td rowspan="2">Invitar residentes</td>
+      <td>T09</td><td>Endpoints de invitación</td><td>Implementar GET residents/invite y POST residents/set-credentials para que el residente active su cuenta con el código de invitación.</td><td>5</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T10</td><td>Pantalla de residentes</td><td>Implementar ResidentsScreen para que el administrador liste, registre y elimine residentes.</td><td>5</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
+
+  <tr><td rowspan="2">US01</td><td rowspan="2">Registrar cuotas mensuales</td>
+      <td>T11</td><td>Endpoints de cuotas</td><td>Implementar en el bounded context Finances el registro, consulta y actualización de cuotas (fees).</td><td>6</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T12</td><td>Pantallas de cobranzas</td><td>Implementar FinanceScreen y CollectionsScreen con el estado de cobranza por unidad.</td><td>6</td><td>Suteau, Antonin</td><td>Done</td></tr>
+
+  <tr><td>US02</td><td>Consultar deudas</td>
+      <td>T13</td><td>Pantalla de finanzas del residente</td><td>Implementar ResidentFinanceScreen con las cuotas pendientes y pagadas del residente.</td><td>5</td><td>Heredia Hoyos, Danitza Ivonne</td><td>Done</td></tr>
+
+  <tr><td rowspan="2">US03</td><td rowspan="2">Registrar pago</td>
+      <td>T14</td><td>Integración con Mercado Pago</td><td>Implementar los endpoints de /api/v1/payments (preference, checkout, confirm y webhook) con modo demo cuando no hay credenciales.</td><td>8</td><td>Jave Chang, Alejandro Manuel</td><td>Done</td></tr>
+  <tr><td>T15</td><td>Pagos y recibos</td><td>Implementar el registro de pagos y la generación de recibos asociados a cada cuota.</td><td>5</td><td>Suteau, Antonin</td><td>Done</td></tr>
+
+  <tr><td rowspan="2">US16</td><td rowspan="2">Consultar áreas comunes</td>
+      <td>T16</td><td>Endpoints de espacios comunes</td><td>Implementar en el bounded context SocialSpaces el registro, consulta, actualización y eliminación de espacios comunes.</td><td>5</td><td>Heredia Hoyos, Danitza Ivonne</td><td>Done</td></tr>
+  <tr><td>T17</td><td>Pantalla de espacios</td><td>Implementar SpacesScreen y ServicesScreen con los espacios y sus reglas.</td><td>5</td><td>Heredia Hoyos, Danitza Ivonne</td><td>Done</td></tr>
+
+  <tr><td rowspan="2">US17</td><td rowspan="2">Reservar área común</td>
+      <td>T18</td><td>Endpoints de reservas</td><td>Implementar el registro, consulta y cancelación de reservas de espacios comunes.</td><td>5</td><td>Suteau, Antonin</td><td>Done</td></tr>
+  <tr><td>T19</td><td>Pantalla de reservas</td><td>Implementar MyReservationsScreen con las reservas del residente.</td><td>4</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
+</table>
+
+##### 4.2.1.4. Development Evidence for Sprint Review
+
+Durante el Sprint 1 el equipo implementó la base de los tres productos de BuildingFex. En la Landing Page se construyó la estructura del proyecto en Vue 3 con Vite, sus secciones principales y el soporte de idiomas español e inglés. En los Web Services se implementó la API en .NET 10 siguiendo la arquitectura DDD por bounded contexts, con autenticación JWT, cifrado de contraseñas con BCrypt, los módulos de IAM, Finances y SocialSpaces, y la integración con Mercado Pago; además, se migró la base de datos de MySQL a PostgreSQL para su despliegue en Render, corrigiendo las incompatibilidades detectadas durante la migración. En la aplicación móvil se desarrolló el cliente Android con Kotlin y Jetpack Compose, con las pantallas de autenticación, residentes, finanzas, espacios comunes y reservas.
+
+A continuación se presentan los commits relacionados con la implementación en cada repositorio.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/landingpage | main | 32b5e03 | Initial commit | - | 29/09/2026 |
+| BuildingFex-UPC/landingpage | main | 0872ca4 | feat: add landing page project structure and components | - | 29/09/2026 |
+| BuildingFex-UPC/backend | main | ea29c75 | Initial commit | - | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 8fc59f6 | Initial commit: BuildingFex API backend | - | 29/09/2026 |
+| BuildingFex-UPC/backend | main | a8263d5 | Add Render blueprint and fail fast on misconfigured production env | Add render.yaml with the full service definition and deploy.env.example documenting every variable, replacing the Railway-only example. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | b8a388e | Report which JWT secret sources were checked when validation fails | The previous message could not distinguish between a missing variable, a placeholder value or a value shorter than the required length. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 84d49d5 | Read MercadoPago credentials from environment instead of hardcoding them | The script now writes the MercadoPago section only when MP_ACCESS_TOKEN, MP_PUBLIC_KEY and MP_WEBHOOK_SECRET are exported. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 9709964 | Migrate from MySQL to PostgreSQL for Render | Render does not offer managed MySQL. Swap MySql.EntityFrameworkCore for Npgsql.EntityFrameworkCore.PostgreSQL and UseMySQL for UseNpgsql. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | fa6b220 | fix: puerto 5432 por defecto al parsear connection strings sin puerto | Render omite el puerto en el connection string interno; se detecta la omisión leyendo la autoridad de la URI. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | d86ff51 | fix: reemplazar tipos longtext de MySQL por text en el modelo | longtext no existe en PostgreSQL e impedía que EnsureCreated creara el esquema. Afectaba a AppDbContext, Finances y SocialSpaces. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 81d2008 | fix: converter DateOnly->DateTime debe producir UTC para timestamptz | DateOnly.ToDateTime devuelve Kind=Unspecified y PostgreSQL lo rechaza en columnas timestamp with time zone. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 2e176db | docs: update module statuses, add repositories section and MP demo mode note | - | 01/10/2026 |
+| BuildingFex-UPC/frontend | develop | 0fad52e | Initial commit | - | 30/09/2026 |
+| BuildingFex-UPC/frontend | develop | fe3a524 | BuildingFex Android client (Kotlin + Jetpack Compose) | - | 30/09/2026 |
+| BuildingFex-UPC/frontend | main | 8602c98 | Add BuildingFex logo to login screen and drawer header | - | 30/09/2026 |
+
+##### 4.2.1.5. Testing Suite Evidence for Sprint Review
+
+Durante el Sprint 1 se elaboraron pruebas unitarias para la lógica de la aplicación móvil y pruebas de aceptación bajo el enfoque BDD (Behavior-Driven Development) para las User Stories implementadas. Las pruebas unitarias se desarrollaron con JUnit sobre las clases utilitarias que soportan el flujo de invitación de residentes y la gestión de unidades. Las pruebas de aceptación se redactaron en lenguaje Gherkin a partir de los criterios de aceptación definidos en la sección 2.4.1. Las pruebas de integración de los Web Services se incorporarán en el Sprint 2.
+
+**Repositorio de pruebas:** https://github.com/BuildingFex-UPC/frontend
+
+**Unit Tests**
+
+| Clase de prueba | User Story | Comportamiento verificado |
+| :--- | :--- | :--- |
+| InviteCodesTest | US13 | Extracción del código de invitación a partir de un código simple, un código etiquetado o el mensaje completo compartido por el administrador; detección de mensajes y rechazo de textos inválidos (10 casos). |
+| DepartmentNumberTest | US13 | Obtención del piso a partir del número de departamento, separación del sufijo aleatorio y generación de sufijos de cuatro caracteres no ambiguos (3 casos). |
+
+**Acceptance Tests**
+
+```gherkin
+Feature: US14 - Iniciar sesión de forma segura
+  Como usuario
+  quiero iniciar sesión de forma segura
+  para proteger la información del edificio
+
+  Scenario: Inicio de sesión con credenciales válidas
+    Given el usuario posee una cuenta registrada con credenciales válidas
+    When inicia sesión con su correo y contraseña
+    Then el sistema autentica al usuario
+    And le permite acceder al dashboard correspondiente a su rol
+
+  Scenario: Inicio de sesión con credenciales inválidas
+    Given el usuario ingresa una contraseña incorrecta
+    When intenta iniciar sesión
+    Then el sistema rechaza la autenticación
+    And muestra un mensaje de credenciales inválidas
+```
+
+```gherkin
+Feature: US13 - Invitar residentes y asignar unidad
+  Como administrador
+  quiero invitar residentes y asignarles una unidad
+  para que accedan al sistema
+
+  Scenario: Generación de invitación para una unidad existente
+    Given existe una unidad registrada en el edificio
+    And los datos del residente son válidos
+    When el administrador genera la invitación
+    Then el sistema crea un código de invitación asociado a la unidad
+
+  Scenario: Activación de cuenta con código de invitación
+    Given el residente recibió un código de invitación válido
+    When ingresa el código y define su correo y contraseña
+    Then el sistema activa su cuenta asociada a la unidad
+```
+
+```gherkin
+Feature: US02 - Consultar deudas y estado de pago
+  Como residente
+  quiero visualizar mis deudas y su estado de pago
+  para saber cuánto y cuándo debo pagar
+
+  Scenario: Residente con cuotas pendientes
+    Given el residente tiene cuotas registradas
+    When consulta su estado de cuenta
+    Then el sistema muestra las cuotas pendientes con su monto y estado de pago
+
+  Scenario: Residente sin deudas pendientes
+    Given el residente no tiene cuotas pendientes
+    When consulta su estado de cuenta
+    Then el sistema indica que no existen cuotas pendientes
+```
+
+```gherkin
+Feature: US17 - Reservar un área común
+  Como residente
+  quiero reservar un área común en una fecha y hora
+  para asegurar su uso sin conflictos
+
+  Scenario: Reserva en un horario disponible
+    Given el área común está disponible en la fecha y hora solicitadas
+    When el residente registra la reserva
+    Then el sistema crea la reserva asociada al residente
+
+  Scenario: Reserva en un horario no disponible
+    Given el horario solicitado ya está reservado
+    When el residente intenta registrar la reserva
+    Then el sistema rechaza la solicitud
+```
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/frontend | develop | fe3a524 | BuildingFex Android client (Kotlin + Jetpack Compose) | Incluye las pruebas unitarias InviteCodesTest y DepartmentNumberTest. | 30/09/2026 |
+| BuildingFex-UPC/frontend | develop | 4350c6b | test: add acceptance test for US14 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | ceaebc1 | test: add acceptance test for US13 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | 55abe34 | test: add acceptance test for US02 | - | 04/10/2026 |
+| BuildingFex-UPC/frontend | develop | d1cbd8b | test: add acceptance test for US17 | - | 04/10/2026 |
+
+##### 4.2.1.6. Execution Evidence for Sprint Review
+
+Al cierre del Sprint 1, BuildingFex cuenta con sus tres productos en funcionamiento. La Landing Page se encuentra desplegada en Vercel y presenta la propuesta de valor, los beneficios, los planes de suscripción (Essential, Standard y Scale), los videos del producto y del equipo, en español e inglés. Los Web Services se encuentran desplegados en Render y son consumidos por la aplicación móvil Android, en la que el administrador puede iniciar sesión, registrar e invitar residentes, gestionar las cuotas y consultar el estado de cobranza, mientras que el residente puede activar su cuenta con un código de invitación, consultar y pagar sus deudas, y reservar áreas comunes.
+
+**Landing Page:** https://buildingfex.vercel.app/
+
+A continuación se presentan las principales vistas implementadas.
+
+**Landing Page – Sección principal**
+
+![Landing Page Hero](img/sprint1-landing-hero.png)
+
+**Landing Page – Planes de suscripción**
+
+![Landing Page Planes](img/sprint1-landing-planes.png)
+
+**Aplicación móvil – Inicio de sesión**
+
+![Inicio de sesión](img/sprint1-app-login.png)
+
+**Aplicación móvil – Gestión de residentes (administrador)**
+
+![Residentes](img/sprint1-app-residentes.png)
+
+**Aplicación móvil – Cobranzas (administrador)**
+
+![Cobranzas](img/sprint1-app-cobranzas.png)
+
+**Aplicación móvil – Mis deudas y pago (residente)**
+
+![Finanzas residente](img/sprint1-app-deudas.png)
+
+**Aplicación móvil – Áreas comunes y reservas (residente)**
+
+![Áreas comunes](img/sprint1-app-areas.png)
+
+**Video de navegación**
+
+En el video se recorren la Landing Page en sus dos idiomas y los principales flujos de la aplicación móvil: el inicio de sesión del administrador, la gestión de residentes y de sus códigos de invitación, el estado de cobranza de las cuotas y la gestión de áreas comunes; y, desde la cuenta del residente, la consulta de sus deudas y la reserva de un área común.
+
+[![Video de navegación](img/sprint1-video.png)](https://drive.google.com/file/d/1O0ApfGeRRmZWkpnKku9gWH2G7VqVoagA/view?usp=drive_link)
+
+**URL del video:** [upc-pre-202620-1acc0238-4939-BuildingFex-productnavigation-tb1.mp4](https://drive.google.com/file/d/1O0ApfGeRRmZWkpnKku9gWH2G7VqVoagA/view?usp=drive_link)
+##### 4.2.1.7. Services Documentation Evidence for Sprint Review
+
+Durante el Sprint 1 se documentaron con OpenAPI, mediante Swagger UI, los Web Services de los bounded contexts IAM, Finances y SocialSpaces. La documentación se genera automáticamente a partir de los controladores de la API en .NET 10 y se encuentra disponible en el entorno desplegado en Render, lo que permite al equipo y al cliente móvil probar cada endpoint con datos de muestra. Los endpoints protegidos requieren el token JWT obtenido en el inicio de sesión.
+
+**Documentación desplegada (Swagger UI):** https://backend-1-lgr7.onrender.com/swagger
+
+**Repositorio de Web Services:** https://github.com/BuildingFex-UPC/backend
+
+| Bounded Context | Acción | Verbo HTTP | Sintaxis de llamada | Parámetros | Ejemplo de response | Explicación del response |
+| :--- | :--- | :--- | :--- | :--- | :--- | :--- |
+| IAM | Iniciar sesión | POST | `/api/v1/authentication/sign-in` | Body: `email`, `password` | `{ "user": { "id": "admin-seed-1", "name": "Admin BuildingFex", "email": "admin@buildingfex.test", "role": "admin" }, "token": "eyJhbGci..." }` | 200 OK con los datos del usuario y el token JWT. 400 si las credenciales son inválidas. |
+| IAM | Registrar administrador | POST | `/api/v1/authentication/register-admin` | Body: `name`, `email`, `password`, `dni`, `address`, `company`, `ruc` | `{ "user": { "id": "...", "role": "admin", ... }, "token": "eyJhbGci..." }` | Crea la cuenta del administrador y retorna su sesión iniciada. |
+| IAM | Verificar correo | GET | `/api/v1/authentication/check-email?email={email}` | Query: `email` | `{ "exists": false }` | Indica si el correo ya está registrado antes de crear la cuenta. |
+| IAM | Consultar invitación | GET | `/api/v1/authentication/residents/invite?code={code}` | Query: `code` | `{ "id": "resident-seed-1", "name": "...", "floor": "3", "hasCredentials": false }` | Retorna el residente asociado al código de invitación. 404 si el código no existe. |
+| IAM | Activar cuenta de residente | POST | `/api/v1/authentication/residents/set-credentials` | Body: `code`, `email`, `password` | `{ "user": { "role": "resident", ... }, "token": "eyJhbGci..." }` | Asigna correo y contraseña al residente invitado y le permite ingresar a la aplicación. |
+| IAM | Listar residentes | GET | `/users?ownerAdminId={id}&role=resident` | Query: `ownerAdminId`, `role`, `email`, `code` | `[ { "id": "resident-seed-1", "name": "...", "role": "resident", "floor": "3" } ]` | Lista los usuarios del administrador filtrados por rol. |
+| IAM | Registrar residente | POST | `/users` | Body: `name`, `role`, `floor`, `ownerAdminId` | `{ "id": "...", "code": "...", "role": "resident" }` | Crea al residente y genera su código de invitación. |
+| IAM | Eliminar residente | DELETE | `/users/{id}` | Path: `id` | `204 No Content` | Elimina al residente indicado. |
+| Finances | Listar cuotas | GET | `/fees?ownerAdminId={id}&residentId={id}` | Query: `ownerAdminId`, `residentId` | `[ { "id": "...", "residentId": "resident-seed-1", "amount": 150 } ]` | Lista las cuotas registradas por administrador o por residente. |
+| Finances | Consultar deudas (recibos) | GET | `/receipts?residentId={id}` | Query: `ownerAdminId`, `residentId` | `[ { "id": "receipt-seed-1", "concept": "Mantenimiento Junio 2026", "amount": 150, "dueDate": "2026-07-31", "status": "Pending" } ]` | Retorna los recibos del residente con su monto, vencimiento y estado de pago. |
+| Finances | Iniciar pago | POST | `/api/v1/payments/checkout` | Body: datos del recibo a pagar | `{ "checkoutUrl": "https://..." }` | Crea la preferencia de pago en Mercado Pago. En modo demo simula el pago sin llamar a Mercado Pago. |
+| Finances | Confirmar pago | POST | `/api/v1/payments/confirm` | Body: identificador del pago | `{ "status": "approved" }` | Confirma el pago y marca el recibo como pagado. |
+| SocialSpaces | Listar áreas comunes | GET | `/socialSpaces?ownerAdminId={id}` | Query: `ownerAdminId` | `[ { "id": "...", "name": "Parrilla", "capacity": 10, "description": "..." } ]` | Lista las áreas comunes del edificio con su capacidad y descripción. |
+| SocialSpaces | Registrar área común | POST | `/socialSpaces` | Body: `name`, `capacity`, `description`, `imageUrl`, `ownerAdminId` | `{ "id": "...", "name": "SUM", "capacity": 30 }` | Crea un área común para el edificio. |
+| SocialSpaces | Listar reservas | GET | `/reservations?spaceId={id}&date={fecha}` | Query: `ownerAdminId`, `spaceId`, `residentId`, `date` | `[ { "id": "...", "spaceId": "...", "date": "2026-10-10", "startTime": "18:00", "endTime": "20:00" } ]` | Lista las reservas filtradas por espacio, residente o fecha. |
+| SocialSpaces | Registrar reserva | POST | `/reservations` | Body: `spaceId`, `residentId`, `date`, `startTime`, `endTime`, `guests` | `{ "id": "...", "spaceId": "...", "date": "2026-10-10", "startTime": "18:00", "endTime": "20:00" }` | Crea la reserva del residente para el área común. |
+| SocialSpaces | Cancelar reserva | DELETE | `/reservations/{id}` | Path: `id` | `204 No Content` | Cancela la reserva indicada. |
+
+**Interacción con la documentación**
+
+A continuación se muestra la prueba del endpoint de inicio de sesión en Swagger UI con el usuario de muestra `admin@buildingfex.test`, donde se obtiene el token JWT que luego se utiliza para consultar los recibos del residente.
+
+![Swagger – Vista general](img/sprint1-swagger-general.png)
+
+![Swagger – Sign-in](img/sprint1-swagger-signin.png)
+
+![Swagger – Recibos](img/sprint1-swagger-receipts.png)
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/backend | main | 8fc59f6 | Initial commit: BuildingFex API backend | Incluye la configuración de Swagger (OpenAPI) y los controladores documentados. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 2e176db | docs: update module statuses, add repositories section and MP demo mode note | - | 01/10/2026 |
+| BuildingFex-UPC/backend | main | 0077af8 | fix: match swagger security scheme reference name so bearer token is sent | Corrige la referencia del esquema de seguridad para que Swagger UI envíe el token JWT en las peticiones protegidas. | 04/10/2026 |
+
+##### 4.2.1.8. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 1 se realizó el despliegue de los tres productos digitales de BuildingFex. La Landing Page se desplegó en Vercel, los Web Services se desplegaron como contenedor Docker en Render junto con una base de datos PostgreSQL gestionada por la misma plataforma, y la aplicación móvil Android se configuró para consumir los Web Services desplegados. A continuación se describen los pasos realizados para cada producto.
+
+**1. Despliegue de la Landing Page (Vercel)**
+
+1. Se creó una cuenta en Vercel vinculada a la organización de GitHub BuildingFex-UPC.
+2. Se importó el repositorio `landingpage` como nuevo proyecto, seleccionando Vite como framework, `npm run build` como comando de compilación y `dist` como directorio de salida.
+3. Se agregó el archivo `vercel.json` con una regla de reescritura hacia `index.html`, para que las rutas del router de Vue (términos, privacidad) funcionen al acceder directamente a ellas.
+4. Se configuraron las variables de entorno `VITE_WEB_APP_URL`, `VITE_YOUTUBE_PRODUCT_ID` y `VITE_YOUTUBE_TEAM_ID`.
+5. Vercel despliega automáticamente cada cambio enviado a la rama `main`.
+
+**URL de la Landing Page:** https://buildingfex.vercel.app/
+
+![Vercel – Despliegue automático completado para el commit 0872ca4 de la rama main](img/sprint1-deploy-vercel.png)
+
+**2. Despliegue de los Web Services (Render)**
+
+1. Se creó una cuenta en Render vinculada a la organización de GitHub BuildingFex-UPC.
+2. Se creó una base de datos PostgreSQL en Render. Dado que Render no ofrece MySQL gestionado, la API se migró de MySQL a PostgreSQL (commit `9709964`).
+3. Se agregó al repositorio un `Dockerfile` multi-stage (SDK de .NET 10 para compilar y runtime de ASP.NET para ejecutar) y el archivo `render.yaml`, que define el servicio web, el health check en `/health` y el despliegue automático.
+4. Se configuraron en Render las variables de entorno: la cadena de conexión `ConnectionStrings__DefaultConnection`, el secreto JWT `TokenSettings__Secret`, generado por Render, y las credenciales de Mercado Pago. Ningún secreto se almacena en el repositorio (commit `84d49d5`).
+5. Se corrigieron los errores detectados en el primer despliegue: el puerto por defecto de PostgreSQL (`fa6b220`), los tipos `longtext` incompatibles (`d86ff51`) y las fechas en UTC (`81d2008`).
+
+**URL de los Web Services:** https://backend-1-lgr7.onrender.com
+**Documentación:** https://backend-1-lgr7.onrender.com/swagger
+
+![Render – Web Services desplegados y accesibles en producción](img/sprint1-deploy-render.png)
+
+**3. Configuración de la aplicación móvil**
+
+1. En el archivo `build.gradle.kts` se definió la constante `API_BASE_URL` apuntando a los Web Services desplegados en Render, tanto para la variante debug como para release.
+2. 2. Se generó el APK de la aplicación (`app-debug.apk`) con Android Studio y se ejecutó en un emulador Android (Pixel 5) para verificar la comunicación con los Web Services desplegados.
+3. La distribución de la aplicación mediante Firebase App Distribution se realizará en un Sprint posterior.
+
+![Android Studio – Build APK](img/sprint1-deploy-apk.png)
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/landingpage | main | 0872ca4 | feat: add landing page project structure and components | Incluye el archivo vercel.json para el despliegue en Vercel. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | a8263d5 | Add Render blueprint and fail fast on misconfigured production env | Add render.yaml with the full service definition and deploy.env.example documenting every variable. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 84d49d5 | Read MercadoPago credentials from environment instead of hardcoding them | - | 29/09/2026 |
+| BuildingFex-UPC/backend | main | 9709964 | Migrate from MySQL to PostgreSQL for Render | Render does not offer managed MySQL, so running everything there means PostgreSQL. | 29/09/2026 |
+| BuildingFex-UPC/backend | main | fa6b220 | fix: puerto 5432 por defecto al parsear connection strings sin puerto | Render omite el puerto en el connection string interno. | 29/09/2026 |
+
+##### 4.2.1.9. Team Collaboration Insights during Sprint
+
+Durante el Sprint 1 el equipo organizó la implementación según la matriz de Aspect Leaders and Collaborators (sección 4.2.1.2). Cada líder coordinó el avance de su aspecto y distribuyó las tareas del Sprint Backlog entre los colaboradores, mientras que el seguimiento se realizó en el tablero del Sprint y en reuniones virtuales por Google Meet. El trabajo se desarrolló en tres repositorios de la organización BuildingFex-UPC, uno por producto: `landingpage` para la Landing Page, `backend` para los Web Services y `frontend` para la aplicación móvil Android. Los cambios se registraron mediante commits siguiendo la convención Conventional Commits (`feat`, `fix`, `docs`, `test`).
+
+A continuación se presentan los analíticos de colaboración de GitHub (Insights) de cada repositorio, que muestran la cantidad de commits realizados por cada integrante durante el Sprint.
+
+**Landing Page – https://github.com/BuildingFex-UPC/landingpage**
+
+![Insights Landing Page – Contributors](img/sprint1-insights-landing.png)
+
+**Web Services – https://github.com/BuildingFex-UPC/backend**
+
+![Insights Web Services – Contributors](img/sprint1-insights-backend.png)
+
+**Aplicación móvil – https://github.com/BuildingFex-UPC/frontend**
+
+![Insights Aplicación móvil – Contributors](img/sprint1-insights-frontend.png)
+
+**Interpretación de los analíticos**
+
+En el repositorio de la Landing Page se registraron 2 commits en la rama `main`, correspondientes a la creación de la estructura del proyecto en Vue 3 y de sus componentes. En el repositorio de Web Services se registraron 11 commits; la mayor actividad se concentró el 29/09/2026, día en que se migró la base de datos a PostgreSQL y se corrigieron los errores detectados en el despliegue en Render, a lo que se sumó la corrección de la configuración de seguridad de Swagger (commit `0077af8`). En el repositorio de la aplicación móvil se registraron 3 commits en `main`, con la construcción del cliente Android; además, las pruebas de aceptación de las User Stories del Sprint se registraron en la rama `develop` (commits `4350c6b`, `ceaebc1`, `55abe34` y `d1cbd8b`), por lo que aún no se reflejan en los analíticos de la rama principal.
+
+Los analíticos evidencian que, durante este primer Sprint, la construcción de la estructura base de los tres productos estuvo concentrada en el líder técnico del equipo, Alejandro Jave Chang, mientras que Antonin Suteau participó en las pruebas de aceptación y en la corrección de la documentación de los Web Services. Esta concentración se explica porque el Sprint 1 se enfocó en establecer la arquitectura base de los tres productos. Como acción de mejora para el Sprint 2, el equipo acordó distribuir de forma más equilibrada los commits entre todos los integrantes según la matriz de Aspect Leaders and Collaborators, trabajar en ramas `feature/*` integradas mediante Pull Requests hacia `develop`, y aplicar Conventional Commits en todos los mensajes.
 
 
 ## Capítulo IV: Product Implementation & Validation
@@ -3728,9 +4141,11 @@ La generación, instalación y validación del APK permanecen pendientes de comp
 
 ### 4.3. Validation Interviews
 
-En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFlex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
+En esta sección se documentan las actividades de validación ejecutadas con usuarios reales pertenecientes a nuestros dos segmentos objetivo. El propósito es evaluar la usabilidad, claridad y propuesta de valor tanto de la Landing Page como de los prototipos navegables de la aplicación web de **BuildingFex**, garantizando que el sistema provea estrictamente el servicio sin flujos de asistencia innecesarios que desvíen la atención del usuario.
 
 ---
+
+
 
 #### 4.3.1. Diseño de entrevistas
 
@@ -3746,6 +4161,7 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
 7. Después de ver la presentación / prototipo de la aplicación, ¿cuál fue tu primera impresión sobre BuildingFlex?
 
 ---
+
 
 #### Segmento 1: Juntas de Directiva y Residentes
 
@@ -3803,6 +4219,21 @@ En esta sección se documentan las actividades de validación ejecutadas con usu
 
 A continuación, se detalla el registro de las sesiones de validación realizadas con los usuarios seleccionados, grabando la pantalla y la interacción directa con el sistema. 
 
+##### Segmento 1: Juntas de Directiva y Residentes
+
+**Entrevista 6**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Gaël Gauthier |
+| **Edad** | 21 |
+| **Distrito** | Miraflores |
+| **Perfil** | Residente del edificio |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-gael-tb1](https://drive.google.com/file/d/1c8Tet-AQTgUqTKLSoOl_SSQTqRXpqPz-/view?usp=drive_link) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 07:20 |
+| **Screenshot** | ![Entrevista Gaël Gauthier](img/validacion-gael.png) |
+| **Resumen de Apreciaciones** | Gaël Gauthier, residente del edificio, recorrió la Landing Page y la aplicación móvil desde el perfil de residente. Destacó la interfaz y la facilidad de manejo de la aplicación, así como su utilidad para consultar sus cuotas y su estado de pago. También valoró la seguridad que transmite la plataforma, ya que centralizar los pagos en un canal oficial del edificio ayuda a evitar estafas. Como mejora, propuso incorporar un chat en vivo para comunicarse directamente con la administración. Afirmó que sí utilizaría BuildingFex, porque la considera simple de usar y práctica en el día a día. |
+
 
 ##### Segmento 2: Empresas de Gestión de Edificios 
 
@@ -3820,6 +4251,19 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 
 
 <div style="page-break-after: always;"></div>
+
+**Entrevista 5**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Luz Quispe |
+| **Edad** | 38 |
+| **Distrito** | Miraflores |
+| **Perfil** | Conserje del edificio, encargada de la atención y la gestión diaria de los vecinos |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-luz-tb1](https://drive.google.com/file/d/1ot1rwofgPzZBK5EEPS2TCrhCkSkDaC9n/view?usp=drive_link) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 05:30 |
+| **Screenshot** | ![Entrevista Luz Quispe](img/validacion-luz.png) |
+| **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
 
 
 
