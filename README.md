@@ -4322,7 +4322,8 @@ No se consideraron las funcionalidades de incidencias, comunicados y documentos,
 **Problema:**  
 En la pantalla de acceso se presentan las opciones para iniciar sesión, registrar un administrador y activar una cuenta mediante un código de invitación. Al encontrarse dentro del mismo contexto, un usuario nuevo podría no identificar inmediatamente cuál de estas opciones corresponde a su situación. Esto puede generar confusión especialmente para los residentes, quienes utilizan un código de invitación para activar su cuenta en lugar de realizar un registro convencional.
 
-**Screenshot:** `img/Login-mockup.png`
+**Screenshot:** 
+<br> ![Login-mockup.png](img/Login-mockup.png)
 
 **Recomendación:**  
 Diferenciar visualmente las opciones según el tipo de usuario y utilizar textos de apoyo breves que permitan identificar la acción correspondiente. Por ejemplo, se puede presentar una opción específica para administradores y otra para usuarios que poseen un código de invitación.
@@ -4336,7 +4337,8 @@ Diferenciar visualmente las opciones según el tipo de usuario y utilizar textos
 **Problema:**  
 Dentro de la sección de finanzas se presentan elementos relacionados con la configuración de parámetros financieros, como la cuota mensual base y la tasa de mora, junto con acciones de automatización como generar el recibo del mes y crear recibos vencidos. Estas acciones tienen objetivos diferentes: unas permiten establecer reglas y otras ejecutar procesos. Presentarlas dentro de la misma sección puede dificultar la diferenciación entre configuración y acciones operativas.
 
-**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+**Screenshot:** 
+<br> ![GestionFinanzas-Admin-mockup.png](img/GestionFinanzas-Admin-mockup.png)
 
 **Recomendación:**  
 Separar visualmente ambos grupos mediante subtítulos, tarjetas o bloques diferenciados. Se recomienda mantener un bloque destinado a la configuración financiera y otro destinado a las automatizaciones y acciones operativas.
@@ -4350,7 +4352,8 @@ Separar visualmente ambos grupos mediante subtítulos, tarjetas o bloques difere
 **Problema:**  
 En la sección de finanzas se muestran indicadores como “monto pendiente” y “total pagado”. Cuando estos valores aparecen en S/0, el usuario puede no identificar con claridad si esto significa que no existen deudas, que todas las cuotas ya fueron pagadas o que todavía no se han generado recibos. El valor numérico por sí solo no comunica completamente el estado actual del proceso financiero.
 
-**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+**Screenshot:**
+<br> ![GestionFinanzas-Admin-mockup.png](img/GestionFinanzas-Admin-mockup.png)
 
 **Recomendación:**  
 Complementar los indicadores con un mensaje contextual que explique el significado del valor mostrado. Por ejemplo, se podría indicar “No existen cuotas generadas”, “Todas las cuotas están pagadas” o “No existen pagos registrados”, según corresponda al estado real del sistema.
@@ -4364,7 +4367,8 @@ Complementar los indicadores con un mensaje contextual que explique el significa
 **Problema:**  
 La configuración de pago mediante Mercado Pago se presenta mediante un control que permite activar el método. Sin embargo, el usuario puede necesitar información adicional para identificar si el método se encuentra actualmente activo y qué efecto tendrá sobre el proceso de pago al modificar esta configuración.
 
-**Screenshot:** `img/GestionFinanzas-Admin-mockup.png`
+**Screenshot:**  
+<br> ![GestionFinanzas-Admin-mockup.png](img/GestionFinanzas-Admin-mockup.png)
 
 **Recomendación:**  
 Mostrar explícitamente el estado actual del método de pago, por ejemplo, “Mercado Pago activo” o “Mercado Pago inactivo”. Asimismo, se puede incorporar una breve descripción que explique qué sucede cuando el administrador activa o desactiva esta opción.
@@ -4378,8 +4382,8 @@ Mostrar explícitamente el estado actual del método de pago, por ejemplo, “Me
 **Problema:**  
 La sección de suscripciones de la Landing Page presenta los planes Esencial, Estándar y Escala junto con su precio mensual y el rango de departamentos correspondiente. Sin embargo, la información mostrada no permite identificar claramente las diferencias funcionales entre las alternativas. Esto puede dificultar que un administrador o junta de propietarios determine rápidamente qué plan se adapta mejor a sus necesidades.
 
-**Screenshot:** `img/sprint1-landing-planes.png`
-
+**Screenshot:** 
+<br> ![sprint1-landing-planes](img/sprint1-landing-planes.png)
 **Recomendación:**  
 Incluir una comparación breve de las principales funcionalidades disponibles en cada plan o agregar una opción como “Ver características” que permita consultar las diferencias entre las alternativas antes de seleccionar el botón “Suscribirse”.
 
