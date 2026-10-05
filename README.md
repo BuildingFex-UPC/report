@@ -3533,7 +3533,43 @@ Sección de cards explicando al cliente por que somos mejores que la competencia
 
 Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la izquierda y las preguntas a la derecha con pequeños detalles que resaltan el interfaz. 
 
+##### 3.1.4. Mobile Applications UX/UI Design**
+##### 3.1.4.1. Mobile Applications Wireframes
+![login](img/Login.png)
+![gestion](img/GestionResidente-Admin.png)
+![finanzas](img/GestionFinanzas-Admin.png)
+![deudas](img/Misdeudasypago-redisente.png)
+![areas](img/Areascomunesyreservas-residentr.png)
+##### 3.1.4.1. Mobile Applications Wireframes Diagrams
+![diagram-wireframe](img/wireframediagram.png)
+##### 3.1.4.1. Mobile Applications Mockups
+![login](img/Login-mockup.png)
+![gestion](img/GestionResidente-Admin-mockup.png)
+![finanzas](img/GestionFinanzas-Admin-mockup.png)
+![deudas](img/Misdeudasypago-redisente-mockup.png)
+![areas](img/Areascomunesyreservas-residentr-mockup.png)
+##### 3.1.4.1. Mobile Applications User Flow Diagrams
+![userflow-diagram](img/UserFlowDiagrams.png)
+##### 3.1.4.1. Mobile Applications Prototyping
+**Aplicación móvil – Inicio de sesión**
 
+![Inicio de sesión](img/sprint1-app-login.png)
+
+**Aplicación móvil – Gestión de residentes (administrador)**
+
+![Residentes](img/sprint1-app-residentes.png)
+
+**Aplicación móvil – Cobranzas (administrador)**
+
+![Cobranzas](img/sprint1-app-cobranzas.png)
+
+**Aplicación móvil – Mis deudas y pago (residente)**
+
+![Finanzas residente](img/sprint1-app-deudas.png)
+
+**Aplicación móvil – Áreas comunes y reservas (residente)**
+
+![Áreas comunes](img/sprint1-app-areas.png)
 
 
 ---
