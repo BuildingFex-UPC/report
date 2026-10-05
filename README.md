@@ -1228,17 +1228,20 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 
 #### 2.4.3. Product Backlog
 
-El Product Backlog de BuildingFex consolida las historias de usuario y de investigación derivadas de las secciones 2.4.1 (User Stories) y 2.4.2 (Impact Mapping). Sus elementos representan el trabajo del producto y se priorizan según su aporte al MVP y la precedencia de las funcionalidades.
+El Product Backlog de BuildingFex consolida las historias de usuario y de investigación derivadas de las secciones 2.4.1 (User Stories) y 2.4.2 (Impact Mapping). Sus elementos representan el trabajo del producto y se ordenan por prioridad y, dentro de cada nivel, por Story Points de mayor a menor.
 
 La priorización se define con la escala **Alta / Media / Baja** según el valor para el usuario y su aporte al MVP, y el esfuerzo se estima en **Story Points** usando la sucesión de Fibonacci (1, 2, 3, 5, 8, 13). El backlog también incorpora las **Spike Stories** (prefijo `SP`) necesarias para reducir incertidumbre técnica antes de la implementación. El backlog es un artefacto vivo: el orden y la estimación se ajustan al cierre de cada Sprint y tras el análisis de entrevistas (sección 2.2.3).
 
-**Orden por importancia y precedencia**
+**Orden por prioridad y Story Points**
 
-La posición de cada fila representa el orden de atención del backlog; los identificadores de las historias se conservan y no determinan su posición. Se priorizan las funcionalidades de mayor valor para el MVP, comenzando por el registro, el acceso y la incorporación de residentes, y continuando con las operaciones centrales de cobranzas, reservas, incidencias y comunicaciones. Las mejoras complementarias y las funcionalidades de prioridad baja se sitúan después de esa base.
+La tabla presenta primero las historias de prioridad **Alta**, luego las de prioridad **Media** y finalmente las de prioridad **Baja**. Dentro de cada nivel, las historias se ordenan por **Story Points de mayor a menor**: 8, 5, 3 y 2, según las estimaciones del backlog. Por ello, US06 y US26, ambas de prioridad alta y 8 puntos, ocupan las primeras posiciones.
 
-La precedencia se respeta antes de seleccionar una funcionalidad dependiente. Por ello, una historia de prioridad media puede adelantarse cuando proporciona información necesaria para otra de prioridad alta, sin cambiar su prioridad ni su estimación. En este backlog, US07 precede a US06 porque el reporte consolidado de ingresos y egresos necesita el registro de gastos.
+Los identificadores, las descripciones, las prioridades y las estimaciones se conservan. Cuando dos historias tienen la misma prioridad y los mismos Story Points, se mantiene su orden relativo.
 
-Las principales relaciones que justifican la secuencia son:
+**Precedencia para la planificación del Sprint**
+
+Las dependencias se consideran al seleccionar las historias de cada Sprint y organizar su implementación. El orden de la tabla expresa la prioridad y el esfuerzo estimado; las funcionalidades que requieren datos o capacidades de otras historias se planifican tomando en cuenta esas relaciones.
+Las principales dependencias para la planificación son:
 
 - **US12 → US14 → US13:** registro de la administradora, acceso autenticado e incorporación de residentes.
 - **US01 → US02 → US03:** registro de cuotas, consulta de deudas y registro de pagos.
