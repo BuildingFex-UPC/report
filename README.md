@@ -3787,9 +3787,9 @@ A continuación se presentan las principales vistas implementadas.
 
 En el video se recorren la Landing Page en sus dos idiomas y los principales flujos de la aplicación móvil: el inicio de sesión del administrador, la gestión de residentes y de sus códigos de invitación, el estado de cobranza de las cuotas y la gestión de áreas comunes; y, desde la cuenta del residente, la consulta de sus deudas y la reserva de un área común.
 
-[![Video de navegación](img/sprint1-video.png)]([COMPLETAR: URL OneDrive])
+[![Video de navegación](img/sprint1-video.png)](https://drive.google.com/file/d/1O0ApfGeRRmZWkpnKku9gWH2G7VqVoagA/view?usp=drive_link)
 
-**URL del video:** [upc-pre-202620-1acc0238-4939-BuildingFex-productnavigation-tb1.mp4]([COMPLETAR: URL OneDrive])
+**URL del video:** [upc-pre-202620-1acc0238-4939-BuildingFex-productnavigation-tb1.mp4](https://drive.google.com/file/d/1O0ApfGeRRmZWkpnKku9gWH2G7VqVoagA/view?usp=drive_link)
 ##### 4.2.1.7. Services Documentation Evidence for Sprint Review
 
 Durante el Sprint 1 se documentaron con OpenAPI, mediante Swagger UI, los Web Services de los bounded contexts IAM, Finances y SocialSpaces. La documentación se genera automáticamente a partir de los controladores de la API en .NET 10 y se encuentra disponible en el entorno desplegado en Render, lo que permite al equipo y al cliente móvil probar cada endpoint con datos de muestra. Los endpoints protegidos requieren el token JWT obtenido en el inicio de sesión.
@@ -3994,7 +3994,7 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Edad** | 21 |
 | **Distrito** | Miraflores |
 | **Perfil** | Residente del edificio |
-| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-gael-tb1](LIEN_DRIVE) |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-gael-tb1](https://drive.google.com/file/d/1c8Tet-AQTgUqTKLSoOl_SSQTqRXpqPz-/view?usp=drive_link) |
 | **Timing y Duración** | Inicio: 00:00 / Duración: 07:20 |
 | **Screenshot** | ![Entrevista Gaël Gauthier](img/validacion-gael.png) |
 | **Resumen de Apreciaciones** | Gaël Gauthier, residente del edificio, recorrió la Landing Page y la aplicación móvil desde el perfil de residente. Destacó la interfaz y la facilidad de manejo de la aplicación, así como su utilidad para consultar sus cuotas y su estado de pago. También valoró la seguridad que transmite la plataforma, ya que centralizar los pagos en un canal oficial del edificio ayuda a evitar estafas. Como mejora, propuso incorporar un chat en vivo para comunicarse directamente con la administración. Afirmó que sí utilizaría BuildingFex, porque la considera simple de usar y práctica en el día a día. |
@@ -4025,7 +4025,7 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Edad** | 38 |
 | **Distrito** | Miraflores |
 | **Perfil** | Conserje del edificio, encargada de la atención y la gestión diaria de los vecinos |
-| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-tb1]([URL OneDrive]) |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-luz-tb1](https://drive.google.com/file/d/1ot1rwofgPzZBK5EEPS2TCrhCkSkDaC9n/view?usp=drive_link) |
 | **Timing y Duración** | Inicio: 00:00 / Duración: 05:30 |
 | **Screenshot** | ![Entrevista Luz Quispe](img/validacion-luz.png) |
 | **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
