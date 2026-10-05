@@ -3588,7 +3588,7 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 ![deudas](img/Misdeudasypago-redisente-mockup.png)
 ![areas](img/Areascomunesyreservas-residentr-mockup.png)
 ##### 3.1.4.1. Mobile Applications User Flow Diagrams
-![userflow-diagram](img/UserFlowDiagrams.png)
+![userflow-diagram](img/UserFlow-Diagrams.png)
 ##### 3.1.4.1. Mobile Applications Prototyping
 **Aplicación móvil – Inicio de sesión**
 
@@ -4239,23 +4239,23 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Nombres y Apellidos** | Luz Quispe |
 | **Edad** | 38 |
 | **Distrito** | Miraflores |
-| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-luz-tp1](upc-pre-202610-1asi0730-10203-BuildingFex-validation-sprint-6) |
-| **Timing y Duración** | Inicio: 00:00 / Duración: 10:37 |
+| **Perfil** | Conserje del edificio, encargada de la atención y la gestión diaria de los vecinos |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-luz-tb1](https://drive.google.com/file/d/1ot1rwofgPzZBK5EEPS2TCrhCkSkDaC9n/view?usp=drive_link) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 05:30 |
 | **Screenshot** | ![Entrevista Luz Quispe](img/validacion-luz.png) |
 | **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
 
-**Entrevista 5**
+**Entrevista 7**
 
 | Campo | Detalle |
 | :--- | :--- |
 | **Nombres y Apellidos** | Carlos Chang |
 | **Edad** | 24 |
 | **Distrito** | San Borja |
-| **Perfil** | Conserje del edificio, encargada de la atención y la gestión diaria de los vecinos |
-| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-luz-tb1](https://drive.google.com/file/d/1ot1rwofgPzZBK5EEPS2TCrhCkSkDaC9n/view?usp=drive_link) |
-| **Timing y Duración** | Inicio: 00:00 / Duración: 05:30 |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-carlos-tb1](LINK_DEL_VIDEO_DE_CARLOS) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 10:38 |
 | **Screenshot** | ![Entrevista Carlos Chang](img/validacion6-carlos.png) |
-| **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
+| **Resumen de Apreciaciones** | Carlos percibe que el formulario para el registro manual de nuevos inquilinos es mucho más claro y seguro frente al uso tradicional de hojas de Excel, un método que él considera un riesgo constante de errores operativos. Valora que el sistema le permita asignar directamente la unidad y los datos del residente, actualizando el directorio al instante, lo que le brinda una mayor tranquilidad y un control absoluto sobre la información del condominio.El entrevistado resalta la rapidez en la transición entre las distintas pantallas, como al momento de pasar del panel general al módulo de incidencias. Menciona que, en su rol de administrador, suele saltar de un tema a otro constantemente durante el día, por lo que una interfaz que responde de inmediato y sin pantallas de carga le permite trabajar a su propio ritmo con una herramienta que se siente directa y eficiente.Respecto al flujo para el despacho de incidencias, Carlos lo califica como perfecto por ir directo al grano. Aprecia que el sistema omita pasos intermedios burocráticos o módulos destinados a brindar asistencia y guiar al vecino, permitiendo que la gestión se enfoque pura y exclusivamente en visualizar la falla reportada, asignar a un proveedor técnico y ejecutar el servicio. Subraya que este nivel de automatización y practicidad es exactamente lo que busca para poder escalar su negocio. |
 
 ### 4.3.3. Evaluaciones según heurísticas
 
