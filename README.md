@@ -4260,12 +4260,23 @@ A continuación, se detalla el registro de las sesiones de validación realizada
 | **Nombres y Apellidos** | Luz Quispe |
 | **Edad** | 38 |
 | **Distrito** | Miraflores |
+| **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-luz-tp1](upc-pre-202610-1asi0730-10203-BuildingFex-validation-sprint-6) |
+| **Timing y Duración** | Inicio: 00:00 / Duración: 10:37 |
+| **Screenshot** | ![Entrevista Luz Quispe](img/validacion-luz.png) |
+| **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
+
+**Entrevista 5**
+
+| Campo | Detalle |
+| :--- | :--- |
+| **Nombres y Apellidos** | Carlos Chang |
+| **Edad** | 24 |
+| **Distrito** | San Borja |
 | **Perfil** | Conserje del edificio, encargada de la atención y la gestión diaria de los vecinos |
 | **URL del Video** | [upc-pre-202620-1acc0238-4939-BuildingFex-validation-luz-tb1](https://drive.google.com/file/d/1ot1rwofgPzZBK5EEPS2TCrhCkSkDaC9n/view?usp=drive_link) |
 | **Timing y Duración** | Inicio: 00:00 / Duración: 05:30 |
 | **Screenshot** | ![Entrevista Luz Quispe](img/validacion-luz.png) |
 | **Resumen de Apreciaciones** | Luz Quispe, conserje del edificio, se encarga diariamente de la atención y la gestión de los vecinos. Tras recorrer la Landing Page y la aplicación móvil, destacó la accesibilidad de la aplicación y la facilidad para navegar entre sus secciones, así como la opción de comunicarse con los residentes desde un solo lugar, que considera el aspecto más útil para su trabajo. Como mejora, propuso incorporar una pestaña de cámara dentro de la aplicación pensada específicamente para los conserjes. Afirmó que sí utilizaría BuildingFex, ya que le simplificaría el trabajo y la gestión de los vecinos, en especial la comunicación con ellos. |
-
 
 ### 4.3.3. Evaluaciones según heurísticas
 
