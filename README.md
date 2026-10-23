@@ -1,47 +1,68 @@
-<div align="center">
-  
-![Logo-UPC](img/img-upc.png)
-# Universidad Peruana de Ciencias Aplicadas
-## Carrera de Ingeniería de Software
+<center>
+<div align="center" style="text-align: center; width: 100%;">
 
-1ACC0238
+<p align="center" style="text-align: center; margin: 0 auto;">
+  <img src="img/img-upc.png" alt="Logo-UPC" style="display: inline-block; margin: 0 auto; max-width: 250px;" />
+</p>
 
-Aplicaciones para Dispositivos Móviles  
+<h1 align="center" style="border: none; border-bottom: none; text-align: center; margin-bottom: 0;">Universidad Peruana de Ciencias Aplicadas</h1>
+<h2 align="center" style="border: none; border-bottom: none; text-align: center; margin-top: 5px;">Carrera de Ingeniería de Software</h2>
 
-**NRC** 
+<p align="center" style="text-align: center; font-size: 1.1em; margin: 4px 0;"><strong>1ACC0238</strong></p>
+<p align="center" style="text-align: center; font-size: 1.15em; margin: 4px 0;"><strong>Aplicaciones para Dispositivos Móviles</strong></p>
 
-4939  
+<p align="center" style="text-align: center; margin: 6px 0;"><strong>NRC:</strong> 4939</p>
 
----
+<br>
 
-# Informe del Trabajo Final
+<h1 align="center" style="border: none; border-bottom: none; text-align: center; margin: 15px 0;">Informe del Trabajo Final</h1>
 
-**Docente** 
+<p align="center" style="text-align: center; margin: 6px 0;"><strong>Docente:</strong> Quevedo Velasco, David Gerardo</p>
+<p align="center" style="text-align: center; margin: 6px 0;"><strong>Equipo:</strong> BuildingFex</p>
+<p align="center" style="text-align: center; margin: 6px 0;"><strong>Proyecto:</strong> BuildingFex</p>
 
-Quevedo Velasco, David Gerardo  
+<br>
 
-**Equipo** 
+<h3 align="center" style="border: none; border-bottom: none; text-align: center; margin-bottom: 10px;">Integrantes</h3>
 
-BuildingFex  
+<table align="center" style="margin: 0 auto; border: none !important; border-collapse: collapse; text-align: center;">
+  <thead>
+    <tr style="border: none !important;">
+      <th align="center" style="border: none !important; text-align: center; padding: 6px 18px; font-weight: bold;">Código</th>
+      <th align="center" style="border: none !important; text-align: center; padding: 6px 18px; font-weight: bold;">Apellidos y Nombres</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr style="border: none !important;">
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u202022211</td>
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Javier Murillo, Mathias</td>
+    </tr>
+    <tr style="border: none !important;">
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u202318220</td>
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Hermoza Quispe, Jude Alessandro</td>
+    </tr>
+    <tr style="border: none !important;">
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u202312510</td>
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Jave Chang, Alejandro Manuel</td>
+    </tr>
+    <tr style="border: none !important;">
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u201910803</td>
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Heredia Hoyos, Danitza Ivonne</td>
+    </tr>
+    <tr style="border: none !important;">
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u202624026</td>
+      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Suteau, Antonin</td>
+    </tr>
+  </tbody>
+</table>
 
-**Proyecto** 
+<br>
 
-BuildingFex  
-
-### Integrantes
-
-| Código     | Apellidos y Nombres |
-|:-----------| :--- |
-| u202022211 | Javier Murillo, Mathias |
-| u202318220 | Hermoza Quispe, Jude Alessandro |
-| u202312510 | Jave Chang, Alejandro Manuel |
-| u201910803 | Heredia Hoyos, Danitza Ivonne |
-| u202624026 | Suteau, Antonin |
-
-**Período** 2026-20  
-Setiembre 2026
+<p align="center" style="text-align: center; margin: 4px 0;"><strong>Período</strong> 202620</p>
+<p align="center" style="text-align: center; margin: 4px 0;">Noviembre 2026</p>
 
 </div>
+</center>
 
 <div style="page-break-after: always;"></div>
 
@@ -66,7 +87,143 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
 
 <div style="page-break-after: always;"></div>
 
-## Contenido Student Outcome
+## Contenido
+
+### Tabla de contenidos
+
+- [Student Outcome](#student-outcome)
+- [Objetivos SMART](#objetivos-smart)
+- [Capítulo I: Presentación](#capítulo-i-presentación)
+  - [1.1. Startup Profile](#11-startup-profile)
+    - [1.1.1. Descripción de la Startup](#111-descripción-de-la-startup)
+    - [1.1.2. Perfiles de integrantes del equipo](#112-perfiles-de-integrantes-del-equipo)
+  - [1.2. Solution Profile](#12-solution-profile)
+    - [1.2.1. Antecedentes y problemática](#121-antecedentes-y-problemática)
+    - [1.2.2. Lean UX Process](#122-lean-ux-process)
+      - [1.2.2.1. Lean UX Problem Statements](#1221-lean-ux-problem-statements)
+      - [1.2.2.2. Lean UX Assumptions](#1222-lean-ux-assumptions)
+      - [1.2.2.3. Lean UX Hypothesis Statements](#1223-lean-ux-hypothesis-statements)
+      - [1.2.2.4. Lean UX Canvas](#1224-lean-ux-canvas)
+  - [1.3. Segmentos objetivo](#13-segmentos-objetivo)
+- [Capítulo II: Requirements Development and Software Solution Design](#capítulo-ii-requirements-development-and-software-solution-design)
+  - [2.1. Competidores](#21-competidores)
+    - [2.1.1. Análisis competitivo](#211-análisis-competitivo)
+    - [2.1.2. Estrategias y tácticas frente a competidores](#212-estrategias-y-tácticas-frente-a-competidores)
+  - [2.2. Entrevistas](#22-entrevistas)
+    - [2.2.1. Diseño de entrevistas](#221-diseño-de-entrevistas)
+    - [2.2.2. Registro de entrevistas](#222-registro-de-entrevistas)
+    - [2.2.3. Análisis de entrevistas](#223-análisis-de-entrevistas)
+  - [2.3. Needfinding](#23-needfinding)
+    - [2.3.1. User Personas](#231-user-personas)
+    - [2.3.2. User Task Matrix](#232-user-task-matrix)
+    - [2.3.3. User Journey Mapping](#233-user-journey-mapping)
+    - [2.3.4. Empathy Mapping](#234-empathy-mapping)
+    - [2.3.5. Big Picture EventStorming](#235-big-picture-eventstorming)
+    - [2.3.6. Ubiquitous Language](#236-ubiquitous-language)
+  - [2.4. Requirements specification](#24-requirements-specification)
+    - [2.4.1. User Stories](#241-user-stories)
+    - [2.4.2. Impact Mapping](#242-impact-mapping)
+    - [2.4.3. Product Backlog](#243-product-backlog)
+  - [2.5. Strategic-Level Domain-Driven Design](#25-strategic-level-domain-driven-design)
+    - [2.5.1. EventStorming](#251-eventstorming)
+      - [2.5.1.1. Candidate Context Discovery](#2511-candidate-context-discovery)
+      - [2.5.1.2. Domain Message Flows Modeling](#2512-domain-message-flows-modeling)
+      - [2.5.1.3. Bounded Context Canvases](#2513-bounded-context-canvases)
+    - [2.5.2. Context Mapping](#252-context-mapping)
+    - [2.5.3. Software Architecture](#253-software-architecture)
+      - [2.5.3.1. Software Architecture Context Level Diagrams](#2531-software-architecture-context-level-diagrams)
+      - [2.5.3.2. Software Architecture Container Level Diagrams](#2532-software-architecture-container-level-diagrams)
+      - [2.5.3.3. Software Architecture Deployment Diagrams](#2533-software-architecture-deployment-diagrams)
+  - [2.6. Tactical-Level Domain-Driven Design](#26-tactical-level-domain-driven-design)
+    - [2.6.1. Bounded Context: Finanzas](#261-bounded-context-finanzas)
+      - [2.6.1.1. Domain Layer](#2611-domain-layer)
+      - [2.6.1.2. Interface Layer](#2612-interface-layer)
+      - [2.6.1.3. Application Layer](#2613-application-layer)
+      - [2.6.1.4. Infrastructure Layer](#2614-infrastructure-layer)
+      - [2.6.1.5. Bounded Context Software Architecture Component Level Diagrams](#2615-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.1.6. Bounded Context Software Architecture Code Level Diagrams](#2616-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.1.6.1. Bounded Context Domain Layer Class Diagrams](#26161-bounded-context-domain-layer-class-diagrams)
+        - [2.6.1.6.2. Bounded Context Database Design Diagram](#26162-bounded-context-database-design-diagram)
+    - [2.6.2. Bounded Context: Suscripciones](#262-bounded-context-suscripciones)
+      - [2.6.2.1. Domain Layer](#2621-domain-layer)
+      - [2.6.2.2. Interface Layer](#2622-interface-layer)
+      - [2.6.2.3. Application Layer](#2623-application-layer)
+      - [2.6.2.4. Infrastructure Layer](#2624-infrastructure-layer)
+      - [2.6.2.5. Bounded Context Software Architecture Component Level Diagrams](#2625-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.2.6. Bounded Context Software Architecture Code Level Diagrams](#2626-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.2.6.1. Bounded Context Domain Layer Class Diagrams](#26261-bounded-context-domain-layer-class-diagrams)
+        - [2.6.2.6.2. Bounded Context Database Design Diagram](#26262-bounded-context-database-design-diagram)
+    - [2.6.3. Bounded Context: Reservas](#263-bounded-context-reservas)
+      - [2.6.3.1. Domain Layer](#2631-domain-layer)
+      - [2.6.3.2. Interface Layer](#2632-interface-layer)
+      - [2.6.3.3. Application Layer](#2633-application-layer)
+      - [2.6.3.4. Infrastructure Layer](#2634-infrastructure-layer)
+      - [2.6.3.5. Bounded Context Software Architecture Component Level Diagrams](#2635-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.3.6. Bounded Context Software Architecture Code Level Diagrams](#2636-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.3.6.1. Bounded Context Domain Layer Class Diagrams](#26361-bounded-context-domain-layer-class-diagrams)
+        - [2.6.3.6.2. Bounded Context Database Design Diagram](#26362-bounded-context-database-design-diagram)
+    - [2.6.4. Bounded Context: Incidencias](#264-bounded-context-incidencias)
+      - [2.6.4.1. Domain Layer](#2641-domain-layer)
+      - [2.6.4.2. Interface Layer](#2642-interface-layer)
+      - [2.6.4.3. Application Layer](#2643-application-layer)
+      - [2.6.4.4. Infrastructure Layer](#2644-infrastructure-layer)
+      - [2.6.4.5. Bounded Context Software Architecture Component Level Diagrams](#2645-bounded-context-software-architecture-component-level-diagrams)
+      - [2.6.4.6. Bounded Context Software Architecture Code Level Diagrams](#2646-bounded-context-software-architecture-code-level-diagrams)
+        - [2.6.4.6.1. Bounded Context Domain Layer Class Diagrams](#26461-bounded-context-domain-layer-class-diagrams)
+        - [2.6.4.6.2. Bounded Context Database Design Diagram](#26462-bounded-context-database-design-diagram)
+- [Capítulo III: Solution UI/UX Design](#capítulo-iii-solution-uiux-design)
+  - [3.1. Product design](#31-product-design)
+    - [3.1.1. Style Guidelines](#311-style-guidelines)
+      - [3.1.1.1. General Style Guidelines](#3111-general-style-guidelines)
+    - [3.1.2. Information Architecture](#312-information-architecture)
+      - [3.1.2.1. Organization Systems](#3121-organization-systems)
+      - [3.1.2.2. Labelling Systems](#3122-labelling-systems)
+      - [3.1.2.3. SEO Tags and Meta Tags](#3123-seo-tags-and-meta-tags)
+      - [3.1.2.4. Searching Systems](#3124-searching-systems)
+      - [3.1.2.5. Navigation Systems](#3125-navigation-systems)
+    - [3.1.3. Landing Page UI Design](#313-landing-page-ui-design)
+      - [3.1.3.1. Landing Page Wireframe](#3131-landing-page-wireframe)
+      - [3.1.3.2. Landing Page Mock-up](#3132-landing-page-mock-up)
+    - [3.1.4. Mobile Applications UX/UI Design](#314-mobile-applications-uxui-design)
+      - [3.1.4.1. Mobile Applications Wireframes](#3141-mobile-applications-wireframes)
+      - [3.1.4.2. Mobile Applications Wireflow Diagrams](#3142-mobile-applications-wireflow-diagrams)
+      - [3.1.4.3. Mobile Applications Mock-ups](#3143-mobile-applications-mock-ups)
+      - [3.1.4.4. Mobile Applications User Flow Diagrams](#3144-mobile-applications-user-flow-diagrams)
+      - [3.1.4.5. Mobile Applications Prototyping](#3145-mobile-applications-prototyping)
+- [Capítulo IV: Product Implementation & Validation](#capítulo-iv-product-implementation--validation)
+  - [4. Product Implementation & Validation](#4-product-implementation--validation)
+  - [4.1. Software Configuration Management](#41-software-configuration-management)
+    - [4.1.1. Software Development Environment Configuration](#411-software-development-environment-configuration)
+    - [4.1.2. Source Code Management](#412-source-code-management)
+    - [4.1.3. Source Code Style Guide & Conventions](#413-source-code-style-guide--conventions)
+    - [4.1.4. Software Deployment Configuration](#414-software-deployment-configuration)
+  - [4.2. Landing Page & Mobile Application Implementation](#42-landing-page--mobile-application-implementation)
+    - [4.2.1. Sprint 1](#421-sprint-1)
+      - [4.2.1.1. Sprint Planning 1](#4211-sprint-planning-1)
+      - [4.2.1.2. Aspect Leaders and Collaborators](#4212-aspect-leaders-and-collaborators)
+      - [4.2.1.3. Sprint Backlog 1](#4213-sprint-backlog-1)
+      - [4.2.1.4. Development Evidence for Sprint Review](#4214-development-evidence-for-sprint-review)
+      - [4.2.1.5. Testing Suite Evidence for Sprint Review](#4215-testing-suite-evidence-for-sprint-review)
+      - [4.2.1.6. Execution Evidence for Sprint Review](#4216-execution-evidence-for-sprint-review)
+      - [4.2.1.7. Services Documentation Evidence for Sprint Review](#4217-services-documentation-evidence-for-sprint-review)
+      - [4.2.1.8. Software Deployment Evidence for Sprint Review](#4218-software-deployment-evidence-for-sprint-review)
+      - [4.2.1.9. Team Collaboration Insights during Sprint](#4219-team-collaboration-insights-during-sprint)
+  - [4.3. Validation Interviews](#43-validation-interviews)
+    - [4.3.1. Diseño de Entrevistas](#431-diseño-de-entrevistas)
+    - [4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)
+    - [4.3.3. Evaluaciones según heurísticas](#433-evaluaciones-según-heurísticas)
+- [Conclusiones](#conclusiones)
+  - [Conclusiones y recomendaciones](#conclusiones-y-recomendaciones)
+- [Video App Validation](#video-app-validation)
+- [Video About the product](#video-about-the-product)
+- [Video About the team](#video-about-the-team)
+- [Glosario](#glosario)
+- [Bibliografía](#bibliografía)
+- [Anexos](#anexos)
+
+<div style="page-break-after: always;"></div>
+
+## Student Outcome
 
 **ABET Student Outcome 5:** Funcionamiento en equipos multidisciplinarios.
 
@@ -145,6 +302,102 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
         <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo.<br><br><b>TB1:</b> Durante este Sprint reconocí que necesitaba aprender de forma autónoma herramientas que no conocía, como Android Studio, Trello, Swagger y la grabación de videos de navegación del producto. También comprendí la importancia de aplicar Conventional Commits y GitFlow para que el trabajo de cada integrante quede registrado. Las entrevistas de validación con usuarios reales me mostraron que es necesario seguir aprendiendo a escuchar al usuario para mejorar el producto.</td>
   </tr>
 </table>
+
+<div style="page-break-after: always;"></div>
+
+## Objetivos SMART
+
+En esta sección, cada integrante del equipo de desarrollo presenta su plan de desarrollo profesional individual enfocado en el crecimiento continuo tras la culminación de sus estudios universitarios. Cada plan incluye al menos dos objetivos formulados bajo el marco SMART (*Specific, Measurable, Attainable, Relevant, Time-bound*), estableciendo metas concretas, medibles y orientadas a consolidar su desempeño profesional en la industria del software y la tecnología.
+
+---
+
+### Mathias Javier Murillo (Código: u202022211)
+
+#### Objetivo SMART 1: Especialización y Certificación en Arquitectura Cloud
+* **Specific (Específico):** Obtener la certificación oficial *AWS Certified Solutions Architect - Associate* para profundizar y validar capacidades en el diseño de infraestructuras escalables, tolerantes a fallos y de alta disponibilidad en la nube.
+* **Measurable (Medible):** Aprobar el examen oficial de certificación de AWS con una calificación superior a 750/1000 puntos y desplegar 3 proyectos prácticos con arquitecturas serverless en un repositorio público de GitHub.
+* **Attainable (Alcanzable):** Dedicar 6 horas semanales al estudio teórico-práctico a través de plataformas especializadas (Coursera/A Cloud Guru) y aprovechar la experiencia previa en integración de servicios web y APIs adquirida en la carrera.
+* **Relevant (Relevante):** La arquitectura cloud es una competencia fundamental para liderar técnicamente proyectos de software corporativos de gran escala y optimizar costos operativos de infraestructura.
+* **Time-bound (Temporal):** Obtener la certificación en un plazo máximo de 12 meses posteriores a la graduación universitaria.
+
+#### Objetivo SMART 2: Inserción y Crecimiento Laboral como Desarrollador Full Stack Mid-Level
+* **Specific (Específico):** Conseguir y consolidarme en un puesto como Desarrollador Full Stack Mid-Level en una empresa del sector tecnológico o Fintech, participando activamente en el diseño de servicios web backend y aplicaciones frontend responsivas.
+* **Measurable (Medible):** Postular a un mínimo de 20 empresas alineadas con el stack tecnológico de preferencia (Node.js/TypeScript o .NET con React/Kotlin), superando con éxito al menos 3 procesos de entrevistas técnicas completas y logrando la contratación formal.
+* **Attainable (Alcanzable):** Respaldado por el portafolio de proyectos universitarios, la experiencia en desarrollo ágil y el dominio de buenas prácticas de código limpio demostradas a lo largo de la carrera.
+* **Relevant (Relevante):** Permitirá afianzar mi transición al mercado laboral formal, asumiendo mayores responsabilidades de arquitectura técnica y liderazgo funcional dentro de equipos multidisciplinarios.
+* **Time-bound (Temporal):** Alcanzar la posición laboral dentro de los primeros 18 meses posteriores a la obtención del grado académico.
+
+---
+
+### Jude Alessandro Hermoza Quispe (Código: u202318220)
+
+#### Objetivo SMART 1: Certificación en Liderazgo Ágil y Gestión de Equipos de Ingeniería
+* **Specific (Específico):** Obtener la certificación internacional *Professional Scrum Master I (PSM I)* emitida por Scrum.org para formalizar conocimientos en facilitación de procesos ágiles, remoción de impedimentos y optimización de flujos de trabajo en equipos de desarrollo.
+* **Measurable (Medible):** Superar la evaluación oficial de certificación PSM I con una calificación mínima aprobatoria del 85%.
+* **Attainable (Alcanzable):** Desarrollar un plan de estudio autónomo de 4 horas semanales durante 3 meses, repasando la Scrum Guide y simuladores oficiales, aprovechando la experiencia en priorización de backlog y liderazgo ágil en los proyectos de la carrera.
+* **Relevant (Relevante):** Fortalece mi perfil técnico con capacidades de liderazgo y gestión de proyectos, permitiendo actuar como nexo estratégico entre el negocio y el equipo de ingeniería.
+* **Time-bound (Temporal):** Lograr la certificación en un periodo no mayor a 9 meses tras finalizar la carrera universitaria.
+
+#### Objetivo SMART 2: Dominio Práctico en Arquitectura de Microservicios y Domain-Driven Design (DDD)
+* **Specific (Específico):** Diseñar, implementar y publicar en código abierto una solución de software empresarial basada en microservicios y Domain-Driven Design (DDD) utilizando ASP.NET Core, Docker y Kubernetes, incluyendo su documentación arquitectónica C4 completa.
+* **Measurable (Medible):** Publicar el repositorio en GitHub con pruebas automatizadas con una cobertura superior al 80%, redactar 2 artículos técnicos explicativos en Medium o Dev.to y obtener un mínimo de 30 estrellas de la comunidad técnica.
+* **Attainable (Alcanzable):** Construido sobre las bases conceptuales y prácticas de Tactical y Strategic DDD, modelo C4 y arquitectura limpia desarrolladas en BuildingFex.
+* **Relevant (Relevante):** Demuestra capacidad técnica avanzada en diseño de software empresarial frente a empresas internacionales de desarrollo y reclutadores de primer nivel.
+* **Time-bound (Temporal):** Culminar y publicar el proyecto en un plazo máximo de 12 meses después de la graduación.
+
+---
+
+### Alejandro Manuel Jave Chang (Código: u202312510)
+
+#### Objetivo SMART 1: Certificación en Gestión y Optimización de Bases de Datos Relacionales
+* **Specific (Específico):** Obtener una certificación profesional en administración y modelado avanzado de bases de datos relacionales (*PostgreSQL Certified Professional* o *AWS Certified Database - Specialty*), profundizando en indexación, particionamiento y alta concurrencia.
+* **Measurable (Medible):** Aprobar el examen formal de certificación con un puntaje de al menos 80/100 y desarrollar un proyecto benchmark documentado que compare estrategias de escalabilidad de consultas.
+* **Attainable (Alcanzable):** Dedicar 5 horas semanales a la práctica en entornos virtualizados y resolución de laboratorios técnicos, capitalizando los conocimientos previos de diseño de esquemas relacionales y persistencia con Entity Framework Core.
+* **Relevant (Relevante):** El rendimiento, seguridad e integridad de la base de datos son componentes críticos para la escalabilidad de plataformas SaaS B2B, área central de mi interés profesional.
+* **Time-bound (Temporal):** Obtener la certificación dentro de los 12 meses posteriores a la culminación de mis estudios universitarios.
+
+#### Objetivo SMART 2: Lanzamiento y Tracción de un Producto SaaS B2B en Producción
+* **Specific (Específico):** Liderar el diseño técnico, despliegue y puesta en marcha de un Producto Mínimo Viable (MVP) para una solución SaaS B2B orientada a la optimización de procesos operativos en el mercado peruano o latinoamericano.
+* **Measurable (Medible):** Desplegar la plataforma en un entorno de producción seguro con monitoreo activo, captando y manteniendo a un mínimo de 3 empresas u organizaciones cliente en fase piloto o suscripción paga durante al menos 3 meses consecutivos.
+* **Attainable (Alcanzable):** Aprovechar las metodologías Lean UX, patrones de diseño de interfaces web/móvil y arquitectura SaaS implementadas en el proyecto BuildingFex.
+* **Relevant (Relevante):** Consolidará mi perfil como ingeniero de software con visión emprendedora, capacidad de resolver problemas de negocio reales y experiencia completa en el ciclo de vida de un producto digital.
+* **Time-bound (Temporal):** Lograr el lanzamiento y los clientes piloto en un lapso no mayor a 24 meses tras la graduación.
+
+---
+
+### Danitza Ivonne Heredia Hoyos (Código: u201910803)
+
+#### Objetivo SMART 1: Certificación Internacional en Experiencia de Usuario y Accesibilidad Digital
+* **Specific (Específico):** Obtener la certificación profesional *Certified Professional in Accessibility Core Competencies (CPACC)* o la credencial de *UX Design Professional Certificate*, orientada al diseño inclusivo y auditorías de accesibilidad bajo estándares WCAG.
+* **Measurable (Medible):** Aprobar el examen de certificación con un puntaje igual o superior al 80% y realizar la auditoría completa de accesibilidad a una aplicación web real, emitiendo un informe técnico de mejoras.
+* **Attainable (Alcanzable):** Destinar 6 horas semanales durante 4 meses al estudio de pautas de accesibilidad y análisis heurístico, aprovechando la sólida experiencia previa en diseño UI/UX y evaluaciones heurísticas desarrollada en el curso.
+* **Relevant (Relevante):** La accesibilidad digital es un estándar mandatorio a nivel global que incrementa el valor profesional y la competitividad en el diseño de productos digitales centrados en la inclusión.
+* **Time-bound (Temporal):** Alcanzar la certificación en un plazo de 12 meses posteriores al egreso de la carrera.
+
+#### Objetivo SMART 2: Implementación de un Sistema de Diseño Empresarial en una Organización
+* **Specific (Específico):** Diseñar y documentar un Design System integral para una empresa de software o producto digital, estableciendo tokens de diseño, librerías de componentes en Figma y guías de interacción alineadas con los desarrolladores frontend.
+* **Measurable (Medible):** Documentar al menos 40 componentes reutilizables con directrices de uso y lograr una tasa de adopción del sistema de diseño en el 100% de los nuevos módulos desarrollados por la organización.
+* **Attainable (Alcanzable):** Fundamentado en la experiencia de definición de Style Guidelines, guías de estilo generales y prototipos de alta fidelidad elaborados en la carrera.
+* **Relevant (Relevante):** Mejora drásticamente la coherencia visual, disminuye los tiempos de entrega del equipo de ingeniería y posiciona mi perfil como Product Designer o UX Lead.
+* **Time-bound (Temporal):** Completar e implementar el Design System en un periodo máximo de 18 meses posgraduación.
+
+---
+
+### Antonin Suteau (Código: u202624026)
+
+#### Objetivo SMART 1: Inserción Profesional como Ingeniero de Software en la Industria Aeroespacial
+* **Specific (Específico):** Obtener un puesto como Ingeniero de Software Junior de Sistemas Embebidos o Sistemas de Misión en una empresa de la industria aeroespacial en Francia o Europa (tales como Airbus, Thales o Safran).
+* **Measurable (Medible):** Postular a un mínimo de 15 ofertas laborales especializadas del sector, superar las evaluaciones técnicas correspondientes y asegurar un contrato por tiempo indefinido (CDI) en el área de ingeniería de software aeroespacial.
+* **Attainable (Alcanzable):** Combinar la formación universitaria en ingeniería aeronáutica y aeroespacial con las competencias prácticas de desarrollo de software, pruebas estructuradas y metodologías ágiles adquiridas en este proyecto internacional.
+* **Relevant (Relevante):** Representa el cumplimiento directo de mi vocación profesional, integrando el rigor de la ingeniería aeronáutica con las soluciones modernas de software para sistemas críticos.
+* **Time-bound (Temporal):** Asegurar la posición profesional dentro de los 12 meses posteriores a la obtención del diploma de ingeniería en Francia.
+
+#### Objetivo SMART 2: Certificación en Verificación y Pruebas de Calidad de Software Crítico
+* **Specific (Específico):** Obtener la certificación internacional *ISTQB Certified Tester - Foundation Level (CTFL)* para formalizar métodos rigurosos de verificación, validación y aseguramiento de la calidad en software crítico.
+* **Measurable (Medible):** Aprobar el examen de certificación con una calificación mínima aprobatoria del 75% en el primer intento.
+* **Attainable (Alcanzable):** Establecer un cronograma de estudio intensivo de 5 horas por semana durante 2 meses, repasando el syllabus de ISTQB y apoyándome en la experiencia adquirida en pruebas BDD, Gherkin y pruebas de APIs con OpenAPI.
+* **Relevant (Relevante):** En sistemas aeroespaciales y de transporte, la calidad, fiabilidad y verificación formal del software son factores esenciales para la seguridad operativa.
+* **Time-bound (Temporal):** Obtener la certificación dentro de los 15 meses posteriores a la graduación universitaria.
 
 <div style="page-break-after: always;"></div>
 
@@ -3262,7 +3515,7 @@ La relación es **users 1:N incidents**: un usuario admin puede tener múltiples
 
 ---
 
-## Capítulo III: Solution UI/
+## Capítulo III: Solution UI/UX Design
 
 ### 3.1. Product Design
 #### 3.1.1. Style Guidelines
@@ -3572,24 +3825,24 @@ Sección de cards explicando al cliente por que somos mejores que la competencia
 
 Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la izquierda y las preguntas a la derecha con pequeños detalles que resaltan el interfaz. 
 
-##### 3.1.4. Mobile Applications UX/UI Design**
+#### 3.1.4. Mobile Applications UX/UI Design
 ##### 3.1.4.1. Mobile Applications Wireframes
 ![login](img/Login.png)
 ![gestion](img/GestionResidente-Admin.png)
 ![finanzas](img/GestionFinanzas-Admin.png)
 ![deudas](img/Misdeudasypago-redisente.png)
 ![areas](img/Areascomunesyreservas-residentr.png)
-##### 3.1.4.1. Mobile Applications Wireframes Diagrams
+##### 3.1.4.2. Mobile Applications Wireflow Diagrams
 ![diagram-wireframe](img/wireframediagram.png)
-##### 3.1.4.1. Mobile Applications Mockups
+##### 3.1.4.3. Mobile Applications Mock-ups
 ![login](img/Login-mockup.png)
 ![gestion](img/GestionResidente-Admin-mockup.png)
 ![finanzas](img/GestionFinanzas-Admin-mockup.png)
 ![deudas](img/Misdeudasypago-redisente-mockup.png)
 ![areas](img/Areascomunesyreservas-residentr-mockup.png)
-##### 3.1.4.1. Mobile Applications User Flow Diagrams
+##### 3.1.4.4. Mobile Applications User Flow Diagrams
 ![userflow-diagram](img/UserFlow-Diagrams.png)
-##### 3.1.4.1. Mobile Applications Prototyping
+##### 3.1.4.5. Mobile Applications Prototyping
 **Aplicación móvil – Inicio de sesión**
 
 ![Inicio de sesión](img/sprint1-app-login.png)
@@ -3614,7 +3867,7 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 ---
 <div style="page-break-after: always;"></div>
 
-## Capítulo IV: Product Implementation, Validation & Deployment
+## Capítulo IV: Product Implementation & Validation
 
 ### 4. Product Implementation & Validation
 
@@ -3756,7 +4009,7 @@ El APK resultante se encuentra en `app/build/outputs/apk/debug/app-debug.apk`. L
 
 <div style="page-break-after: always;"></div>
 
-### 4.2. Landing Page, Services & Applications Implementation
+### 4.2. Landing Page & Mobile Application Implementation
 
 #### 4.2.1. Sprint 1
 
@@ -4383,6 +4636,10 @@ A partir de la evaluación heurística realizada, se identificaron principalment
 
 Las recomendaciones propuestas buscan mejorar la comprensión de las acciones disponibles, diferenciar los tipos de información dentro de las secciones financieras y comunicar de manera más explícita los estados del sistema. Estas mejoras pueden ser consideradas para las siguientes iteraciones del producto, especialmente durante la evolución de las funcionalidades del Sprint 2.
 
+<div style="page-break-after: always;"></div>
+
+## Conclusiones
+
 ### Conclusiones y recomendaciones
 
 La entrega AV1 confirma la vigencia del Problem Statement (sección 1.2.2.1): las seis entrevistas realizadas (tres por segmento) muestran que la conciliación de pagos y la coordinación de áreas comunes son, en ambos segmentos, las principales fuentes de fricción frente a la gestión manual actual (Excel, WhatsApp). Sin embargo, matizan los assumptions de la sección 1.2.2.2: el Segmento 2 (Empresas de Gestión) valida con fuerza la automatización total propuesta, mientras que el Segmento 1 (Juntas de Directiva, edad promedio 50.3 años) prioriza el trato personal y expresa preocupación por la privacidad en temas de morosidad, por lo que la automatización no debe ser homogénea entre segmentos.
@@ -4395,6 +4652,53 @@ Los criterios de éxito del Lean UX Canvas (-25% morosidad, -40% onboarding, cre
 - Priorizar en los primeros Sprints las funcionalidades de Cobranzas y Áreas Comunes, por ser los puntos de dolor más mencionados.
 - Ampliar la muestra de validación (3 entrevistas por segmento) antes de cerrar los montos de suscripción (S/ 40, 80 y 120).
 - Definir desde el Sprint 1 la instrumentación de analítica necesaria para medir los tres criterios de éxito del Lean UX Canvas en las siguientes entregas.
+
+<div style="page-break-after: always;"></div>
+
+## Video App Validation
+
+En esta sección se presentan los enlaces a las grabaciones de las sesiones de validación de la aplicación móvil realizadas con los usuarios objetivo de ambos segmentos:
+
+* **Video de validación con usuario (Juntas de Directiva / Residentes - Gael):**  
+  [upc-pre-202620-1acc0238-4939-BuildingFex-validation-gael-tb1](https://drive.google.com/file/d/1c8Tet-AQTgUqTKLSoOl_SSQTqRXpqPz-/view?usp=drive_link)
+* **Video de validación con usuario (Empresas de Gestión de Edificios - Administrador):**  
+  [upc-pre-202620-1acc0238-4939-BuildingFex-validation-tb1](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202312510_upc_edu_pe/IQABePlFaPELQ5hsQKzrfSPaAeuMbvpn07GJ22l0BkUM0AY?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=ZPzvKj)
+* **Video de validación con usuario (Luz):**  
+  [upc-pre-202620-1acc0238-4939-BuildingFex-validation-luz-tb1](https://drive.google.com/file/d/1ot1rwofgPzZBK5EEPS2TCrhCkSkDaC9n/view?usp=drive_link)
+
+<div style="page-break-after: always;"></div>
+
+## Video About the product
+
+Video demostrativo donde se presenta la propuesta de valor de BuildingFex, la navegación integral por la Landing Page en dos idiomas y los flujos móviles clave implementados en el Sprint 1:
+
+* **Video del producto y navegación:**  
+  [upc-pre-202620-1acc0238-4939-BuildingFex-productnavigation-tb1.mp4](https://drive.google.com/file/d/1O0ApfGeRRmZWkpnKku9gWH2G7VqVoagA/view?usp=drive_link)
+
+<div style="page-break-after: always;"></div>
+
+## Video About the team
+
+Video en el que cada uno de los integrantes del equipo presenta su rol, contribución técnica y aprendizajes en el desarrollo de BuildingFex:
+
+* **Video del equipo BuildingFex:**  
+  [BuildingFex Team Presentation](https://github.com/BuildingFex-UPC/report)
+
+<div style="page-break-after: always;"></div>
+
+## Glosario
+
+Definiciones de los términos clave y conceptos técnicos empleados a lo largo del reporte:
+
+* **Bounded Context:** Límite explícito dentro del cual un modelo de dominio tiene aplicabilidad y sus conceptos del lenguaje ubicuo poseen un significado consistente.
+* **Domain-Driven Design (DDD):** Enfoque de desarrollo de software que prioriza el modelado del dominio de negocio por encima de la tecnología subyacente.
+* **EventStorming:** Metodología rápida y colaborativa basada en eventos de dominio para el descubrimiento y diseño de la arquitectura de software.
+* **Jetpack Compose:** Kit de herramientas moderno y declarativo para el desarrollo de interfaces nativas en Android con Kotlin.
+* **Lean UX:** Metodología centrada en el diseño ágil iterativo, formulación de hipótesis contrastables y medición continua del impacto con usuarios reales.
+* **Product Backlog:** Registro priorizado de épicas, historias de usuario y tareas técnicas que componen el alcance del producto.
+* **Property Manager:** Persona o empresa encargada de administrar condominios, supervisar el mantenimiento de las áreas comunes y gestionar la cobranza de cuotas.
+* **SaaS (Software as a Service):** Modelo de distribución de software en la nube donde los usuarios acceden mediante suscripción periódica.
+* **User Story:** Especificación breve y centrada en el usuario que detalla un requerimiento funcional y sus criterios de aceptación en formato BDD/Gherkin.
 
 <div style="page-break-after: always;"></div>
 
