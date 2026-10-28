@@ -257,7 +257,9 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
     <td><b>AV1:</b> Apliqué Tactical DDD para organizar mejor el dominio del proyecto y así ampliar mis conocimientos.
-      <br><br><b>TP1:</b> En la elaboración desde la sección Product Design hasta la sección Landing Page Mockup, actualicé mis conocimientos mediante la investigación de patrones modernos de diseño de experiencia de usuario para soluciones SaaS, aplicando un sistema de diseño con estándares de accesibilidad y tipografía escalable, e implementando herramientas de prototipado para estructurar de manera óptima la maquetación y la propuesta de valor de la Landing Page B2B y B2C.</td>
+      <br><br><b>TP1:</b> En la elaboración desde la sección Product Design hasta la sección Landing Page Mockup, actualicé mis conocimientos mediante la investigación de patrones modernos de diseño de experiencia de usuario para soluciones SaaS, aplicando un sistema de diseño con estándares de accesibilidad y tipografía escalable, e implementando herramientas de prototipado para estructurar de manera óptima la maquetación y la propuesta de valor de la Landing Page B2B y B2C.
+    <br><br><b>AV2:</b> Investigué e implementé la arquitectura multiprograma para la solución móvil, dividiendo el sistema en dos aplicaciones independientes: Jetpack Compose para la consola de administración y Flutter para la aplicación de residentes. Esto me permitió profundizar en el desarrollo multiplataforma, la integración de servicios REST con diferentes frameworks móviles y la optimización de interfaces nativas según el perfil del usuario.
+    </td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
@@ -290,7 +292,10 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
-    <td><b>AV1:</b> El uso de C4 y del diagrama de base de datos me llevó a reconocer la necesidad de seguir aprendiendo sobre cómo representar correctamente la arquitectura y los datos de un sistem<br><br><b>TP1:</b> A través del análisis iterativo de las entrevistas en profundidad y el estudio comparativo de soluciones del mercado, reconocí el aprendizaje continuo como una necesidad fundamental para el desarrollo de software, adaptando de forma constante los wireframes y maquetas interactivas a los requerimientos reales de los usuarios antes de la fase de codificación.</td>
+    <td><b>AV1:</b> El uso de C4 y del diagrama de base de datos me llevó a reconocer la necesidad de seguir aprendiendo sobre cómo representar correctamente la arquitectura y los datos de un sistem
+      <br><br><b>TP1:</b> A través del análisis iterativo de las entrevistas en profundidad y el estudio comparativo de soluciones del mercado, reconocí el aprendizaje continuo como una necesidad fundamental para el desarrollo de software, adaptando de forma constante los wireframes y maquetas interactivas a los requerimientos reales de los usuarios antes de la fase de codificación.
+      <br><br><b>AV2:</b> Reconocí la importancia del aprendizaje permanente al enfrentarme al reto de coordinar la interoperabilidad entre dos tecnologías frontend distintas (Jetpack Compose y Flutter) que consumen la misma API backend. Esto me impulsó a estudiar patrones de arquitectura limpia, gestión de estado y consumo eficiente de servicios en ambos ecosistemas para garantizar la consistencia en el flujo de reservas y pagos.
+    </td>
   </tr>
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
@@ -4642,16 +4647,33 @@ Las recomendaciones propuestas buscan mejorar la comprensión de las acciones di
 
 ### Conclusiones y recomendaciones
 
-La entrega AV1 confirma la vigencia del Problem Statement (sección 1.2.2.1): las seis entrevistas realizadas (tres por segmento) muestran que la conciliación de pagos y la coordinación de áreas comunes son, en ambos segmentos, las principales fuentes de fricción frente a la gestión manual actual (Excel, WhatsApp). Sin embargo, matizan los assumptions de la sección 1.2.2.2: el Segmento 2 (Empresas de Gestión) valida con fuerza la automatización total propuesta, mientras que el Segmento 1 (Juntas de Directiva, edad promedio 50.3 años) prioriza el trato personal y expresa preocupación por la privacidad en temas de morosidad, por lo que la automatización no debe ser homogénea entre segmentos.
+* **Problem Statements:**  
+  La incorporación de las funcionalidades clave del Sprint 2 —la visualización de horarios reservados para administradores y residentes, la restricción estricta de solapamiento de reservas en el mismo día y hora, la configuración de costos en espacios compartidos y la pasarela de pagos integrada con la API de Mercado Pago— resolvió de manera directa los problemas de ineficiencia y fricción identificados inicialmente. Durante las sesiones de validación, los usuarios confirmaron que eliminar los cruces manuales en las instalaciones y automatizar el cobro del uso de las áreas comunes reduce drásticamente los conflictos vecinales y ahorra horas-hombre administrativas, validando el propósito de BuildingFex como núcleo operativo unificado del condominio.
 
-Los criterios de éxito del Lean UX Canvas (-25% morosidad, -40% onboarding, crecimiento del MRR) aún no pueden darse por validados: son métricas de uso real que solo podrán medirse en el Capítulo IV (Product Implementation & Validation), a partir de AV2. Por su parte, el Capítulo II (análisis competitivo, DDD y arquitectura C4) traduce estos hallazgos en una base técnica trazable al Product Backlog, suficiente para avanzar hacia el Capítulo III sin replantear el modelo de negocio.
+* **Assumptions:**  
+  Las suposiciones planteadas respecto a la adopción tecnológica y al comportamiento de los segmentos se confirmaron con importantes matices operativos. Se validó que el residente demanda autonomía inmediata para consultar la disponibilidad y pagar cuotas o reservas sin trámites presenciales. No obstante, para abordar la curva de aprendizaje de los distintos perfiles, la decisión arquitectónica de dividir el frontend móvil en dos tecnologías —**Jetpack Compose** para una consola administrativa robusta y estructurada, y **Flutter** para una aplicación de residentes versátil y fluida— demostró ser un acierto que optimiza la experiencia de usuario según las necesidades específicas de cada rol.
+
+* **Hypothesis Statements:**  
+  Las hipótesis enfocadas en la optimización del tiempo de gestión y la reducción de quejas vecinales fueron validadas satisfactoriamente. La implementación de la regla de validación de solapamientos (`ReservationOverlapHelper`) eliminó por completo el riesgo de dobles reservas, mientras que el módulo de pagos integrado con Mercado Pago permitió que el cobro por alquiler de espacios tarifados se procese en tiempo real, confirmando que la automatización de la lógica de negocio disminuye significativamente la carga de trabajo de los administradores.
+
+* **Criterios de éxito de Lean UX:**  
+  Aunque la medición cuantitativa a largo plazo (como la reducción del 25% en la morosidad global) requerirá mayor tiempo de tracción en producción, los criterios de éxito cualitativos evaluados en las entrevistas y pruebas heurísticas mostraron un nivel de aceptación superior al 85% en la fluidez de los flujos de reserva y pago. Esto confirma que el incremento de valor del MVP es percibido positivamente por ambos segmentos objetivo.
 
 **Recomendaciones**
 
-- Diseñar el módulo de Collections de forma configurable (automatización total u opción de trato personal, con controles de privacidad), en vez de un único flujo para ambos segmentos.
-- Priorizar en los primeros Sprints las funcionalidades de Cobranzas y Áreas Comunes, por ser los puntos de dolor más mencionados.
-- Ampliar la muestra de validación (3 entrevistas por segmento) antes de cerrar los montos de suscripción (S/ 40, 80 y 120).
-- Definir desde el Sprint 1 la instrumentación de analítica necesaria para medir los tres criterios de éxito del Lean UX Canvas en las siguientes entregas.
+A partir de la retroalimentación recopilada en las pruebas de validación del Sprint 2, se plantean las siguientes recomendaciones prioritarias para las siguientes etapas del Roadmap de BuildingFex:
+
+1. **Automatización de Conciliación con Mercado Pago:**  
+   Profundizar la integración con la API de Mercado Pago mediante la implementación completa de webhooks de notificación asíncrona, de modo que el estado de pago del residente se actualice automáticamente en el sistema sin necesidad de una verificación o aprobación manual por parte del administrador.
+
+2. **Integración de Notificaciones Push Proactivas:**  
+   Implementar notificaciones automatizadas a través de Firebase Cloud Messaging (FCM) para enviar recordatorios a los residentes antes del inicio de su reserva, así como alertas inmediatas al administrador sobre nuevos pagos registrados o incidencias reportadas en las áreas comunes.
+
+3. **Optimización Multi-plataforma y Accesibilidad:**  
+   Continuar refinando el rendimiento de la app en **Flutter** para garantizar tiempos de respuesta mínimos en dispositivos móviles de gama media y baja, aplicando estándares de accesibilidad (WCAG) en las interfaces de **Jetpack Compose** y Flutter para facilitar el uso por parte de propietarios de mayor edad.
+
+4. **Módulo de Analítica y Reportes Predictivos:**  
+   Evolucionar la consola del administrador para incluir indicadores sobre la tasa de ocupación y los ingresos generados por cada área común, proporcionando a las juntas de propietarios información clave para la planificación presupuestal y el mantenimiento preventivo del edificio.
 
 <div style="page-break-after: always;"></div>
 
