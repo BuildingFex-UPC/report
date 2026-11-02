@@ -1,65 +1,40 @@
 <center>
-<div align="center" style="text-align: center; width: 100%;">
+<div align="center">
 
-<p align="center" style="text-align: center; margin: 0 auto;">
-  <img src="img/img-upc.png" alt="Logo-UPC" style="display: inline-block; margin: 0 auto; max-width: 250px;" />
+<p align="center"><img src="img/img-upc.png" alt="Logo-UPC" width="250"/></p>
+
+<p align="center"><font size="6"><b>Universidad Peruana de Ciencias Aplicadas</b></font></p>
+<p align="center"><font size="5"><b>Carrera de Ingeniería de Software</b></font></p>
+
+<p align="center"><b>1ACC0238</b></p>
+<p align="center"><b>Aplicaciones para Dispositivos Móviles</b></p>
+<p align="center"><b>NRC:</b> 4939</p>
+
+<br>
+
+<p align="center"><font size="6"><b>Informe del Trabajo Final</b></font></p>
+
+<p align="center"><b>Docente:</b> Quevedo Velasco, David Gerardo</p>
+<p align="center"><b>Equipo:</b> BuildingFex</p>
+<p align="center"><b>Proyecto:</b> BuildingFex</p>
+
+<br>
+
+<p align="center"><font size="4"><b>Integrantes</b></font></p>
+
+<p align="center">
+<b>Código &nbsp;&nbsp;&nbsp;&nbsp; Apellidos y Nombres</b><br>
+u202022211 &nbsp;&nbsp; Javier Murillo, Mathias<br>
+u202318220 &nbsp;&nbsp; Hermoza Quispe, Jude Alessandro<br>
+u202312510 &nbsp;&nbsp; Jave Chang, Alejandro Manuel<br>
+u201910803 &nbsp;&nbsp; Heredia Hoyos, Danitza Ivonne<br>
+u202624026 &nbsp;&nbsp; Suteau, Antonin
 </p>
 
-<h1 align="center" style="border: none; border-bottom: none; text-align: center; margin-bottom: 0;">Universidad Peruana de Ciencias Aplicadas</h1>
-<h2 align="center" style="border: none; border-bottom: none; text-align: center; margin-top: 5px;">Carrera de Ingeniería de Software</h2>
-
-<p align="center" style="text-align: center; font-size: 1.1em; margin: 4px 0;"><strong>1ACC0238</strong></p>
-<p align="center" style="text-align: center; font-size: 1.15em; margin: 4px 0;"><strong>Aplicaciones para Dispositivos Móviles</strong></p>
-
-<p align="center" style="text-align: center; margin: 6px 0;"><strong>NRC:</strong> 4939</p>
-
 <br>
 
-<h1 align="center" style="border: none; border-bottom: none; text-align: center; margin: 15px 0;">Informe del Trabajo Final</h1>
-
-<p align="center" style="text-align: center; margin: 6px 0;"><strong>Docente:</strong> Quevedo Velasco, David Gerardo</p>
-<p align="center" style="text-align: center; margin: 6px 0;"><strong>Equipo:</strong> BuildingFex</p>
-<p align="center" style="text-align: center; margin: 6px 0;"><strong>Proyecto:</strong> BuildingFex</p>
-
-<br>
-
-<h3 align="center" style="border: none; border-bottom: none; text-align: center; margin-bottom: 10px;">Integrantes</h3>
-
-<table align="center" style="margin: 0 auto; border: none !important; border-collapse: collapse; text-align: center;">
-  <thead>
-    <tr style="border: none !important;">
-      <th align="center" style="border: none !important; text-align: center; padding: 6px 18px; font-weight: bold;">Código</th>
-      <th align="center" style="border: none !important; text-align: center; padding: 6px 18px; font-weight: bold;">Apellidos y Nombres</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr style="border: none !important;">
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u202022211</td>
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Javier Murillo, Mathias</td>
-    </tr>
-    <tr style="border: none !important;">
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u202318220</td>
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Hermoza Quispe, Jude Alessandro</td>
-    </tr>
-    <tr style="border: none !important;">
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u202312510</td>
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Jave Chang, Alejandro Manuel</td>
-    </tr>
-    <tr style="border: none !important;">
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u201910803</td>
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Heredia Hoyos, Danitza Ivonne</td>
-    </tr>
-    <tr style="border: none !important;">
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">u202624026</td>
-      <td align="center" style="border: none !important; text-align: center; padding: 4px 18px;">Suteau, Antonin</td>
-    </tr>
-  </tbody>
-</table>
-
-<br>
-
-<p align="center" style="text-align: center; margin: 4px 0;"><strong>Período</strong> 202620</p>
-<p align="center" style="text-align: center; margin: 4px 0;">Noviembre 2026</p>
+<p align="center"><b>Período</b> 202620</p>
+<p align="center">Noviembre 2026</p>
 
 </div>
 </center>
