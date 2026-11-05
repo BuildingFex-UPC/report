@@ -1097,361 +1097,1533 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 
 ### US01 – Registrar cuotas mensuales
 
-<table> 
+### US01 – Registrar cuotas mensuales
+
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr> <td>US01</td><td>Administrador</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar cuotas mensuales</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero registrar las cuotas mensuales de cada unidad para gestionar la cobranza del edificio.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen unidades registradas.<br> <strong>When:</strong> El administrador registra una cuota mensual válida.<br> <strong>Then:</strong> El sistema crea la cuota asociada a la unidad y al período correspondiente.<br><br> <strong>AC02 – Given:</strong> Existe una cuota registrada para la misma unidad y período.<br> <strong>When:</strong> El administrador intenta registrar otra cuota para ese período.<br> <strong>Then:</strong> El sistema rechaza el registro e informa que ya existe una cuota para la unidad y período indicados. <br><br> <strong>AC03 – Given:</strong> Faltan datos requeridos para registrar la cuota.<br> <strong>When:</strong> El administrador intenta registrar la cuota.<br> <strong>Then:</strong> El sistema rechaza el registro e informa los datos que deben completarse. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US01</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registrar cuotas mensuales</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero registrar las cuotas mensuales de cada unidad para gestionar la cobranza del edificio.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+      <strong>AC01 – Given:</strong> Existen unidades registradas.<br>
+      <strong>When:</strong> El administrador registra una cuota mensual válida.<br>
+      <strong>Then:</strong> El sistema crea la cuota asociada a la unidad y al período correspondiente.
+    </p>
+    <p>
+      <strong>AC02 – Given:</strong> Existe una cuota registrada para la misma unidad y período.<br>
+      <strong>When:</strong> El administrador intenta registrar otra cuota para ese período.<br>
+      <strong>Then:</strong> El sistema rechaza el registro e informa que ya existe una cuota para la unidad y período indicados.
+    </p>
+    <p>
+      <strong>AC03 – Given:</strong> Faltan datos requeridos para registrar la cuota.<br>
+      <strong>When:</strong> El administrador intenta registrar la cuota.<br>
+      <strong>Then:</strong> El sistema rechaza el registro e informa los datos que deben completarse.
+    </p>
+    </td>
+  </tr>
 </table>
 
 ### US02 – Consultar deudas
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US02</td><td>Residente</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar deudas y estado de pago</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero visualizar mis deudas y su estado de pago para saber cuánto y cuándo debo pagar.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El residente tiene cuotas registradas.<br> <strong>When:</strong> El residente consulta su estado de cuenta.<br> <strong>Then:</strong> El sistema muestra las cuotas pendientes y su estado de pago.<br><br> <strong>AC02 – Given:</strong> El residente no tiene deudas pendientes.<br> <strong>When:</strong> El residente consulta su estado de cuenta.<br> <strong>Then:</strong> El sistema informa que no existen cuotas pendientes.<br><br> <strong>AC03 – Given:</strong> El usuario no está asociado a una unidad.<br> <strong>When:</strong> El usuario intenta consultar información financiera.<br> <strong>Then:</strong> El sistema rechaza el acceso a la información financiera. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US02</td>
+    <td>Residente</td>
+    <td>Alta</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar deudas y estado de pago</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero visualizar mis deudas y su estado de pago para saber cuánto y cuándo debo pagar.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> El residente tiene cuotas registradas.<br>
+        <strong>When:</strong> El residente consulta su estado de cuenta.<br>
+        <strong>Then:</strong> El sistema muestra las cuotas pendientes y su estado de pago.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El residente no tiene deudas pendientes.<br>
+        <strong>When:</strong> El residente consulta su estado de cuenta.<br>
+        <strong>Then:</strong> El sistema informa que no existen cuotas pendientes.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El usuario no está asociado a una unidad.<br>
+        <strong>When:</strong> El usuario intenta consultar información financiera.<br>
+        <strong>Then:</strong> El sistema rechaza el acceso a la información financiera.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US03 – Registrar pago
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US03</td><td>Residente</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar pago y comprobante</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para dejar constancia del pago realizado.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una cuota pendiente asociada al residente.<br> <strong>When:</strong> El residente registra un pago válido y adjunta el comprobante.<br> <strong>Then:</strong> El sistema registra el pago asociado a la cuota y conserva el comprobante.<br><br> <strong>AC02 – Given:</strong> No existe una cuota pendiente asociada al residente.<br> <strong>When:</strong> El residente intenta registrar un pago.<br> <strong>Then:</strong> El sistema rechaza el registro del pago..<br><br> <strong>AC03 – Given:</strong> Falta el comprobante requerido.<br> <strong>When:</strong> El residente intenta registrar el pago.<br> <strong>Then:</strong> El sistema rechaza el registro e informa que debe adjuntar el comprobante. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US03</td>
+    <td>Residente</td>
+    <td>Alta</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registrar pago y comprobante</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para dejar constancia del pago realizado.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe una cuota pendiente asociada al residente.<br>
+        <strong>When:</strong> El residente registra un pago válido y adjunta el comprobante.<br>
+        <strong>Then:</strong> El sistema registra el pago asociado a la cuota y conserva el comprobante.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> No existe una cuota pendiente asociada al residente.<br>
+        <strong>When:</strong> El residente intenta registrar un pago.<br>
+        <strong>Then:</strong> El sistema rechaza el registro del pago.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> Falta el comprobante requerido.<br>
+        <strong>When:</strong> El residente intenta registrar el pago.<br>
+        <strong>Then:</strong> El sistema rechaza el registro e informa que debe adjuntar el comprobante.
+      </p>
+    </td>
+  </tr>
 </table>
 
 
 ### US04 – Recordatorios de cobro
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US04</td><td>Administrador</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Enviar recordatorios automáticos de cobro</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes para reducir la morosidad.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Un residente presenta una cuota vencida.<br> <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br> <strong>Then:</strong> El sistema envía un recordatorio de cobro al residente.<br><br> <strong>AC02 – Given:</strong> Un residente no presenta cuotas vencidas.<br> <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br> <strong>Then:</strong> El sistema no envía un recordatorio de morosidad al residente.<br><br> <strong>AC03 – Given:</strong> Existe un recordatorio pendiente de envío.<br> <strong>When:</strong> El sistema intenta enviar la notificación.<br> <strong>Then:</strong> El sistema registra el resultado del intento de envío. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US04</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Enviar recordatorios automáticos de cobro</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes para reducir la morosidad.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Un residente presenta una cuota vencida.<br>
+        <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br>
+        <strong>Then:</strong> El sistema envía un recordatorio de cobro al residente.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Un residente no presenta cuotas vencidas.<br>
+        <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br>
+        <strong>Then:</strong> El sistema no envía un recordatorio de morosidad al residente.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> Existe un recordatorio pendiente de envío.<br>
+        <strong>When:</strong> El sistema intenta enviar la notificación.<br>
+        <strong>Then:</strong> El sistema registra el resultado del intento de envío.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US05 – Recibo digital
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US05</td><td>Residente</td><td>Media</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir recibo digital</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir un recibo digital al confirmarse mi pago para tener respaldo.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un pago confirmado.<br> <strong>When:</strong> El sistema procesa la confirmación del pago.<br> <strong>Then:</strong> El sistema genera un recibo digital asociado al pago.<br><br> <strong>AC02 – Given:</strong> El pago no se encuentra confirmado.<br> <strong>When:</strong> El sistema procesa el estado del pago.<br> <strong>Then:</strong> El sistema no genera un recibo como pago confirmado. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US05</td>
+    <td>Residente</td>
+    <td>Media</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recibir recibo digital</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero recibir un recibo digital al confirmarse mi pago para tener respaldo.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe un pago confirmado.<br>
+        <strong>When:</strong> El sistema procesa la confirmación del pago.<br>
+        <strong>Then:</strong> El sistema genera un recibo digital asociado al pago.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El pago no se encuentra confirmado.<br>
+        <strong>When:</strong> El sistema procesa el estado del pago.<br>
+        <strong>Then:</strong> El sistema no genera un recibo como pago confirmado.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US06 – Reporte financiero consolidado
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US06</td><td>Miembro de la junta</td><td>Alta</td><td>EP02 – Reportes financieros</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar reporte financiero consolidado</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen registros financieros del período solicitado.<br> <strong>When:</strong> El miembro de la junta consulta el reporte.<br> <strong>Then:</strong> El sistema proporciona los ingresos, egresos y morosidad correspondientes.<br><br> <strong>AC02 – Given:</strong> No existen registros financieros para el período.<br> <strong>When:</strong>El miembro de la junta solicita el reporte.<br> <strong>Then:</strong> El sistema genera un reporte sin movimientos registrados.<br><br> <strong>AC03 – Given:</strong> El usuario no tiene permisos de miembro de la junta.<br> <strong>When:</strong> El usuario solicita información financiera consolidada.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US06</td>
+    <td>Miembro de la junta</td>
+    <td>Alta</td>
+    <td>EP02 – Reportes financieros</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar reporte financiero consolidado</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existen registros financieros del período solicitado.<br>
+        <strong>When:</strong> El miembro de la junta consulta el reporte.<br>
+        <strong>Then:</strong> El sistema proporciona los ingresos, egresos y morosidad correspondientes.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> No existen registros financieros para el período.<br>
+        <strong>When:</strong> El miembro de la junta solicita el reporte.<br>
+        <strong>Then:</strong> El sistema genera un reporte sin movimientos registrados.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El usuario no tiene permisos de miembro de la junta.<br>
+        <strong>When:</strong> El usuario solicita información financiera consolidada.<br>
+        <strong>Then:</strong> El sistema rechaza el acceso.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US07 – Registrar gastos
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US07</td><td>Administrador</td><td>Media</td><td>EP02 – Reportes financieros</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar gastos administrativos</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero registrar los gastos administrativos y servicios compartidos para reflejarlos en el estado de cuenta.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Los datos del gasto son válidos.<br> <strong>When:</strong> El administrador registra el gasto.<br> <strong>Then:</strong> El sistema almacena el gasto asociado al período correspondiente.<br><br> <strong>AC02 – Given:</strong> Faltan datos requeridos para registrar el gasto.<br> <strong>When:</strong> El administrador intenta registrar el gasto.<br> <strong>Then:</strong> El sistema rechaza el registro e informa los datos faltantes.<br><br> <strong>AC03 – Given:</strong> Existe un gasto registrado.<br> <strong>When:</strong> Se genera el estado de cuenta correspondiente.<br> <strong>Then:</strong> El sistema incluye el gasto registrado en el resultado. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US07</td>
+    <td>Administrador</td>
+    <td>Media</td>
+    <td>EP02 – Reportes financieros</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registrar gastos administrativos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero registrar los gastos administrativos y servicios compartidos para reflejarlos en el estado de cuenta.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Los datos del gasto son válidos.<br>
+        <strong>When:</strong> El administrador registra el gasto.<br>
+        <strong>Then:</strong> El sistema almacena el gasto asociado al período correspondiente.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Faltan datos requeridos para registrar el gasto.<br>
+        <strong>When:</strong> El administrador intenta registrar el gasto.<br>
+        <strong>Then:</strong> El sistema rechaza el registro e informa los datos faltantes.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> Existe un gasto registrado.<br>
+        <strong>When:</strong> Se genera el estado de cuenta correspondiente.<br>
+        <strong>Then:</strong> El sistema incluye el gasto registrado en el resultado.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US08 – Exportar reportes financieros
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US08</td><td>Miembro de la junta</td><td>Media</td><td>EP02 – Reportes financieros</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Exportar reportes financieros en PDF</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero exportar los reportes financieros en PDF para compartirlos.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un reporte financiero generado.<br> <strong>When:</strong> El miembro de la junta solicita su exportación.<br> <strong>Then:</strong> El sistema genera un archivo PDF con la información del reporte.<br><br> <strong>AC02 – Given:</strong> El usuario no tiene permisos para consultar reportes financieros.<br> <strong>When:</strong> El usuario solicita la exportación de un reporte.<br> <strong>Then:</strong> El sistema rechaza la solicitud de exportación. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US08</td>
+    <td>Miembro de la junta</td>
+    <td>Media</td>
+    <td>EP02 – Reportes financieros</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Exportar reportes financieros en PDF</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como miembro de la junta, quiero exportar los reportes financieros en PDF para compartirlos.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe un reporte financiero generado.<br>
+        <strong>When:</strong> El miembro de la junta solicita su exportación.<br>
+        <strong>Then:</strong> El sistema genera un archivo PDF con la información del reporte.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El usuario no tiene permisos para consultar reportes financieros.<br>
+        <strong>When:</strong> El usuario solicita la exportación de un reporte.<br>
+        <strong>Then:</strong> El sistema rechaza la solicitud de exportación.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US09 – Seleccionar plan
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US09</td><td>Empresa administradora</td><td>Alta</td><td>EP03 – Planes de suscripción</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Seleccionar plan según número de unidades</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero elegir un plan según el número de unidades para pagar solo por lo que necesito.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> La cantidad de unidades corresponde a un rango de plan disponible.<br> <strong>When:</strong> La empresa administradora selecciona el plan.<br> <strong>Then:</strong> El sistema asocia la suscripción al plan correspondiente.<br><br> <strong>AC02 – Given:</strong> La cantidad de unidades no corresponde a ningún plan disponible.<br> <strong>When:</strong> La empresa administradora intenta seleccionar un plan.<br> <strong>Then:</strong> El sistema rechaza la selección e informa que no existe un plan aplicable. </td>
-  </tr> 
-</table> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US09</td>
+    <td>Empresa administradora</td>
+    <td>Alta</td>
+    <td>EP03 – Planes de suscripción</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Seleccionar plan según número de unidades</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como empresa administradora, quiero elegir un plan según el número de unidades para pagar solo por lo que necesito.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> La cantidad de unidades corresponde a un rango de plan disponible.<br>
+        <strong>When:</strong> La empresa administradora selecciona el plan.<br>
+        <strong>Then:</strong> El sistema asocia la suscripción al plan correspondiente.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> La cantidad de unidades no corresponde a ningún plan disponible.<br>
+        <strong>When:</strong> La empresa administradora intenta seleccionar un plan.<br>
+        <strong>Then:</strong> El sistema rechaza la selección e informa que no existe un plan aplicable.
+      </p>
+    </td>
+  </tr>
+</table>
 
 ### US10 – Cambiar plan
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US10</td><td>Empresa administradora</td><td>Media</td><td>EP03 – Planes de suscripción</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Cambiar plan de suscripción</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero cambiar de plan cuando incorporo o retiro edificios para ajustar mi facturación.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> La cantidad de unidades asociadas a la empresa ha cambiado.<br> <strong>When:</strong>La empresa administradora actualiza su suscripción.<br> <strong>Then:</strong> El sistema determina el plan correspondiente a la nueva cantidad de unidades.<br><br> <strong>AC02 – Given:</strong> El nuevo plan tiene una tarifa diferente al plan actual.<br> <strong>When:</strong> La empresa administradora confirma el cambio de plan.<br> <strong>Then:</strong> El sistema aplica la nueva tarifa a la facturación correspondiente.<br><br> <strong>AC03 – Given:</strong> La nueva cantidad de unidades no corresponde a un plan disponible.<br> <strong>When:</strong> La empresa administradora intenta actualizar la suscripción.<br> <strong>Then:</strong> El sistema rechaza el cambio de plan. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US10</td>
+    <td>Empresa administradora</td>
+    <td>Media</td>
+    <td>EP03 – Planes de suscripción</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Cambiar plan de suscripción</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como empresa administradora, quiero cambiar de plan cuando incorporo o retiro edificios para ajustar mi facturación.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> La cantidad de unidades asociadas a la empresa ha cambiado.<br>
+        <strong>When:</strong> La empresa administradora actualiza su suscripción.<br>
+        <strong>Then:</strong> El sistema determina el plan correspondiente a la nueva cantidad de unidades.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El nuevo plan tiene una tarifa diferente al plan actual.<br>
+        <strong>When:</strong> La empresa administradora confirma el cambio de plan.<br>
+        <strong>Then:</strong> El sistema aplica la nueva tarifa a la facturación correspondiente.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> La nueva cantidad de unidades no corresponde a un plan disponible.<br>
+        <strong>When:</strong> La empresa administradora intenta actualizar la suscripción.<br>
+        <strong>Then:</strong> El sistema rechaza el cambio de plan.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US11 – Facturación en PEN
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US11</td><td>Responsable de pagos</td><td>Media</td><td>EP03 – Planes de suscripción</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir facturación mensual en soles</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como responsable de pagos, quiero recibir la facturación mensual en soles (PEN) para agilizar su aprobación.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una suscripción activa.<br> <strong>When:</strong> El sistema genera la facturación mensual.<br> <strong>Then:</strong> El sistema genera la factura con el importe expresado en soles (PEN).<br><br> <strong>AC02 – Given:</strong> La facturación mensual ha sido generada correctamente.<br> <strong>When:</strong> El responsable de pagos consulta la facturación.<br> <strong>Then:</strong> El sistema muestra el monto correspondiente en soles (PEN). </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US11</td>
+    <td>Responsable de pagos</td>
+    <td>Media</td>
+    <td>EP03 – Planes de suscripción</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recibir facturación mensual en soles</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como responsable de pagos, quiero recibir la facturación mensual en soles (PEN) para agilizar su aprobación.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe una suscripción activa.<br>
+        <strong>When:</strong> El sistema genera la facturación mensual.<br>
+        <strong>Then:</strong> El sistema genera la factura con el importe expresado en soles (PEN).
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> La facturación mensual ha sido generada correctamente.<br>
+        <strong>When:</strong> El responsable de pagos consulta la facturación.<br>
+        <strong>Then:</strong> El sistema muestra el monto correspondiente en soles (PEN).
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US12 – Registrar cuenta y edificios
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US12</td><td>Empresa administradora</td><td>Alta</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar cuenta y edificios</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como empresa administradora, quiero registrar mi cuenta y dar de alta edificios para empezar a operar.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Los datos de la empresa son válidos.<br> <strong>When:</strong> La empresa administradora registra su cuenta.<br> <strong>Then:</strong> El sistema crea la cuenta de la empresa administradora.<br><br> <strong>AC02 – Given:</strong> La cuenta de la empresa está registrada.<br> <strong>When:</strong> La empresa administradora registra un edificio con datos válidos.<br> <strong>Then:</strong> El sistema asocia el edificio a la empresa.<br><br> <strong>AC03 – Given:</strong> Los datos requeridos de la cuenta o del edificio son inválidos o están incompletos.<br> <strong>When:</strong> La empresa administradora intenta realizar el registro.<br> <strong>Then:</strong> El sistema rechaza el registro e informa los datos que deben corregirse.</td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US12</td>
+    <td>Empresa administradora</td>
+    <td>Alta</td>
+    <td>EP04 – Gestión de usuarios y acceso</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registrar cuenta y edificios</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como empresa administradora, quiero registrar mi cuenta y dar de alta edificios para empezar a operar.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Los datos de la empresa son válidos.<br>
+        <strong>When:</strong> La empresa administradora registra su cuenta.<br>
+        <strong>Then:</strong> El sistema crea la cuenta de la empresa administradora.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> La cuenta de la empresa está registrada.<br>
+        <strong>When:</strong> La empresa administradora registra un edificio con datos válidos.<br>
+        <strong>Then:</strong> El sistema asocia el edificio a la empresa.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> Los datos requeridos de la cuenta o del edificio son inválidos o están incompletos.<br>
+        <strong>When:</strong> La empresa administradora intenta realizar el registro.<br>
+        <strong>Then:</strong> El sistema rechaza el registro e informa los datos que deben corregirse.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US13 – Invitar residentes
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US13</td><td>Administrador</td><td>Alta</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Invitar residentes y asignar unidad</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero invitar residentes y asignarles una unidad para que accedan al sistema.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una unidad registrada y los datos del residente son válidos.<br> <strong>When:</strong> El administrador genera la invitación.<br> <strong>Then:</strong> El sistema crea la invitación asociada a la unidad.<br><br> <strong>AC02 – Given:</strong> La unidad indicada no existe.<br> <strong>When:</strong> El administrador intenta generar la invitación.<br> <strong>Then:</strong> El sistema rechaza la operación.<br><br> <strong>AC03 – Given:</strong> El residente ya tiene una invitación activa.<br> <strong>When:</strong> El administrador intenta generar otra invitación.<br> <strong>Then:</strong> El sistema evita duplicar una invitación duplicada. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US13</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP04 – Gestión de usuarios y acceso</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Invitar residentes y asignar unidad</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero invitar residentes y asignarles una unidad para que accedan al sistema.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe una unidad registrada y los datos del residente son válidos.<br>
+        <strong>When:</strong> El administrador genera la invitación.<br>
+        <strong>Then:</strong> El sistema crea la invitación asociada a la unidad.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> La unidad indicada no existe.<br>
+        <strong>When:</strong> El administrador intenta generar la invitación.<br>
+        <strong>Then:</strong> El sistema rechaza la operación.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El residente ya tiene una invitación activa.<br>
+        <strong>When:</strong> El administrador intenta generar otra invitación.<br>
+        <strong>Then:</strong> El sistema evita generar invitaciones duplicadas.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US14 – Iniciar sesión
+### US14 – Iniciar sesión
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US14</td><td>Usuario</td><td>Alta</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Iniciar sesión de forma segura</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como usuario, quiero iniciar sesión de forma segura para proteger la información.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El usuario posee credenciales válidas.<br> <strong>When:</strong>El usuario inicia sesión.<br> <strong>Then:</strong> El sistema autentica al usuario y permite el acceso autorizado.<br><br> <strong>AC02 – Given:</strong> Las credenciales proporcionadas son inválidas.<br> <strong>When:</strong> El usuario intenta iniciar sesión.<br> <strong>Then:</strong> El sistema rechaza la autenticación e informa que las credenciales no son válidas.<br><br> <strong>AC03 – Given:</strong> La cuenta del usuario no está habilitada.<br> <strong>When:</strong> El usuario intenta iniciar sesión.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US14</td>
+    <td>Usuario</td>
+    <td>Alta</td>
+    <td>EP04 – Gestión de usuarios y acceso</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Iniciar sesión de forma segura</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como usuario, quiero iniciar sesión de forma segura para proteger la información.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> El usuario posee credenciales válidas.<br>
+        <strong>When:</strong> El usuario inicia sesión.<br>
+        <strong>Then:</strong> El sistema autentica al usuario y permite el acceso autorizado.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Las credenciales proporcionadas son inválidas.<br>
+        <strong>When:</strong> El usuario intenta iniciar sesión.<br>
+        <strong>Then:</strong> El sistema rechaza la autenticación e informa que las credenciales no son válidas.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> La cuenta del usuario no está habilitada.<br>
+        <strong>When:</strong> El usuario intenta iniciar sesión.<br>
+        <strong>Then:</strong> El sistema rechaza el acceso.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US15 – Definir roles
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US15</td><td>Administrador</td><td>Media</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Definir roles y permisos</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero definir roles (admin, junta, residente) para controlar permisos.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un usuario registrado.<br> <strong>When:</strong> El administrador asigna un rol válido.<br> <strong>Then:</strong> El sistema registra el rol asociado al usuario.<br><br> <strong>AC02 – Given:</strong>El usuario tiene un rol asignado.<br> <strong>When:</strong> El usuario solicita una operación restringida a su rol.<br> <strong>Then:</strong> El sistema permite la operación únicamente si el rol del usuario posee el permiso requerido.<br><br> <strong>AC03 – Given:</strong>El usuario no posee permisos de administración.<br> <strong>When:</strong> El usuario intenta modificar los roles de otros usuarios.<br> <strong>Then:</strong> El sistema rechaza la modificación. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US15</td>
+    <td>Administrador</td>
+    <td>Media</td>
+    <td>EP04 – Gestión de usuarios y acceso</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Definir roles y permisos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero definir roles (admin, junta, residente) para controlar permisos.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe un usuario registrado.<br>
+        <strong>When:</strong> El administrador asigna un rol válido.<br>
+        <strong>Then:</strong> El sistema registra el rol asociado al usuario.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El usuario tiene un rol asignado.<br>
+        <strong>When:</strong> El usuario solicita una operación restringida a su rol.<br>
+        <strong>Then:</strong> El sistema permite la operación únicamente si el rol del usuario posee el permiso requerido.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El usuario no posee permisos de administración.<br>
+        <strong>When:</strong> El usuario intenta modificar los roles de otros usuarios.<br>
+        <strong>Then:</strong> El sistema rechaza la modificación.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US16 – Consultar áreas comunes
 
-<table> <tr><th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US16</td><td>Residente</td><td>Alta</td><td>EP05 – Áreas comunes y reservas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar catálogo de áreas comunes</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero ver el catálogo de áreas comunes con reglas y disponibilidad para saber qué puedo reservar.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen áreas comunes configuradas.<br> <strong>When:</strong> El residente consulta el catálogo.<br> <strong>Then:</strong> El sistema proporciona las áreas, sus reglas y su disponibilidad.<br><br> <strong>AC02 – Given:</strong> Un área se encuentra en mantenimiento.<br> <strong>When:</strong> El residente consulta su disponibilidad.<br> <strong>Then:</strong> El sistema indica que el área no está disponible para reserva.<br><br> <strong>AC03 – Given:</strong> No existen áreas comunes registradas.<br> <strong>When:</strong> El residente consulta el catálogo.<br> <strong>Then:</strong> El sistema informa que no existen áreas disponibles. </td>
-  </tr> 
+<table>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US16</td>
+    <td>Residente</td>
+    <td>Alta</td>
+    <td>EP05 – Áreas comunes y reservas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar catálogo de áreas comunes</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero ver el catálogo de áreas comunes con reglas y disponibilidad para saber qué puedo reservar.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existen áreas comunes configuradas.<br>
+        <strong>When:</strong> El residente consulta el catálogo.<br>
+        <strong>Then:</strong> El sistema proporciona las áreas, sus reglas y su disponibilidad.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Un área se encuentra en mantenimiento.<br>
+        <strong>When:</strong> El residente consulta su disponibilidad.<br>
+        <strong>Then:</strong> El sistema indica que el área no está disponible para reserva.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> No existen áreas comunes registradas.<br>
+        <strong>When:</strong> El residente consulta el catálogo.<br>
+        <strong>Then:</strong> El sistema informa que no existen áreas disponibles.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US17 – Reservar área común
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US17</td><td>Residente</td><td>Alta</td><td>EP05 – Áreas comunes y reservas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Reservar un área común</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero reservar un área común en fecha y hora para asegurar su uso sin conflictos.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El área común está disponible y la solicitud cumple las reglas establecidas.<br> <strong>When:</strong> El residente registra la reserva.<br> <strong>Then:</strong> El sistema crea la reserva asociada al residente.<br><br> <strong>AC02 – Given:</strong> El horario solicitado no está disponible.<br> <strong>When:</strong> El residente intenta registrar la reserva.<br> <strong>Then:</strong> El sistema rechaza la solicitud.<br><br> <strong>AC03 – Given:</strong> La solicitud incumple las reglas del área común.<br> <strong>When:</strong> El residente intenta reservarla.<br> <strong>Then:</strong> El sistema rechaza la reserva. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US17</td>
+    <td>Residente</td>
+    <td>Alta</td>
+    <td>EP05 – Áreas comunes y reservas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Reservar un área común</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero reservar un área común en fecha y hora para asegurar su uso sin conflictos.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> El área común está disponible y la solicitud cumple las reglas establecidas.<br>
+        <strong>When:</strong> El residente registra la reserva.<br>
+        <strong>Then:</strong> El sistema crea la reserva asociada al residente.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El horario solicitado no está disponible.<br>
+        <strong>When:</strong> El residente intenta registrar la reserva.<br>
+        <strong>Then:</strong> El sistema rechaza la solicitud.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> La solicitud incumple las reglas del área común.<br>
+        <strong>When:</strong> El residente intenta reservarla.<br>
+        <strong>Then:</strong> El sistema rechaza la reserva.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US18 – Validar solapamiento de reservas
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US18</td><td>Developer</td><td>Alta</td><td>EP05 – Áreas comunes y reservas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Validar solapamiento de reservas</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como Developer, quiero validar el solapamiento de reservas para evitar reservas incompatibles.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una reserva para la misma área y un horario que se solapa.<br> <strong>When:</strong> El servicio recibe una solicitud de nueva reserva.<br> <strong>Then:</strong> El servicio rechaza la solicitud con una respuesta de conflicto y no crea la reserva.<br><br> <strong>AC02 – Given:</strong> No existe una reserva que se solape y la solicitud contiene datos válidos.<br> <strong>When:</strong> El servicio recibe la solicitud.<br> <strong>Then:</strong> El servicio acepta la creación y devuelve una respuesta exitosa.<br><br> <strong>AC03 – Given:</strong> La solicitud no contiene los datos requeridos.<br> <strong>When:</strong> El servicio recibe la solicitud.<br> <strong>Then:</strong> El servicio devuelve una respuesta de validación y no crea la reserva.<br><br> <strong>AC04 – Given:</strong> Existen solicitudes concurrentes para la misma área y horario.<br> <strong>When:</strong> El servicio procesa las solicitudes de reserva.<br> <strong>Then:</strong> El sistema registra únicamente una reserva para el horario disponible y rechaza las solicitudes que generen solapamiento.</td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US18</td>
+    <td>Developer</td>
+    <td>Alta</td>
+    <td>EP05 – Áreas comunes y reservas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Validar solapamiento de reservas</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como Developer, quiero validar el solapamiento de reservas para evitar reservas incompatibles.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe una reserva para la misma área y un horario que se solapa.<br>
+        <strong>When:</strong> El servicio recibe una solicitud de nueva reserva.<br>
+        <strong>Then:</strong> El servicio rechaza la solicitud con una respuesta de conflicto y no crea la reserva.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> No existe una reserva que se solape y la solicitud contiene datos válidos.<br>
+        <strong>When:</strong> El servicio recibe la solicitud.<br>
+        <strong>Then:</strong> El servicio acepta la creación y devuelve una respuesta exitosa.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> La solicitud no contiene los datos requeridos.<br>
+        <strong>When:</strong> El servicio recibe la solicitud.<br>
+        <strong>Then:</strong> El servicio devuelve una respuesta de validación y no crea la reserva.
+      </p>
+      <p>
+        <strong>AC04 – Given:</strong> Existen solicitudes concurrentes para la misma área y horario.<br>
+        <strong>When:</strong> El servicio procesa las solicitudes de reserva.<br>
+        <strong>Then:</strong> El sistema registra únicamente una reserva para el horario disponible y rechaza las solicitudes que generen solapamiento.
+      </p>
+    </td>
+  </tr>
 </table>
 
-### US19 – Configurar áreas comunes
-
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US19</td><td>Administrador</td><td>Media</td><td>EP05 – Áreas comunes y reservas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Configurar reglas y mantenimiento de áreas</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero configurar reglas y mantenimiento de cada espacio para gestionar su disponibilidad.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un área común registrada.<br> <strong>When:</strong> El administrador configura sus reglas.<br> <strong>Then:</strong> El sistema almacena las reglas asociadas al área.<br><br> <strong>AC02 – Given:</strong> Un área requiere mantenimiento.<br> <strong>When:</strong> El administrador registra su estado de mantenimiento.<br> <strong>Then:</strong> El sistema actualiza su disponibilidad.<br><br> <strong>AC03 – Given:</strong> Un usuario sin permisos administrativos intenta modificar la configuración.<br> <strong>When:</strong> El usuario intenta modificar la configuración de un área.<br> <strong>Then:</strong> el sistema rechaza el cambio. </td>
-  </tr> 
+    <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th>
+  </tr>
+  <tr>
+    <td>US19</td><td>Administrador</td><td>Media</td><td>EP05 – Áreas comunes y reservas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Configurar reglas y mantenimiento de áreas</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero configurar reglas y mantenimiento de cada espacio para gestionar su disponibilidad.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p><strong>AC01 – Given:</strong> Existe un área común registrada.<br>
+      <strong>When:</strong> El administrador configura sus reglas.<br>
+      <strong>Then:</strong> El sistema almacena las reglas asociadas al área.</p>
+      <p><strong>AC02 – Given:</strong> Un área requiere mantenimiento.<br>
+      <strong>When:</strong> El administrador registra su estado de mantenimiento.<br>
+      <strong>Then:</strong> El sistema actualiza su disponibilidad.</p>
+      <p><strong>AC03 – Given:</strong> Un usuario sin permisos administrativos intenta modificar la configuración.<br>
+      <strong>When:</strong> El usuario intenta modificar la configuración de un área.<br>
+      <strong>Then:</strong> El sistema rechaza el cambio.</p>
+    </td>
+  </tr>
 </table>
 
-### US20 – Reportar incidencia
-
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US20</td><td>Residente</td><td>Alta</td><td>EP06 – Gestión de incidencias</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Reportar una incidencia</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero reportar una incidencia con descripción y foto para dejar constancia del problema.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El residente proporciona una descripción válida y una fotografía.<br> <strong>When:</strong> El residente registra la incidencia.<br> <strong>Then:</strong> El sistema crea la incidencia con estado "Abierta" y la asocia al residente.<br><br> <strong>AC02 – Given:</strong> Falta la descripción requerida.<br> <strong>When:</strong> El residente intenta registrar la incidencia.<br> <strong>Then:</strong> El sistema rechaza el registro.<br><br> <strong>AC03 – Given:</strong> La incidencia ha sido registrada correctamente.<br> <strong>When:</strong> El residente consulta sus incidencias.<br> <strong>Then:</strong> El sistema asocia la incidencia registrada con su estado actual. </td>
-  </tr> 
+    <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th>
+  </tr>
+  <tr>
+    <td>US20</td><td>Residente</td><td>Alta</td><td>EP06 – Gestión de incidencias</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Reportar una incidencia</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero reportar una incidencia con descripción y foto para dejar constancia del problema.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p><strong>AC01 – Given:</strong> El residente proporciona una descripción válida y una fotografía.<br>
+      <strong>When:</strong> El residente registra la incidencia.<br>
+      <strong>Then:</strong> El sistema crea la incidencia con estado "Abierta" y la asocia al residente.</p>
+      <p><strong>AC02 – Given:</strong> Falta la descripción requerida.<br>
+      <strong>When:</strong> El residente intenta registrar la incidencia.<br>
+      <strong>Then:</strong> El sistema rechaza el registro.</p>
+      <p><strong>AC03 – Given:</strong> La incidencia ha sido registrada correctamente.<br>
+      <strong>When:</strong> El residente consulta sus incidencias.<br>
+      <strong>Then:</strong> El sistema muestra la incidencia registrada con su estado actual.</p>
+    </td>
+  </tr>
 </table>
 
 ### US21 – Dar seguimiento a incidencias
 
-<table> 
-<tr>
-<th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US21</td><td>Administrador</td><td>Alta</td><td>EP06 – Gestión de incidencias</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Actualizar estado de incidencias</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero dar seguimiento al estado de cada incidencia (abierta, en proceso, resuelta) para controlar su resolución.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una incidencia abierta.<br> <strong>When:</strong> El administrador inicia su atención.<br> <strong>Then:</strong> El sistema actualiza el estado a en proceso.<br><br> <strong>AC02 – Given:</strong> Una incidencia se encuentra en proceso.<br> <strong>When:</strong> El administrador registra su resolución.<br> <strong>Then:</strong> El sistema actualiza el estado a resuelta.<br><br> <strong>AC03 – Given:</strong> El estado indicado no pertenece a los estados permitidos.<br> <strong>When:</strong> El administrador intenta actualizar la incidencia.<br> <strong>Then:</strong> El sistema rechaza el cambio de estado. </td>
-  </tr> 
+<table>
+  <tr>
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US21</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP06 – Gestión de incidencias</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Actualizar estado de incidencias</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero dar seguimiento al estado de cada incidencia (abierta, en proceso, resuelta) para controlar su resolución.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe una incidencia abierta.<br>
+        <strong>When:</strong> El administrador inicia su atención.<br>
+        <strong>Then:</strong> El sistema actualiza el estado a "En proceso".
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Una incidencia se encuentra en proceso.<br>
+        <strong>When:</strong> El administrador registra su resolución.<br>
+        <strong>Then:</strong> El sistema actualiza el estado a "Resuelta".
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El estado indicado no pertenece a los estados permitidos.<br>
+        <strong>When:</strong> El administrador intenta actualizar la incidencia.<br>
+        <strong>Then:</strong> El sistema rechaza el cambio de estado.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US22 – Notificación de incidencias
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US22</td><td>Residente</td><td>Media</td><td>EP06 – Gestión de incidencias</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir notificaciones sobre incidencias</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir notificación cuando cambie el estado de mi incidencia para conocer su avance.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una incidencia asociada al residente.<br> <strong>When:</strong> El administrador modifica el estado de la incidencia.<br> <strong>Then:</strong> El sistema envía una notificación al residente informado sobre el nuevo estado.<br><br> <strong>AC02 – Given:</strong> El estado actual de la incidencia no cambia.<br> <strong>When:</strong> El sistema procesa la incidencia.<br> <strong>Then:</strong> El sistema no genera una notificación de cambio de estado. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US22</td>
+    <td>Residente</td>
+    <td>Media</td>
+    <td>EP06 – Gestión de incidencias</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recibir notificaciones sobre incidencias</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero recibir notificación cuando cambie el estado de mi incidencia para conocer su avance.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe una incidencia asociada al residente.<br>
+        <strong>When:</strong> El administrador modifica el estado de la incidencia.<br>
+        <strong>Then:</strong> El sistema envía una notificación al residente informándole sobre el nuevo estado.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El estado actual de la incidencia no cambia.<br>
+        <strong>When:</strong> El sistema procesa la incidencia.<br>
+        <strong>Then:</strong> El sistema no genera una notificación de cambio de estado.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US23 – Publicar comunicados
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US23</td><td>Administrador</td><td>Alta</td><td>EP07 – Comunicaciones y documentos</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Publicar comunicados oficiales</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero publicar comunicados oficiales para que los residentes los reciban.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El administrador proporciona información válida.<br> <strong>When:</strong> El administrador publica un comunicado.<br> <strong>Then:</strong> El sistema registra el comunicado y lo asocia al edificio correspondiente.<br><br> <strong>AC02 – Given:</strong> El comunicado no contiene información requerida.<br> <strong>When:</strong> El administrador intenta publicarlo.<br> <strong>Then:</strong> El sistema rechaza la publicación.<br><br> <strong>AC03 – Given:</strong> El usuario no posee permisos administrativos.<br> <strong>When:</strong> El usuario intenta publicar un comunicado.<br> <strong>Then:</strong> El sistema rechaza la operación. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US23</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP07 – Comunicaciones y documentos</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Publicar comunicados oficiales</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero publicar comunicados oficiales para que los residentes los reciban.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> El administrador proporciona información válida.<br>
+        <strong>When:</strong> El administrador publica un comunicado.<br>
+        <strong>Then:</strong> El sistema registra el comunicado y lo asocia al edificio correspondiente.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El comunicado no contiene información requerida.<br>
+        <strong>When:</strong> El administrador intenta publicarlo.<br>
+        <strong>Then:</strong> El sistema rechaza la publicación.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El usuario no posee permisos administrativos.<br>
+        <strong>When:</strong> El usuario intenta publicar un comunicado.<br>
+        <strong>Then:</strong> El sistema rechaza la operación.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US24 – Consultar documentos
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US24</td><td>Residente</td><td>Media</td><td>EP07 – Comunicaciones y documentos</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar documentos oficiales</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero consultar el reglamento y las actas del edificio para acceder a sus documentos oficiales.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen documentos disponibles para el edificio.<br> <strong>When:</strong> El residente consulta el repositorio.<br> <strong>Then:</strong> El sistema proporciona los documentos a los que tiene acceso.<br><br> <strong>AC02 – Given:</strong> El residente no pertenece al edificio asociado al documento.<br> <strong>When:</strong> El residente intenta acceder al documento.<br> <strong>Then:</strong> El sistema rechaza el acceso al documento.<br><br> <strong>AC03 – Given:</strong> No existen documentos disponibles.<br> <strong>When:</strong> El residente consulta el repositorio.<br> <strong>Then:</strong> El sistema informa que no existen documentos disponibles. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US24</td>
+    <td>Residente</td>
+    <td>Media</td>
+    <td>EP07 – Comunicaciones y documentos</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar documentos oficiales</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero consultar el reglamento y las actas del edificio para acceder a sus documentos oficiales.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existen documentos disponibles para el edificio.<br>
+        <strong>When:</strong> El residente consulta el repositorio.<br>
+        <strong>Then:</strong> El sistema proporciona los documentos a los que tiene acceso.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El residente no pertenece al edificio asociado al documento.<br>
+        <strong>When:</strong> El residente intenta acceder al documento.<br>
+        <strong>Then:</strong> El sistema rechaza el acceso al documento.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> No existen documentos disponibles.<br>
+        <strong>When:</strong> El residente consulta el repositorio.<br>
+        <strong>Then:</strong> El sistema informa que no existen documentos disponibles.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US25 – Notificaciones push
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US25</td><td>Residente</td><td>Media</td><td>EP07 – Comunicaciones y documentos</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir notificaciones push de comunicados importantes</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir notificaciones push de comunicados importantes para conocer información relevante del edificio.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un comunicado marcado como importante.<br> <strong>When:</strong> El administrador publica el comunicado.<br> <strong>Then:</strong> El sistema envía una notificación push a los residentes correspondientes.<br><br> <strong>AC02 – Given:</strong> Un comunicado no está marcado como importante.<br> <strong>When:</strong> El administrador publica el comunicado.<br> <strong>Then:</strong> El sistema no genera una notificación push de importancia.<br><br> <strong>AC03 – Given:</strong> El envío de una notificación falla.<br> <strong>When:</strong> El sistema procesa el comunicado.<br> <strong>Then:</strong> El sistema registra el resultado del intento de envío. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US25</td>
+    <td>Residente</td>
+    <td>Media</td>
+    <td>EP07 – Comunicaciones y documentos</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recibir notificaciones push de comunicados importantes</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero recibir notificaciones push de comunicados importantes para conocer información relevante del edificio.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe un comunicado marcado como importante.<br>
+        <strong>When:</strong> El administrador publica el comunicado.<br>
+        <strong>Then:</strong> El sistema envía una notificación push a los residentes correspondientes.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Un comunicado no está marcado como importante.<br>
+        <strong>When:</strong> El administrador publica el comunicado.<br>
+        <strong>Then:</strong> El sistema no genera una notificación push de importancia.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El envío de una notificación falla.<br>
+        <strong>When:</strong> El sistema procesa el comunicado.<br>
+        <strong>Then:</strong> El sistema registra el resultado del intento de envío.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US26 – Dashboard unificado
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US26</td><td>Administrador</td><td>Alta</td><td>EP08 – Dashboard unificado</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar dashboard unificado</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero consultar un dashboard con resumen de cobranzas, reservas e incidencias para conocer el estado general del edificio.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen datos de cobranzas, reservas e incidencias.<br> <strong>When:</strong> El administrador consulta el dashboard.<br> <strong>Then:</strong> El sistema proporciona un resumen actualizado de las tres categorías.<br><br> <strong>AC02 – Given:</strong> Una de las categorías no contiene registros.<br> <strong>When:</strong> El administrador consulta el dashboard.<br> <strong>Then:</strong> El sistema muestra la categoría sin registros sin afectar las demás.<br><br> <strong>AC03 – Given:</strong> El usuario no tiene permisos administrativos.<br> <strong>When:</strong> El usuario intenta consultar el dashboard administrativo.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US26</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP08 – Dashboard unificado</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar dashboard unificado</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero consultar un dashboard con resumen de cobranzas, reservas e incidencias para conocer el estado general del edificio.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existen datos de cobranzas, reservas e incidencias.<br>
+        <strong>When:</strong> El administrador consulta el dashboard.<br>
+        <strong>Then:</strong> El sistema proporciona un resumen actualizado de las tres categorías.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Una de las categorías no contiene registros.<br>
+        <strong>When:</strong> El administrador consulta el dashboard.<br>
+        <strong>Then:</strong> El sistema muestra la categoría sin registros sin afectar las demás.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El usuario no tiene permisos administrativos.<br>
+        <strong>When:</strong> El usuario intenta consultar el dashboard administrativo.<br>
+        <strong>Then:</strong> El sistema rechaza el acceso.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US27 – Indicadores de junta
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US27</td><td>Miembro de la junta</td><td>Media</td><td>EP08 – Dashboard unificado</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar indicadores de morosidad e incidencias</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero consultar indicadores de morosidad e incidencias pendientes.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen cuotas pendientes e incidencias registradas.<br> <strong>When:</strong> El miembro de la junta consulta los indicadores.<br> <strong>Then:</strong> El sistema proporciona los indicadores de morosidad e incidencias pendientes.<br><br> <strong>AC02 – Given:</strong> No existen cuotas pendientes.<br> <strong>When:</strong> El miembro de la junta consulta los indicadores.<br> <strong>Then:</strong> El sistema muestra un indicador de morosidad igual a cero.<br><br> <strong>AC03 – Given:</strong> El usuario no pertenece a la junta.<br> <strong>When:</strong> El sistema intenta consultar estos indicadores.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td></tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US27</td>
+    <td>Miembro de la junta</td>
+    <td>Media</td>
+    <td>EP08 – Dashboard unificado</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar indicadores de morosidad e incidencias</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como miembro de la junta, quiero consultar indicadores de morosidad e incidencias pendientes.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existen cuotas pendientes e incidencias registradas.<br>
+        <strong>When:</strong> El miembro de la junta consulta los indicadores.<br>
+        <strong>Then:</strong> El sistema proporciona los indicadores de morosidad e incidencias pendientes.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> No existen cuotas pendientes.<br>
+        <strong>When:</strong> El miembro de la junta consulta los indicadores.<br>
+        <strong>Then:</strong> El sistema muestra un indicador de morosidad igual a cero.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El usuario no pertenece a la junta.<br>
+        <strong>When:</strong> El usuario intenta consultar estos indicadores.<br>
+        <strong>Then:</strong> El sistema rechaza el acceso.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US28 – Recuperar contraseña
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US28</td><td>Usuario</td><td>Baja</td><td>EP04 – Gestión de usuarios y acceso</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recuperar contraseña</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una cuenta asociada al identificador proporcionado.<br> <strong>When:</strong> El usuario solicita recuperar su contraseña.<br> <strong>Then:</strong> El sistema genera y envía un mecanismo válido para restablecer la contraseña..<br><br> <strong>AC02 – Given:</strong> No existe una cuenta asociada al identificador proporcionado.<br> <strong>When:</strong> El usuario solicita recuperar su contraseña.<br> <strong>Then:</strong> El sistema no genera credenciales de recuperación.<br><br> <strong>AC03 – Given:</strong> El mecanismo de recuperación ha expirado.<br> <strong>When:</strong> El usuario intenta utilizarlo.<br> <strong>Then:</strong> El sistema rechaza la recuperación. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US28</td>
+    <td>Usuario</td>
+    <td>Baja</td>
+    <td>EP04 – Gestión de usuarios y acceso</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recuperar contraseña</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como usuario, quiero recuperar mi contraseña para volver a acceder a mi cuenta.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe una cuenta asociada al identificador proporcionado.<br>
+        <strong>When:</strong> El usuario solicita recuperar su contraseña.<br>
+        <strong>Then:</strong> El sistema genera y envía un mecanismo válido para restablecer la contraseña.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> No existe una cuenta asociada al identificador proporcionado.<br>
+        <strong>When:</strong> El usuario solicita recuperar su contraseña.<br>
+        <strong>Then:</strong> El sistema no genera credenciales de recuperación.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El mecanismo de recuperación ha expirado.<br>
+        <strong>When:</strong> El usuario intenta utilizarlo.<br>
+        <strong>Then:</strong> El sistema rechaza la recuperación.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US29 – Configurar pagos fijos periódicos
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US29</td><td>Administrador</td><td>Baja</td><td>EP02 – Reportes financieros</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Configurar pagos fijos periódicos</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero configurar pagos fijos periódicos para automatizar egresos recurrentes.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Los datos del pago recurrente son válidos.<br> <strong>When:</strong> El administrador configura el pago periódico.<br> <strong>Then:</strong> El sistema registra la periodicidad, monto y concepto del egreso.<br><br> <strong>AC02 – Given:</strong> Existe una configuración de pago recurrente activa.<br> <strong>When:</strong> Llega el período programado.<br> <strong>Then:</strong> El sistema genera el egreso correspondiente según la configuración registrada.<br><br> <strong>AC03 – Given:</strong> La configuración contiene datos inválidos o incompletos.<br> <strong>When:</strong> El administrador intenta registrarla.<br> <strong>Then:</strong> El sistema rechaza la configuración. </td></tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US29</td>
+    <td>Administrador</td>
+    <td>Baja</td>
+    <td>EP02 – Reportes financieros</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Configurar pagos fijos periódicos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero configurar pagos fijos periódicos para automatizar egresos recurrentes.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Los datos del pago recurrente son válidos.<br>
+        <strong>When:</strong> El administrador configura el pago periódico.<br>
+        <strong>Then:</strong> El sistema registra la periodicidad, monto y concepto del egreso.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Existe una configuración de pago recurrente activa.<br>
+        <strong>When:</strong> Llega el período programado.<br>
+        <strong>Then:</strong> El sistema genera el egreso correspondiente según la configuración registrada.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> La configuración contiene datos inválidos o incompletos.<br>
+        <strong>When:</strong> El administrador intenta registrarla.<br>
+        <strong>Then:</strong> El sistema rechaza la configuración.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US30 – Evolución de morosidad
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US30</td><td>Administrador</td><td>Baja</td><td>EP02 – Reportes financieros</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar evolución mensual de morosidad</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero consultar la evolución mensual de morosidad en un gráfico para identificar tendencias.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen registros históricos de morosidad.<br> <strong>When:</strong> El administrador consulta su evolución mensual.<br> <strong>Then:</strong> El sistema proporciona los valores correspondientes a cada período.<br><br> <strong>AC02 – Given:</strong> Existen datos de varios períodos.<br> <strong>When:</strong> El administrador consulta la evolución.<br> <strong>Then:</strong> El sistema presenta los datos en orden cronológico.<br><br> <strong>AC03 – Given:</strong> No existen registros históricos.<br> <strong>When:</strong> El administrador consulta la evolución.<br> <strong>Then:</strong> El sistema informa que no existen datos suficientes para mostrar la evolución. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US30</td>
+    <td>Administrador</td>
+    <td>Baja</td>
+    <td>EP02 – Reportes financieros</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar evolución mensual de morosidad</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero consultar la evolución mensual de morosidad en un gráfico para identificar tendencias.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existen registros históricos de morosidad.<br>
+        <strong>When:</strong> El administrador consulta su evolución mensual.<br>
+        <strong>Then:</strong> El sistema proporciona los valores correspondientes a cada período.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Existen datos de varios períodos.<br>
+        <strong>When:</strong> El administrador consulta la evolución.<br>
+        <strong>Then:</strong> El sistema presenta los datos en orden cronológico.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> No existen registros históricos.<br>
+        <strong>When:</strong> El administrador consulta la evolución.<br>
+        <strong>Then:</strong> El sistema informa que no existen datos suficientes para mostrar la evolución.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US31 – Información en la Landing Page
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US31</td><td>Visitante</td><td>Alta</td><td>EP09 – Presencia digital</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Conocer la propuesta de valor y los planes de BuildingFex</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> el visitante accede a la Landing Page.<br> <strong>When:</strong> recorre la página principal.<br> <strong>Then:</strong> el sistema presenta la propuesta de valor, los beneficios y los videos del producto y del equipo.<br><br> <strong>AC02 – Given:</strong> el visitante desea conocer los precios.<br> <strong>When:</strong> accede a la sección de planes.<br> <strong>Then:</strong> el sistema muestra los planes Essential, Standard y Scale con sus características.<br><br> <strong>AC03 – Given:</strong> el visitante prefiere otro idioma.<br> <strong>When:</strong> selecciona el idioma español o inglés.<br> <strong>Then:</strong> el sistema muestra todo el contenido en el idioma seleccionado. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US31</td>
+    <td>Visitante</td>
+    <td>Alta</td>
+    <td>EP09 – Presencia digital</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Conocer la propuesta de valor y los planes de BuildingFex</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como visitante, quiero conocer la propuesta de valor y los planes de BuildingFex en la Landing Page para decidir si suscribirme.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> El visitante accede a la Landing Page.<br>
+        <strong>When:</strong> Recorre la página principal.<br>
+        <strong>Then:</strong> El sistema presenta la propuesta de valor, los beneficios y los videos del producto y del equipo.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El visitante desea conocer los precios.<br>
+        <strong>When:</strong> Accede a la sección de planes.<br>
+        <strong>Then:</strong> El sistema muestra los planes Essential, Standard y Scale con sus características.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El visitante prefiere otro idioma.<br>
+        <strong>When:</strong> Selecciona el idioma español o inglés.<br>
+        <strong>Then:</strong> El sistema muestra todo el contenido en el idioma seleccionado.
+      </p>
+    </td>
+  </tr>
 </table>
 
 #### Spike Stories
 
 ### SP01 – Evaluar almacenamiento seguro de documentos
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>SP01</td><td>Developer</td><td>Media</td><td>EP07 – Comunicaciones y documentos</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Evaluar almacenamiento seguro de documentos</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> BuildingFex requiere almacenar reglamentos, actas y otros documentos.<br> <strong>When:</strong> Se investigan alternativas de almacenamiento.<br> <strong>Then:</strong> Se documentan sus capacidades, limitaciones y requisitos técnicos.<br><br> <strong>AC02 – Given:</strong> La plataforma maneja información que requiere protección.<br> <strong>When:</strong> Se evalúan las alternativas.<br> <strong>Then:</strong> Se documentan sus mecanismos de seguridad, control de acceso y protección de datos.<br><br> <strong>AC03 – Given:</strong> Existen al menos dos alternativas viables.<br> <strong>When:</strong> Finaliza la evaluación de las alternativas.<br> <strong>Then:</strong> Se documenta la comparación, la alternativa recomendada y los riesgos identificados.<br><br> <strong>AC04 – Given:</strong> Se ha seleccionado una alternativa recomendada.<br> <strong>When:</strong> Finaliza el spike.<br> <strong>Then:</strong> Se documentan las conclusiones y los siguientes pasos para su implementación. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>SP01</td>
+    <td>Developer</td>
+    <td>Media</td>
+    <td>EP07 – Comunicaciones y documentos</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Evaluar almacenamiento seguro de documentos</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> BuildingFex requiere almacenar reglamentos, actas y otros documentos.<br>
+        <strong>When:</strong> Se investigan alternativas de almacenamiento.<br>
+        <strong>Then:</strong> Se documentan sus capacidades, limitaciones y requisitos técnicos.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> La plataforma maneja información que requiere protección.<br>
+        <strong>When:</strong> Se evalúan las alternativas.<br>
+        <strong>Then:</strong> Se documentan sus mecanismos de seguridad, control de acceso y protección de datos.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> Existen al menos dos alternativas viables.<br>
+        <strong>When:</strong> Finaliza la evaluación de las alternativas.<br>
+        <strong>Then:</strong> Se documenta la comparación, la alternativa recomendada y los riesgos identificados.
+      </p>
+      <p>
+        <strong>AC04 – Given:</strong> Se ha seleccionado una alternativa recomendada.<br>
+        <strong>When:</strong> Finaliza el spike.<br>
+        <strong>Then:</strong> Se documentan las conclusiones y los siguientes pasos para su implementación.
+      </p>
+    </td>
+  </tr>
 </table>
 
 
