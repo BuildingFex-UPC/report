@@ -850,75 +850,294 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 
 ### US01 – Registrar cuotas mensuales
 
-<table> 
+### US01 – Registrar cuotas mensuales
+
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr> <td>US01</td><td>Administrador</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar cuotas mensuales</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero registrar las cuotas mensuales de cada unidad para gestionar la cobranza del edificio.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen unidades registradas.<br> <strong>When:</strong> El administrador registra una cuota mensual válida.<br> <strong>Then:</strong> El sistema crea la cuota asociada a la unidad y al período correspondiente.<br><br> <strong>AC02 – Given:</strong> Existe una cuota registrada para la misma unidad y período.<br> <strong>When:</strong> El administrador intenta registrar otra cuota para ese período.<br> <strong>Then:</strong> El sistema rechaza el registro e informa que ya existe una cuota para la unidad y período indicados. <br><br> <strong>AC03 – Given:</strong> Faltan datos requeridos para registrar la cuota.<br> <strong>When:</strong> El administrador intenta registrar la cuota.<br> <strong>Then:</strong> El sistema rechaza el registro e informa los datos que deben completarse. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US01</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registrar cuotas mensuales</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero registrar las cuotas mensuales de cada unidad para gestionar la cobranza del edificio.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+      <strong>AC01 – Given:</strong> Existen unidades registradas.<br>
+      <strong>When:</strong> El administrador registra una cuota mensual válida.<br>
+      <strong>Then:</strong> El sistema crea la cuota asociada a la unidad y al período correspondiente.
+    </p>
+    <p>
+      <strong>AC02 – Given:</strong> Existe una cuota registrada para la misma unidad y período.<br>
+      <strong>When:</strong> El administrador intenta registrar otra cuota para ese período.<br>
+      <strong>Then:</strong> El sistema rechaza el registro e informa que ya existe una cuota para la unidad y período indicados.
+    </p>
+    <p>
+      <strong>AC03 – Given:</strong> Faltan datos requeridos para registrar la cuota.<br>
+      <strong>When:</strong> El administrador intenta registrar la cuota.<br>
+      <strong>Then:</strong> El sistema rechaza el registro e informa los datos que deben completarse.
+    </p>
+    </td>
+  </tr>
 </table>
 
 ### US02 – Consultar deudas
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US02</td><td>Residente</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar deudas y estado de pago</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero visualizar mis deudas y su estado de pago para saber cuánto y cuándo debo pagar.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> El residente tiene cuotas registradas.<br> <strong>When:</strong> El residente consulta su estado de cuenta.<br> <strong>Then:</strong> El sistema muestra las cuotas pendientes y su estado de pago.<br><br> <strong>AC02 – Given:</strong> El residente no tiene deudas pendientes.<br> <strong>When:</strong> El residente consulta su estado de cuenta.<br> <strong>Then:</strong> El sistema informa que no existen cuotas pendientes.<br><br> <strong>AC03 – Given:</strong> El usuario no está asociado a una unidad.<br> <strong>When:</strong> El usuario intenta consultar información financiera.<br> <strong>Then:</strong> El sistema rechaza el acceso a la información financiera. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US02</td>
+    <td>Residente</td>
+    <td>Alta</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar deudas y estado de pago</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero visualizar mis deudas y su estado de pago para saber cuánto y cuándo debo pagar.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> El residente tiene cuotas registradas.<br>
+        <strong>When:</strong> El residente consulta su estado de cuenta.<br>
+        <strong>Then:</strong> El sistema muestra las cuotas pendientes y su estado de pago.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El residente no tiene deudas pendientes.<br>
+        <strong>When:</strong> El residente consulta su estado de cuenta.<br>
+        <strong>Then:</strong> El sistema informa que no existen cuotas pendientes.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El usuario no está asociado a una unidad.<br>
+        <strong>When:</strong> El usuario intenta consultar información financiera.<br>
+        <strong>Then:</strong> El sistema rechaza el acceso a la información financiera.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US03 – Registrar pago
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US03</td><td>Residente</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Registrar pago y comprobante</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para dejar constancia del pago realizado.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una cuota pendiente asociada al residente.<br> <strong>When:</strong> El residente registra un pago válido y adjunta el comprobante.<br> <strong>Then:</strong> El sistema registra el pago asociado a la cuota y conserva el comprobante.<br><br> <strong>AC02 – Given:</strong> No existe una cuota pendiente asociada al residente.<br> <strong>When:</strong> El residente intenta registrar un pago.<br> <strong>Then:</strong> El sistema rechaza el registro del pago..<br><br> <strong>AC03 – Given:</strong> Falta el comprobante requerido.<br> <strong>When:</strong> El residente intenta registrar el pago.<br> <strong>Then:</strong> El sistema rechaza el registro e informa que debe adjuntar el comprobante. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US03</td>
+    <td>Residente</td>
+    <td>Alta</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Registrar pago y comprobante</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para dejar constancia del pago realizado.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe una cuota pendiente asociada al residente.<br>
+        <strong>When:</strong> El residente registra un pago válido y adjunta el comprobante.<br>
+        <strong>Then:</strong> El sistema registra el pago asociado a la cuota y conserva el comprobante.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> No existe una cuota pendiente asociada al residente.<br>
+        <strong>When:</strong> El residente intenta registrar un pago.<br>
+        <strong>Then:</strong> El sistema rechaza el registro del pago.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> Falta el comprobante requerido.<br>
+        <strong>When:</strong> El residente intenta registrar el pago.<br>
+        <strong>Then:</strong> El sistema rechaza el registro e informa que debe adjuntar el comprobante.
+      </p>
+    </td>
+  </tr>
 </table>
 
 
 ### US04 – Recordatorios de cobro
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US04</td><td>Administrador</td><td>Alta</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Enviar recordatorios automáticos de cobro</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes para reducir la morosidad.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Un residente presenta una cuota vencida.<br> <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br> <strong>Then:</strong> El sistema envía un recordatorio de cobro al residente.<br><br> <strong>AC02 – Given:</strong> Un residente no presenta cuotas vencidas.<br> <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br> <strong>Then:</strong> El sistema no envía un recordatorio de morosidad al residente.<br><br> <strong>AC03 – Given:</strong> Existe un recordatorio pendiente de envío.<br> <strong>When:</strong> El sistema intenta enviar la notificación.<br> <strong>Then:</strong> El sistema registra el resultado del intento de envío. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US04</td>
+    <td>Administrador</td>
+    <td>Alta</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Enviar recordatorios automáticos de cobro</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes para reducir la morosidad.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Un residente presenta una cuota vencida.<br>
+        <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br>
+        <strong>Then:</strong> El sistema envía un recordatorio de cobro al residente.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> Un residente no presenta cuotas vencidas.<br>
+        <strong>When:</strong> Se ejecuta el proceso de recordatorios.<br>
+        <strong>Then:</strong> El sistema no envía un recordatorio de morosidad al residente.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> Existe un recordatorio pendiente de envío.<br>
+        <strong>When:</strong> El sistema intenta enviar la notificación.<br>
+        <strong>Then:</strong> El sistema registra el resultado del intento de envío.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US05 – Recibo digital
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US05</td><td>Residente</td><td>Media</td><td>EP01 – Gestión de cobranzas</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Recibir recibo digital</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero recibir un recibo digital al confirmarse mi pago para tener respaldo.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe un pago confirmado.<br> <strong>When:</strong> El sistema procesa la confirmación del pago.<br> <strong>Then:</strong> El sistema genera un recibo digital asociado al pago.<br><br> <strong>AC02 – Given:</strong> El pago no se encuentra confirmado.<br> <strong>When:</strong> El sistema procesa el estado del pago.<br> <strong>Then:</strong> El sistema no genera un recibo como pago confirmado. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US05</td>
+    <td>Residente</td>
+    <td>Media</td>
+    <td>EP01 – Gestión de cobranzas</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Recibir recibo digital</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como residente, quiero recibir un recibo digital al confirmarse mi pago para tener respaldo.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existe un pago confirmado.<br>
+        <strong>When:</strong> El sistema procesa la confirmación del pago.<br>
+        <strong>Then:</strong> El sistema genera un recibo digital asociado al pago.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> El pago no se encuentra confirmado.<br>
+        <strong>When:</strong> El sistema procesa el estado del pago.<br>
+        <strong>Then:</strong> El sistema no genera un recibo como pago confirmado.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US06 – Reporte financiero consolidado
 
-<table> 
+<table>
   <tr>
-  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US06</td><td>Miembro de la junta</td><td>Alta</td><td>EP02 – Reportes financieros</td></tr> 
-  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Consultar reporte financiero consolidado</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea.</td></tr> 
-  <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen registros financieros del período solicitado.<br> <strong>When:</strong> El miembro de la junta consulta el reporte.<br> <strong>Then:</strong> El sistema proporciona los ingresos, egresos y morosidad correspondientes.<br><br> <strong>AC02 – Given:</strong> No existen registros financieros para el período.<br> <strong>When:</strong>El miembro de la junta solicita el reporte.<br> <strong>Then:</strong> El sistema genera un reporte sin movimientos registrados.<br><br> <strong>AC03 – Given:</strong> El usuario no tiene permisos de miembro de la junta.<br> <strong>When:</strong> El usuario solicita información financiera consolidada.<br> <strong>Then:</strong> El sistema rechaza el acceso. </td>
-  </tr> 
+    <th>Story ID</th>
+    <th>User</th>
+    <th>Priority</th>
+    <th>Epic</th>
+  </tr>
+  <tr>
+    <td>US06</td>
+    <td>Miembro de la junta</td>
+    <td>Alta</td>
+    <td>EP02 – Reportes financieros</td>
+  </tr>
+  <tr>
+    <th>Title</th>
+    <td colspan="3">Consultar reporte financiero consolidado</td>
+  </tr>
+  <tr>
+    <th colspan="4">Description</th>
+  </tr>
+  <tr>
+    <td colspan="4">Como miembro de la junta, quiero ver un reporte consolidado de ingresos, egresos y morosidad para rendir cuentas en asamblea.</td>
+  </tr>
+  <tr>
+    <th colspan="4">Acceptance Criteria</th>
+  </tr>
+  <tr>
+    <td colspan="4">
+      <p>
+        <strong>AC01 – Given:</strong> Existen registros financieros del período solicitado.<br>
+        <strong>When:</strong> El miembro de la junta consulta el reporte.<br>
+        <strong>Then:</strong> El sistema proporciona los ingresos, egresos y morosidad correspondientes.
+      </p>
+      <p>
+        <strong>AC02 – Given:</strong> No existen registros financieros para el período.<br>
+        <strong>When:</strong> El miembro de la junta solicita el reporte.<br>
+        <strong>Then:</strong> El sistema genera un reporte sin movimientos registrados.
+      </p>
+      <p>
+        <strong>AC03 – Given:</strong> El usuario no tiene permisos de miembro de la junta.<br>
+        <strong>When:</strong> El usuario solicita información financiera consolidada.<br>
+        <strong>Then:</strong> El sistema rechaza el acceso.
+      </p>
+    </td>
+  </tr>
 </table>
 
 ### US07 – Registrar gastos
