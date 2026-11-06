@@ -4993,7 +4993,8 @@ Se ve un buen diseño en la sección de preguntas con la barra de búsqueda a la
 ![deudas](img/Misdeudasypago-redisente-mockup.png)
 ![areas](img/Areascomunesyreservas-residentr-mockup.png)
 ##### 3.1.4.4. Mobile Applications User Flow Diagrams
-![userflow-diagram](img/UserFlow-Diagrams.png)
+![userflow-diagram](img/UserFlow-Diagram.png)
+[BuildingFex-User-Diagram](https://www.figma.com/design/vr2BKEcjMnFoSzK3JE40rb/BuildingFex-%C2%B7-R%C3%A9plica-de-interfaces-y-User-Flows--trabajo-aislado-?node-id=12-2)
 ##### 3.1.4.5. Mobile Applications Prototyping
 **Aplicación móvil – Inicio de sesión**
 
