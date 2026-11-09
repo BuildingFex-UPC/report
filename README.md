@@ -208,6 +208,16 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
       - [4.2.1.7. Services Documentation Evidence for Sprint Review](#4217-services-documentation-evidence-for-sprint-review)
       - [4.2.1.8. Software Deployment Evidence for Sprint Review](#4218-software-deployment-evidence-for-sprint-review)
       - [4.2.1.9. Team Collaboration Insights during Sprint](#4219-team-collaboration-insights-during-sprint)
+    - [4.2.2. Sprint 2](#422-sprint-2)
+      - [4.2.2.1. Sprint Planning 2](#4221-sprint-planning-2)
+      - [4.2.2.2. Aspect Leaders and Collaborators](#4222-aspect-leaders-and-collaborators)
+      - [4.2.2.3. Sprint Backlog 2](#4223-sprint-backlog-2)
+      - [4.2.2.4. Development Evidence for Sprint Review](#4224-development-evidence-for-sprint-review)
+      - [4.2.2.5. Testing Suite Evidence for Sprint Review](#4225-testing-suite-evidence-for-sprint-review)
+      - [4.2.2.6. Execution Evidence for Sprint Review](#4226-execution-evidence-for-sprint-review)
+      - [4.2.2.7. Services Documentation Evidence for Sprint Review](#4227-services-documentation-evidence-for-sprint-review)
+      - [4.2.2.8. Software Deployment Evidence for Sprint Review](#4228-software-deployment-evidence-for-sprint-review)
+      - [4.2.2.9. Team Collaboration Insights during Sprint](#4229-team-collaboration-insights-during-sprint)
   - [4.3. Validation Interviews](#43-validation-interviews)
     - [4.3.1. Diseño de Entrevistas](#431-diseño-de-entrevistas)
     - [4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)
@@ -4395,6 +4405,80 @@ A continuación se presentan los analíticos de colaboración de GitHub (Insight
 En el repositorio de la Landing Page se registraron 2 commits en la rama `main`, correspondientes a la creación de la estructura del proyecto en Vue 3 y de sus componentes. En el repositorio de Web Services se registraron 11 commits; la mayor actividad se concentró el 29/09/2026, día en que se migró la base de datos a PostgreSQL y se corrigieron los errores detectados en el despliegue en Render, a lo que se sumó la corrección de la configuración de seguridad de Swagger (commit `0077af8`). En el repositorio de la aplicación móvil se registraron 3 commits en `main`, con la construcción del cliente Android; además, las pruebas de aceptación de las User Stories del Sprint se registraron en la rama `develop` (commits `4350c6b`, `ceaebc1`, `55abe34` y `d1cbd8b`), por lo que aún no se reflejan en los analíticos de la rama principal.
 
 Los analíticos evidencian que, durante este primer Sprint, la construcción de la estructura base de los tres productos estuvo concentrada en el líder técnico del equipo, Alejandro Jave Chang, mientras que Antonin Suteau participó en las pruebas de aceptación y en la corrección de la documentación de los Web Services. Esta concentración se explica porque el Sprint 1 se enfocó en establecer la arquitectura base de los tres productos. Como acción de mejora para el Sprint 2, el equipo acordó distribuir de forma más equilibrada los commits entre todos los integrantes según la matriz de Aspect Leaders and Collaborators, trabajar en ramas `feature/*` integradas mediante Pull Requests hacia `develop`, y aplicar Conventional Commits en todos los mensajes.
+
+
+#### 4.2.2. Sprint 2
+
+En esta sección se registra el avance del equipo BuildingFex durante el Sprint 2. _Por completar por el equipo._
+
+##### 4.2.2.1. Sprint Planning 2
+
+| Sprint # | Sprint 2 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | Por completar |
+| Time | Por completar |
+| Location | Por completar |
+| Prepared By | Por completar |
+| Attendees (to planning meeting) | Por completar |
+| Sprint 1 Review Summary | Por completar |
+| Sprint 1 Retrospective Summary | Por completar |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | Por completar |
+| Sprint 2 Velocity | Por completar |
+| Sum of Story Points | Por completar |
+
+##### 4.2.2.2. Aspect Leaders and Collaborators
+
+_Por completar por el equipo._
+
+| Team Member (Last Name, First Name) | GitHub Username | Aspecto 1 | Aspecto 2 | Aspecto 3 |
+| :--- | :--- | :---: | :---: | :---: |
+| Javier Murillo, Mathias | K1ngHulk | | | |
+| Hermoza Quispe, Jude Alessandro | JvnnDev | | | |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | | | |
+| Heredia Hoyos, Danitza Ivonne | UDnTzh | | | |
+| Suteau, Antonin | antoninsuteau | | | |
+
+##### 4.2.2.3. Sprint Backlog 2
+
+**URL del tablero:** Por completar (Trello del Sprint 2)
+
+<table>
+  <tr><th colspan="2">Sprint #</th><th colspan="6">Sprint 2</th></tr>
+  <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
+  <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
+  <tr><td>US18</td><td>Validar solapamiento de reservas</td>
+      <td>T01</td><td>Restricción de reservas solapadas</td><td>Impedir que un residente reserve un área común ya reservada en la misma fecha y hora, incluso ante solicitudes simultáneas (candado por edificio, espacio y fecha, y validación del formato de fecha).</td><td>Por completar</td><td>Hermoza Quispe, Jude Alessandro</td><td>In review (PR BackEnd #1)</td></tr>
+</table>
+
+##### 4.2.2.4. Development Evidence for Sprint Review
+
+_Por completar por el equipo._
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/BackEnd | feature/reservation-overlap | f26c366 | fix(reservations): serialize concurrent bookings to prevent overlapping reservations | Candado por edificio/espacio/fecha en una transacción antes de verificar el solape, validación del formato de fecha y script de integración | 09/11/2026 |
+
+##### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+_Por completar por el equipo._
+
+##### 4.2.2.6. Execution Evidence for Sprint Review
+
+_Por completar por el equipo._
+
+##### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+_Por completar por el equipo._
+
+##### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+_Por completar por el equipo._
+
+##### 4.2.2.9. Team Collaboration Insights during Sprint
+
+_Por completar por el equipo._
 
 
 ### 4.3. Validation Interviews
