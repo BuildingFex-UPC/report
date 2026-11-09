@@ -1337,9 +1337,9 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 <table> 
   <tr>
   <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
-  <tr><td>US18</td><td>Developer</td><td>Alta</td><td>EP05 – Áreas comunes y reservas</td></tr> 
+  <tr><td>US18</td><td>Residente</td><td>Alta</td><td>EP05 – Áreas comunes y reservas</td></tr> 
   <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Validar solapamiento de reservas</td></tr> 
-  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como Developer, quiero validar el solapamiento de reservas para evitar reservas incompatibles.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una reserva para la misma área y un horario que se solapa.<br> <strong>When:</strong> El servicio recibe una solicitud de nueva reserva.<br> <strong>Then:</strong> El servicio rechaza la solicitud con una respuesta de conflicto y no crea la reserva.<br><br> <strong>AC02 – Given:</strong> No existe una reserva que se solape y la solicitud contiene datos válidos.<br> <strong>When:</strong> El servicio recibe la solicitud.<br> <strong>Then:</strong> El servicio acepta la creación y devuelve una respuesta exitosa.<br><br> <strong>AC03 – Given:</strong> La solicitud no contiene los datos requeridos.<br> <strong>When:</strong> El servicio recibe la solicitud.<br> <strong>Then:</strong> El servicio devuelve una respuesta de validación y no crea la reserva.<br><br> <strong>AC04 – Given:</strong> Existen solicitudes concurrentes para la misma área y horario.<br> <strong>When:</strong> El servicio procesa las solicitudes de reserva.<br> <strong>Then:</strong> El sistema registra únicamente una reserva para el horario disponible y rechaza las solicitudes que generen solapamiento.</td>
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como residente, quiero que el sistema no me permita reservar un área común que ya está reservada en esa fecha y hora para evitar reservas incompatibles.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existe una reserva para la misma área y un horario que se solapa.<br> <strong>When:</strong> El servicio recibe una solicitud de nueva reserva.<br> <strong>Then:</strong> El servicio rechaza la solicitud con una respuesta de conflicto y no crea la reserva.<br><br> <strong>AC02 – Given:</strong> No existe una reserva que se solape y la solicitud contiene datos válidos.<br> <strong>When:</strong> El servicio recibe la solicitud.<br> <strong>Then:</strong> El servicio acepta la creación y devuelve una respuesta exitosa.<br><br> <strong>AC03 – Given:</strong> La solicitud no contiene los datos requeridos.<br> <strong>When:</strong> El servicio recibe la solicitud.<br> <strong>Then:</strong> El servicio devuelve una respuesta de validación y no crea la reserva.<br><br> <strong>AC04 – Given:</strong> Existen solicitudes concurrentes para la misma área y horario.<br> <strong>When:</strong> El servicio procesa las solicitudes de reserva.<br> <strong>Then:</strong> El sistema registra únicamente una reserva para el horario disponible y rechaza las solicitudes que generen solapamiento.</td>
   </tr> 
 </table>
 
@@ -1508,6 +1508,8 @@ El Product Backlog de BuildingFex consolida las historias de usuario y de invest
 
 La priorización se define con la escala **Alta / Media / Baja** según el valor para el usuario y su aporte al MVP, y el esfuerzo se estima en **Story Points** usando la sucesión de Fibonacci (1, 2, 3, 5, 8, 13). El backlog también incorpora las **Spike Stories** (prefijo `SP`) necesarias para reducir incertidumbre técnica antes de la implementación. El backlog es un artefacto vivo: el orden y la estimación se ajustan al cierre de cada Sprint y tras el análisis de entrevistas (sección 2.2.3).
 
+**Tablero de Trello del Product Backlog:** [BuildingFex – Product Backlog y seguimiento](https://trello.com/invite/b/6ac33ca5ca23ef60e5eb31b3/ATTIb63bf8f9449e9328c45b765d085e5d58B3245C85/buildingfex-product-backlog-y-seguimiento)
+
 **Orden por prioridad y Story Points**
 
 La tabla presenta primero las historias de prioridad **Alta**, luego las de prioridad **Media** y finalmente las de prioridad **Baja**. Dentro de cada nivel, las historias se ordenan por **Story Points de mayor a menor**: 8, 5, 3 y 2, según las estimaciones del backlog. Por ello, US06 y US26, ambas de prioridad alta y 8 puntos, ocupan las primeras posiciones.
@@ -1539,7 +1541,7 @@ Las principales dependencias para la planificación son:
 | US03 | Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para que quede constancia. | 5 | Alta |
 | US04 | Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes morosos para reducir la morosidad. | 5 | Alta |
 | US09 | Como empresa administradora, quiero elegir un plan de suscripción según el número de unidades para pagar solo por lo que necesito. | 5 | Alta |
-| US18 | Como sistema, quiero validar que una reserva no se solape con otra existente para evitar dobles reservas. | 5 | Alta |
+| US18 | Como residente, quiero que el sistema no me permita reservar un área común que ya está reservada en esa fecha y hora para evitar dobles reservas. | 5 | Alta |
 | US17 | Como residente, quiero reservar un área común en una fecha y hora para asegurar su uso sin conflictos. | 5 | Alta |
 | US20 | Como residente, quiero reportar una incidencia con descripción y foto para que la administración la atienda. | 5 | Alta |
 | US21 | Como administrador, quiero dar seguimiento al estado de cada incidencia (abierta, en proceso, resuelta) para controlar las reparaciones. | 5 | Alta |
