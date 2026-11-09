@@ -859,6 +859,24 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **Dispositivos** | - Smartphone: Es su herramienta de trabajo principal absoluto. <br>- Laptop/Computadora: Su uso está estrictamente relegado a tareas pesadas que no puede hacer desde su celular. |
 | **Flujos principales** | - Recaudación y Verificación de Pagos.<br>- Gestión de Áreas Comunes.<br>- Onboarding y Creación de Base de Datos.<br>- Consolidación y Reportes. |
 
+#### Entrevista 7
+
+| Campo | Detalle |
+|------|--------|
+| **Segmento** | Empresas de Gestión de Edificios |
+| **Nombre** | Nataly |
+| **Apellidos** | Sandoval |
+| **Edad** | 22 |
+| **Distrito** | Jesús María |
+| **Screenshot** |  ![Entrevista 7](img/entrevista7_nataly.png)  |
+| **URL** | [Entrevista 7 - Nataly Sandoval](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318220_upc_edu_pe/IQBG99OR4LuwSKxqrSD-qnTIAVDvZei2znhmiMkkjQQ37mo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jzjgQD) |
+| **Duración** | 7:15 |
+| **Resumen** | Administradora de condominios de 22 años que recién terminó su carrera universitaria y gestiona 6 edificios (de 20 a 50 departamentos) en Jesús María, Lince y Pueblo Libre, con una contadora externa y un asistente de cobros. Trabaja con Excel (un archivo por edificio) y WhatsApp; los pagos llegan por transferencia, Yape o Plin y se concilian a mano. Sus cuellos de botella son el levantamiento inicial de información al sumar un edificio, la cobranza atrasada y la consolidación de reportes para cada junta, lo que le ha costado 3 contratos por falta de transparencia. Probó un software antes, pero lo halló complicado. Prioriza ahorrar horas de contabilidad y ve casi indispensable la integración con bancos y billeteras para automatizar el registro de pagos, los recordatorios a morosos y la emisión de recibos. |
+| **Personalidad** | - Responsable y ordenada: asumió la administración por necesidad de la junta.<br>- Pragmática: prioriza reducir errores y ahorrar horas de contabilidad.<br>- Orientada al crecimiento: busca sumar más edificios. |
+| **Marcas** | - Excel: cobros, contabilidad y reportes.<br>- WhatsApp: comunicación con vecinos, conserjes y proveedores.<br>- Yape / Plin: pagos de los residentes. |
+| **Dispositivos** | - Smartphone: coordinación diaria por WhatsApp.<br>- Laptop: consolidación de Excel y reportes. |
+| **Flujos principales** | - Cobranza y conciliación manual de pagos.<br>- Onboarding de un edificio nuevo.<br>- Consolidación de reportes para cada junta.<br>- Atención de reclamos e incidencias. |
+
 #### 2.2.3. Análisis de entrevistas
 
 ##### Segmento 1: Juntas de Directiva (Propietarios que administran su propio edificio)
