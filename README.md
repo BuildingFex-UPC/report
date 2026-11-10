@@ -1494,6 +1494,17 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   </tr> 
 </table>
 
+### US32 – Visualizar horarios reservados
+
+<table> 
+  <tr>
+  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
+  <tr><td>US32</td><td>Administrador / Residente</td><td>Media</td><td>EP05 – Áreas comunes y reservas</td></tr> 
+  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Visualizar horarios reservados</td></tr> 
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador o residente, quiero ver los horarios ya reservados de un área común en una fecha para planificar su uso y evitar cruces.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen reservas para un área común en la fecha seleccionada.<br> <strong>When:</strong> El usuario consulta los horarios de esa área.<br> <strong>Then:</strong> El sistema muestra los horarios ocupados ordenados por hora de inicio.<br><br> <strong>AC02 – Given:</strong> No existen reservas para el área en la fecha seleccionada.<br> <strong>When:</strong> El usuario consulta los horarios de esa área.<br> <strong>Then:</strong> El sistema indica que el área está libre ese día.<br><br> <strong>AC03 – Given:</strong> El administrador consulta los horarios reservados.<br> <strong>When:</strong> Selecciona un área y una fecha.<br> <strong>Then:</strong> El sistema muestra además el nombre y el código del residente de cada reserva. </td>
+  </tr> 
+</table>
+
 #### Spike Stories
 
 ### SP01 – Evaluar almacenamiento seguro de documentos
@@ -1572,6 +1583,7 @@ Las principales dependencias para la planificación son:
 | US22 | Como residente, quiero recibir una notificación cuando cambie el estado de mi incidencia para estar informado. | 3 | Media |
 | SP01 | Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex (Spike Story). | 3 | Media |
 | US24 | Como residente, quiero consultar el reglamento interno y las actas en la nube para revisarlos cuando lo necesite. | 3 | Media |
+| US32 | Como administrador o residente, quiero ver los horarios ya reservados de un área común en una fecha para planificar su uso y evitar cruces. | 3 | Media |
 | US29 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | 5 | Baja |
 | US30 | Como administrador, quiero ver la evolución mensual de la morosidad en un gráfico para identificar tendencias. | 3 | Baja |
 | US28 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | 2 | Baja |
