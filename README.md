@@ -4462,6 +4462,9 @@ _Por completar por el equipo._
   <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
   <tr><td>US18</td><td>Validar solapamiento de reservas</td>
       <td>T01</td><td>Restricción de reservas solapadas</td><td>Impedir que un residente reserve un área común ya reservada en la misma fecha y hora, incluso ante solicitudes simultáneas (candado por edificio, espacio y fecha, y validación del formato de fecha).</td><td>Por completar</td><td>Hermoza Quispe, Jude Alessandro</td><td>In review (PR BackEnd #1)</td></tr>
+    <tr><td rowspan="2">US32</td><td rowspan="2">Visualizar horarios reservados</td>
+      <td>T02</td><td>Horarios reservados en la app del administrador</td><td>Agregar en la pantalla Reservas un panel que muestre, por área común y fecha, los horarios ocupados ordenados por hora de inicio, con el nombre y código del residente.</td><td>4</td><td>Suteau, Antonin</td><td>In review (PR FrontEnd-Administrador #1)</td></tr>
+  <tr><td>T03</td><td>Horarios reservados en la app del residente</td><td>Mostrar siempre en el formulario de reserva los horarios ya ocupados del día seleccionado, ordenados por hora, con estado de carga y mensaje de área libre.</td><td>3</td><td>Suteau, Antonin</td><td>In review (PR FrontEnd-Residente #1)</td></tr>
 </table>
 
 ##### 4.2.2.4. Development Evidence for Sprint Review
