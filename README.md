@@ -4456,10 +4456,7 @@ Para el Sprint 2 se redefinieron los aspectos de trabajo a partir de la separaci
 
 ![Sprint Backlog 2](img/sprint2-backlog.png)
 
-**URL del tablero:** (https://trello.com/b/NLjYoLc9/buildingfex-sprint-2)
-
-  <tr><td>US03</td><td>Registrar el pago de la cuota</td>
-      <td>T04</td><td>Pago con Mercado Pago Checkout Pro</td><td>Integrar el pago de cuotas desde la app del residente con Mercado Pago Checkout Pro (entorno sandbox) y verificar el pago de forma segura en los Web Services.</td><td>8</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
+**URL del tablero:** https://trello.com/b/NLjYoLc9/buildingfex-sprint-2
 
 <table>
   <tr><th colspan="2">Sprint #</th><th colspan="6">Sprint 2</th></tr>
@@ -4470,6 +4467,10 @@ Para el Sprint 2 se redefinieron los aspectos de trabajo a partir de la separaci
     <tr><td rowspan="2">US32</td><td rowspan="2">Visualizar horarios reservados</td>
       <td>T02</td><td>Horarios reservados en la app del administrador</td><td>Agregar en la pantalla Reservas un panel que muestre, por área común y fecha, los horarios ocupados ordenados por hora de inicio, con el nombre y código del residente.</td><td>4</td><td>Suteau, Antonin</td><td>In review (PR FrontEnd-Administrador #1)</td></tr>
   <tr><td>T03</td><td>Horarios reservados en la app del residente</td><td>Mostrar siempre en el formulario de reserva los horarios ya ocupados del día seleccionado, ordenados por hora, con estado de carga y mensaje de área libre.</td><td>3</td><td>Suteau, Antonin</td><td>In review (PR FrontEnd-Residente #1)</td></tr>
+  
+<tr><td>US03</td><td>Registrar el pago de la cuota</td>
+      <td>T04</td><td>Pago con Mercado Pago Checkout Pro</td><td>Integrar el pago de cuotas desde la app del residente con Mercado Pago Checkout Pro (entorno sandbox) y verificar el pago de forma segura en los Web Services.</td><td>8</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
+
 </table>
 
 ##### 4.2.2.4. Development Evidence for Sprint Review
