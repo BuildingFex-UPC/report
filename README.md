@@ -4428,29 +4428,29 @@ En esta sección se registra el avance del equipo BuildingFex durante el Sprint 
 | Sprint # | Sprint 2 |
 | :--- | :--- |
 | **Sprint Planning Background** | |
-| Date | Por completar |
-| Time | Por completar |
-| Location | Por completar |
-| Prepared By | Por completar |
-| Attendees (to planning meeting) | Por completar |
-| Sprint 1 Review Summary | Por completar |
-| Sprint 1 Retrospective Summary | Por completar |
+| Date | 25-10-2026 |
+| Time | 08:00 PM |
+| Location | Reunión virtual vía Google Meet |
+| Prepared By | Suteau, Antonin |
+| Attendees (to planning meeting) | Javier Murillo, Mathias / Hermoza Quispe, Jude Alessandro / Jave Chang, Alejandro Manuel / Heredia Hoyos, Danitza Ivonne / Suteau, Antonin |
+| Sprint 1 Review Summary | En el Sprint 1 se completaron 18 de las 19 tareas planificadas (34 de 39 Story Points): la Landing Page se desplegó en Vercel, los Web Services de IAM, Finances y SocialSpaces se desplegaron en Render con PostgreSQL, y la aplicación móvil permitió iniciar sesión, invitar residentes, registrar cuotas, pagar y reservar áreas comunes. Quedó pendiente el registro de edificios de la US12 (T05). |
+| Sprint 1 Retrospective Summary | Funcionó bien desplegar temprano los tres productos y documentar los commits con Conventional Commits. Como mejoras, el equipo identificó que los commits se concentraron en pocos integrantes, que la integración entre aplicación y Web Services se hizo cerca de la entrega y que la validación de reservas permitía cruces de horario. Se acordó que cada integrante suba sus propias tareas en ramas feature con Pull Request hacia develop y que las funcionalidades se prueben con las cuentas de prueba del administrador y de un residente antes de integrarlas. |
 | **Sprint Goal & User Stories** | |
-| Sprint 2 Goal | Por completar |
-| Sprint 2 Velocity | Por completar |
+| Sprint 2 Goal | **Our focus is on** separar BuildingFex en una aplicación móvil para el administrador y otra para el residente, y hacer confiables las reservas de áreas comunes y el pago de cuotas.<br>**We believe it delivers** a los residentes la seguridad de que su reserva no se cruzará con otra y de que su pago queda registrado, y al administrador una vista clara de la ocupación de los espacios comunes del edificio.<br>**This will be confirmed when** un residente paga su cuota con Mercado Pago desde su aplicación, consulta los horarios ya reservados de un área común y no puede reservar un horario ocupado, y el administrador ve esas mismas reservas por espacio y fecha en su aplicación. |
+| Sprint 2 Velocity | 34 |
 | Sum of Story Points | Por completar |
 
 ##### 4.2.2.2. Aspect Leaders and Collaborators
 
-_Por completar por el equipo._
+Para el Sprint 2 se redefinieron los aspectos de trabajo a partir de la separación de la aplicación móvil en dos productos: **Web Services y Despliegue**, **Aplicación del Administrador**, **Aplicación del Residente**, **Reservas**, **Pagos** y **Landing Page y Documentación**. Cada aspecto cuenta con un líder (L), responsable de coordinar su avance, revisar los Pull Requests y asegurar su integración, y con uno o más colaboradores (C) que participan en su implementación. Esta distribución se refleja en las tareas del Sprint Backlog 2.
 
-| Team Member (Last Name, First Name) | GitHub Username | Aspecto 1 | Aspecto 2 | Aspecto 3 |
-| :--- | :--- | :---: | :---: | :---: |
-| Javier Murillo, Mathias | K1ngHulk | | | |
-| Hermoza Quispe, Jude Alessandro | JvnnDev | | | |
-| Jave Chang, Alejandro Manuel | alejandro202312510 | | | |
-| Heredia Hoyos, Danitza Ivonne | UDnTzh | | | |
-| Suteau, Antonin | antoninsuteau | | | |
+| Team Member (Last Name, First Name) | GitHub Username | Web Services y Despliegue | App Administrador | App Residente | Reservas | Pagos | Landing Page y Documentación |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Javier Murillo, Mathias | K1ngHulk | C | - | C | - | L | - |
+| Hermoza Quispe, Jude Alessandro | JvnnDev | C | - | - | L | - | C |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | L | L | L | - | C | C |
+| Heredia Hoyos, Danitza Ivonne | UDnTzh | - | - | - | - | - | L |
+| Suteau, Antonin | antoninsuteau | - | C | C | C | - | C |
 
 ##### 4.2.2.3. Sprint Backlog 2
 
