@@ -4466,11 +4466,9 @@ Para el Sprint 2 se redefinieron los aspectos de trabajo a partir de la separaci
       <td>T01</td><td>Restricción de reservas solapadas</td><td>Impedir que un residente reserve un área común ya reservada en la misma fecha y hora, incluso ante solicitudes simultáneas (candado por edificio, espacio y fecha, y validación del formato de fecha).</td><td>6</td><td>Hermoza Quispe, Jude Alessandro</td><td>In review (PR BackEnd #1)</td></tr>
     <tr><td rowspan="2">US32</td><td rowspan="2">Visualizar horarios reservados</td>
       <td>T02</td><td>Horarios reservados en la app del administrador</td><td>Agregar en la pantalla Reservas un panel que muestre, por área común y fecha, los horarios ocupados ordenados por hora de inicio, con el nombre y código del residente.</td><td>4</td><td>Suteau, Antonin</td><td>In review (PR FrontEnd-Administrador #1)</td></tr>
-  <tr><td>T03</td><td>Horarios reservados en la app del residente</td><td>Mostrar siempre en el formulario de reserva los horarios ya ocupados del día seleccionado, ordenados por hora, con estado de carga y mensaje de área libre.</td><td>3</td><td>Suteau, Antonin</td><td>In review (PR FrontEnd-Residente #1)</td></tr>
-  
+  <tr><td>T03</td><td>Horarios reservados en la app del residente</td><td>Mostrar siempre en el formulario de reserva los horarios ya ocupados del día seleccionado, ordenados por hora, con estado de carga y mensaje de área libre.</td><td>3</td><td>Suteau, Antonin</td><td>In review (PR FrontEnd-Residente #1)</td></tr> 
 <tr><td>US03</td><td>Registrar el pago de la cuota</td>
       <td>T04</td><td>Pago con Mercado Pago Checkout Pro</td><td>Integrar el pago de cuotas desde la app del residente con Mercado Pago Checkout Pro (entorno sandbox) y verificar el pago de forma segura en los Web Services.</td><td>8</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
-
 </table>
 
 ##### 4.2.2.4. Development Evidence for Sprint Review
@@ -4509,11 +4507,9 @@ Durante el Sprint 2 se implementó la restricción de reservas solapadas (US18),
 | BuildingFex-UPC/BackEnd | feature/reservation-overlap | f26c366 | fix(reservations): serialize concurrent bookings to prevent overlapping reservations | - | 09/11/2026 |
 | BuildingFex-UPC/BackEnd | main | b8d2924 | feat(finances): integrate Mercado Pago Checkout Pro sandbox and secure payment verification | - | 07/11/2026 |
 | BuildingFex-UPC/FrontEnd-Residente | main | bca44fe | feat(finances): complete Mercado Pago in-app checkout and remove redundant local reconciliation | - | 07/11/2026 |
-| BuildingFex-UPC/FrontEnd-Administrador | feature/us32-horarios-reservados | 51bd7bc | show reserved schedules by space and date | - | 09/11/2026 |
-| BuildingFex-UPC/FrontEnd-Administrador | feature/us32-horarios-reservados | d79c646 | add texts for reserved schedules | - | 09/11/2026 |
-| BuildingFex-UPC/FrontEnd-Residente | feature/us32-horarios-reservados | 0f2e350 | always show reserved slots for the selected day | - | 09/11/2026 |
-| BuildingFex-UPC/FrontEnd-Residente | feature/us32-horarios-reservados | e09328f | add empty-state text for reserved slots | - | 09/11/2026 |
-
+| BuildingFex-UPC/FrontEnd-Administrador | develop | 6c6b92e | feat(reservations): show reserved schedules by space and date | - | 09/11/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | develop | 047da21 | test: add US32 unit tests | - | 10/11/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 57a4328 | feat(reservations): always show reserved slots for the selected day | - | 09/11/2026 |
 ##### 4.2.2.5. Testing Suite Evidence for Sprint Review
 
 Las pruebas disponibles en los repositorios al cierre del Sprint 2 son:
