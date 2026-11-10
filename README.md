@@ -4311,6 +4311,8 @@ Durante el Sprint 1 se documentaron con OpenAPI, mediante Swagger UI, los Web Se
 
 **Documentación desplegada (Swagger UI):** https://backend-1-lgr7.onrender.com/swagger
 
+![Swagger UI del Sprint 2](img/sprint2-swagger-general.jpg)
+
 **Repositorio de Web Services:** https://github.com/BuildingFex-UPC/backend
 
 | Bounded Context | Acción | Verbo HTTP | Sintaxis de llamada | Parámetros | Ejemplo de response | Explicación del response |
@@ -4542,6 +4544,12 @@ Los Web Services de los bounded contexts IAM, Finances y SocialSpaces continúan
 Durante el Sprint 2 el despliegue de los Web Services se gestionó con un Render Blueprint (`render.yaml` en BuildingFex-UPC/BackEnd): servicio web `buildingfex-api` con contenedor Docker, plan `starter`, verificación de salud en `/health` y despliegue automático (`autoDeploy`) con las claves y la cadena de conexión a PostgreSQL configuradas como variables de entorno en el panel de Render. La Landing Page continúa desplegada en Vercel.
 
 **Capturas del panel de Render y de Vercel:** Por completar.
+
+**Capturas del panel de Render y de Vercel:**
+
+![Despliegue de los Web Services en Render](img/sprint2-deploy-render.jpg)
+
+![Despliegue de la Landing Page en Vercel](img/sprint2-deploy-vercel.jpg)
 
 ##### 4.2.2.9. Team Collaboration Insights during Sprint
 
