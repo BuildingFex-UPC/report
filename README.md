@@ -4513,10 +4513,54 @@ Durante el Sprint 2 se implementó la restricción de reservas solapadas (US18),
 Las pruebas disponibles en los repositorios al cierre del Sprint 2 son:
 
 - **BuildingFex-UPC/FrontEnd-Residente** (Flutter): `test/invite_codes_test.dart` y `test/reservation_rules_test.dart`.
-- **BuildingFex-UPC/FrontEnd-Administrador** (Kotlin): `DepartmentNumberTest`, `PayoutScheduleTest` y `ExampleUnitTest` (pruebas unitarias en `app/src/test`), y `ExampleInstrumentedTest` (instrumentada).
+- **BuildingFex-UPC/FrontEnd-Administrador** (Kotlin): `ReservedSchedulesTest` (US32), `DepartmentNumberTest`, `PayoutScheduleTest` y `ExampleUnitTest` (pruebas unitarias en `app/src/test`), y `ExampleInstrumentedTest` (instrumentada).****
 - **BuildingFex-UPC/BackEnd:** `tests/reservations_integration.py`, script de integración que lanza reservas simultáneas sobre el mismo espacio, fecha y horario contra una API de prueba con datos de ejemplo, para comprobar que solo una se acepta (US18).
 
-**Resultados de ejecución:** Por completar (el script de integración aún no se ejecutó contra un entorno de prueba).
+**Resultados de ejecución:** las 12 pruebas unitarias de la aplicación del administrador se ejecutaron en Android Studio con resultado satisfactorio (12 de 12). Entre ellas se encuentran las 4 pruebas de `ReservedSchedulesTest`, que verifican que el panel de horarios reservados muestra solo las reservas del área y la fecha seleccionadas, las ordena por hora de inicio, acepta fechas enviadas con hora y no muestra horarios cuando el área está libre. El script de integración de la US18 aún no se ejecutó contra un entorno de prueba.
+
+![Pruebas unitarias de la aplicación del administrador](img/sprint2-unit-tests.png)
+
+**Acceptance Tests**
+
+```gherkin
+Feature: US32 - Visualizar horarios reservados
+  Como administrador o residente
+  quiero ver los horarios ya reservados de un área común en una fecha
+  para planificar su uso y evitar cruces
+
+  Scenario: Área con reservas en la fecha seleccionada
+    Given existen reservas para el gimnasio el 10-11-2026 de 18:00 a 19:00 y de 09:00 a 10:00
+    When el usuario consulta los horarios del gimnasio para el 10-11-2026
+    Then el sistema muestra los horarios 09:00 – 10:00 y 18:00 – 19:00 en ese orden
+
+  Scenario: Área libre en la fecha seleccionada
+    Given no existen reservas para la parrilla el 11-11-2026
+    When el usuario consulta los horarios de la parrilla para el 11-11-2026
+    Then el sistema indica que el área está libre ese día
+
+  Scenario: El administrador identifica al residente de cada reserva
+    Given existe una reserva del gimnasio a nombre de un residente
+    When el administrador consulta los horarios reservados del gimnasio
+    Then el sistema muestra el nombre y el código del residente junto al horario
+```
+
+```gherkin
+Feature: US18 - Validar solapamiento de reservas
+  Como residente
+  quiero que el sistema impida reservar un horario ya ocupado
+  para evitar conflictos con otros residentes
+
+  Scenario: Reserva en un horario ocupado
+    Given el gimnasio está reservado el 10-11-2026 de 18:00 a 19:00
+    When un residente intenta reservar el gimnasio el 10-11-2026 de 18:30 a 19:30
+    Then el sistema rechaza la reserva
+    And informa que el horario ya está ocupado
+
+  Scenario: Reservas simultáneas del mismo horario
+    Given dos residentes envían al mismo tiempo una reserva del gimnasio para el mismo horario
+    When el sistema procesa ambas solicitudes
+    Then solo una reserva es aceptada
+```
 
 ##### 4.2.2.6. Execution Evidence for Sprint Review
 
