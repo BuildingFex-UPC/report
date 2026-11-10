@@ -4501,6 +4501,12 @@ Durante el Sprint 2 se implementó la restricción de reservas solapadas (US18),
 | BuildingFex-UPC/FrontEnd-Administrador | main | 1712ed1 | Merge branch 'develop' into main | - | 31/10/2026 |
 | BuildingFex-UPC/LandingPage | main | 297433e | feat: make landing page responsive and set CTA buttons to Empezar/Start | - | 27/10/2026 |
 | BuildingFex-UPC/BackEnd | feature/reservation-overlap | f26c366 | fix(reservations): serialize concurrent bookings to prevent overlapping reservations | - | 09/11/2026 |
+| BuildingFex-UPC/BackEnd | main | b8d2924 | feat(finances): integrate Mercado Pago Checkout Pro sandbox and secure payment verification | - | 07/11/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | bca44fe | feat(finances): complete Mercado Pago in-app checkout and remove redundant local reconciliation | - | 07/11/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | feature/us32-horarios-reservados | 51bd7bc | show reserved schedules by space and date | - | 09/11/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | feature/us32-horarios-reservados | d79c646 | add texts for reserved schedules | - | 09/11/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | feature/us32-horarios-reservados | 0f2e350 | always show reserved slots for the selected day | - | 09/11/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | feature/us32-horarios-reservados | e09328f | add empty-state text for reserved slots | - | 09/11/2026 |
 
 ##### 4.2.2.5. Testing Suite Evidence for Sprint Review
 
