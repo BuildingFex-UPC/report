@@ -4513,7 +4513,7 @@ Durante el Sprint 2 se implementó la restricción de reservas solapadas (US18),
 Las pruebas disponibles en los repositorios al cierre del Sprint 2 son:
 
 - **BuildingFex-UPC/FrontEnd-Residente** (Flutter): `test/invite_codes_test.dart` y `test/reservation_rules_test.dart`.
-- **BuildingFex-UPC/FrontEnd-Administrador** (Kotlin): `ReservedSchedulesTest` (US32), `DepartmentNumberTest`, `PayoutScheduleTest` y `ExampleUnitTest` (pruebas unitarias en `app/src/test`), y `ExampleInstrumentedTest` (instrumentada).****
+- **BuildingFex-UPC/FrontEnd-Administrador** (Kotlin): `ReservedSchedulesTest` (US32), `DepartmentNumberTest`, `PayoutScheduleTest` y `ExampleUnitTest` (pruebas unitarias en `app/src/test`), y `ExampleInstrumentedTest` (instrumentada).
 - **BuildingFex-UPC/BackEnd:** `tests/reservations_integration.py`, script de integración que lanza reservas simultáneas sobre el mismo espacio, fecha y horario contra una API de prueba con datos de ejemplo, para comprobar que solo una se acepta (US18).
 
 **Resultados de ejecución:** las 12 pruebas unitarias de la aplicación del administrador se ejecutaron en Android Studio con resultado satisfactorio (12 de 12). Entre ellas se encuentran las 4 pruebas de `ReservedSchedulesTest`, que verifican que el panel de horarios reservados muestra solo las reservas del área y la fecha seleccionadas, las ordena por hora de inicio, acepta fechas enviadas con hora y no muestra horarios cuando el área está libre. El script de integración de la US18 aún no se ejecutó contra un entorno de prueba.
