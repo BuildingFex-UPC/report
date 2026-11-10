@@ -4569,7 +4569,15 @@ Al cierre del Sprint 2 los productos están disponibles en los siguientes enlace
 - **Landing Page:** https://buildingfex.vercel.app/
 - **Web Services (Swagger UI):** https://backend-1-lgr7.onrender.com/swagger
 
-**Capturas de ejecución de las aplicaciones móviles:** Por completar.
+**Capturas de ejecución de la aplicación del administrador:**
+
+El administrador ingresa al Dashboard con el resumen del edificio (residentes, unidades ocupadas y vacías, deuda total, ingresos vs egresos e incidencias recientes). Desde Espacios sociales publica las áreas comunes que los residentes pueden reservar y, en Reservas, consulta con el nuevo panel de la US32 los horarios ocupados de cada área por fecha; cuando no hay reservas, el panel indica que el área está libre.
+
+<p align="center">
+  <img src="img/sprint2-app-dashboard.png" alt="Dashboard del administrador" width="250"/>
+  <img src="img/sprint2-app-espacios.png" alt="Espacios sociales" width="250"/>
+  <img src="img/sprint2-app-reservas.png" alt="Horarios reservados (US32)" width="250"/>
+</p>
 
 ##### 4.2.2.7. Services Documentation Evidence for Sprint Review
 
