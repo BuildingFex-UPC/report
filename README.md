@@ -4605,8 +4605,31 @@ Durante el Sprint 2 el despliegue de los Web Services se gestionó con un Render
 
 ##### 4.2.2.9. Team Collaboration Insights during Sprint
 
-_Por completar por el equipo._
+Durante el Sprint 2 el equipo trabajó según la matriz de Aspect Leaders and Collaborators (sección 4.2.2.2). A diferencia del Sprint 1, cada integrante subió sus propias tareas en ramas feature y las integró mediante Pull Requests, lo que se refleja en una mayor cantidad de integrantes con commits en los repositorios de producto.
 
+A continuación se presentan los analíticos de colaboración de GitHub (Insights) de cada repositorio.
+
+**Web Services – https://github.com/BuildingFex-UPC/BackEnd**
+
+![Insights Web Services – Contributors](img/sprint2-insights-backend.png)
+
+**Aplicación del administrador – https://github.com/BuildingFex-UPC/FrontEnd-Administrador**
+
+![Insights App Administrador – Contributors](img/sprint2-insights-admin.png)
+
+**Aplicación del residente – https://github.com/BuildingFex-UPC/FrontEnd-Residente**
+
+![Insights App Residente – Contributors](img/sprint2-insights-residente.png)
+
+**Landing Page – https://github.com/BuildingFex-UPC/LandingPage**
+
+![Insights Landing Page – Contributors](img/sprint2-insights-landing.png)
+
+**Interpretación de los analíticos**
+
+En los Web Services se registraron 19 commits durante el Sprint 2: Alejandro Jave Chang (12) realizó la edición de perfiles, la eliminación de recibos y la configuración del despliegue en Render; Danitza Heredia (4) agregó el costo de las áreas comunes; Mathias Javier Murillo (2) integró Mercado Pago Checkout Pro con verificación segura del pago; y Jude Hermoza Quispe (1) implementó la restricción de reservas solapadas. En la aplicación del administrador se registraron 9 commits: Alejandro Jave Chang (6) separó la aplicación para que sea exclusiva del administrador y agregó la edición del perfil; Antonin Suteau (2) implementó el panel de horarios reservados de la US32 con sus pruebas unitarias; y Danitza Heredia (1) agregó la configuración del costo de los espacios. En la aplicación del residente, desarrollada en Flutter, se registraron 13 commits: Alejandro Jave Chang (11) creó la aplicación y sus pantallas, Mathias Javier Murillo (1) completó el pago con Mercado Pago y Antonin Suteau (1) mostró los horarios ocupados al reservar. En la Landing Page se registraron 2 commits de Alejandro Jave Chang para hacerla responsive y actualizar el video del producto.
+
+Los analíticos muestran que en este Sprint todos los integrantes aportaron código a los productos, cumpliendo el acuerdo de la retrospectiva del Sprint 1. Sin embargo, la mayor parte de los commits sigue concentrada en el líder técnico, Alejandro Jave Chang, debido a que la separación de la aplicación en dos productos requirió reconstruir gran parte de las pantallas; para el siguiente Sprint el equipo buscará repartir de forma más equilibrada las tareas de las aplicaciones móviles.
 
 ### 4.3. Validation Interviews
 
