@@ -239,7 +239,8 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
     <td><b>AV1:</b> Investigué y apliqué conceptos de Análisis Competitivo, Estrategias y Tácticas frente a Competidores, así como User Stories, Ubiquitous Language y Requirements Specification, para definir y documentar los requisitos de BuildingFlex.
-      <br><br><b>TP1:</b> A través de la evaluación de heurísticas y la revisión de los criterios de aceptación de las User Stories, actualicé y reforcé mis conocimientos sobre usabilidad, experiencia de usuario y especificación de requisitos, aplicándolos para mejorar la calidad y coherencia de la propuesta.</td>
+      <br><br><b>TP1:</b> A través de la evaluación de heurísticas y la revisión de los criterios de aceptación de las User Stories, actualicé y reforcé mis conocimientos sobre usabilidad, experiencia de usuario y especificación de requisitos, aplicándolos para mejorar la calidad y coherencia de la propuesta.
+      <br><br><b>AV2:</b> Actualicé las User Stories incorporando criterios de aceptación y participé en la elaboración del video About-The-Product, aplicando conocimientos de ingeniería de software. </td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
@@ -275,7 +276,8 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   <tr>
     <td>Danitza Ivonne Heredia Hoyos</td>
     <td><b>AV1:</b> Identifiqué la necesidad de reforzar mis conocimientos sobre análisis competitivo y especificación de requisitos, revisando estos conceptos y aplicándolos en la elaboración de las diferentes secciones de BuildingFlex.
-      <br><br><b>TP1:</b> Reconocí la necesidad de seguir fortaleciendo mis conocimientos sobre heurísticas de usabilidad y definición de requisitos, ya que su correcta aplicación requiere revisar y aprender continuamente buenas prácticas para evaluar y mejorar una solución de software.</td>
+      <br><br><b>TP1:</b> Reconocí la necesidad de seguir fortaleciendo mis conocimientos sobre heurísticas de usabilidad y definición de requisitos, ya que su correcta aplicación requiere revisar y aprender continuamente buenas prácticas para evaluar y mejorar una solución de software.
+      <br><br><b>AV2:</b> Reconocí la necesidad de fortalecer mis conocimientos en desarrollo frontend y backend para implementar nuevas funcionalidades en BuildingFex.</td>
   </tr>
   <tr>
     <td>Antonin Suteau</td>
@@ -1716,7 +1718,6 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
 </table>
 
 ### US14 – Iniciar sesión
-### US14 – Iniciar sesión
 
 <table>
   <tr>
@@ -1966,6 +1967,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   </tr>
 </table>
 
+### US19 – Configurar reglas y mantenimiento de áreas
 <table>
   <tr>
     <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th>
@@ -2001,6 +2003,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   </tr>
 </table>
 
+### US20 – Reportar una incidencia
 <table>
   <tr>
     <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th>
