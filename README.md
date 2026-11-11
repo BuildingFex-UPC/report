@@ -4623,7 +4623,7 @@ A continuación se presentan los analíticos de colaboración de GitHub (Insight
 
 **Landing Page – https://github.com/BuildingFex-UPC/LandingPage**
 
-![Insights Landing Page – Contributors](img/sprint2-insights-landing.png)
+![Insights Landing Page – Contributors](img/sprint2-insights-landing..png)
 
 **Interpretación de los analíticos**
 
