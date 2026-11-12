@@ -1,5 +1,5 @@
-<center>
-<div align="center">
+  <center>
+<div align="center" style="text-align: center; width: 100%;">
 
 <p align="center"><img src="img/img-upc.png" alt="Logo-UPC" width="250"/></p>
 
@@ -183,6 +183,16 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
       - [4.2.1.7. Services Documentation Evidence for Sprint Review](#4217-services-documentation-evidence-for-sprint-review)
       - [4.2.1.8. Software Deployment Evidence for Sprint Review](#4218-software-deployment-evidence-for-sprint-review)
       - [4.2.1.9. Team Collaboration Insights during Sprint](#4219-team-collaboration-insights-during-sprint)
+    - [4.2.2. Sprint 2](#422-sprint-2)
+      - [4.2.2.1. Sprint Planning 2](#4221-sprint-planning-2)
+      - [4.2.2.2. Aspect Leaders and Collaborators](#4222-aspect-leaders-and-collaborators)
+      - [4.2.2.3. Sprint Backlog 2](#4223-sprint-backlog-2)
+      - [4.2.2.4. Development Evidence for Sprint Review](#4224-development-evidence-for-sprint-review)
+      - [4.2.2.5. Testing Suite Evidence for Sprint Review](#4225-testing-suite-evidence-for-sprint-review)
+      - [4.2.2.6. Execution Evidence for Sprint Review](#4226-execution-evidence-for-sprint-review)
+      - [4.2.2.7. Services Documentation Evidence for Sprint Review](#4227-services-documentation-evidence-for-sprint-review)
+      - [4.2.2.8. Software Deployment Evidence for Sprint Review](#4228-software-deployment-evidence-for-sprint-review)
+      - [4.2.2.9. Team Collaboration Insights during Sprint](#4229-team-collaboration-insights-during-sprint)
   - [4.3. Validation Interviews](#43-validation-interviews)
     - [4.3.1. Diseño de Entrevistas](#431-diseño-de-entrevistas)
     - [4.3.2. Registro de Entrevistas](#432-registro-de-entrevistas)
@@ -227,7 +237,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b> Investigó y aplicó técnicas de entrevista estructurada (sección 2.2), la construcción del Product Backlog —épicas, User Stories, Spike Stories y estimación con Story Points sobre la sucesión de Fibonacci (sección 2.4.3)— y el modelo C4 para la Software Architecture (sección 2.5.3). Reclasificó la US29 de EP01 a EP02 por corresponder a egresos recurrentes e incorporó la Spike Story SP01 sobre almacenamiento seguro de documentos (EP07).<br><br><b>TP1:</b> Elaboró las secciones 4., 4.1. y 4.1.1–4.1.4 del capítulo Product Implementation &amp; Validation, investigando la configuración del entorno Android con Kotlin y Jetpack Compose, las convenciones de código y los procedimientos de despliegue de BuildingFex. Contrastó los repositorios actuales para documentar ASP.NET Core/PostgreSQL y Render, y aplicó GitFlow mediante una rama feature, cinco commits pequeños con Conventional Commits y su integración en develop mediante el <a href="https://github.com/BuildingFex-UPC/report/pull/24">PR #24</a>. Esta actividad consolidó sus conocimientos de gestión de configuración y trazabilidad de cambios en un proyecto colaborativo.</td>
+    <td><b>AV1:</b> Investigó y aplicó técnicas de entrevista estructurada (sección 2.2), la construcción del Product Backlog —épicas, User Stories, Spike Stories y estimación con Story Points sobre la sucesión de Fibonacci (sección 2.4.3)— y el modelo C4 para la Software Architecture (sección 2.5.3). Reclasificó la US29 de EP01 a EP02 por corresponder a egresos recurrentes e incorporó la Spike Story SP01 sobre almacenamiento seguro de documentos (EP07).<br><br><b>TP1:</b> Elaboró las secciones 4., 4.1. y 4.1.1–4.1.4 del capítulo Product Implementation &amp; Validation, investigando la configuración del entorno Android con Kotlin y Jetpack Compose, las convenciones de código y los procedimientos de despliegue de BuildingFex. Contrastó los repositorios actuales para documentar ASP.NET Core/PostgreSQL y Render, y aplicó GitFlow mediante una rama feature, cinco commits pequeños con Conventional Commits y su integración en develop mediante el <a href="https://github.com/BuildingFex-UPC/report/pull/24">PR #24</a>. Esta actividad consolidó sus conocimientos de gestión de configuración y trazabilidad de cambios en un proyecto colaborativo.<br><br><b>AV2:</b> Actualizó el Product Backlog reescribiendo la US18 como historia del residente (restricción de reservas solapadas), vinculó el tablero de Trello en la sección 2.4.3, incorporó la Entrevista 7 del segmento de Empresas de Gestión de Edificios (sección 2.2.2) y documentó la estructura y las evidencias del Sprint 2 (sección 4.2.2) a partir de los repositorios del equipo. Además, incorporó en los Web Services la validación de reservas solapadas ante solicitudes simultáneas (PR #1 de BackEnd).</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
@@ -244,7 +254,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-        <td><b>AV1:</b> He aprendido cómo se desarrolla un proyecto académico en Perú y he utilizado por primera vez GitHub, lo que me permitirá, más adelante en mis estudios, llevar a cabo proyectos en grupo.<br><br><b>TB1:</b> En la elaboración de la sección 4.2.1 (Sprint 1) actualicé mis conocimientos sobre el marco de trabajo Scrum: Sprint Planning, Sprint Goal, Sprint Backlog y matriz de líderes y colaboradores. Aprendí a redactar pruebas de aceptación en lenguaje Gherkin bajo el enfoque BDD, a documentar y probar Web Services con Swagger (OpenAPI) utilizando autenticación JWT, y a ejecutar la aplicación móvil en Android Studio con un emulador. Además, identifiqué y corregí un error de configuración en la documentación Swagger del backend.</td>
+        <td><b>AV1:</b> He aprendido cómo se desarrolla un proyecto académico en Perú y he utilizado por primera vez GitHub, lo que me permitirá, más adelante en mis estudios, llevar a cabo proyectos en grupo.<br><br><b>TB1:</b> En la elaboración de la sección 4.2.1 (Sprint 1) actualicé mis conocimientos sobre el marco de trabajo Scrum: Sprint Planning, Sprint Goal, Sprint Backlog y matriz de líderes y colaboradores. Aprendí a redactar pruebas de aceptación en lenguaje Gherkin bajo el enfoque BDD, a documentar y probar Web Services con Swagger (OpenAPI) utilizando autenticación JWT, y a ejecutar la aplicación móvil en Android Studio con un emulador. Además, identifiqué y corregí un error de configuración en la documentación Swagger del backend.<br><br><b>AV2:</b> Implementé la US32 en las dos aplicaciones móviles: en la del administrador (Kotlin con Jetpack Compose) agregué un panel de horarios reservados por área y fecha, y en la del residente (Flutter) mostré siempre los horarios ocupados al reservar. Así aprendí a trabajar con dos frameworks distintos que consumen la misma API. También completé el Sprint 2 del informe (secciones 4.2.2.3, 4.2.2.4, 4.2.2.7 y 4.2.2.8) y agregué la US32 al Product Backlog.</td>
   </tr>
 
   <!-- ================= CRITERIO 2 ================= -->
@@ -264,7 +274,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
 </tr>
 <tr>
     <td>Jude Alessandro Hermoza Quispe</td>
-    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).<br><br><b>TP1:</b> Reconoció la necesidad de actualizar sus conocimientos sobre configuración de aplicaciones móviles y despliegue de servicios. Consultó documentación oficial y los archivos de los repositorios para identificar el uso de Kotlin con Jetpack Compose y ASP.NET Core con PostgreSQL en Render. Contrastó la sección 4.1 con las evidencias del Sprint 1, incorporando las referencias a la generación del APK debug y su ejecución en el emulador Pixel 5, documentadas en 4.2.1.8. Este proceso reforzó la importancia de revisar la coherencia del informe conforme el equipo incorpora nuevas evidencias de desarrollo.</td>
+    <td><b>AV1:</b> Identificó vacíos propios en priorización de backlog y modelado arquitectónico; se capacitó de forma autónoma en el uso de Spike Stories y en la notación C4, y trasladó lo aprendido a la revisión y corrección del backlog del equipo (mover la US29 a EP02, añadir la Spike Story SP01).<br><br><b>TP1:</b> Reconoció la necesidad de actualizar sus conocimientos sobre configuración de aplicaciones móviles y despliegue de servicios. Consultó documentación oficial y los archivos de los repositorios para identificar el uso de Kotlin con Jetpack Compose y ASP.NET Core con PostgreSQL en Render. Contrastó la sección 4.1 con las evidencias del Sprint 1, incorporando las referencias a la generación del APK debug y su ejecución en el emulador Pixel 5, documentadas en 4.2.1.8. Este proceso reforzó la importancia de revisar la coherencia del informe conforme el equipo incorpora nuevas evidencias de desarrollo.<br><br><b>AV2:</b> Reconoció la necesidad de contrastar el informe con la evidencia real de los repositorios: al preparar el Sprint 2 verificó los commits, las URLs desplegadas y los archivos de prueba, y comprobó que su rama del informe estaba desactualizada respecto a develop, por lo que rehízo sus cambios sobre la versión vigente para no sobrescribir el trabajo de sus compañeros. Este proceso reforzó la importancia de sincronizar el trabajo antes de integrarlo.</td>
   </tr>
   <tr>
     <td>Alejandro Manuel Jave Chang</td>
@@ -281,7 +291,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
   </tr>
   <tr>
     <td>Antonin Suteau</td>
-        <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo.<br><br><b>TB1:</b> Durante este Sprint reconocí que necesitaba aprender de forma autónoma herramientas que no conocía, como Android Studio, Trello, Swagger y la grabación de videos de navegación del producto. También comprendí la importancia de aplicar Conventional Commits y GitFlow para que el trabajo de cada integrante quede registrado. Las entrevistas de validación con usuarios reales me mostraron que es necesario seguir aprendiendo a escuchar al usuario para mejorar el producto.</td>
+        <td><b>AV1:</b> Me he dado cuenta de que mi grupo va mucho más adelantado que yo en esta asignatura. Por eso tengo que reforzar mis conocimientos y adquirir unos conocimientos básicos mínimos sobre la materia para no perjudicar a mi grupo.<br><br><b>TB1:</b> Durante este Sprint reconocí que necesitaba aprender de forma autónoma herramientas que no conocía, como Android Studio, Trello, Swagger y la grabación de videos de navegación del producto. También comprendí la importancia de aplicar Conventional Commits y GitFlow para que el trabajo de cada integrante quede registrado. Las entrevistas de validación con usuarios reales me mostraron que es necesario seguir aprendiendo a escuchar al usuario para mejorar el producto.<br><br><b>AV2:</b> Al no conocer Flutter, tuve que entender por mi cuenta cómo estaba organizado el código del residente antes de modificarlo. También aprendí a trabajar con ramas feature y Pull Requests desde la web de GitHub, y me di cuenta de que todavía tengo que mejorar en el uso de Conventional Commits, porque al principio olvidé el prefijo en algunos mensajes.</td>
   </tr>
 </table>
 
@@ -835,6 +845,24 @@ Explorar cómo manejan el volumen (varios edificios a la vez), cómo estandariza
 | **Marcas** | - WhatsApp: Su centro principal de operaciones.<br>- Google Sheets: La herramienta que impuso en su equipo para poder trabajar desde el celular, reemplazando al Excel tradicional.<br>- Yape: Crítico en su operativa diaria. |
 | **Dispositivos** | - Smartphone: Es su herramienta de trabajo principal absoluto. <br>- Laptop/Computadora: Su uso está estrictamente relegado a tareas pesadas que no puede hacer desde su celular. |
 | **Flujos principales** | - Recaudación y Verificación de Pagos.<br>- Gestión de Áreas Comunes.<br>- Onboarding y Creación de Base de Datos.<br>- Consolidación y Reportes. |
+
+#### Entrevista 7
+
+| Campo | Detalle |
+|------|--------|
+| **Segmento** | Empresas de Gestión de Edificios |
+| **Nombre** | Nataly |
+| **Apellidos** | Sandoval |
+| **Edad** | 22 |
+| **Distrito** | Jesús María |
+| **Screenshot** |  ![Entrevista 7](img/entrevista7_nataly.png)  |
+| **URL** | [Entrevista 7 - Nataly Sandoval](https://upcedupe-my.sharepoint.com/:v:/g/personal/u202318220_upc_edu_pe/IQBG99OR4LuwSKxqrSD-qnTIAVDvZei2znhmiMkkjQQ37mo?nav=eyJyZWZlcnJhbEluZm8iOnsicmVmZXJyYWxBcHAiOiJPbmVEcml2ZUZvckJ1c2luZXNzIiwicmVmZXJyYWxBcHBQbGF0Zm9ybSI6IldlYiIsInJlZmVycmFsTW9kZSI6InZpZXciLCJyZWZlcnJhbFZpZXciOiJNeUZpbGVzTGlua0NvcHkifX0&e=jzjgQD) |
+| **Duración** | 7:15 |
+| **Resumen** | Administradora de condominios de 22 años que recién terminó su carrera universitaria y gestiona 6 edificios (de 20 a 50 departamentos) en Jesús María, Lince y Pueblo Libre, con una contadora externa y un asistente de cobros. Trabaja con Excel (un archivo por edificio) y WhatsApp; los pagos llegan por transferencia, Yape o Plin y se concilian a mano. Sus cuellos de botella son el levantamiento inicial de información al sumar un edificio, la cobranza atrasada y la consolidación de reportes para cada junta, lo que le ha costado 3 contratos por falta de transparencia. Probó un software antes, pero lo halló complicado. Prioriza ahorrar horas de contabilidad y ve casi indispensable la integración con bancos y billeteras para automatizar el registro de pagos, los recordatorios a morosos y la emisión de recibos. |
+| **Personalidad** | - Responsable y ordenada: asumió la administración por necesidad de la junta.<br>- Pragmática: prioriza reducir errores y ahorrar horas de contabilidad.<br>- Orientada al crecimiento: busca sumar más edificios. |
+| **Marcas** | - Excel: cobros, contabilidad y reportes.<br>- WhatsApp: comunicación con vecinos, conserjes y proveedores.<br>- Yape / Plin: pagos de los residentes. |
+| **Dispositivos** | - Smartphone: coordinación diaria por WhatsApp.<br>- Laptop: consolidación de Excel y reportes. |
+| **Flujos principales** | - Cobranza y conciliación manual de pagos.<br>- Onboarding de un edificio nuevo.<br>- Consolidación de reportes para cada junta.<br>- Atención de reclamos e incidencias. |
 
 #### 2.2.3. Análisis de entrevistas
 
@@ -1924,7 +1952,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   </tr>
   <tr>
     <td>US18</td>
-    <td>Developer</td>
+    <td>Residente</td>
     <td>Alta</td>
     <td>EP05 – Áreas comunes y reservas</td>
   </tr>
@@ -1936,7 +1964,7 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
     <th colspan="4">Description</th>
   </tr>
   <tr>
-    <td colspan="4">Como Developer, quiero validar el solapamiento de reservas para evitar reservas incompatibles.</td>
+    <td colspan="4">Como residente, quiero que el sistema no me permita reservar un área común que ya está reservada en esa fecha y hora para evitar reservas incompatibles.</td>
   </tr>
   <tr>
     <th colspan="4">Acceptance Criteria</th>
@@ -2573,6 +2601,17 @@ Las User Stories de BuildingFex representan las funcionalidades requeridas para 
   </tr>
 </table>
 
+### US32 – Visualizar horarios reservados
+
+<table> 
+  <tr>
+  <th>Story ID</th><th>User</th><th>Priority</th><th>Epic</th></tr> 
+  <tr><td>US32</td><td>Administrador / Residente</td><td>Media</td><td>EP05 – Áreas comunes y reservas</td></tr> 
+  <tr><th colspan="4">Title</th></tr> <tr><td colspan="4">Visualizar horarios reservados</td></tr> 
+  <tr><th colspan="4">Description</th></tr> <tr><td colspan="4">Como administrador o residente, quiero ver los horarios ya reservados de un área común en una fecha para planificar su uso y evitar cruces.</td></tr> <tr><th colspan="4">Acceptance Criteria</th></tr> <tr><td colspan="4"> <strong>AC01 – Given:</strong> Existen reservas para un área común en la fecha seleccionada.<br> <strong>When:</strong> El usuario consulta los horarios de esa área.<br> <strong>Then:</strong> El sistema muestra los horarios ocupados ordenados por hora de inicio.<br><br> <strong>AC02 – Given:</strong> No existen reservas para el área en la fecha seleccionada.<br> <strong>When:</strong> El usuario consulta los horarios de esa área.<br> <strong>Then:</strong> El sistema indica que el área está libre ese día.<br><br> <strong>AC03 – Given:</strong> El administrador consulta los horarios reservados.<br> <strong>When:</strong> Selecciona un área y una fecha.<br> <strong>Then:</strong> El sistema muestra además el nombre y el código del residente de cada reserva. </td>
+  </tr> 
+</table>
+
 #### Spike Stories
 
 ### SP01 – Evaluar almacenamiento seguro de documentos
@@ -2640,6 +2679,8 @@ El Product Backlog de BuildingFex consolida las historias de usuario y de invest
 
 La priorización se define con la escala **Alta / Media / Baja** según el valor para el usuario y su aporte al MVP, y el esfuerzo se estima en **Story Points** usando la sucesión de Fibonacci (1, 2, 3, 5, 8, 13). El backlog también incorpora las **Spike Stories** (prefijo `SP`) necesarias para reducir incertidumbre técnica antes de la implementación. El backlog es un artefacto vivo: el orden y la estimación se ajustan al cierre de cada Sprint y tras el análisis de entrevistas (sección 2.2.3).
 
+**Tablero de Trello del Product Backlog:** [BuildingFex – Product Backlog y seguimiento](https://trello.com/invite/b/6ac33ca5ca23ef60e5eb31b3/ATTIb63bf8f9449e9328c45b765d085e5d58B3245C85/buildingfex-product-backlog-y-seguimiento)
+
 **Orden por prioridad y Story Points**
 
 La tabla presenta primero las historias de prioridad **Alta**, luego las de prioridad **Media** y finalmente las de prioridad **Baja**. Dentro de cada nivel, las historias se ordenan por **Story Points de mayor a menor**: 8, 5, 3 y 2, según las estimaciones del backlog. Por ello, US06 y US26, ambas de prioridad alta y 8 puntos, ocupan las primeras posiciones.
@@ -2671,7 +2712,7 @@ Las principales dependencias para la planificación son:
 | US03 | Como residente, quiero registrar el pago de mi cuota y adjuntar el comprobante para que quede constancia. | 5 | Alta |
 | US04 | Como administrador, quiero que el sistema envíe recordatorios automáticos de cobro a los residentes morosos para reducir la morosidad. | 5 | Alta |
 | US09 | Como empresa administradora, quiero elegir un plan de suscripción según el número de unidades para pagar solo por lo que necesito. | 5 | Alta |
-| US18 | Como sistema, quiero validar que una reserva no se solape con otra existente para evitar dobles reservas. | 5 | Alta |
+| US18 | Como residente, quiero que el sistema no me permita reservar un área común que ya está reservada en esa fecha y hora para evitar dobles reservas. | 5 | Alta |
 | US17 | Como residente, quiero reservar un área común en una fecha y hora para asegurar su uso sin conflictos. | 5 | Alta |
 | US20 | Como residente, quiero reportar una incidencia con descripción y foto para que la administración la atienda. | 5 | Alta |
 | US21 | Como administrador, quiero dar seguimiento al estado de cada incidencia (abierta, en proceso, resuelta) para controlar las reparaciones. | 5 | Alta |
@@ -2692,6 +2733,7 @@ Las principales dependencias para la planificación son:
 | US22 | Como residente, quiero recibir una notificación cuando cambie el estado de mi incidencia para estar informado. | 3 | Media |
 | SP01 | Como Developer, quiero investigar alternativas de almacenamiento seguro de documentos para determinar una solución viable para BuildingFex (Spike Story). | 3 | Media |
 | US24 | Como residente, quiero consultar el reglamento interno y las actas en la nube para revisarlos cuando lo necesite. | 3 | Media |
+| US32 | Como administrador o residente, quiero ver los horarios ya reservados de un área común en una fecha para planificar su uso y evitar cruces. | 3 | Media |
 | US29 | Como administrador, quiero configurar pagos fijos periódicos (por ejemplo, a trabajadores del edificio) para automatizar egresos recurrentes. | 5 | Baja |
 | US30 | Como administrador, quiero ver la evolución mensual de la morosidad en un gráfico para identificar tendencias. | 3 | Baja |
 | US28 | Como usuario, quiero recuperar mi contraseña para volver a acceder si la olvido. | 2 | Baja |
@@ -5527,6 +5569,218 @@ En el repositorio de la Landing Page se registraron 2 commits en la rama `main`,
 
 Los analíticos evidencian que, durante este primer Sprint, la construcción de la estructura base de los tres productos estuvo concentrada en el líder técnico del equipo, Alejandro Jave Chang, mientras que Antonin Suteau participó en las pruebas de aceptación y en la corrección de la documentación de los Web Services. Esta concentración se explica porque el Sprint 1 se enfocó en establecer la arquitectura base de los tres productos. Como acción de mejora para el Sprint 2, el equipo acordó distribuir de forma más equilibrada los commits entre todos los integrantes según la matriz de Aspect Leaders and Collaborators, trabajar en ramas `feature/*` integradas mediante Pull Requests hacia `develop`, y aplicar Conventional Commits en todos los mensajes.
 
+
+#### 4.2.2. Sprint 2
+
+En esta sección se registra el avance del equipo BuildingFex durante el Sprint 2. Durante este periodo se ampliaron los Web Services (edición de perfil de usuarios, eliminación de recibos y restricción de reservas solapadas), la aplicación móvil del residente (Flutter), la aplicación móvil del administrador (Kotlin con Jetpack Compose, separada como aplicación exclusiva del administrador), la Landing Page responsive y el despliegue del backend mediante un Render Blueprint.
+
+##### 4.2.2.1. Sprint Planning 2
+
+| Sprint # | Sprint 2 |
+| :--- | :--- |
+| **Sprint Planning Background** | |
+| Date | 25-10-2026 |
+| Time | 08:00 PM |
+| Location | Reunión virtual vía Google Meet |
+| Prepared By | Suteau, Antonin |
+| Attendees (to planning meeting) | Javier Murillo, Mathias / Hermoza Quispe, Jude Alessandro / Jave Chang, Alejandro Manuel / Heredia Hoyos, Danitza Ivonne / Suteau, Antonin |
+| Sprint 1 Review Summary | En el Sprint 1 se completaron 18 de las 19 tareas planificadas (34 de 39 Story Points): la Landing Page se desplegó en Vercel, los Web Services de IAM, Finances y SocialSpaces se desplegaron en Render con PostgreSQL, y la aplicación móvil permitió iniciar sesión, invitar residentes, registrar cuotas, pagar y reservar áreas comunes. Quedó pendiente el registro de edificios de la US12 (T05). |
+| Sprint 1 Retrospective Summary | Funcionó bien desplegar temprano los tres productos y documentar los commits con Conventional Commits. Como mejoras, el equipo identificó que los commits se concentraron en pocos integrantes, que la integración entre aplicación y Web Services se hizo cerca de la entrega y que la validación de reservas permitía cruces de horario. Se acordó que cada integrante suba sus propias tareas en ramas feature con Pull Request hacia develop y que las funcionalidades se prueben con las cuentas de prueba del administrador y de un residente antes de integrarlas. |
+| **Sprint Goal & User Stories** | |
+| Sprint 2 Goal | **Our focus is on** separar BuildingFex en una aplicación móvil para el administrador y otra para el residente, y hacer confiables las reservas de áreas comunes y el pago de cuotas.<br>**We believe it delivers** a los residentes la seguridad de que su reserva no se cruzará con otra y de que su pago queda registrado, y al administrador una vista clara de la ocupación de los espacios comunes del edificio.<br>**This will be confirmed when** un residente paga su cuota con Mercado Pago desde su aplicación, consulta los horarios ya reservados de un área común y no puede reservar un horario ocupado, y el administrador ve esas mismas reservas por espacio y fecha en su aplicación. |
+| Sprint 2 Velocity | 34 |
+| Sum of Story Points | 13 |
+
+##### 4.2.2.2. Aspect Leaders and Collaborators
+
+Para el Sprint 2 se redefinieron los aspectos de trabajo a partir de la separación de la aplicación móvil en dos productos: **Web Services y Despliegue**, **Aplicación del Administrador**, **Aplicación del Residente**, **Reservas**, **Pagos** y **Landing Page y Documentación**. Cada aspecto cuenta con un líder (L), responsable de coordinar su avance, revisar los Pull Requests y asegurar su integración, y con uno o más colaboradores (C) que participan en su implementación. Esta distribución se refleja en las tareas del Sprint Backlog 2.
+
+| Team Member (Last Name, First Name) | GitHub Username | Web Services y Despliegue | App Administrador | App Residente | Reservas | Pagos | Landing Page y Documentación |
+| :--- | :--- | :---: | :---: | :---: | :---: | :---: | :---: |
+| Javier Murillo, Mathias | K1ngHulk | C | - | C | - | L | - |
+| Hermoza Quispe, Jude Alessandro | JvnnDev | C | - | - | L | - | C |
+| Jave Chang, Alejandro Manuel | alejandro202312510 | L | L | L | - | C | C |
+| Heredia Hoyos, Danitza Ivonne | UDnTzh | - | - | - | - | - | L |
+| Suteau, Antonin | antoninsuteau | - | C | C | C | - | C |
+
+##### 4.2.2.3. Sprint Backlog 2
+
+![Sprint Backlog 2](img/sprint2-backlog.png)
+
+**URL del tablero:** https://trello.com/b/NLjYoLc9/buildingfex-sprint-2
+
+<table>
+  <tr><th colspan="2">Sprint #</th><th colspan="6">Sprint 2</th></tr>
+  <tr><th colspan="2">User Story</th><th colspan="6">Work-Item / Task</th></tr>
+  <tr><th>Id</th><th>Title</th><th>Id</th><th>Title</th><th>Description</th><th>Estimation (Hours)</th><th>Assigned To</th><th>Status</th></tr>
+  <tr><td>US18</td><td>Validar solapamiento de reservas</td>
+      <td>T01</td><td>Restricción de reservas solapadas</td><td>Impedir que un residente reserve un área común ya reservada en la misma fecha y hora, incluso ante solicitudes simultáneas (candado por edificio, espacio y fecha, y validación del formato de fecha).</td><td>6</td><td>Hermoza Quispe, Jude Alessandro</td><td>In review (PR BackEnd #1)</td></tr>
+    <tr><td rowspan="2">US32</td><td rowspan="2">Visualizar horarios reservados</td>
+      <td>T02</td><td>Horarios reservados en la app del administrador</td><td>Agregar en la pantalla Reservas un panel que muestre, por área común y fecha, los horarios ocupados ordenados por hora de inicio, con el nombre y código del residente.</td><td>4</td><td>Suteau, Antonin</td><td>Done (PR FrontEnd-Administrador #1)</td></tr>
+  <tr><td>T03</td><td>Horarios reservados en la app del residente</td><td>Mostrar siempre en el formulario de reserva los horarios ya ocupados del día seleccionado, ordenados por hora, con estado de carga y mensaje de área libre.</td><td>3</td><td>Suteau, Antonin</td><td>Done (PR FrontEnd-Residente #1)</td></tr> 
+<tr><td>US03</td><td>Registrar el pago de la cuota</td>
+      <td>T04</td><td>Pago con Mercado Pago Checkout Pro</td><td>Integrar el pago de cuotas desde la app del residente con Mercado Pago Checkout Pro (entorno sandbox) y verificar el pago de forma segura en los Web Services.</td><td>8</td><td>Javier Murillo, Mathias</td><td>Done</td></tr>
+</table>
+
+##### 4.2.2.4. Development Evidence for Sprint Review
+
+Durante el Sprint 2 se implementó la restricción de reservas solapadas (US18), se añadió la edición del perfil de residentes y administradores, la eliminación de recibos y mejoras en finanzas y reservas de ambas aplicaciones móviles, y se migró el despliegue del backend a un Render Blueprint. A continuación se presentan los commits relacionados con la implementación en cada repositorio.
+
+| Repository | Branch | Commit Id | Commit Message | Commit Message Body | Committed on (Date) |
+| :--- | :--- | :--- | :--- | :--- | :--- |
+| BuildingFex-UPC/BackEnd | main | ad6b75f | feat(receipts): add DELETE receipts/{id} endpoint | - | 26/10/2026 |
+| BuildingFex-UPC/BackEnd | main | d665a49 | feat(iam): add PATCH users/{id}/profile to edit resident profile data | - | 27/10/2026 |
+| BuildingFex-UPC/BackEnd | main | 0c55cea | feat(iam): allow editing resident email and profile avatar in PATCH users/{id}/profile | - | 28/10/2026 |
+| BuildingFex-UPC/BackEnd | main | 87b08b3 | feat(iam): allow admins to edit their profile via PATCH users/{id}/profile | - | 28/10/2026 |
+| BuildingFex-UPC/BackEnd | main | e2f989a | feat(iam): allow admin password change and resident department edit in PATCH profile | - | 28/10/2026 |
+| BuildingFex-UPC/BackEnd | main | 94519ca | chore: retry deploy after transient database DNS failure | - | 29/10/2026 |
+| BuildingFex-UPC/BackEnd | main | 29a2b98 | chore: redeploy against restored database | - | 29/10/2026 |
+| BuildingFex-UPC/BackEnd | main | 81cded8 | chore: redeploy with corrected database connection | - | 29/10/2026 |
+| BuildingFex-UPC/BackEnd | main | 71a671e | chore(infra): manage backend with a Render Blueprint | - | 29/10/2026 |
+| BuildingFex-UPC/BackEnd | main | df54fe4 | fix(infra): use the exact display name of the existing database | - | 30/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 10d16b5 | BuildingFex resident app (Flutter) | - | 26/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 53bab5c | fix(finances): always show checkout card and auto-apply late fees | - | 26/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 02ed631 | feat(residente): selectores de fecha/hora, edición de cuenta y correcciones de layout | - | 27/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 587d59f | fix(reservas): Mis reservas no mostraba reservas creadas en otra pestana | - | 27/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 6fe820b | feat(profile): editable login email and drawer avatar (preset or gallery photo) | - | 28/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | a3cc778 | feat(profile): photo-only avatar and department number in profile views | - | 28/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 9288f9b | feat(settings): edit department instead of floor and reflect profile edits immediately | - | 29/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | e5999f9 | fix(finance): align resident dashboard amount and show overdue status | - | 29/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 27a6f03 | fix(finance): reload the finance tab when opened | - | 29/10/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 6651910 | fix(finance): make "total paid" consistent with the paid fees | - | 30/10/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | main | cc3b895 | Split BuildingFex: make Compose app admin-only | - | 26/10/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | main | 93da5ff | fix(finances): residents with no receipts are no longer shown as pending | - | 28/10/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | main | 28ccd1b | feat(settings): editable admin profile + confirm before switching plans | - | 28/10/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | main | 73dccae | feat(settings): let the admin change their own password | - | 29/10/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | main | 4b1533d | fix(finances): record a payment when the admin settles a debt | - | 29/10/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | main | 1712ed1 | Merge branch 'develop' into main | - | 31/10/2026 |
+| BuildingFex-UPC/LandingPage | main | 297433e | feat: make landing page responsive and set CTA buttons to Empezar/Start | - | 27/10/2026 |
+| BuildingFex-UPC/BackEnd | feature/reservation-overlap | f26c366 | fix(reservations): serialize concurrent bookings to prevent overlapping reservations | - | 09/11/2026 |
+| BuildingFex-UPC/BackEnd | main | b8d2924 | feat(finances): integrate Mercado Pago Checkout Pro sandbox and secure payment verification | - | 07/11/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | bca44fe | feat(finances): complete Mercado Pago in-app checkout and remove redundant local reconciliation | - | 07/11/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | develop | 6c6b92e | feat(reservations): show reserved schedules by space and date | - | 09/11/2026 |
+| BuildingFex-UPC/FrontEnd-Administrador | develop | 047da21 | test: add US32 unit tests | - | 10/11/2026 |
+| BuildingFex-UPC/FrontEnd-Residente | main | 57a4328 | feat(reservations): always show reserved slots for the selected day | - | 09/11/2026 |
+##### 4.2.2.5. Testing Suite Evidence for Sprint Review
+
+Las pruebas disponibles en los repositorios al cierre del Sprint 2 son:
+
+- **BuildingFex-UPC/FrontEnd-Residente** (Flutter): `test/invite_codes_test.dart` y `test/reservation_rules_test.dart`.
+- **BuildingFex-UPC/FrontEnd-Administrador** (Kotlin): `ReservedSchedulesTest` (US32), `DepartmentNumberTest`, `PayoutScheduleTest` y `ExampleUnitTest` (pruebas unitarias en `app/src/test`), y `ExampleInstrumentedTest` (instrumentada).
+- **BuildingFex-UPC/BackEnd:** `tests/reservations_integration.py`, script de integración que lanza reservas simultáneas sobre el mismo espacio, fecha y horario contra una API de prueba con datos de ejemplo, para comprobar que solo una se acepta (US18).
+
+**Resultados de ejecución:** las 12 pruebas unitarias de la aplicación del administrador se ejecutaron en Android Studio con resultado satisfactorio (12 de 12). Entre ellas se encuentran las 4 pruebas de `ReservedSchedulesTest`, que verifican que el panel de horarios reservados muestra solo las reservas del área y la fecha seleccionadas, las ordena por hora de inicio, acepta fechas enviadas con hora y no muestra horarios cuando el área está libre. El script de integración de la US18 aún no se ejecutó contra un entorno de prueba.
+
+![Pruebas unitarias de la aplicación del administrador](img/sprint2-unit-tests.png)
+
+**Acceptance Tests**
+
+```gherkin
+Feature: US32 - Visualizar horarios reservados
+  Como administrador o residente
+  quiero ver los horarios ya reservados de un área común en una fecha
+  para planificar su uso y evitar cruces
+
+  Scenario: Área con reservas en la fecha seleccionada
+    Given existen reservas para el gimnasio el 10-11-2026 de 18:00 a 19:00 y de 09:00 a 10:00
+    When el usuario consulta los horarios del gimnasio para el 10-11-2026
+    Then el sistema muestra los horarios 09:00 – 10:00 y 18:00 – 19:00 en ese orden
+
+  Scenario: Área libre en la fecha seleccionada
+    Given no existen reservas para la parrilla el 11-11-2026
+    When el usuario consulta los horarios de la parrilla para el 11-11-2026
+    Then el sistema indica que el área está libre ese día
+
+  Scenario: El administrador identifica al residente de cada reserva
+    Given existe una reserva del gimnasio a nombre de un residente
+    When el administrador consulta los horarios reservados del gimnasio
+    Then el sistema muestra el nombre y el código del residente junto al horario
+```
+
+```gherkin
+Feature: US18 - Validar solapamiento de reservas
+  Como residente
+  quiero que el sistema impida reservar un horario ya ocupado
+  para evitar conflictos con otros residentes
+
+  Scenario: Reserva en un horario ocupado
+    Given el gimnasio está reservado el 10-11-2026 de 18:00 a 19:00
+    When un residente intenta reservar el gimnasio el 10-11-2026 de 18:30 a 19:30
+    Then el sistema rechaza la reserva
+    And informa que el horario ya está ocupado
+
+  Scenario: Reservas simultáneas del mismo horario
+    Given dos residentes envían al mismo tiempo una reserva del gimnasio para el mismo horario
+    When el sistema procesa ambas solicitudes
+    Then solo una reserva es aceptada
+```
+
+##### 4.2.2.6. Execution Evidence for Sprint Review
+
+Al cierre del Sprint 2 los productos están disponibles en los siguientes enlaces:
+
+- **Landing Page:** https://buildingfex.vercel.app/
+- **Web Services (Swagger UI):** https://backend-1-lgr7.onrender.com/swagger
+
+**Capturas de ejecución de la aplicación del administrador:**
+
+El administrador ingresa al Dashboard con el resumen del edificio (residentes, unidades ocupadas y vacías, deuda total, ingresos vs egresos e incidencias recientes). Desde Espacios sociales publica las áreas comunes que los residentes pueden reservar y, en Reservas, consulta con el nuevo panel de la US32 los horarios ocupados de cada área por fecha; cuando no hay reservas, el panel indica que el área está libre.
+
+<p align="center">
+  <img src="img/sprint2-app-dashboard.png" alt="Dashboard del administrador" width="250"/>
+  <img src="img/sprint2-app-espacios.png" alt="Espacios sociales" width="250"/>
+  <img src="img/sprint2-app-reservas.png" alt="Horarios reservados (US32)" width="250"/>
+</p>
+
+##### 4.2.2.7. Services Documentation Evidence for Sprint Review
+
+Los Web Services de los bounded contexts IAM, Finances y SocialSpaces continúan documentados con OpenAPI mediante Swagger UI. Durante el Sprint 2 se incorporaron o modificaron los siguientes endpoints:
+
+- `PATCH /api/v1/users/{id}/profile`: edición de los datos del perfil del residente (correo, avatar, departamento) y del administrador (incluido el cambio de contraseña).
+- `DELETE /api/v1/receipts/{id}`: eliminación de recibos.
+- `POST` de reservas: ahora rechaza con `RESERVATION_OVERLAP` una reserva que se solape con otra existente y con `RESERVATION_DATE_INVALID` una fecha que no tenga el formato `yyyy-MM-dd`.
+
+**Documentación desplegada (Swagger UI):** https://backend-1-lgr7.onrender.com/swagger
+
+   ![Swagger UI del Sprint 2](img/sprint2-swagger-general.jpeg)
+
+##### 4.2.2.8. Software Deployment Evidence for Sprint Review
+
+Durante el Sprint 2 el despliegue de los Web Services se gestionó con un Render Blueprint (`render.yaml` en BuildingFex-UPC/BackEnd): servicio web `buildingfex-api` con contenedor Docker, plan `starter`, verificación de salud en `/health` y despliegue automático (`autoDeploy`) con las claves y la cadena de conexión a PostgreSQL configuradas como variables de entorno en el panel de Render. La Landing Page continúa desplegada en Vercel.
+
+**Capturas del panel de Render y de Vercel:**
+
+![Despliegue de los Web Services en Render](img/sprint2-deploy-render.jpeg)
+
+![Despliegue de la Landing Page en Vercel](img/sprint2-deploy-vercel.jpeg)
+
+##### 4.2.2.9. Team Collaboration Insights during Sprint
+
+Durante el Sprint 2 el equipo trabajó según la matriz de Aspect Leaders and Collaborators (sección 4.2.2.2). A diferencia del Sprint 1, cada integrante subió sus propias tareas en ramas feature y las integró mediante Pull Requests, lo que se refleja en una mayor cantidad de integrantes con commits en los repositorios de producto.
+
+A continuación se presentan los analíticos de colaboración de GitHub (Insights) de cada repositorio.
+
+**Web Services – https://github.com/BuildingFex-UPC/BackEnd**
+
+![Insights Web Services – Contributors](img/sprint2-insights-backend.png)
+
+**Aplicación del administrador – https://github.com/BuildingFex-UPC/FrontEnd-Administrador**
+
+![Insights App Administrador – Contributors](img/sprint2-insights-admin.png)
+
+**Aplicación del residente – https://github.com/BuildingFex-UPC/FrontEnd-Residente**
+
+![Insights App Residente – Contributors](img/sprint2-insights-residente.png)
+
+**Landing Page – https://github.com/BuildingFex-UPC/LandingPage**
+
+![Insights Landing Page – Contributors](img/sprint2-insights-landing..png)
+
+**Interpretación de los analíticos**
+
+En los Web Services se registraron 19 commits durante el Sprint 2: Alejandro Jave Chang (12) realizó la edición de perfiles, la eliminación de recibos y la configuración del despliegue en Render; Danitza Heredia (4) agregó el costo de las áreas comunes; Mathias Javier Murillo (2) integró Mercado Pago Checkout Pro con verificación segura del pago; y Jude Hermoza Quispe (1) implementó la restricción de reservas solapadas. En la aplicación del administrador se registraron 9 commits: Alejandro Jave Chang (6) separó la aplicación para que sea exclusiva del administrador y agregó la edición del perfil; Antonin Suteau (2) implementó el panel de horarios reservados de la US32 con sus pruebas unitarias; y Danitza Heredia (1) agregó la configuración del costo de los espacios. En la aplicación del residente, desarrollada en Flutter, se registraron 13 commits: Alejandro Jave Chang (11) creó la aplicación y sus pantallas, Mathias Javier Murillo (1) completó el pago con Mercado Pago y Antonin Suteau (1) mostró los horarios ocupados al reservar. En la Landing Page se registraron 2 commits de Alejandro Jave Chang para hacerla responsive y actualizar el video del producto.
+
+Los analíticos muestran que en este Sprint todos los integrantes aportaron código a los productos, cumpliendo el acuerdo de la retrospectiva del Sprint 1. Sin embargo, la mayor parte de los commits sigue concentrada en el líder técnico, Alejandro Jave Chang, debido a que la separación de la aplicación en dos productos requirió reconstruir gran parte de las pantallas; para el siguiente Sprint el equipo buscará repartir de forma más equilibrada las tareas de las aplicaciones móviles.
 
 ### 4.3. Validation Interviews
 
