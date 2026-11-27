@@ -233,6 +233,8 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
         <b>AV1:</b> Como equipo, aplicamos distintas técnicas y herramientas en el proyecto, lo que nos permitió actualizar nuestros conocimientos, mejorar nuestra formación profesional y reforzar el desarrollo del software.
         <br><br>
         <b>TP1:</b> Como equipo, integramos técnicas de diseño de interfaces y modelado de sistemas para la solución móvil, lo que nos permitió consolidar nuestros conocimientos arquitectónicos y asegurar la trazabilidad del desarrollo profesional en el proyecto.
+        <br><br>
+        <b>TB2:</b> Como equipo, actualizamos nuestros conocimientos incorporando prácticas de accesibilidad guiadas por los estándares de Apple y Android, integración y distribución continua (GitHub Actions con Firebase App Distribution) y cumplimiento legal en las dos aplicaciones, con todas las suites de pruebas en verde al cierre de la entrega.
     </td>
   </tr>
   <tr>
@@ -244,6 +246,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
     <td><b>AV1:</b> Apliqué Tactical DDD para organizar mejor el dominio del proyecto y así ampliar mis conocimientos.
       <br><br><b>TP1:</b> En la elaboración desde la sección Product Design hasta la sección Landing Page Mockup, actualicé mis conocimientos mediante la investigación de patrones modernos de diseño de experiencia de usuario para soluciones SaaS, aplicando un sistema de diseño con estándares de accesibilidad y tipografía escalable, e implementando herramientas de prototipado para estructurar de manera óptima la maquetación y la propuesta de valor de la Landing Page B2B y B2C.
     <br><br><b>AV2:</b> Investigué e implementé la arquitectura multiprograma para la solución móvil, dividiendo el sistema en dos aplicaciones independientes: Jetpack Compose para la consola de administración y Flutter para la aplicación de residentes. Esto me permitió profundizar en el desarrollo multiplataforma, la integración de servicios REST con diferentes frameworks móviles y la optimización de interfaces nativas según el perfil del usuario.
+    <br><br><b>TB2:</b> Investigué y apliqué las guías de calidad de Apple (Human Interface Guidelines) y Android (Material Design) para remediar la accesibilidad de ambas aplicaciones: tonos legibles en los temas claro y oscuro, etiquetas Semantics en la interfaz compartida y pruebas unitarias de contraste. Configuré desde cero un pipeline de GitHub Actions que compila los APK y los publica automáticamente en Firebase App Distribution ante cada integración a <i>main</i>, aprendiendo a manejar service accounts, claves API y grupos de testers. Integré el documento de Términos y Condiciones en las dos aplicaciones con tecnologías distintas —<i>webview_flutter</i> en Flutter y <i>WebView</i> nativo en Jetpack Compose—, lo que me permitió profundizar en desarrollo multiplataforma, consentimiento legal y publicación de software móvil. Además implementé la US19 (reglas por área y bloqueo por mantenimiento) en el backend y en ambas apps, y la US26 (dashboard unificado) en la consola del administrador, validando cada cambio con las suites de pruebas (backend 30/30, residente 51/51, administrador 21) y con los builds de CI publicados para el grupo de testers <i>pruebas-qa</i>.
     </td>
   </tr>
   <tr>
@@ -270,6 +273,8 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
         <b>AV1:</b> Trabajar en equipo es clave porque nos permite compartir ideas, resolver problemas en conjunto y obtener mejores resultados en el proyecto.
         <br><br>
         <b>TP1:</b> El trabajo colaborativo en esta etapa nos incentivó a investigar de manera continua y unificar criterios de diseño y modelado, fortaleciendo nuestra capacidad de adaptación técnica y el aprendizaje continuo como equipo.
+        <br><br>
+        <b>TB2:</b> Como equipo, reconocimos la necesidad de aprendizaje permanente al incorporar herramientas y estándares que no dominábamos (CI/CD móvil, accesibilidad y consentimiento legal) y al distribuir el trabajo entre cinco integrantes y dos stacks móviles distintos, documentando lo aprendido en las remediaciones de buenas prácticas y en este informe.
     </td>
 </tr>
 <tr>
@@ -281,6 +286,7 @@ Evidencias de colaboración y participación del equipo para la entrega AV1:
     <td><b>AV1:</b> El uso de C4 y del diagrama de base de datos me llevó a reconocer la necesidad de seguir aprendiendo sobre cómo representar correctamente la arquitectura y los datos de un sistem
       <br><br><b>TP1:</b> A través del análisis iterativo de las entrevistas en profundidad y el estudio comparativo de soluciones del mercado, reconocí el aprendizaje continuo como una necesidad fundamental para el desarrollo de software, adaptando de forma constante los wireframes y maquetas interactivas a los requerimientos reales de los usuarios antes de la fase de codificación.
       <br><br><b>AV2:</b> Reconocí la importancia del aprendizaje permanente al enfrentarme al reto de coordinar la interoperabilidad entre dos tecnologías frontend distintas (Jetpack Compose y Flutter) que consumen la misma API backend. Esto me impulsó a estudiar patrones de arquitectura limpia, gestión de estado y consumo eficiente de servicios en ambos ecosistemas para garantizar la consistencia en el flujo de reservas y pagos.
+      <br><br><b>TB2:</b> Reconocí la necesidad de mantenerme actualizado al contrastar ambas aplicaciones contra las guías oficiales de Apple y Android: documenté seis remediaciones de buenas prácticas y las apliqué en el código. Tuve que aprender de forma autónoma GitHub Actions y Firebase App Distribution, herramientas que no había utilizado antes, resolviendo además incompatibilidades de versiones entre AGP y Flutter dentro del pipeline. La integración de los Términos y Condiciones en dos frameworks distintos me obligó a estudiar cómo cada ecosistema carga contenido legal y qué exige el consentimiento explícito del usuario, reforzando mi convicción de que el aprendizaje continuo es indispensable para el desarrollo profesional.
     </td>
   </tr>
   <tr>
