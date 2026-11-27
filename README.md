@@ -47,8 +47,8 @@ u202624026 &nbsp;&nbsp; Suteau, Antonin
 | :--- | :--- | :--- | :--- |
 | AV1 | 10-09-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Carátula<br>- Registro de Versiones del informe<br>- Project Report Collaboration Insights<br>- Contenido<br>- Student Outcome<br>- Capítulo I: Presentación<br>- Capítulo II: Requirements Development and Software Solution Design<br>- Conclusiones<br>- Bibliografía<br>- Anexos |
 | TB1 | 04-10-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Correciones del AV1<br>- Capitulo III<br>- Capitulo IV<br> |
-| AV2 | 11-11-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido los siguientes capítulos:<br>- Video validacion de aplicacion<br>- Video about the product<br>- Video about the team<br>- Sprint 2<br> |
-| TB2 | 29-11-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se han incluido lo siguiente:<br>- Correciones del AV2<br>- Sprint 3<br> |
+| AV2 | 11-11-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se ha incluido lo siguiente:<br>- Video validacion de aplicacion<br>- Video about the product<br>- Video about the team<br>- Sprint 2<br> |
+| TB2 | 29-11-2026 | - Javier Murillo, Mathias<br>- Hermoza Quispe, Jude Alessandro<br>- Jave Chang, Alejandro Manuel<br>- Heredia Hoyos, Danitza Ivonne<br>- Suteau, Antonin | Se ha incluido lo siguiente:<br>- Correciones del AV2<br>- Sprint 3<br> |
 
 
 <div style="page-break-after: always;"></div>
