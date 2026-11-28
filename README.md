@@ -6117,7 +6117,7 @@ Video demostrativo donde se presenta la propuesta de valor de BuildingFex, la na
 Video en el que cada uno de los integrantes del equipo presenta su rol, contribución técnica y aprendizajes en el desarrollo de BuildingFex:
 
 * **Video del equipo BuildingFex:**  
-  [BuildingFex Team Presentation](https://github.com/BuildingFex-UPC/report)
+  [BuildingFex Team Presentation](https://youtu.be/anL_HGFmTdA)
 
 <div style="page-break-after: always;"></div>
 
